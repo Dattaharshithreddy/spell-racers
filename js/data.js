@@ -1,0 +1,65 @@
+"use strict";
+/* Content: worlds, words (meaning, Kannada, picture, example sentence, riddle), powers, hazards. */
+/* ================= CONTENT ================= */
+const POWERS={
+  RUSH:{m:"to hurry",k:"ಅವಸರ",eff:"You zoom ahead",icon:"⚡",tgt:"self"},
+  CONFIDENT:{m:"sure of yourself",k:"ಆತ್ಮವಿಶ್ವಾಸ",eff:"Shield blocks a hit",icon:"🛡️",tgt:"self"},
+  MANAGE:{m:"to handle a problem",k:"ನಿಭಾಯಿಸು",eff:"Clears your slowdowns",icon:"🧰",tgt:"self"},
+  AWKWARD:{m:"embarrassed",k:"ಮುಜುಗರ",eff:"Rival trips over",icon:"🙈",tgt:"rival"},
+  EXHAUSTED:{m:"very tired",k:"ತುಂಬಾ ಸುಸ್ತು",eff:"Rival slows down",icon:"😩",tgt:"rival"},
+  NERVOUS:{m:"worried, scared",k:"ಆತಂಕ",eff:"Rival's jumps go weak",icon:"😰",tgt:"rival"}
+};
+const WORLDS=[
+ {name:"Bengaluru",e:"🏙️",theme:"city",story:"Race from Majestic through MG Road and the Silk Board jam to Lalbagh.",
+  secs:[["Majestic","Majestic bus stand. Go!"],["MG Road","MG Road. Street dogs ahead!"],["Silk Board","Silk Board. Total traffic jam!"],["Lalbagh","Lalbagh at sunset. Mind the coconuts!"]],
+  sky:[["#6EC2F2","#FFF1D2"],["#4FB1EE","#DDF3FF"],["#93A3BB","#EADFCB"],["#F49A5D","#FFE4B0"]],far:"#9DB5D3",mid:["#E7B66B","#D98F5B","#B9C7DA"],
+  ground:["#4C4560","#2E2840","#C9C3D3"],pool:["pothole","barricade","bus","cone","auto","cow","dog","pigeons","puddle","coconut"],
+  boss:{name:"Traffic Rakshasa",col:"#7A4FD0",hi:"#9B76E6"},
+  words:[["curious","wanting to know","ಕುತೂಹಲ","🔍🤔"],["patient","able to wait calmly","ತಾಳ್ಮೆ","⏳🧘‍♀️"],["grateful","thankful","ಕೃತಜ್ಞತೆ","🙏💐"],["postpone","to move to a later time","ಮುಂದೂಡು","📅➡️"],["delighted","very happy","ತುಂಬಾ ಖುಷಿ","🎁😄"],["crowded","full of people","ಜನಸಂದಣಿ","👥👥👥"],["reliable","can be trusted","ನಂಬಿಕೆಗೆ ಅರ್ಹ","🤝✅"],["hesitate","to pause before acting","ಹಿಂಜರಿಯು","🚪😬"]]},
+ {name:"Mysuru",e:"🏰",theme:"palace",story:"Dasara time! Dash past elephants and flower stalls to the glowing palace.",
+  secs:[["Devaraja Market","Devaraja Market. Flowers everywhere!"],["Palace Road","Palace Road. Elephants on parade!"],["Dasara Lights","The palace lights are on!"],["Chamundi Hills","Climb to Chamundi Hills!"]],
+  sky:[["#7CC7F0","#FFE9C7"],["#5AB3EA","#FFE2B5"],["#3C2D6E","#F29C6B"],["#F5A35E","#FFE0A8"]],far:"#C79A7E",mid:["#F2C14E","#E8A44A","#F7D79A"],
+  ground:["#A3523A","#7A3A2A","#E8C9A0"],pool:["elephant","cow","pigeons","puddle","barricade","auto","cone"],
+  boss:{name:"Palace Phantom",col:"#C2416E",hi:"#E06A93"},
+  words:[["magnificent","very beautiful and grand","ಭವ್ಯ","🏰✨"],["celebrate","to enjoy a special day","ಆಚರಿಸು","🎉🪔"],["decorate","to make something beautiful","ಅಲಂಕರಿಸು","🎀💡"],["delicious","very tasty","ರುಚಿಕರ","😋🍬"],["ancient","very, very old","ಪ್ರಾಚೀನ","🏺📜"],["proud","happy about what you did","ಹೆಮ್ಮೆ","🏆😊"],["generous","happy to give to others","ಉದಾರ","👵🍬"],["fragile","breaks easily","ಸುಲಭವಾಗಿ ಒಡೆಯುವ","🥚⚠️"]]},
+ {name:"Coorg",e:"🌲",theme:"forest",story:"Misty hills and coffee estates. Watch for monkeys and bees in the forest.",
+  secs:[["Coffee Estate","Coffee estate. Smell that coffee!"],["Misty Hills","Misty hills. Hard to see!"],["Rain Forest","Rain forest. Muddy paths!"],["Abbey Falls","Almost at Abbey Falls!"]],
+  sky:[["#9FD5E8","#EAF6EF"],["#B9CBD3","#EEF2EF"],["#7FA9B5","#D8E8DF"],["#8FD0E8","#E9F7F2"]],far:"#7FA88F",mid:["#3E7D4E","#2F6B40","#5A9A63"],
+  ground:["#7A5434","#57391F","#6FB65A"],pool:["log","rock","monkey","bees","mud","puddle"],
+  boss:{name:"Mist Monster",col:"#3F8C8A",hi:"#6BB5B1"},
+  words:[["misty","full of light fog","ಮಂಜಿನ","🌫️⛰️"],["peaceful","calm and quiet","ಶಾಂತ","🧘🌿"],["drenched","completely wet","ತೊಯ್ದ","🌧️😖"],["shiver","to shake with cold","ನಡುಗು","🥶"],["explore","to go and discover","ಅನ್ವೇಷಿಸು","🧭🗺️"],["fragrant","smells very nice","ಸುವಾಸನೆಯ","🌸👃"],["brave","not afraid","ಧೈರ್ಯಶಾಲಿ","🦁💪"],["slippery","easy to slip on","ಜಾರುವ","🍌😵"]]},
+ {name:"Hampi",e:"🛕",theme:"ruins",story:"Giant boulders and ancient temples. The rocks here like to roll!",
+  secs:[["Virupaksha","Virupaksha temple street."],["Boulder Hills","Boulder hills. Rolling rocks!"],["Stone Chariot","The famous stone chariot!"],["Tungabhadra","Down to the Tungabhadra river!"]],
+  sky:[["#F7C77E","#FFF0D0"],["#F2B266","#FFE6BC"],["#E9945A","#FFD9A6"],["#86C5E8","#FFEBCB"]],far:"#C98F5E",mid:["#C9935B","#B67D48","#D9A974"],
+  ground:["#B88456","#8E6038","#E3C08E"],pool:["boulder","rock","monkey","bats","log","cow"],
+  boss:{name:"Stone Giant",col:"#8A7560",hi:"#B09A82"},
+  words:[["ruins","broken old buildings","ಅವಶೇಷಗಳು","🏚️🧱"],["enormous","very, very big","ಬೃಹತ್","🐘⛰️"],["carve","to cut shapes into stone","ಕೆತ್ತು","🗿🔨"],["wander","to walk around with no plan","ಅಲೆದಾಡು","🚶‍♀️🌄"],["scorching","very, very hot","ಸುಡುವ","☀️🥵"],["mysterious","strange and secret","ನಿಗೂಢ","🕵️❓"],["fascinated","very interested","ಆಕರ್ಷಿತ","🤩📸"],["balance","to stay steady","ಸಮತೋಲನ","🤸⚖️"]]},
+ {name:"Jog Falls",e:"💧",theme:"falls",story:"The final race to India's great waterfall. Crabs, spray and steep rocks!",
+  secs:[["Forest Trail","The forest trail to the falls."],["Viewpoint","The viewpoint. Hear that roar!"],["Spray Zone","Spray zone. Everything is wet!"],["The Falls","The bottom of the falls!"]],
+  sky:[["#7CCBEF","#E8F8FF"],["#62BCEA","#DDF4FF"],["#A8D8EC","#F1FBFF"],["#6FC2EC","#E2F6FF"]],far:"#6E8F86",mid:["#557A6E","#476B60","#6A8F82"],
+  ground:["#5E6E78","#3D4950","#8FD3E8"],pool:["rock","crab","pigeons","puddle","log","boulder"],
+  boss:{name:"Waterfall Wyrm",col:"#2C7FB8",hi:"#5BA8DC"},
+  words:[["breathtaking","so beautiful it amazes you","ಅದ್ಭುತ","🌈😮"],["roar","a loud, deep sound","ಗರ್ಜನೆ","🦁🔊"],["steep","going up or down sharply","ಕಡಿದಾದ","⛰️📐"],["cautious","careful","ಎಚ್ಚರಿಕೆಯ","⚠️🚶"],["thrilled","very excited","ರೋಮಾಂಚಿತ","🎢😆"],["vast","very wide and big","ವಿಶಾಲ","🌊🏞️"],["glimpse","a quick look","ಕ್ಷಣದ ನೋಟ","👀⚡"],["achieve","to succeed after hard work","ಸಾಧಿಸು","🏁🏆"]]}
+];
+const SENT={"curious": "The child was ___ and asked many questions.", "patient": "Please be ___. The bus will come soon.", "grateful": "I am ___ for your help.", "postpone": "It is raining, so let's ___ the picnic.", "delighted": "She was ___ to get a surprise gift.", "crowded": "The metro was so ___ that I had to stand.", "reliable": "He always comes on time. He is very ___.", "hesitate": "Don't ___ to ask the teacher a question.", "magnificent": "The palace looks ___ with all its lights.", "celebrate": "We ___ Dasara with our family.", "decorate": "Let's ___ the house with flowers.", "delicious": "Mysore pak is sweet and ___.", "ancient": "This temple is ___. It is 800 years old.", "proud": "My parents were ___ of my results.", "generous": "The ___ lady gave sweets to everyone.", "fragile": "Carry the glass slowly. It is ___.", "misty": "In the morning the hills are cool and ___.", "peaceful": "The forest was quiet and ___.", "drenched": "I forgot my umbrella and got ___.", "shiver": "It was so cold that I started to ___.", "explore": "Let's ___ the coffee estate together.", "fragrant": "The jasmine flowers are very ___.", "brave": "The ___ girl walked alone through the dark forest.", "slippery": "Be careful, the wet rocks are ___.", "ruins": "We walked through the ___ of an old city.", "enormous": "The boulder was ___, bigger than a bus.", "carve": "Artists used to ___ statues out of stone.", "wander": "We like to ___ around the old streets.", "scorching": "At noon the sun was ___.", "mysterious": "Nobody knows who built it. It is ___.", "fascinated": "I was ___ by the stone chariot.", "balance": "The big rock seems to ___ on a small one.", "breathtaking": "The view of the waterfall was ___.", "roar": "We could hear the ___ of the water.", "steep": "The path down to the falls is very ___.", "cautious": "Be ___ near the edge.", "thrilled": "We were ___ to see a rainbow.", "vast": "The forest is ___ and goes on for miles.", "glimpse": "I caught a ___ of a deer in the trees.", "achieve": "If you practise every day, you will ___ your goal."};
+const RIDDLE={"curious": "I make children ask 'why?' a hundred times. When you want to know everything, you feel…", "patient": "The bus is late and the queue is long, but you stay calm and wait without complaining. You are…", "grateful": "A stranger helps you carry your heavy bags. You say 'thank you' from your heart. You feel…", "postpone": "Rain stops the cricket match, so they move it to next Sunday. What do they do to the match?", "delighted": "Your best friend brings you a surprise birthday cake. You're not just happy, you are…", "crowded": "So many people are in the metro that you can't even move your arms. The metro is…", "reliable": "Your friend keeps every promise and is always on time. You can always trust her. She is…", "hesitate": "You want to ask a question, but you stop for a moment because you're not sure. You…", "magnificent": "The palace glows with thousands of bulbs. It is huge, grand and beautiful. It looks…", "celebrate": "On Dasara you light lamps, wear new clothes and share sweets with family. You…", "decorate": "You hang flowers and lights on the door to make the house look beautiful. You…", "delicious": "One bite of Mysore pak and you say 'Mmm, so tasty!' It is…", "ancient": "This temple was built a thousand years ago, long before your great-grandparents. It is…", "proud": "You came first in the race. You stand tall and smile at your family. You feel…", "generous": "Your neighbour shares her food with everyone and never asks for anything back. She is…", "fragile": "Handle with care! This glass vase can break with one small knock. It is…", "misty": "In the morning you can't see the hills because of soft white fog. The hills are…", "peaceful": "No horns and no noise. Only birds singing and wind in the trees. The place feels…", "drenched": "You walked in heavy rain with no umbrella. Every bit of you is wet. You are…", "shiver": "It's so cold that your whole body shakes and your teeth chatter. You…", "explore": "You walk into a new forest just to see what's there and find new places. You…", "fragrant": "Jasmine and coffee flowers fill the air with a lovely smell. They are…", "brave": "There's a scary noise in the dark, but you walk forward without fear. You are…", "slippery": "The rock is wet and covered in moss. Your feet slide on it. It is…", "ruins": "Broken walls and fallen pillars are all that's left of a great old city. They are the…", "enormous": "This boulder is bigger than a house! It is…", "carve": "With a hammer and chisel, the artist cuts a statue out of solid stone. He…", "wander": "You stroll around the old streets with no map and no plan, just looking. You…", "scorching": "At noon the sun is so hot that the rocks burn your feet. The heat is…", "mysterious": "Nobody knows who made this strange carving, or why. It is…", "fascinated": "You can't stop looking at the stone chariot. It holds all your attention. You are…", "balance": "A giant rock stands on a tiny rock and never falls. It keeps its…", "breathtaking": "You see the waterfall and you can't even speak. It's that beautiful. The view is…", "roar": "The waterfall makes a loud, deep sound, like a lion. That sound is a…", "steep": "The path goes down so sharply that you must hold the railing. It is…", "cautious": "Near the cliff edge, you walk slowly and carefully. You are being…", "thrilled": "You're about to see the falls for the first time and you can't stop jumping. You are…", "vast": "The forest goes on and on, as far as your eyes can see. It is…", "glimpse": "A deer appears between the trees for one second, then it's gone. You caught a…", "achieve": "You practised every single day, and finally you won the trophy. You…"};
+WORLDS.forEach(w=>w.words=w.words.map(([a,m,k,p])=>({a,m,k,p,s:SENT[a],r:RIDDLE[a]})));
+const RACE_PTS=3, GATE_AT=[.24,.5,.76];
+
+
+
+/* Hazards. ground = jump over (red), air = flying, stay low (purple), slow = harmless, only slows (blue) */
+// ground = jump over (red JUMP!), air = flying, stay low (purple), slow = harmless, only slows (blue)
+const HZ={
+  pothole:{w:24,h:8,kind:"ground",msg:"🕳️ Pothole!"}, barricade:{w:24,h:44,kind:"ground",msg:"🚧 Bonk!"},
+  bus:{w:58,h:62,kind:"ground",msg:"🚌 Bus!"}, cone:{w:13,h:28,kind:"ground",msg:"Oops!"},
+  auto:{w:28,h:44,kind:"ground",e:"🛺",sz:48,msg:"🛺 Bonk!"}, cow:{w:30,h:52,kind:"ground",e:"🐄",sz:56,msg:"🐄 Moo!"},
+  elephant:{w:36,h:62,kind:"ground",e:"🐘",sz:68,msg:"🐘 Huge!"}, dog:{w:18,h:30,kind:"ground",e:"🐕",sz:38,move:.5,msg:"🐕 Woof!"},
+  monkey:{w:16,h:32,kind:"ground",e:"🐒",sz:38,move:.6,msg:"🐒 Cheeky!"}, crab:{w:16,h:22,kind:"ground",e:"🦀",sz:32,move:.4,msg:"🦀 Pinch!"},
+  boulder:{w:22,h:44,kind:"ground",move:.9,msg:"🪨 Rolling rock!"}, rock:{w:22,h:30,kind:"ground",msg:"🪨 Rock!"},
+  log:{w:30,h:24,kind:"ground",msg:"🪵 Tripped!"}, coconut:{w:14,h:24,kind:"ground",msg:"🥥 Ouch!"},
+  puddle:{w:34,h:6,kind:"slow",msg:"💦 Splash!"}, mud:{w:36,h:6,kind:"slow",msg:"🟤 Muddy!"},
+  pigeons:{w:34,kind:"air",lo:104,hi:170,e:"🐦",msg:"🐦 Flap!"}, bees:{w:34,kind:"air",lo:104,hi:170,e:"🐝",msg:"🐝 Buzz!"},
+  bats:{w:34,kind:"air",lo:104,hi:170,e:"🦇",msg:"🦇 Eek!"}
+};
+
