@@ -94,7 +94,7 @@ function drawFox(x,y,u,ph,air,sc){
   c.fillStyle="#fff";c.beginPath();c.ellipse(2,10,4,6,.2,0,Math.PI*2);c.fill();c.stroke();
   c.restore();c.restore();
 }
-function drawRunner(L,x,y,u,sc=1){if(L.kind==="rabbit")drawRabbit(x,y,u,L.ph,L.y>2,sc);else drawFox(x,y,u,L.ph,L.y>2,sc)}
+function drawRunner(L,x,y,u,sc=1){const air=L.y>2,idle=G&&G.phase==="count";if(typeof drawSprite==="function"&&drawSprite(L.kind,x,y,u,sc,L.ph,air,idle))return;if(L.kind==="rabbit")drawRabbit(x,y,u,L.ph,air,sc);else drawFox(x,y,u,L.ph,air,sc)}
 
 /* ================= HAZARD ART (bright, outlined, tagged) ================= */
 function drawHazard(h,L,sx,gy,u){

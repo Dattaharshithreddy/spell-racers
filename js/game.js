@@ -49,7 +49,7 @@ function startRace(mode,seed,rival){
   audio();FIN=10500+WI*600;
   const other=k=>k==="rabbit"?"fox":"rabbit",rk=rival&&rival.kind?rival.kind:other(MYKIND);
   G={mode,phase:"count",cnt:3.2,lastBeep:4,t:0,start:0,seen:new Set(),host:!!(rival&&rival.host),race:null,lastSend:0,
-     lanes:[newLane(myName(),MYKIND,false),newLane(mode===1?(rk==="fox"?"Fox bot":"Bunny bot"):String(rival.name||"Friend").slice(0,12),rk,mode===1)]};
+     lanes:[newLane(myName(),MYKIND,false),newLane(mode===1?(rk==="fox"?"Nick":"Judy"):String(rival.name||"Friend").slice(0,12),rk,mode===1)]};
   G.lanes[1].remote=mode===3;
   G.lanes.forEach(L=>{L.cards=[null,null,null];for(let i=0;i<3;i++)L.cards[i]=dealCard(L)});
   buildTrack(seed??Math.floor(Math.random()*1e9));
@@ -229,17 +229,17 @@ function drawWorld(){
   for(const l of L.letters){if(l.got)continue;const sx=(l.x-L.d)*u+px;if(sx<-30||sx>W+30)continue;coin(sx,(l.high?gy-150*u:gy-34*u)+Math.sin(G.t*4+l.x)*3*u,u,l.ch,need.includes(l.ch))}
   // rival on the same road
   const gx=px+(R.d-L.d)*u;
-  if(gx>-30&&gx<W+30){ctx.fillStyle="rgba(0,0,0,.18)";ctx.beginPath();ctx.ellipse(gx,gy+3*u,16*u,4*u,0,0,7);ctx.fill();ctx.globalAlpha=.9;drawRunner(R,gx,gy-R.y,u,1);ctx.globalAlpha=1;pill(R.name,gx+4*u,gy-R.y-68*u,R.kind==="fox"?"#D9531E":"#7A4FD0",u)}
+  if(gx>-30&&gx<W+30){ctx.fillStyle="rgba(0,0,0,.18)";ctx.beginPath();ctx.ellipse(gx,gy+3*u,16*u,4*u,0,0,7);ctx.fill();ctx.globalAlpha=.9;drawRunner(R,gx,gy-R.y,u,1);ctx.globalAlpha=1;pill(R.name,gx+4*u,gy-R.y-(R.kind==="rabbit"?104:90)*u,R.kind==="fox"?"#D9531E":"#7A4FD0",u)}
   L.parts.forEach(p=>{ctx.globalAlpha=Math.min(1,p.t*3);ctx.fillStyle=p.c;ctx.beginPath();ctx.arc(p.x,p.y,p.s*u,0,7);ctx.fill()});ctx.globalAlpha=1;
   ctx.fillStyle="rgba(0,0,0,.25)";ctx.beginPath();ctx.ellipse(px,gy+3*u,Math.max(6,18*u-L.y*.06),4.5*u,0,0,7);ctx.fill();
-  if(L.shield){const r=40*u+Math.sin(G.t*6)*2*u;ctx.fillStyle="rgba(34,160,107,.18)";ctx.strokeStyle="rgba(34,160,107,.9)";ctx.lineWidth=3*u;ctx.beginPath();ctx.arc(px+4*u,gy-L.y-26*u,r,0,7);ctx.fill();ctx.stroke()}
+  if(L.shield){const r=40*u+Math.sin(G.t*6)*2*u;ctx.fillStyle="rgba(34,160,107,.18)";ctx.strokeStyle="rgba(34,160,107,.9)";ctx.lineWidth=3*u;ctx.beginPath();ctx.arc(px+4*u,gy-L.y-40*u,r*1.3,0,7);ctx.fill();ctx.stroke()}
   if(!(L.flash>0&&Math.floor(L.flash*12)%2))drawRunner(L,px,gy-L.y,u,1.15);
   const st=[L.tired&&"😩",L.weak&&"😰",L.wet&&"💦",L.stun&&"💫"].filter(Boolean).join("");
-  if(st){ctx.font=`${16*u}px serif`;ctx.textAlign="center";ctx.fillText(st,px+6*u,gy-L.y-72*u)}
+  if(st){ctx.font=`${16*u}px serif`;ctx.textAlign="center";ctx.fillText(st,px+6*u,gy-L.y-(L.kind==="rabbit"?118:102)*u)}
   L.pop.slice(-2).forEach((p,j,arr)=>{ctx.globalAlpha=Math.min(1,p.t*2);ctx.font=F(800,17*u);ctx.textAlign="left";const tx=px+34*u,ty=gy-L.y-64*u-(arr.length-1-j)*22*u-(1-Math.min(1,p.t))*14*u;ctx.lineWidth=4*u;ctx.strokeStyle="#fff";ctx.strokeText(p.txt,tx,ty);ctx.fillStyle=p.c;ctx.fillText(p.txt,tx,ty);ctx.globalAlpha=1});
   ctx.restore();
 }
-function drawRunner(L,x,y,u,sc=1){if(L.kind==="rabbit")drawRabbit(x,y,u,L.ph,L.y>2,sc);else drawFox(x,y,u,L.ph,L.y>2,sc)}
+function drawRunner(L,x,y,u,sc=1){const air=L.y>2,idle=G&&G.phase==="count";if(typeof drawSprite==="function"&&drawSprite(L.kind,x,y,u,sc,L.ph,air,idle))return;if(L.kind==="rabbit")drawRabbit(x,y,u,L.ph,air,sc);else drawFox(x,y,u,L.ph,air,sc)}
 function loop(t){if(!running)return;const dt=Math.min(.05,(t-last)/1000);last=t;update(dt);if(G){drawWorld();UI.hud()}if(running)requestAnimationFrame(loop)}
 
 /* ---------- input ---------- */
@@ -255,7 +255,7 @@ addEventListener("keydown",e=>{
 let idleOn=false;
 function idleAttract(){
   if(idleOn)return;idleOn=true;FIN=10500;
-  G={mode:1,phase:"run",t:0,seen:new Set(),lanes:[newLane("Rabbit","rabbit",true),newLane("Fox","fox",true)],hazards:[],gates:[],boxes:[]};
+  G={mode:1,phase:"run",t:0,seen:new Set(),lanes:[newLane("Judy","rabbit",true),newLane("Nick","fox",true)],hazards:[],gates:[],boxes:[]};
   G.lanes.forEach(L=>{L.cards=[{w:"RUSH",n:2},{w:"CONFIDENT",n:4},{w:"EXHAUSTED",n:1}]});
   for(let x=700;x<FIN;x+=rnd(480,700))G.hazards.push({x,type:pick(WD().pool.filter(t=>HZ[t].kind==="ground"&&!HZ[t].move&&t!=="coconut")),id:G.hazards.length});
   G.lanes[1].d=-90;let t0=performance.now();

@@ -213,3 +213,5 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--berry);outline-
 @keyframes open{from{transform:scale(.3);opacity:0}}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
 @media (min-width:700px){.hud-bottom{max-width:640px;margin:0 auto}}
+
+.pick .pkimg{display:block;height:40px;width:auto;margin:0 auto 2px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.25))}
