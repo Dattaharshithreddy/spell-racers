@@ -124,6 +124,7 @@ export function updateTraffic(dt, focus, heroes) {
     // tilt to terrain
     const L = 1.2, hf = heightAt(c.pos.x + fx * L, c.pos.z + fz * L), hb = heightAt(c.pos.x - fx * L, c.pos.z - fz * L);
     c.pitch += (THREE.MathUtils.clamp(Math.atan2(hf - hb, L * 2), -0.5, 0.5) - c.pitch) * Math.min(1, dt * 6);
+    c.pos.y = Math.max(c.pos.y, (hf + hb) / 2);
     c.roll = c.type === "bike" ? -c.steer * 0.25 : 0;
     animateVehicle(c, dt);
   }

@@ -100,7 +100,8 @@ export function heightAt(x, z) {
   fx = Math.max(0, Math.min(W.nx - 1.001, fx)); fz = Math.max(0, Math.min(W.nz - 1.001, fz));
   const ix = fx | 0, iz = fz | 0, tx = fx - ix, tz = fz - iz, n = W.nx, H = W.H;
   const a = H[iz * n + ix], b = H[iz * n + ix + 1], c = H[(iz + 1) * n + ix], d = H[(iz + 1) * n + ix + 1];
-  return (a * (1 - tx) + b * tx) * (1 - tz) + (c * (1 - tx) + d * tx) * tz;
+  // match the rendered terrain triangles exactly (diagonal runs b -> c), so feet and tyres sit ON the grass
+  return tx + tz <= 1 ? a + (b - a) * tx + (c - a) * tz : d + (c - d) * (1 - tx) + (b - d) * (1 - tz);
 }
 export function districtAt(x, z) {
   const [fx, fz] = gi(x, z); const ix = Math.round(fx), iz = Math.round(fz);

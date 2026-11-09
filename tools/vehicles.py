@@ -326,6 +326,7 @@ roots = []
 for name, fn, off in (("veh_auto", auto, 0), ("veh_bike", bike, 4), ("veh_jeep", jeep, 8), ("veh_bus", bus, 14), ("veh_car", car, 21)):
     root = link(bpy.data.objects.new(name, None))
     b, ws = fn()
+    bpy.context.view_layer.update()          # make sure every wheel's location is in matrix_world before parenting
     for o in [b] + ws:
         mw = o.matrix_world.copy(); o.parent = root; o.matrix_world = mw
     root.location.x = off if VMODE == "preview" else 0

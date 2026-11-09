@@ -76,7 +76,7 @@ export function makeVehicle(type, x, z, yaw) {
   const wheels = []; obj.traverse((o) => { if (/^wheel/.test(o.name)) wheels.push(o); });
   VS.scene.add(obj);
   const v = { id: VS.list.length, type, T, obj, wheels, pos: new V3(x, 0, z), yaw, speed: 0, steer: 0, vy: 0, pitch: 0, roll: 0, seats: [null, null], net: null, honk: 0 };
-  v.pos.y = VS.ctx.groundAt(x, z, heightAt(x, z) + 1.5); place(v);
+  settle(v); place(v);
   VS.list.push(v); return v;
 }
 /** deterministic parking spots: one auto + one bike at each landmark, more in towns */
@@ -102,8 +102,22 @@ function onStreet(x, z) {
   for (const s of W.streets || []) for (const p of s) if (Math.abs(p[0] - x) < 6 && Math.abs(p[1] - z) < 6 && Math.hypot(p[0] - x, p[1] - z) < 5.6) return true;
   return false;
 }
+/** rest a vehicle on the slope: wheels on the ground, body pitched/rolled to match the terrain */
+export function settle(v) {
+  const fx = Math.sin(v.yaw), fz = Math.cos(v.yaw);
+  const L = v.type === "bus" ? 3.6 : v.type === "bike" ? 0.95 : 1.4, Wd = v.type === "bike" ? 0 : v.type === "bus" ? 1.3 : 0.95;
+  const g = (x, z) => VS.ctx.groundAt(x, z, heightAt(x, z) + 0.6);
+  const hf = g(v.pos.x + fx * L, v.pos.z + fz * L), hb = g(v.pos.x - fx * L, v.pos.z - fz * L);
+  v.pitch = THREE.MathUtils.clamp(Math.atan2(hf - hb, L * 2), -0.5, 0.5);
+  let y = (hf + hb) / 2;
+  if (Wd) {
+    const hr = g(v.pos.x - fz * Wd, v.pos.z + fx * Wd), hl = g(v.pos.x + fz * Wd, v.pos.z - fx * Wd);
+    v.roll = THREE.MathUtils.clamp(Math.atan2(hl - hr, Wd * 2), -0.4, 0.4); y = Math.max(y, (hl + hr) / 2);
+  }
+  v.pos.y = Math.max(y, g(v.pos.x, v.pos.z));
+}
 function place(v) {
-  v.obj.position.copy(v.pos);
+  v.obj.position.copy(v.pos); v.obj.position.y += 0.03;      // tyres rest on the grass, never in it
   v.obj.rotation.set(0, 0, 0); v.obj.rotateY(v.yaw); v.obj.rotateX(-v.pitch); v.obj.rotateZ(v.roll);
 }
 export function seatWorld(v, i, out = new V3()) {
@@ -152,6 +166,7 @@ export function drive(v, input, dt) {
   const L = 1.2, fx = Math.sin(v.yaw), fz = Math.cos(v.yaw);
   const hf = heightAt(v.pos.x + fx * L, v.pos.z + fz * L), hb = heightAt(v.pos.x - fx * L, v.pos.z - fz * L);
   const hr = heightAt(v.pos.x - fz * L * 0.6, v.pos.z + fx * L * 0.6), hl = heightAt(v.pos.x + fz * L * 0.6, v.pos.z - fx * L * 0.6);
+  if (v.vy === 0) v.pos.y = Math.max(v.pos.y, (hf + hb) / 2);        // in dips keep both wheels above the grass
   const tp = v.vy !== 0 ? v.pitch : Math.atan2(hf - hb, L * 2), tr = (v.type === "bike" ? -v.steer * 0.35 * Math.min(1, Math.abs(v.speed) / 15) : Math.atan2(hl - hr, L * 1.2));
   v.pitch += (THREE.MathUtils.clamp(tp, -0.6, 0.6) - v.pitch) * Math.min(1, dt * 8); v.roll += (THREE.MathUtils.clamp(tr, -0.5, 0.5) - v.roll) * Math.min(1, dt * 8);
   if (input.honk) ctx.honk(v);
