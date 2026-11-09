@@ -1,0 +1,17 @@
+{
+  "name": "maathu",
+  "version": "3.0.0",
+  "private": true,
+  "description": "MAATHU – Bangara & Gundamma vs the Silence. Learn English words with Kannada meanings across a 3D Karnataka.",
+  "scripts": {
+    "web": "node scripts/build-web.js",
+    "android:sync": "npm run web && npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.0",
+    "@capacitor/cli": "^7.4.0",
+    "@capacitor/core": "^7.4.0",
+    "@capacitor-community/speech-recognition": "7.0.1",
+    "@capacitor-community/text-to-speech": "6.1.0"
+  }
+}

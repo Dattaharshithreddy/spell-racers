@@ -276,7 +276,7 @@ function palmGeom() {
 }
 function rockGeom() { return vcolGeom(new THREE.IcosahedronGeometry(1.6, 0).scale(1.2, 0.8, 1), 0xb08a68, 0.1); }
 
-export function buildVegetation(scene) {
+export function buildVegetation(scene, colliders = []) {
   const r = rng(1234), groups = new Map(), m = W.meta;
   const kinds = { tree: treeGeom(), palm: palmGeom(), rock: rockGeom() };
   const mats = {};
@@ -284,13 +284,17 @@ export function buildVegetation(scene) {
   const add = (kind, x, z, s, rot, did) => {
     const key = `${Math.floor(x / 240)},${Math.floor(z / 240)}`;
     if (!groups.has(key)) groups.set(key, { tree: [], palm: [], rock: [] });
-    groups.get(key)[kind].push([x, heightAt(x, z) - 0.2, z, s, rot, did]);
+    const y = heightAt(x, z) - 0.2;
+    groups.get(key)[kind].push([x, y, z, s, rot, did]);
+    if (kind === "rock") colliders.push({ x, z, r: 1.55 * s, top: y + 1.1 * s });
+    else colliders.push({ x, z, r: (kind === "tree" ? 0.45 : 0.32) * s });
   };
   const STEP = 6.5;
   for (let z = m.z0; z < m.z0 + (W.nz - 1) * m.cell; z += STEP) for (let x = m.x0; x < m.x0 + (W.nx - 1) * m.cell; x += STEP) {
     const jx = x + (r() - 0.5) * STEP, jz = z + (r() - 0.5) * STEP;
     const [t, p, k, ka] = vegAt(jx, jz); if (ka < 0.5 && r() > 0.25) continue;  // sparse outside the state
     const h = heightAt(jx, jz); if (h < 0.4) continue;
+    if (W.reserved && W.reserved.some((q) => Math.hypot(q.x - jx, q.z - jz) < q.r)) continue;
     const did = districtAt(jx, jz); const roll = r();
     if (roll < t * 0.3) add("tree", jx, jz, 0.75 + r() * 0.7, r() * 6.28, did);
     else if (roll < t * 0.3 + p * 0.32) add("palm", jx, jz, 0.8 + r() * 0.45, r() * 6.28, did);
@@ -316,60 +320,6 @@ export function buildVegetation(scene) {
     root.add(cell); W.vegCells.push(cell);
   }
   scene.add(root);
-}
-
-// ------------------------------------------------------------ towns: pastel houses with Mangalore-tile roofs
-export function buildTowns(scene, colliders) {
-  const r = rng(77), root = new THREE.Group(); root.name = "towns";
-  const wallG = new THREE.BoxGeometry(1, 1, 1).translate(0, 0.5, 0);
-  const roofG = new THREE.ConeGeometry(0.78, 0.55, 4, 1).rotateY(Math.PI / 4).translate(0, 0.27, 0);
-  const wallM = patchRestore(new THREE.MeshLambertMaterial({ map: windowTexture() }), { instanced: true });
-  const roofM = patchRestore(new THREE.MeshLambertMaterial(), { instanced: true });
-  const WALLS = [0xf4d58d, 0xf2a7b8, 0xa9d6e5, 0xc5e1a5, 0xfff3e0, 0xf6c28b, 0xd7c6f2, 0xffffff];
-  const M4 = new THREE.Matrix4(), Q = new THREE.Quaternion(), S = new THREE.Vector3(), P = new THREE.Vector3(), C = new THREE.Color();
-  W.towns = [];
-  for (const c of W.meta.cities) {
-    const big = c.pop > 3e6, n = Math.min(big ? 700 : 220, Math.max(40, Math.round(Math.sqrt(c.pop) / (big ? 4 : 5))));
-    const R = big ? 95 : 22 + Math.sqrt(n) * 3.2;
-    const coastal = c.lon < 75.2, north = c.lat > 15.6;
-    const walls = new THREE.InstancedMesh(wallG, wallM, n), roofs = new THREE.InstancedMesh(roofG, roofM, n);
-    const did = new Float32Array(n); let k = 0;
-    for (let i = 0; i < n * 3 && k < n; i++) {
-      const a = r() * Math.PI * 2, d = Math.sqrt(r()) * R;
-      const x = c.x + Math.cos(a) * d, z = c.z + Math.sin(a) * d;
-      if (heightAt(x, z) < 0.5) continue;
-      if (W.reserved && W.reserved.some((p) => Math.hypot(p.x - x, p.z - z) < p.r)) continue;
-      const w = 2.5 + r() * 3, dd = 2.5 + r() * 3;
-      const h = big && d < 55 ? 3 + r() * r() * 22 : 2.2 + r() * 2.5;
-      const y = heightAt(x, z) - 0.3, rot = Math.round(a / (Math.PI / 2)) * (Math.PI / 2) + (r() - 0.5) * 0.3;
-      Q.setFromAxisAngle(new THREE.Vector3(0, 1, 0), rot);
-      M4.compose(P.set(x, y, z), Q, S.set(w, h, dd)); walls.setMatrixAt(k, M4);
-      walls.setColorAt(k, C.setHex(big && h > 8 ? [0xdfe6ee, 0xb8c7d9, 0xf0e6d6][k % 3] : WALLS[(r() * WALLS.length) | 0]));
-      const flat = (north && r() < 0.7) || (big && h > 8);
-      M4.compose(P.set(x, y + h, z), Q, S.set(w * 1.15, flat ? 0.12 : 1.6 + r() * 0.6, dd * 1.15)); roofs.setMatrixAt(k, M4);
-      roofs.setColorAt(k, C.setHex(flat ? 0xcfc8bb : coastal || r() < 0.7 ? 0xb5532f : 0x9c4a2e));
-      did[k] = districtAt(x, z);
-      colliders.push({ x, z, r: Math.max(w, dd) * 0.58, top: y + h + 1.6 });
-      k++;
-    }
-    walls.count = roofs.count = k;
-    for (const im of [walls, roofs]) {
-      im.geometry = im.geometry.clone(); im.geometry.setAttribute("aDid", new THREE.InstancedBufferAttribute(did, 1));
-      im.computeBoundingSphere(); root.add(im);
-    }
-    W.towns.push({ name: c.name, x: c.x, z: c.z, r: R });
-  }
-  scene.add(root);
-}
-
-function windowTexture() {
-  const c = document.createElement("canvas"); c.width = 64; c.height = 64; const x = c.getContext("2d");
-  x.fillStyle = "#ffffff"; x.fillRect(0, 0, 64, 64);
-  x.fillStyle = "rgba(0,0,0,0.08)"; x.fillRect(0, 56, 64, 8);
-  for (const [wx, wy] of [[10, 14], [38, 14], [10, 36], [38, 36]]) {
-    x.fillStyle = "#3d5a6c"; x.fillRect(wx, wy, 16, 13); x.fillStyle = "#f5e9c8"; x.fillRect(wx - 2, wy - 3, 20, 3); x.fillRect(wx + 7, wy, 2, 13);
-  }
-  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
 }
 
 // ------------------------------------------------------------ sky dome

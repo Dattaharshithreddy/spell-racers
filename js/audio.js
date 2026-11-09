@@ -57,6 +57,13 @@ const SFX = {
   right() { const t = ctx.currentTime; [0, 4, 7].forEach((d, i) => note(hz(d + 5), t + i * 0.08, 0.5, "triangle", 0.2, sfxBus)); },
   restore() { const t = ctx.currentTime; [0, 2, 4, 5, 7, 9, 10].forEach((d, i) => note(hz(d + 3), t + i * 0.12, 1.4, "triangle", 0.16, sfxBus)); drum(t, 80, 0.6, 1.2, sfxBus); },
   talk() { const t = ctx.currentTime; note(hz(5 + ((Math.random() * 4) | 0)), t, 0.06, "square", 0.025, sfxBus); },
+  zap() { const t = ctx.currentTime; const o = ctx.createOscillator(), a = ctx.createGain(); o.type = "square"; o.frequency.setValueAtTime(1400, t); o.frequency.exponentialRampToValueAtTime(380, t + 0.09); a.gain.setValueAtTime(0.05, t); a.gain.exponentialRampToValueAtTime(0.001, t + 0.1); o.connect(a); a.connect(sfxBus); o.start(t); o.stop(t + 0.12); },
+  boom() { const t = ctx.currentTime; drum(t, 140, 0.5, 0.3, sfxBus); noise(t, 0.2, 900, 0.25); },
+  boom2() { const t = ctx.currentTime; drum(t, 70, 0.8, 0.6, sfxBus); noise(t, 0.5, 400, 0.5); },
+  pew() { const t = ctx.currentTime; const o = ctx.createOscillator(), a = ctx.createGain(); o.type = "sawtooth"; o.frequency.setValueAtTime(600, t); o.frequency.exponentialRampToValueAtTime(140, t + 0.15); a.gain.setValueAtTime(0.035, t); a.gain.exponentialRampToValueAtTime(0.001, t + 0.16); o.connect(a); a.connect(sfxBus); o.start(t); o.stop(t + 0.18); },
+  hit() { const t = ctx.currentTime; noise(t, 0.08, 3000, 0.18); },
+  hurt() { const t = ctx.currentTime; note(220, t, 0.15, "square", 0.08, sfxBus); note(165, t + 0.06, 0.2, "square", 0.08, sfxBus); },
+  down() { const t = ctx.currentTime; [7, 5, 3, 0].forEach((d, i) => note(hz(d), t + i * 0.05, 0.2, "triangle", 0.12, sfxBus)); noise(t, 0.3, 1500, 0.2); },
   poof() { const t = ctx.currentTime; noise(t, 0.3, 2400, 0.2); note(hz(9), t, 0.2, "triangle", 0.1, sfxBus); },
 };
 function noise(t, dur, f, g) {

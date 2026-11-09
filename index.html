@@ -35,6 +35,7 @@
       <button id="tCoop" class="big green">📱📱 Play with a friend</button>
       <div class="row">
         <button id="tTiffin">🍱 Word Tiffin <small id="tWords"></small></button>
+        <button id="tHelp">❓ How to play</button>
         <button id="tSound">🔊</button>
       </div>
       <button id="tReset" class="link" hidden>Start a new story</button>
@@ -77,16 +78,21 @@
       <div class="tbtns"><button id="hTiffin" title="Word Tiffin">🍱<i id="hWords"></i></button><button id="hMap" title="Map">🗺️</button><button id="hMenu" title="Menu">☰</button></div>
     </div>
   </div>
+  <div id="hp"><span>❤️</span><div class="bar"><i id="hpFill"></i></div><b id="hpTxt">100</b></div>
+  <div id="bossBar" hidden><small>🤫 MOUNA</small><div class="bar"><i id="bossFill"></i></div></div>
   <div id="compass"><i></i></div>
   <div id="partner" hidden></div>
   <div id="joy"><div id="joyKnob"></div></div>
   <div class="acts">
     <button data-act="talk" id="bTalk" class="act talk" hidden>💬<small>Talk</small></button>
-    <button data-act="swap" id="bSwap" class="act sm">🔁<small>Swap</small></button>
-    <button data-act="team" id="bTeam" class="act sm">🤝<small>Throw</small></button>
-    <button data-act="special" id="bSpecial" class="act mid">⚡<small>Dash</small></button>
-    <button data-act="jump" class="act big">⤒<small>Jump</small></button>
+    <button data-act="swap" id="bSwap" class="act a-swap">🔁<small>Swap</small></button>
+    <button data-act="team" id="bTeam" class="act a-team">🤝<small>Throw</small></button>
+    <button data-act="special" id="bSpecial" class="act a-spec">⚡<small>Dash</small></button>
+    <button data-act="jump" class="act a-jump">⤒<small>Jump</small></button>
+    <button data-act="fire" id="bFire" class="act a-fire">🔫<small>Fire</small></button>
   </div>
+  <div id="coach" hidden><small id="coachN"></small><p id="coachT"></p><button id="coachSkip" class="link">Skip training</button></div>
+  <div id="hurt"></div>
   <div id="toasts"></div>
 </section>
 
@@ -180,14 +186,26 @@
 <section id="help" class="modal" hidden>
   <div class="card wide">
     <h3>How to play</h3>
-    <ul class="help">
-      <li><b>Move</b> with the left stick. <b>Drag</b> the right side of the screen to look around.</li>
-      <li><b>Glowing word orbs</b> hide near each landmark. Touch one to learn the word. It goes into Gundamma's tiffin.</li>
-      <li><b>Wisps</b> (Mouna's shadows) steal words. Bangara can <b>⚡ Dash</b> through them; Gundamma can <b>💥 Pound</b> the ground.</li>
-      <li>Some orbs float high up. Stand next to Gundamma and press <b>🤝 Throw</b> to launch Bangara into the sky.</li>
-      <li>With all six words, <b>talk</b> to the silent friend, put the words back into the story, then <b>say the sentence out loud</b>. Colour returns!</li>
-      <li>After a chapter, <b>🌟 festival words</b> appear in restored towns, so there's always something new to learn.</li>
-    </ul>
+    <h4 class="hh">🎮 Controls</h4>
+    <table class="ctl">
+      <tr><td>🕹️</td><td><b>Left stick</b>: run. <b>Drag the right side</b> of the screen to turn the camera.</td></tr>
+      <tr><td>🔫</td><td><b>Fire</b> (hold): shoots the nearest villain automatically. Bangara's Akshara Blaster fires fast letters; Gundamma's Tiffin Cannon fires exploding tiffin lids.</td></tr>
+      <tr><td>⤒</td><td><b>Jump</b>. Bangara can jump twice in the air.</td></tr>
+      <tr><td>⚡</td><td><b>Dash</b> (Bangara): zoom forward and can't be hit for a moment.</td></tr>
+      <tr><td>💥</td><td><b>Pound</b> (Gundamma): smash the ground and hurt every villain around you.</td></tr>
+      <tr><td>🤝</td><td><b>Team-up</b>: stand next to each other and Gundamma throws Bangara sky-high. You can land on rooftops!</td></tr>
+      <tr><td>🔁</td><td><b>Swap</b> heroes (solo). Your partner follows you and fights by your side.</td></tr>
+      <tr><td>💬</td><td><b>Talk</b> appears when you're next to the silent friend.</td></tr>
+      <tr><td>⌨️</td><td>Keyboard: WASD move · Space jump · F fire · Shift special · Q team-up · Tab swap · E talk · M map</td></tr>
+    </table>
+    <h4 class="hh">📖 Each chapter</h4>
+    <ol class="help">
+      <li>Follow the <b>golden light</b> and the arrow at the top of the screen to the landmark.</li>
+      <li>Find <b>6 glowing words</b>. Villains with a <b>💬 bubble</b> carry stolen words, so beat them to free the words. One word is always <b>up high</b>: use the team-up throw.</li>
+      <li>Watch your <b>❤️ health</b>. Eat 🟨 <b>Mysore Pak</b> dropped by villains to heal. If you're knocked out, you get back up near the landmark.</li>
+      <li>Talk to the silent friend, <b>put the words back into the story</b>, then <b>say the sentence out loud</b>. Colour comes back to the whole district!</li>
+      <li>After a chapter, <b>🌟 festival words</b> appear in restored towns every day. The Mute Gang guards them.</li>
+    </ol>
     <button id="hpOk" class="big gold">Got it</button>
   </div>
 </section>

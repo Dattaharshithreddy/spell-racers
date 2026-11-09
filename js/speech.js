@@ -1,7 +1,12 @@
 // Text-to-speech + speech recognition with graceful fallbacks.
+// Inside the Android app (Capacitor) the WebView has no Web Speech API, so use the native plugins.
+const CAP = window.Capacitor;
+const NATIVE = !!(CAP && CAP.isNativePlatform && CAP.isNativePlatform());
+const NSR = NATIVE ? CAP.Plugins.SpeechRecognition : null;
+const NTTS = NATIVE ? CAP.Plugins.TextToSpeech : null;
 export const Speech = {
-  canListen: !!(window.SpeechRecognition || window.webkitSpeechRecognition),
-  voice: null,
+  canListen: !!(NSR || window.SpeechRecognition || window.webkitSpeechRecognition),
+  voice: null, native: NATIVE,
 };
 function pickVoice() {
   const vs = speechSynthesis?.getVoices?.() || [];
@@ -11,6 +16,7 @@ function pickVoice() {
 if (window.speechSynthesis) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
 
 export function say(text, { rate = 0.92, pitch = 1.05, kn = false } = {}) {
+  if (NTTS) { NTTS.stop().catch(() => {}).finally(() => NTTS.speak({ text, lang: kn ? "kn-IN" : "en-IN", rate, pitch, volume: 1, category: "ambient" }).catch(() => {})); return; }
   if (!window.speechSynthesis) return;
   try {
     speechSynthesis.cancel();
@@ -23,6 +29,7 @@ export function say(text, { rate = 0.92, pitch = 1.05, kn = false } = {}) {
 
 /** Listen once. Resolves with the transcript ("" on silence). Rejects if the mic is unavailable. */
 export function listen({ timeout = 7000, onInterim } = {}) {
+  if (NSR) return nativeListen({ timeout, onInterim });
   return new Promise((resolve, reject) => {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SR) return reject(new Error("no-sr"));
@@ -56,4 +63,23 @@ function lev(a, b) {
   for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++)
     d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
   return d[a.length][b.length];
+}
+
+async function nativeListen({ timeout, onInterim }) {
+  try {
+    const perm = await NSR.checkPermissions();
+    if (perm.speechRecognition !== "granted") { const r = await NSR.requestPermissions(); if (r.speechRecognition !== "granted") throw new Error("not-allowed"); }
+  } catch (e) { throw new Error("not-allowed"); }
+  let best = "", h = null;
+  try { h = await NSR.addListener("partialResults", (d) => { if (d && d.matches && d.matches[0]) { best = d.matches[0]; onInterim && onInterim(best); } }); } catch (e) {}
+  try {
+    const res = await Promise.race([
+      NSR.start({ language: "en-IN", maxResults: 3, popup: false, partialResults: false }),
+      new Promise((r) => setTimeout(() => r(null), timeout + 1500)),
+    ]);
+    if (res && res.matches && res.matches.length) best = res.matches[0];
+  } catch (e) { /* no match / timeout */ }
+  try { await NSR.stop(); } catch (e) {}
+  try { h && h.remove(); } catch (e) {}
+  return best;
 }

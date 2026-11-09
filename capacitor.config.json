@@ -1,0 +1,7 @@
+{
+  "appId": "com.maathu.bangaragundamma",
+  "appName": "MAATHU",
+  "webDir": "www",
+  "backgroundColor": "#1E1B3A",
+  "android": { "allowMixedContent": false, "webContentsDebuggingEnabled": false }
+}
