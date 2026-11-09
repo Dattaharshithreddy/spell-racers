@@ -2,192 +2,198 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-<title>Spell Racers</title>
-<meta name="description" content="Race a rabbit and a fox across Karnataka and learn English words with Kannada meanings.">
-<meta name="theme-color" content="#2A1F4E">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Spell Racers">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#1E1B3A">
+<title>MAATHU · Bangara & Gundamma</title>
 <link rel="manifest" href="manifest.json">
-<link rel="icon" href="icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="icon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600;700;800&family=Nunito:wght@600;700;800;900&display=swap">
-<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/art/icon-192.png">
+<link rel="apple-touch-icon" href="assets/art/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Baloo+Tamma+2:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/maathu.css">
+<script type="importmap">{ "imports": { "three": "./vendor/three.module.min.js" } }</script>
 </head>
 <body>
-<canvas id="cv" aria-label="Game world"></canvas>
+<canvas id="view"></canvas>
 
-<!-- ===== In-race HUD ===== -->
-<div id="hud" class="hud" hidden>
-  <div class="hud-top">
-    <button id="btnPause" class="icon-btn" aria-label="Pause">❚❚</button>
-    <div class="track" aria-label="Race progress">
-      <div class="track-line"><i id="trkFill"></i><span class="gm" style="left:24%"></span><span class="gm" style="left:50%"></span><span class="gm" style="left:76%"></span></div>
-      <span id="trkRv" class="tk rv">🦊</span><span id="trkMe" class="tk me">🐰</span><span class="tk flag">🏁</span>
-    </div>
-    <div class="hud-chip" id="hudWords" aria-label="Words found">📖 0</div>
-  </div>
-  <div id="effects" class="effects" aria-live="polite"></div>
-  <div class="hud-bottom" id="cards"></div>
-</div>
-<div id="count" class="count" hidden></div>
-<div id="toasts" class="toasts" aria-live="polite"></div>
-<div id="flash" class="flash" hidden><div class="flash-w" id="flW"></div><div class="flash-m" id="flM"></div><div class="flash-r" id="flR"></div></div>
+<!-- ============ LOADING ============ -->
+<section id="loading" class="screen show">
+  <div class="logo"><b>MAATHU</b><span class="kn">ಮಾತು</span></div>
+  <div class="bar"><i id="loadFill"></i></div>
+  <p id="loadMsg">Gathering words…</p>
+</section>
 
-<!-- ===== Word Gate (race is paused) ===== -->
-<div id="gate" class="sheet-wrap" hidden>
-  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="gtQ">
-    <div class="sheet-tag">🚪 Word Gate <span id="gtN"></span></div>
-    <div class="gate-q"><span class="gate-pic" id="gtPic"></span><div><h2 id="gtQ"></h2><p class="kn" id="gtK"></p></div></div>
-    <div class="doors" id="gtDoors"></div>
-    <div class="feedback" id="gtFb" hidden></div>
-    <button class="btn primary" id="gtGo" hidden>Keep running ▶</button>
-  </div>
-</div>
-
-<!-- ===== Yaksharaj's cave ===== -->
-<div id="cave" class="cave" hidden>
-  <div class="cave-top">
-    <div class="cave-tag" id="cvTag">Yaksharaj's Cave</div>
-    <div class="lamps" id="lamps"><span class="lamp"></span><span class="lamp"></span><span class="lamp"></span></div>
-  </div>
-  <div class="cave-stage"><canvas id="yk" width="320" height="300" aria-hidden="true"></canvas></div>
-  <div class="cave-panel">
-    <div class="bubble" id="cvBubble"></div>
-    <div class="trial" id="cvTrial"></div>
-    <div class="timer" id="cvTimer" hidden><i id="cvTimerFill"></i></div>
-  </div>
-</div>
-
-<!-- ===== Menu ===== -->
-<div id="menu" class="screen">
-  <div class="panel">
-    <header class="brand">
-      <p class="eyebrow">Karnataka Quest · learn English words</p>
-      <h1 class="logo">Spell<span>Racers</span></h1>
-    </header>
-    <div class="who">
-      <label class="field" for="nmIn"><span>Your name</span><input id="nmIn" maxlength="12" autocomplete="off" value="Bangara"></label>
-      <div class="pick" role="radiogroup" aria-label="Choose your runner">
-        <button id="pkR" role="radio" aria-checked="true" class="on"><img src="img/judy-idle.png" alt="" class="pkimg"><small>Judy</small></button>
-        <button id="pkF" role="radio" aria-checked="false"><img src="img/nick-idle.png" alt="" class="pkimg"><small>Nick</small></button>
+<!-- ============ TITLE ============ -->
+<section id="title" class="screen">
+  <div class="title-sky"></div>
+  <img class="duo" src="assets/art/duo.webp" alt="Bangara the golden rabbit and Gundamma the panda">
+  <div class="title-card">
+    <div class="logo"><b>MAATHU</b><span class="kn">ಮಾತು</span></div>
+    <p class="tag">Bangara &amp; Gundamma <i>vs</i> the Silence</p>
+    <div class="col">
+      <button id="tPlay" class="big gold">▶ <span id="tPlayTxt">Start the story</span></button>
+      <button id="tCoop" class="big green">📱📱 Play with a friend</button>
+      <div class="row">
+        <button id="tTiffin">🍱 Word Tiffin <small id="tWords"></small></button>
+        <button id="tSound">🔊</button>
       </div>
+      <button id="tReset" class="link" hidden>Start a new story</button>
     </div>
-    <h3 class="label">Choose a world</h3>
-    <div class="worlds" id="worlds" role="listbox" aria-label="Worlds"></div>
-    <div class="actions">
-      <button class="btn primary" id="mSolo">▶ Play solo <small>vs bot</small></button>
-      <button class="btn green" id="mOnline">📱📱 Race a friend <small>on two phones</small></button>
+  </div>
+</section>
+
+<!-- ============ HERO PICK ============ -->
+<section id="pick" class="screen">
+  <h2>Who are you?</h2>
+  <div class="heroes">
+    <button class="hero" data-hero="bangara"><img src="assets/art/bangara_cheer.webp" alt=""><b>Bangara</b><span class="kn">ಬಂಗಾರ</span><small>Golden rabbit · super fast · double jump · DASH through wisps</small></button>
+    <button class="hero" data-hero="gundamma"><img src="assets/art/gundamma_cheer.webp" alt=""><b>Gundamma</b><span class="kn">ಗುಂಡಮ್ಮ</span><small>Wise panda · strong · GROUND-POUND · throws Bangara sky-high</small></button>
+  </div>
+  <p class="hint" id="pickHint">In solo play you can swap between them any time.</p>
+  <button class="link" data-back>‹ Back</button>
+</section>
+
+<!-- ============ LOBBY ============ -->
+<section id="lobby" class="screen">
+  <h2>Play with a friend</h2>
+  <p class="hint">Both phones need internet. One phone creates a code, the other joins it.</p>
+  <div class="col narrow">
+    <button id="lbHost" class="big gold">Create a code</button>
+    <div id="lbCode" class="code" hidden></div>
+    <p id="lbWait" class="hint" hidden>Waiting for your friend to join…</p>
+    <div class="or">or</div>
+    <div class="row"><input id="lbIn" maxlength="4" placeholder="CODE" autocomplete="off" autocapitalize="characters"><button id="lbJoin" class="big green">Join</button></div>
+    <p id="lbMsg" class="hint"></p>
+  </div>
+  <button class="link" data-back>‹ Back</button>
+</section>
+
+<!-- ============ HUD ============ -->
+<section id="hud" hidden>
+  <div class="top">
+    <div class="obj"><small id="hChap"></small><b id="hObj"></b><span id="hDist"></span></div>
+    <div class="topR">
+      <canvas id="mini" width="200" height="200"></canvas>
+      <div class="tbtns"><button id="hTiffin" title="Word Tiffin">🍱<i id="hWords"></i></button><button id="hMap" title="Map">🗺️</button><button id="hMenu" title="Menu">☰</button></div>
     </div>
-    <div class="row">
-      <button class="btn ghost" id="mBook">📖 Word Book <small id="bookCount"></small></button>
-      <button class="btn ghost" id="mHelp">❓ How to play</button>
+  </div>
+  <div id="compass"><i></i></div>
+  <div id="partner" hidden></div>
+  <div id="joy"><div id="joyKnob"></div></div>
+  <div class="acts">
+    <button data-act="talk" id="bTalk" class="act talk" hidden>💬<small>Talk</small></button>
+    <button data-act="swap" id="bSwap" class="act sm">🔁<small>Swap</small></button>
+    <button data-act="team" id="bTeam" class="act sm">🤝<small>Throw</small></button>
+    <button data-act="special" id="bSpecial" class="act mid">⚡<small>Dash</small></button>
+    <button data-act="jump" class="act big">⤒<small>Jump</small></button>
+  </div>
+  <div id="toasts"></div>
+</section>
+
+<!-- ============ DIALOGUE ============ -->
+<section id="dlg" hidden>
+  <div class="dlg-box">
+    <div class="pt"><img id="dlgImg" alt=""><span id="dlgIcon"></span></div>
+    <div class="dt"><b id="dlgName"></b><p id="dlgText"></p></div>
+    <span class="next">▶</span>
+  </div>
+</section>
+
+<!-- ============ WORD CARD ============ -->
+<section id="wcard" class="modal" hidden>
+  <div class="card word">
+    <div class="pic" id="wcPic"></div>
+    <h3 id="wcWord"></h3>
+    <p class="kn big" id="wcKn"></p>
+    <p id="wcMean"></p>
+    <p class="ex" id="wcEx"></p>
+    <div class="row"><button id="wcHear">🔊 Hear</button><button id="wcSay">🎤 Say it</button><button id="wcOk" class="gold">Into the tiffin ✓</button></div>
+    <p class="hint" id="wcHeard"></p>
+  </div>
+</section>
+
+<!-- ============ FILL THE STORY ============ -->
+<section id="fill" class="modal" hidden>
+  <div class="card wide">
+    <small class="eyebrow" id="flTag"></small>
+    <h3>Put the words back into the story</h3>
+    <div id="flStory" class="story"></div>
+    <div id="flChips" class="chips"></div>
+    <p class="hint" id="flHint">Tap a word, then tap the blank where it belongs.</p>
+  </div>
+</section>
+
+<!-- ============ SPEAK ============ -->
+<section id="speak" class="modal" hidden>
+  <div class="card">
+    <small class="eyebrow">Wake the land</small>
+    <h3>Say it out loud!</h3>
+    <p class="say" id="spLine"></p>
+    <button id="spMic" class="mic">🎤</button>
+    <p class="hint" id="spMsg">Tap the mic and speak clearly.</p>
+    <div class="row" id="spType" hidden><input id="spIn" placeholder="Type the sentence…" autocomplete="off"><button id="spGo" class="gold">✓</button></div>
+    <button class="link" id="spAlt">No mic? Type it instead</button>
+  </div>
+</section>
+
+<!-- ============ FESTIVAL QUIZ ============ -->
+<section id="quiz" class="modal" hidden>
+  <div class="card">
+    <small class="eyebrow">Word Festival 🌟</small>
+    <h3 id="qzWord"></h3>
+    <p class="hint">What does it mean?</p>
+    <div id="qzOpts" class="col"></div>
+  </div>
+</section>
+
+<!-- ============ MAP ============ -->
+<section id="map" class="modal" hidden>
+  <div class="card map">
+    <div class="row between"><h3>Karnataka</h3><button id="mpClose">✕</button></div>
+    <div class="mapwrap"><canvas id="mapCv"></canvas></div>
+    <p class="hint">Gold = your next stop · Coloured = restored. Tap a restored landmark to travel there.</p>
+  </div>
+</section>
+
+<!-- ============ TIFFIN ============ -->
+<section id="tiffin" class="modal" hidden>
+  <div class="card wide tall">
+    <div class="row between"><h3>🍱 Gundamma's Word Tiffin</h3><button id="tfClose">✕</button></div>
+    <p class="hint" id="tfSum"></p>
+    <div id="tfList"></div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section id="menu" class="modal" hidden>
+  <div class="card">
+    <h3>Paused</h3>
+    <div class="col">
+      <button id="mnResume" class="big gold">Resume</button>
+      <button id="mnSound">🔊 Sound</button>
+      <button id="mnHelp">❓ How to play</button>
+      <button id="mnQuit">🏠 Title screen</button>
     </div>
-    <button class="link" id="mSound">🔊 Sound on</button>
   </div>
-</div>
+</section>
 
-<!-- ===== World intro ===== -->
-<div id="intro" class="screen" hidden>
-  <div class="panel">
-    <p class="eyebrow" id="inTag"></p>
-    <h2 class="title" id="inTitle"></h2>
-    <p class="lead" id="inStory"></p>
-    <div class="sec-head"><h3 class="label">8 new words</h3><button class="link" id="inHear">🔊 Hear them</button></div>
-    <ul class="words" id="inWords"></ul>
-    <button class="btn primary" id="inGo">Start race</button>
-    <button class="btn ghost" id="inBack">‹ Back</button>
+<section id="help" class="modal" hidden>
+  <div class="card wide">
+    <h3>How to play</h3>
+    <ul class="help">
+      <li><b>Move</b> with the left stick. <b>Drag</b> the right side of the screen to look around.</li>
+      <li><b>Glowing word orbs</b> hide near each landmark. Touch one to learn the word. It goes into Gundamma's tiffin.</li>
+      <li><b>Wisps</b> (Mouna's shadows) steal words. Bangara can <b>⚡ Dash</b> through them; Gundamma can <b>💥 Pound</b> the ground.</li>
+      <li>Some orbs float high up. Stand next to Gundamma and press <b>🤝 Throw</b> to launch Bangara into the sky.</li>
+      <li>With all six words, <b>talk</b> to the silent friend, put the words back into the story, then <b>say the sentence out loud</b>. Colour returns!</li>
+      <li>After a chapter, <b>🌟 festival words</b> appear in restored towns, so there's always something new to learn.</li>
+    </ul>
+    <button id="hpOk" class="big gold">Got it</button>
   </div>
-</div>
+</section>
 
-<!-- ===== How to play ===== -->
-<div id="help" class="screen" hidden>
-  <div class="panel">
-    <p class="eyebrow">How to play · <span id="hpN">1/4</span></p>
-    <div class="slides" id="slides">
-      <section class="slide"><div class="demo">🐰💨 <span class="chip red">JUMP!</span> 🚧</div><h2>Tap anywhere to jump</h2><p>Tap again in the air for a double jump. Anything with a red <b>JUMP!</b> tag is an obstacle.</p><p class="small">Purple <b>STAY LOW</b> means birds flying high: don't jump. Blue <b>SLOW</b> is only a puddle.</p></section>
-      <section class="slide" hidden><div class="demo"><span class="coin">R</span><span class="coin">U</span><span class="coin">S</span><span class="coin dim">H</span></div><h2>Collect letter coins</h2><p>Your three cards at the bottom are power words. Gold coins are the next letters they need. Fill a card and it glows.</p></section>
-      <section class="slide" hidden><div class="demo">⚡ RUSH · 🙈 AWKWARD</div><h2>Tap a glowing card</h2><p>Every word does what it means. <b>RUSH</b> makes you hurry. <b>AWKWARD</b> makes your rival trip. <b>CONFIDENT</b> gives you a shield.</p></section>
-      <section class="slide" hidden><div class="demo">🚪 → 🪔🪔🪔</div><h2>Gates and Yaksharaj</h2><p>At a <b>Word Gate</b> the race pauses. Take your time and pick the right word. At the end, <b>Yaksharaj</b> gives you three trials: a riddle, a sentence to build and a sentence to say out loud.</p></section>
-    </div>
-    <div class="row"><button class="btn ghost" id="hpPrev">‹ Back</button><button class="btn primary" id="hpNext">Next ›</button></div>
-  </div>
-</div>
-
-<!-- ===== Online lobby ===== -->
-<div id="lobby" class="screen" hidden>
-  <div class="panel">
-    <p class="eyebrow" id="lbTag">Race a friend</p>
-    <h2 class="title">📱📱 Race a friend</h2>
-    <div id="lbChoose">
-      <p class="lead">One of you creates a room and shares the 4-letter code. The other joins with it. No account needed.</p>
-      <button class="btn primary" id="lbCreate">Create a room</button>
-      <div class="join">
-        <label class="field" for="lbCode"><span>Friend's code</span><input id="lbCode" maxlength="4" autocomplete="off" autocapitalize="characters" placeholder="ABCD"></label>
-        <button class="btn green" id="lbJoin">Join</button>
-      </div>
-    </div>
-    <div id="lbRoom" hidden>
-      <p class="lead" id="lbMsg"></p>
-      <div class="code" id="lbCodeBig" aria-label="Room code"></div>
-      <ul class="players" id="lbList"></ul>
-      <button class="btn primary" id="lbStart" disabled>Waiting for your friend…</button>
-    </div>
-    <p class="err" id="lbErr" hidden></p>
-    <button class="btn ghost" id="lbBack">‹ Back</button>
-  </div>
-</div>
-
-<!-- ===== Results ===== -->
-<div id="results" class="screen" hidden>
-  <div class="panel">
-    <p class="eyebrow" id="rsTag"></p>
-    <h2 class="title" id="rsTitle"></h2>
-    <div class="stars" id="rsStars"></div>
-    <div class="score" id="rsScore"></div>
-    <p class="wait" id="rsWait" hidden></p>
-    <h3 class="label">Words from this race</h3>
-    <ul class="words" id="rsWords"></ul>
-    <button class="btn primary" id="rsNext">Next world ›</button>
-    <div class="row"><button class="btn ghost" id="rsAgain">Race again</button><button class="btn ghost" id="rsMenu">Menu</button></div>
-  </div>
-</div>
-
-<!-- ===== Word Book ===== -->
-<div id="book" class="screen" hidden>
-  <div class="panel">
-    <p class="eyebrow">Your collection</p>
-    <h2 class="title">📖 Word Book</h2>
-    <div class="bar"><i id="bkFill"></i></div>
-    <p class="lead" id="bkSum"></p>
-    <div id="bkList"></div>
-    <button class="btn primary" id="bkBack">‹ Back</button>
-  </div>
-</div>
-
-<!-- ===== Pause ===== -->
-<div id="pause" class="screen" hidden>
-  <div class="panel small">
-    <h2 class="title">Paused</h2>
-    <p class="lead" id="psNote"></p>
-    <button class="btn primary" id="psResume">Resume</button>
-    <button class="btn ghost" id="psSound">🔊 Sound on</button>
-    <button class="btn ghost" id="psQuit">Quit to menu</button>
-  </div>
-</div>
-
-<script src="js/peerjs.min.js"></script>
-<script src="js/data.js"></script>
-<script src="js/audio.js"></script>
-<script src="js/art.js"></script>
-<script src="js/sprites.js"></script>
-<script src="js/game.js"></script>
-<script src="js/net.js"></script>
-<script src="js/yaksha.js"></script>
-<script src="js/ui.js"></script>
-<script>if("serviceWorker" in navigator&&location.protocol==="https:")navigator.serviceWorker.register("sw.js").catch(()=>{})</script>
+<div id="flash" hidden></div>
+<script src="vendor/peerjs.min.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

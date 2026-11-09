@@ -1,5 +1,13 @@
-const V="sr4";
-const FILES=["./","index.html","css/style.css","js/peerjs.min.js","js/data.js","js/audio.js","js/art.js","js/sprites.js","img/judy.png","img/nick.png","img/judy-idle.png","img/nick-idle.png","js/game.js","js/net.js","js/yaksha.js","js/ui.js","manifest.json","icon.svg"];
-self.addEventListener("install",e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(FILES.map(f=>new Request(f,{cache:"reload"}))).catch(()=>{})).then(()=>self.skipWaiting()))});
-self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==V).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
-self.addEventListener("fetch",e=>{if(e.request.method!=="GET")return;e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).then(res=>{if(res.ok){const c=res.clone();caches.open(V).then(cache=>cache.put(e.request,c))}return res})))});
+// Offline cache for MAATHU. Bump V when assets change.
+const V = "maathu-v1";
+const CORE = ["./", "index.html", "css/maathu.css", "manifest.json", "vendor/three.module.min.js", "vendor/peerjs.min.js",
+  "vendor/addons/loaders/GLTFLoader.js", "vendor/addons/utils/BufferGeometryUtils.js",
+  "js/main.js", "js/world.js", "js/chars.js", "js/content.js", "js/ui.js", "js/input.js", "js/speech.js", "js/audio.js", "js/save.js", "js/net.js",
+  "assets/bangara.glb", "assets/gundamma.glb", "assets/props.glb", "assets/art/duo.webp",
+  "world/world.json", "world/height.bin", "world/district.bin", "world/color.png", "world/veg.png"];
+self.addEventListener("install", (e) => e.waitUntil(caches.open(V).then((c) => c.addAll(CORE)).catch(() => {}).then(() => self.skipWaiting())));
+self.addEventListener("activate", (e) => e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== V).map((k) => caches.delete(k)))).then(() => self.clients.claim())));
+self.addEventListener("fetch", (e) => {
+  if (e.request.method !== "GET" || !e.request.url.startsWith(self.location.origin)) return;
+  e.respondWith(caches.match(e.request).then((r) => r || fetch(e.request).then((res) => { const cp = res.clone(); caches.open(V).then((c) => c.put(e.request, cp)); return res; })));
+});

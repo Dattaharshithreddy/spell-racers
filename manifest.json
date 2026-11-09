@@ -1,14 +1,22 @@
 {
-  "name": "Spell Racers – Karnataka Quest",
-  "short_name": "SpellRacers",
-  "description": "Race Judy Hopps and Nick Wilde across Karnataka and learn English words with Kannada meanings.",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#2A1F4E",
-  "theme_color": "#2A1F4E",
-  "icons": [
-    {"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"},
-    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
-    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}
-  ]
+ "name": "MAATHU \u00b7 Bangara & Gundamma",
+ "short_name": "MAATHU",
+ "start_url": "./",
+ "display": "fullscreen",
+ "orientation": "any",
+ "background_color": "#1E1B3A",
+ "theme_color": "#1E1B3A",
+ "icons": [
+  {
+   "src": "assets/art/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "assets/art/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
 }
