@@ -157,3 +157,10 @@ input{font:inherit;font-weight:800;font-size:1.3rem;border:3px solid var(--ink);
 
 .a-car{right:0;bottom:180px;width:64px;height:64px;font-size:1.6rem;background:linear-gradient(#7FD0FF,#2F6FC4);color:#fff;animation:pulse 1.2s infinite}
 #speedo{position:absolute;left:50%;transform:translateX(-50%);top:calc(146px + var(--safe-t));background:rgba(30,27,58,.8);color:#FFD45C;font-weight:800;font-size:1.3rem;border-radius:14px;padding:4px 14px;pointer-events:none}
+
+.mcmeter{height:22px;border-radius:12px;background:#E9E2D2;border:3px solid var(--ink);overflow:hidden;margin:10px 0}
+.mcmeter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#FFD45C,#F2B705);transition:width .06s}
+.mcmeter i.ok{background:linear-gradient(90deg,#7FD07A,#3E8E3A)}
+.mcst{font-weight:600;min-height:3em} button:disabled{opacity:.45}
+#hVoice.on{background:linear-gradient(#9BE29B,#3E8E3A);color:#fff}
+#partner.talking{background:rgba(62,142,58,.9)}

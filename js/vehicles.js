@@ -11,6 +11,8 @@ const SCALE = 1.25;
 export const VT = {
   auto: { name: "Auto-rickshaw", icon: "🛺", max: 30, acc: 15, turn: 1.7, r: 1.35, wheelR: 0.27, seats: [[0, 0.57, 0.4], [0, 0.85, -0.55]], steer: ["wheel_f"], legs: "sit" },
   bike: { name: "Bullet bike", icon: "🏍️", max: 42, acc: 22, turn: 2.3, r: 0.8, wheelR: 0.34, seats: [[0, 0.6, 0.12], [0, 0.6, -0.5]], steer: ["wheel_f"], legs: "straddle" },
+  bus: { name: "KSRTC bus", icon: "🚌", max: 26, acc: 9, turn: 1.0, r: 2.6, wheelR: 0.55, seats: [[-0.6, 1.05, 3.6], [0.5, 1.05, 2.4]], steer: ["wheel_fl", "wheel_fr"], legs: "sit" },
+  car: { name: "Car", icon: "🚗", max: 40, acc: 18, turn: 1.6, r: 1.8, wheelR: 0.34, seats: [[-0.38, 0.62, 0.05], [0.38, 0.62, 0.05]], steer: ["wheel_fl", "wheel_fr"], legs: "sit" },
   jeep: { name: "Jeep", icon: "🚙", max: 36, acc: 17, turn: 1.45, r: 1.9, wheelR: 0.4, seats: [[-0.4, 1.06, 0.25], [0.4, 1.06, 0.25]], steer: ["wheel_fl", "wheel_fr"], legs: "sit" },
 };
 export const VS = { list: [], src: {}, ctx: null, scene: null };
@@ -20,7 +22,7 @@ export async function loadVehicles(scene, ctx) {
   const gl = await new GLTFLoader().loadAsync("assets/vehicles.glb");
   for (const c of gl.scene.children) { toonify(c, { outline: 0.02 }); VS.src[c.name.replace("veh_", "")] = c; }
 }
-function makeVehicle(type, x, z, yaw) {
+export function makeVehicle(type, x, z, yaw) {
   const T = VT[type], obj = VS.src[type].clone(true); obj.scale.setScalar(SCALE);
   const wheels = []; obj.traverse((o) => { if (/^wheel/.test(o.name)) wheels.push(o); });
   VS.scene.add(obj);

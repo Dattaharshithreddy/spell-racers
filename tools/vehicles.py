@@ -115,9 +115,50 @@ def jeep():
     w = [wheel(f"wheel_{n}", 0.4, 0.28, (x, y, 0.4), tyre, chrome) for n, x, y in (("fl", 0.82, -1.15), ("fr", -0.82, -1.15), ("rl", 0.82, 1.1), ("rr", -0.82, 1.1))]
     return b, w
 
+
+def bus():
+    paint_m = vcol_mat("v_paint", 0.4); tyre = vcol_mat("v_tyre", 0.9); chrome = vcol_mat("v_chrome", 0.15, metal=1.0)
+    glass = vcol_mat("v_glass", 0.05); lamp = vcol_mat("v_lamp", 0.1, emit=2.0); canv = vcol_mat("v_canvas", 0.85)
+    P = []
+    P.append(rbox("U_body", (2.4, 9.0, 2.2), (0, 0, 1.75), "#C8102E", paint_m, 0.18))
+    P.append(rbox("U_stripe", (2.44, 9.04, 0.32), (0, 0, 1.45), "#F4EFE6", paint_m, 0.05))
+    P.append(rbox("U_stripe2", (2.44, 9.04, 0.12), (0, 0, 1.18), "#F2B705", paint_m, 0.03))
+    P.append(rbox("U_roof", (2.3, 8.8, 0.18), (0, 0, 2.9), "#F4EFE6", paint_m, 0.08))
+    for sx in (1, -1):
+        for k in range(7):
+            P.append(rbox(f"U_win{sx}{k}", (0.04, 0.95, 0.75), (1.21 * sx, -3.3 + k * 1.15, 2.2), "#3F6578", glass, 0.0))
+    P.append(rbox("U_wind", (2.2, 0.05, 1.05), (0, -4.51, 2.2), "#3F6578", glass, 0.0))
+    P.append(rbox("U_back", (2.2, 0.05, 0.7), (0, 4.51, 2.3), "#3F6578", glass, 0.0))
+    P.append(rbox("U_door", (0.05, 0.9, 1.6), (-1.21, -3.0, 1.35), "#2A2A2E", canv, 0.0))
+    P.append(rbox("U_board", (1.6, 0.05, 0.3), (0, -4.52, 2.9), "#111111", canv, 0.02))
+    P.append(rbox("U_boardL", (1.2, 0.06, 0.16), (0, -4.54, 2.9), "#FFB347", lamp, 0.0))
+    for sx in (1, -1):
+        o = prim("cyl", f"U_lamp{sx}", vertices=16, radius=0.15, depth=0.05, loc=(0.85 * sx, -4.52, 1.0), rot=(90, 0, 0)); P.append(solidc(o, "#FFF6C8", lamp))
+    P.append(rbox("U_bump", (2.4, 0.2, 0.25), (0, -4.55, 0.65), "#2A2A2E", tyre, 0.05))
+    b = join(P, "body")
+    w = [wheel(f"wheel_{n}", 0.55, 0.35, (x, y, 0.55), tyre, chrome) for n, x, y in (("fl", 1.05, -3.0), ("fr", -1.05, -3.0), ("rl", 1.05, 2.8), ("rr", -1.05, 2.8))]
+    return b, w
+
+def car():
+    paint_m = vcol_mat("v_paint", 0.3); tyre = vcol_mat("v_tyre", 0.9); chrome = vcol_mat("v_chrome", 0.15, metal=1.0)
+    glass = vcol_mat("v_glass", 0.05); lamp = vcol_mat("v_lamp", 0.1, emit=2.0)
+    P = []
+    P.append(rbox("C_body", (1.65, 3.5, 0.62), (0, 0, 0.72), "#F4F4F2", paint_m, 0.2))
+    P.append(rbox("C_cabin", (1.5, 2.0, 0.6), (0, 0.25, 1.3), "#F4F4F2", paint_m, 0.22))
+    P.append(rbox("C_glassF", (1.42, 0.05, 0.5), (0, -0.78, 1.3), "#3F6578", glass, 0.0, rot=(-30, 0, 0)))
+    P.append(rbox("C_glassB", (1.42, 0.05, 0.45), (0, 1.25, 1.3), "#3F6578", glass, 0.0, rot=(25, 0, 0)))
+    for sx in (1, -1):
+        P.append(rbox(f"C_side{sx}", (0.04, 1.6, 0.45), (0.76 * sx, 0.25, 1.32), "#3F6578", glass, 0.0))
+        o = prim("cyl", f"C_lamp{sx}", vertices=16, radius=0.13, depth=0.05, loc=(0.55 * sx, -1.76, 0.85), rot=(90, 0, 0)); P.append(solidc(o, "#FFF6C8", lamp))
+        P.append(rbox(f"C_tail{sx}", (0.3, 0.05, 0.14), (0.6 * sx, 1.76, 0.9), "#C8102E", lamp, 0.0))
+    P.append(rbox("C_grill", (0.8, 0.05, 0.2), (0, -1.76, 0.65), "#2A2A2E", tyre, 0.02))
+    b = join(P, "body")
+    w = [wheel(f"wheel_{n}", 0.34, 0.24, (x, y, 0.34), tyre, chrome) for n, x, y in (("fl", 0.78, -1.15), ("fr", -0.78, -1.15), ("rl", 0.78, 1.15), ("rr", -0.78, 1.15))]
+    return b, w
+
 reset(); MATS.clear()
 roots = []
-for name, fn, off in (("veh_auto", auto, 0), ("veh_bike", bike, 4), ("veh_jeep", jeep, 8)):
+for name, fn, off in (("veh_auto", auto, 0), ("veh_bike", bike, 4), ("veh_jeep", jeep, 8), ("veh_bus", bus, 14), ("veh_car", car, 20)):
     root = link(bpy.data.objects.new(name, None))
     b, ws = fn()
     for o in [b] + ws:
@@ -130,5 +171,5 @@ if VMODE == "glb":
     print("exported vehicles", flush=True)
 else:
     sc = bpy.context.scene
-    cam = studio(sc, cam_loc=(9, -9, 4.0), cam_rot=(72, 0, 38), lens=40, samples=24, res=(1000, 560))
+    cam = studio(sc, cam_loc=(10, -18, 7.0), cam_rot=(72, 0, 18), lens=28, samples=24, res=(1200, 560))
     render(os.path.join(OUTD, "vehicles_preview.png")); print("rendered", flush=True)

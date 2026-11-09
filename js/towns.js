@@ -225,6 +225,9 @@ export function buildTowns(scene, colliders) {
     for (let j = -N; j <= N; j++) if (((j % 3) + 3) % 3 === 2) sg.push(streetLine(city, ca, sa, -R, j * LOT, R, j * LOT, R));
     for (let i = -N; i <= N; i++) if (((i % 4) + 4) % 4 === 3) sg.push(streetLine(city, ca, sa, i * LOT, -R, i * LOT, R, R));
     const sgs = sg.filter(Boolean);
+    W.streets = W.streets || [];
+    for (let j = -N; j <= N; j++) if (((j % 3) + 3) % 3 === 2) W.streets.push(streetPts(city, ca, sa, -R, j * LOT, R, j * LOT, R));
+    for (let i = -N; i <= N; i++) if (((i % 4) + 4) % 4 === 3) W.streets.push(streetPts(city, ca, sa, i * LOT, -R, i * LOT, R, R));
     if (sgs.length) { const m = new THREE.Mesh(mergeGeometries(sgs), K.mats.street); root.add(m); }
     // instanced meshes
     const emit = (list, geo, mat, tint, scaleY = 1) => {
@@ -241,6 +244,11 @@ export function buildTowns(scene, colliders) {
     W.towns.push({ name: city.name, x: city.x, z: city.z, r: R });
   }
   scene.add(root);
+}
+function streetPts(city, ca, sa, ax, az, bx, bz, R) {
+  const out = [], L = Math.hypot(bx - ax, bz - az), n = Math.ceil(L / 6);
+  for (let k = 0; k <= n; k++) { const lx = ax + (bx - ax) * k / n, lz = az + (bz - az) * k / n; if (Math.hypot(lx, lz) > R) continue; out.push([city.x + lx * ca - lz * sa, city.z + lx * sa + lz * ca]); }
+  return out;
 }
 function streetLine(city, ca, sa, ax, az, bx, bz, R) {
   const pts = [], L = Math.hypot(bx - ax, bz - az), n = Math.ceil(L / 4);

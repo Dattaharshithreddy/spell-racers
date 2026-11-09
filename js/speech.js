@@ -83,3 +83,20 @@ async function nativeListen({ timeout, onInterim }) {
   try { h && h.remove(); } catch (e) {}
   return best;
 }
+
+/** open the microphone (works in browsers and in the Android app's WebView) */
+export function openMic(raw = true) {
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return Promise.reject(new Error("no-mic"));
+  return navigator.mediaDevices.getUserMedia({ audio: raw ? { echoCancellation: false, noiseSuppression: false, autoGainControl: false } : { echoCancellation: true, noiseSuppression: true, autoGainControl: true } });
+}
+let meterCtx = null;
+/** calls cb(level 0..1) every frame until stop() */
+export function levelMeter(stream, cb) {
+  const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return { stop() {} };
+  meterCtx = meterCtx || new AC(); if (meterCtx.state === "suspended") meterCtx.resume();
+  const src = meterCtx.createMediaStreamSource(stream), an = meterCtx.createAnalyser(); an.fftSize = 512; src.connect(an);
+  const buf = new Float32Array(an.fftSize); let run = true;
+  const tick = () => { if (!run) return; an.getFloatTimeDomainData(buf); let s = 0; for (const v of buf) s += v * v; const lv = Math.min(1, Math.sqrt(s / buf.length) * 6); window.__micMax = Math.max(window.__micMax || 0, lv); cb(lv); requestAnimationFrame(tick); };
+  tick();
+  return { stop() { run = false; try { src.disconnect(); } catch (e) {} } };
+}

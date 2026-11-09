@@ -75,7 +75,7 @@
     <div class="obj"><small id="hChap"></small><b id="hObj"></b><span id="hDist"></span></div>
     <div class="topR">
       <canvas id="mini" width="200" height="200"></canvas>
-      <div class="tbtns"><button id="hTiffin" title="Word Tiffin">🍱<i id="hWords"></i></button><button id="hMap" title="Map">🗺️</button><button id="hMenu" title="Menu">☰</button></div>
+      <div class="tbtns"><button id="hVoice" title="Voice chat" hidden>🔇</button><button id="hTiffin" title="Word Tiffin">🍱<i id="hWords"></i></button><button id="hMap" title="Map">🗺️</button><button id="hMenu" title="Menu">☰</button></div>
     </div>
   </div>
   <div id="hp"><span>❤️</span><div class="bar"><i id="hpFill"></i></div><b id="hpTxt">100</b></div>
@@ -144,6 +144,16 @@
   </div>
 </section>
 
+<!-- ============ MIC CHECK ============ -->
+<section id="micchk" class="modal" hidden>
+  <div class="card">
+    <div class="row between"><small class="eyebrow" id="mcTitle">🎤 Mic check</small><button id="mcClose" class="link" hidden>✕</button></div>
+    <div class="mcmeter"><i id="mcBar"></i></div>
+    <p id="mcSt" class="mcst"></p>
+    <div class="col"><button id="mcGo" class="big gold" disabled>Continue ✓</button><button id="mcAgain" hidden>🔁 Try again</button><button id="mcType" class="link">No mic? Type instead</button></div>
+  </div>
+</section>
+
 <!-- ============ FESTIVAL QUIZ ============ -->
 <section id="quiz" class="modal" hidden>
   <div class="card">
@@ -180,6 +190,7 @@
       <button id="mnResume" class="big gold">Resume</button>
       <button id="mnSound">🔊 Sound</button>
       <button id="mnHelp">❓ How to play</button>
+      <button id="mnMic">🎤 Test microphone</button>
       <button id="mnQuit">🏠 Title screen</button>
     </div>
   </div>
@@ -198,6 +209,7 @@
       <tr><td>🤝</td><td><b>Team-up</b>: stand next to each other and Gundamma throws Bangara sky-high. You can land on rooftops!</td></tr>
       <tr><td>🔁</td><td><b>Swap</b> heroes (solo). Your partner follows you and fights by your side.</td></tr>
       <tr><td>🛺</td><td><b>Drive</b>: walk up to an auto-rickshaw, bike or jeep and tap the vehicle button. Stick = steer and accelerate, pull back to brake/reverse, ⤒ = horn. Your partner rides along and can shoot from the back. Run villains over!</td></tr>
+      <tr><td>🎙️</td><td><b>Voice chat</b> (two phones): tap 🎙️ at the top to talk to your friend. It switches off by itself while you do a speaking challenge.</td></tr>
       <tr><td>💬</td><td><b>Talk</b> appears when you're next to the silent friend.</td></tr>
       <tr><td>⌨️</td><td>Keyboard: WASD move · Space jump/horn · F fire · Shift special · Q team-up · Tab swap · V vehicle · E talk · M map</td></tr>
     </table>

@@ -1,5 +1,5 @@
 // DOM UI: screens, HUD, dialogue, word cards, story puzzles, map, tiffin.
-import { say, listen, matchScore, Speech } from "./speech.js";
+import { say, listen, matchScore, Speech, openMic, levelMeter } from "./speech.js";
 import { Sound } from "./audio.js";
 
 export const $ = (id) => document.getElementById(id);
@@ -7,7 +7,8 @@ export function screen(id) { for (const s of document.querySelectorAll(".screen"
 export const show = (id) => { $(id).hidden = false; };
 export const hide = (id) => { $(id).hidden = true; };
 export const isOpen = (id) => !$(id).hidden;
-export function anyModal() { return ["wcard", "fill", "speak", "quiz", "map", "tiffin", "menu", "help"].some((m) => isOpen(m)) || isOpen("dlg"); }
+export const hooks = { micStart: () => {}, micEnd: () => {} };
+export function anyModal() { return ["wcard", "fill", "speak", "quiz", "map", "tiffin", "menu", "help", "micchk"].some((m) => isOpen(m)) || isOpen("dlg"); }
 
 export function toast(html, cls = "", ms = 2600) {
   const t = $("toasts"); const d = document.createElement("div"); d.className = "toast " + cls; d.innerHTML = html; t.appendChild(d);
@@ -104,23 +105,65 @@ export function fillStory(ch, onDone) {
 }
 
 // ------------------------------------------------------------ speak challenge
-export function speakChallenge(sentence, onDone) {
+/** Live mic check. Resolves "ok" (heard you), "type" (use keyboard) or "skip". */
+export function micCheck({ standalone = false } = {}) {
+  return new Promise((resolve) => {
+    hooks.micStart();
+    const bar = $("mcBar"), st = $("mcSt"), go = $("mcGo"), again = $("mcAgain"), typ = $("mcType");
+    let stream = null, meter = null, heard = 0, timer = null, done = false;
+    const native = Speech.native;
+    const cleanup = () => { if (meter) meter.stop(); meter = null; if (stream) stream.getTracks().forEach((t) => t.stop()); stream = null; clearTimeout(timer); };
+    const finish = (r) => { if (done) return; done = true; cleanup(); hide("micchk"); hooks.micEnd(); resolve(r); };
+    const start = async () => {
+      cleanup(); heard = 0; go.disabled = true; again.hidden = true; bar.style.width = "0%"; bar.className = "";
+      st.innerHTML = "Say <b>“Namaskara Gundamma!”</b> out loud…";
+      try { stream = await openMic(); }
+      catch (e) {
+        st.innerHTML = native ? "🚫 <b>The microphone is blocked.</b> Open phone <b>Settings → Apps → MAATHU → Permissions → Microphone → Allow</b>, then tap Try again."
+          : "🚫 <b>The microphone is blocked.</b> Tap the 🔒 icon next to the address bar → allow <b>Microphone</b>, then tap Try again.";
+        again.hidden = false; Sound.sfx("wrong"); return;
+      }
+      let last = performance.now();
+      meter = levelMeter(stream, (lv) => {
+        const now = performance.now(), dt = Math.min(0.25, (now - last) / 1000); last = now;
+        bar.style.width = Math.round(lv * 100) + "%";
+        if (lv > 0.12) heard += dt;
+        if (heard > 0.3 && go.disabled) {
+          go.disabled = false; bar.className = "ok"; st.innerHTML = "✅ <b>Your mic is working!</b> I can hear you clearly."; Sound.sfx("right");
+          clearTimeout(timer); if (!standalone) setTimeout(() => finish("ok"), 1100);
+        }
+      });
+      timer = setTimeout(() => { if (go.disabled) { st.innerHTML = "🤔 <b>I can't hear you.</b> Hold the phone closer, check nothing is covering the mic, and speak a little louder."; again.hidden = false; } }, 8000);
+    };
+    go.onclick = () => finish("ok"); again.onclick = start; typ.onclick = () => finish("type"); $("mcClose").onclick = () => finish("skip");
+    $("mcClose").hidden = !standalone; typ.hidden = standalone;
+    $("mcTitle").textContent = standalone ? "🎤 Microphone test" : "🎤 Mic check before you speak";
+    show("micchk"); start();
+  });
+}
+
+export function speakChallenge(sentence, onDone, { typing = false } = {}) {
   const words = sentence.split(" ");
   const line = $("spLine"); line.innerHTML = words.map((w) => `<span>${w}</span>`).join(" ");
   $("spMsg").textContent = Speech.canListen ? "Tap the mic and read the sentence out loud." : "Your browser can't use the mic. Type the sentence instead.";
-  $("spType").hidden = Speech.canListen; $("spAlt").hidden = !Speech.canListen; $("spMic").hidden = !Speech.canListen; $("spIn").value = "";
+  const useMic = Speech.canListen && !typing;
+  $("spType").hidden = useMic; $("spAlt").hidden = !useMic; $("spMic").hidden = !useMic; $("spIn").value = "";
+  if (typing) $("spMsg").textContent = "Type the sentence exactly as shown.";
   const highlight = (heard) => {
     const spans = line.querySelectorAll("span"); const h = heard.toLowerCase();
     spans.forEach((s) => s.classList.toggle("hit", matchScore(h, s.textContent) >= 1));
   };
-  const win = () => { Sound.sfx("right"); $("spMsg").innerHTML = "✨ <b>Wonderful!</b> Listen…"; setTimeout(() => { hide("speak"); onDone(); }, 900); };
+  const win = () => { Sound.sfx("right"); $("spMsg").innerHTML = "✨ <b>Wonderful!</b> Listen…"; setTimeout(() => { hide("speak"); hooks.micEnd(); onDone(); }, 900); };
+  let misses = 0;
+  hooks.micStart();
   $("spMic").onclick = async () => {
     $("spMic").classList.add("rec"); $("spMsg").textContent = "Listening…";
     try {
       const heard = await listen({ timeout: 8000, onInterim: highlight });
       highlight(heard); const sc = matchScore(heard, sentence);
       if (sc >= 0.66) win();
-      else { Sound.sfx("wrong"); $("spMsg").innerHTML = heard ? `I heard “${heard}”. Almost! Try again, a little slower.` : "I didn't hear anything. Try again!"; }
+      else { Sound.sfx("wrong"); misses++; $("spMsg").innerHTML = heard ? `I heard “${heard}”. Almost! Try again, a little slower.` : "I didn't hear anything. Try again!";
+        if (misses >= 3) { $("spMsg").innerHTML += "<br><small>Still not working? You can <b>type it instead</b> below.</small>"; $("spType").hidden = false; } }
     } catch (e) { $("spMsg").textContent = "Mic not available. Type it instead."; $("spType").hidden = false; }
     $("spMic").classList.remove("rec");
   };
