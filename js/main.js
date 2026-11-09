@@ -10,6 +10,7 @@ import { Input, initInput, pollKeys, consume } from "./input.js";
 import { Sound } from "./audio.js";
 import { Save } from "./save.js";
 import { Net, hostRoom, joinRoom } from "./net.js";
+import { VS, VT, loadVehicles, spawnVehicles, drive, animateVehicle, cullVehicles, nearestFree, vehicleBlock, seatWorld, initLegs, seatPose } from "./vehicles.js";
 import { C as CB, loadCombat, equip, applyAim, heroFire, autoTarget, vCenter, shoot, spawnVillain, damageVillain, killVillain, clearVillains,
   updateCombat, dropPak, WEAPON } from "./combat.js";
 
@@ -58,6 +59,7 @@ async function boot() {
     step(52, "Planting coconut trees…"); await tick();
     buildVegetation(scene, S.colliders);
     step(62, "Building towns and shops…"); await tick();
+    try { await Promise.race([document.fonts.load("bold 30px 'Baloo Tamma 2'", "ಹೋಟೆಲ್"), sleep(2500)]); } catch (e) {}
     buildTowns(scene, S.colliders); buildColliderGrid();
     step(72, "Waking up Bangara and Gundamma…");
     const [b, g, pr] = await Promise.all([loadHero("bangara"), loadHero("gundamma"), loadProps()]);
@@ -65,9 +67,11 @@ async function boot() {
     buildMouna();
     step(80, "Arming the heroes…");
     await loadCombat(scene, combatCtx());
-    for (const h of [b, g]) { scene.add(h.holder); scene.add(h.holder.userData.shadow); const H = makeHeroState(h); S.heroes[h.kind] = H; equip(H); }
+    for (const h of [b, g]) { scene.add(h.holder); scene.add(h.holder.userData.shadow); const H = makeHeroState(h); S.heroes[h.kind] = H; equip(H); initLegs(H); }
+    await loadVehicles(scene, vehCtx());
     step(88, "Placing the landmarks…"); await tick();
     placeLandmarks();
+    spawnVehicles(CHAPTERS);
     mapImg = await new Promise((r) => { const i = new Image(); i.onload = () => r(i); i.src = "world/color.png"; });
     UI.setMapImage(mapImg);
     step(100, "Ready!");
@@ -141,7 +145,8 @@ function pushBox(p, b, r) {
   if (px < pz) lx += Math.sign(lx || 1) * px; else lz += Math.sign(lz || 1) * pz;
   p.x = b.x + lx * b.c + lz * b.s; p.z = b.z - lx * b.s + lz * b.c;
 }
-function collide(p, r) {
+function collide(p, r) { collideWorld(p, r); vehicleBlock(p, r); }
+function collideWorld(p, r) {
   for (const b of S.boxes) pushBox(p, b, r);
   for (const c of near(p.x, p.z)) {
     if (c.obb) { pushBox(p, c, r); continue; }
@@ -498,6 +503,79 @@ function updateSpecialBtn() {
 }
 function updateWordBadge() { const n = Object.keys(Save.d.words).length; $("hWords").textContent = n || ""; $("tWords").textContent = n ? `${n} words learned` : ""; }
 
+// ============================================================ vehicles
+function vehCtx() {
+  return {
+    groundAt, collide: collideWorld,
+    blocked: (x, z, r) => solidAt(x, heightAt(x, z) + 1, z) || near(x, z).some((c) => (c.obb ? !!inBox(c, x, z, r) : Math.hypot(c.x - x, c.z - z) < c.r + r)),
+    crash: (v) => { Sound.sfx("crash"); if (driverIsMe(v)) shake(0.4); },
+    edge: (v) => { if (driverIsMe(v) && S.t - (S.lastWall || 0) > 4) { S.lastWall = S.t; UI.toast("🌊 Can't drive there!"); } },
+    honk: (v) => { if (S.t - v.honk > 0.6) { v.honk = S.t; Sound.sfx("horn"); if (S.mode !== "solo") Net.send("honk", { i: v.id }); } },
+    runOver: (v) => {
+      for (const e of CB.villains) {
+        if (e.dead || e.kind === "boss" || e.passive) continue;
+        if (Math.hypot(e.pos.x - v.pos.x, e.pos.z - v.pos.z) < v.T.r + 0.7) {
+          if (S.t - (e.ranT || 0) < 0.6) continue; e.ranT = S.t;
+          combatCtx().hitVillain(e, 80, v.pos); const a = v.yaw; e.pos.x += Math.sin(a) * 2.5; e.pos.z += Math.cos(a) * 2.5;
+          Sound.sfx("boom"); v.speed *= 0.85;
+        }
+      }
+    },
+  };
+}
+const driverIsMe = (v) => { const k = v.seats[0]; return k && S.heroes[k].ctrl !== "remote"; };
+function enterVehicle(H, v, seat, announce = true) {
+  if (v.seats[seat]) return false;
+  v.seats[seat] = H.kind; H.veh = { v, seat }; H.vel.set(0, 0, 0); H.vy = 0;
+  if (seat === 0) v.net = null;
+  if (announce && S.mode !== "solo" && H.ctrl === "me") Net.send("vseat", { i: v.id, k: H.kind, s: seat });
+  if (H.ctrl === "me") UI.toast(seat === 0 ? `${v.T.icon} You're driving the ${v.T.name}! Stick = steer · ⤒ = horn` : `${v.T.icon} Riding along. Hold 🔫 to shoot from the ${v.T.name}!`, "gold", 3000);
+  return true;
+}
+function exitVehicle(H, announce = true) {
+  const R = H.veh; if (!R) return; const v = R.v;
+  v.seats[R.seat] = null; H.veh = null;
+  const side = R.seat === 0 ? -1 : 1, a = v.yaw;
+  H.pos.set(v.pos.x + Math.cos(a) * (v.T.r + 0.9) * side, 0, v.pos.z - Math.sin(a) * (v.T.r + 0.9) * side);
+  H.pos.y = groundAt(H.pos.x, H.pos.z, 999); H.vel.set(0, 0, 0); H.vy = 0; H.yaw = v.yaw;
+  H.h.model.rotation.x = 0;
+  if (announce && S.mode !== "solo" && H.ctrl === "me") Net.send("vseat", { i: v.id, k: H.kind, s: -1 });
+}
+function toggleVehicle() {
+  const H = active();
+  if (H.veh) {
+    const v = H.veh.v; exitVehicle(H);
+    if (S.mode === "solo") { const O = other(); if (O.veh && O.veh.v === v) exitVehicle(O); }
+    return;
+  }
+  const v = nearestFree(H.pos); if (!v) return;
+  const seat = v.seats[0] ? 1 : 0;
+  enterVehicle(H, v, seat);
+  if (S.mode === "solo" && seat === 0) { const O = other(); if (!O.veh && O.pos.distanceTo(H.pos) < 40 && !O.ko) enterVehicle(O, v, 1, false); }
+}
+function updateHeroInVehicle(H, dt) {
+  const R = H.veh, v = R.v;
+  if (R.seat === 0 && H.ctrl === "me" && !S.busy && !UI.anyModal()) {
+    const honk = consume("jump");
+    drive(v, { throttle: Input.move.y, steer: Input.move.x, honk }, dt);
+  } else if (R.seat === 0 && H.ctrl !== "remote") drive(v, { throttle: 0, steer: 0 }, dt);
+  seatWorld(v, R.seat, H.pos); H.yaw = v.yaw; H.vel.set(Math.sin(v.yaw) * v.speed, 0, Math.cos(v.yaw) * v.speed); H.ground = true;
+  // passengers (and AI riders) can shoot from the vehicle
+  let firing = false;
+  if (R.seat === 1 && H.ctrl === "me" && !S.busy && !UI.anyModal()) firing = Input.held.has("fire") || consume("fire");
+  if (R.seat === 1 && H.ctrl === "ai") { H.aiFire -= dt; const tg = autoTarget(H, new V3(Math.sin(v.yaw), 0, Math.cos(v.yaw)), 30); if (tg && !tg.passive && H.aiFire <= 0) { firing = true; H.aiFire = WEAPON[H.kind].cd * 2.2; } }
+  if (firing && H.fireCd <= 0) fire(H);
+  if (R.seat === 0 && H.ctrl === "me") consume("fire");
+  const h = H.h; play(h, "idle"); h.mixer.update(dt);
+  h.holder.position.copy(H.pos); h.holder.rotation.set(0, 0, 0); h.holder.rotateY(v.yaw); h.holder.rotateX(-v.pitch); h.holder.rotateZ(v.roll);
+  h.model.rotation.x = 0; h.model.position.y = 0; h.model.visible = true;
+  h.holder.updateMatrixWorld(true);
+  seatPose(H, v.T.legs);
+  if (R.seat === 0) { H.aim.dir.set(Math.sin(v.yaw), -0.45, Math.cos(v.yaw)).normalize(); H.aim.t = Math.max(H.aim.t, 0.05); }
+  applyAim(H);
+  h.holder.userData.shadow.visible = false; H.anim = "ride";
+}
+
 // ============================================================ hero update
 const tmp = new V3();
 function camForward() { return new V3(-Math.sin(S.cam.yaw), 0, -Math.cos(S.cam.yaw)); }
@@ -507,8 +585,11 @@ function updateHero(H, dt) {
   H.dash = Math.max(0, H.dash - dt); H.throwT = Math.max(0, H.throwT - dt); H.stun = Math.max(0, H.stun - dt); H.fireCd = Math.max(0, H.fireCd - dt);
   if (H.aim) H.aim.t = Math.max(0, H.aim.t - dt);
   H.hurtT += dt; if (H.hurtT > 4 && H.hp < H.maxHp && !H.ko) H.hp = Math.min(H.maxHp, H.hp + 5 * dt);
-  if (H.ctrl === "remote") { remoteFollow(H, dt); return animateHero(H, dt); }
+  if (H.ctrl === "remote") { remoteFollow(H, dt); if (H.veh) return updateHeroInVehicle(H, dt); H.h.holder.userData.shadow.visible = true; return animateHero(H, dt); }
+  if (H.ko > 0 && H.veh) exitVehicle(H);
   if (H.ko > 0) { H.ko -= dt; if (H.ko <= 0) respawn(H); return animateHero(H, dt); }
+  if (H.veh) return updateHeroInVehicle(H, dt);
+  H.h.holder.userData.shadow.visible = true; H.h.holder.rotation.set(0, H.yaw, 0);
   let mx = 0, mz = 0, wantJump = false, wantSpecial = false, firing = false;
   if (H.ctrl === "me" && !S.busy && !UI.anyModal()) {
     const y = S.cam.yaw, fx = -Math.sin(y), fz = -Math.cos(y), rx = Math.cos(y), rz = -Math.sin(y);
@@ -517,6 +598,7 @@ function updateHero(H, dt) {
     if (wantJump && S.tut) S.tut.jumped = true; if (wantSpecial && S.tut) S.tut.special = true;
   } else if (H.ctrl === "ai" && !S.busy) {
     const L = active(); const back = 2.6;
+    if (L.veh && L.veh.seat === 0 && !L.veh.v.seats[1] && H.pos.distanceTo(L.pos) < 40) { enterVehicle(H, L.veh.v, 1, false); return; }
     const tx = L.pos.x - Math.sin(L.yaw) * back + Math.cos(L.yaw) * 1.3, tz = L.pos.z - Math.cos(L.yaw) * back - Math.sin(L.yaw) * 1.3;
     const dx = tx - H.pos.x, dz = tz - H.pos.z, d = Math.hypot(dx, dz);
     if (d > 70) H.pos.set(tx, groundAt(tx, tz, 999), tz);
@@ -634,6 +716,11 @@ function remoteFollow(H, dt) {
   H.yaw += angDiff(H.yaw, n.y) * k; H.ground = !!n.g; H.dash = n.a === "dash" ? 0.1 : 0;
   if (n.hp !== undefined) H.hp = n.hp;
 }
+function syncRemoteSeat(H, d) {
+  const want = d.vh ? VS.list[d.vh[0]] : null;
+  if (H.veh && (!want || H.veh.v !== want || H.veh.seat !== d.vh[1])) { const R = H.veh; R.v.seats[R.seat] = null; if (R.seat === 0 && R.v.net) { R.v.net.s = 0; R.v.net.st = 0; } H.veh = null; }
+  if (want && !H.veh && !want.seats[d.vh[1]]) { want.seats[d.vh[1]] = H.kind; H.veh = { v: want, seat: d.vh[1] }; }
+}
 const angDiff = (a, b) => { let d = b - a; while (d > Math.PI) d -= Math.PI * 2; while (d < -Math.PI) d += Math.PI * 2; return d; };
 
 // ============================================================ effects
@@ -656,10 +743,11 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 function updateCamera(dt) {
   const H = active(), c = S.cam;
   if (Input.look.dx || Input.look.dy) { if (S.tut) S.tut.look += Math.abs(Input.look.dx) + Math.abs(Input.look.dy); c.yaw -= Input.look.dx * 0.0065; c.pitch = THREE.MathUtils.clamp(c.pitch + Input.look.dy * 0.004, 0.08, 1.15); Input.look.dx = Input.look.dy = 0; S.lastLook = S.t; }
-  const sp = Math.hypot(H.vel.x, H.vel.z);
-  if (sp > 2 && S.t - S.lastLook > 1.6 && H.ground && !(H.aim && H.aim.t > 0)) c.yaw += angDiff(c.yaw, H.yaw + Math.PI) * Math.min(1, dt * 0.9 * (sp / H.h.speed));
-  const dist = UI.isOpen("dlg") ? 5.5 : c.dist;
-  const tgt = tmp.set(H.pos.x, H.pos.y + 1.35, H.pos.z);
+  const sp = Math.hypot(H.vel.x, H.vel.z), inV = H.veh;
+  if (inV) { if (S.t - S.lastLook > 1.0 && Math.abs(inV.v.speed) > 1) c.yaw += angDiff(c.yaw, inV.v.yaw + Math.PI) * Math.min(1, dt * 3); }
+  else if (sp > 2 && S.t - S.lastLook > 1.6 && H.ground && !(H.aim && H.aim.t > 0)) c.yaw += angDiff(c.yaw, H.yaw + Math.PI) * Math.min(1, dt * 0.9 * (sp / H.h.speed));
+  const dist = UI.isOpen("dlg") ? 5.5 : inV ? 11 + Math.abs(inV.v.speed) * 0.08 : c.dist;
+  const tgt = inV ? tmp.set(inV.v.pos.x, inV.v.pos.y + 1.9, inV.v.pos.z) : tmp.set(H.pos.x, H.pos.y + 1.35, H.pos.z);
   const want = new V3(tgt.x + Math.sin(c.yaw) * Math.cos(c.pitch) * dist, tgt.y + Math.sin(c.pitch) * dist, tgt.z + Math.cos(c.yaw) * Math.cos(c.pitch) * dist);
   const floor = heightAt(want.x, want.z) + 0.9; if (want.y < floor) want.y = floor;
   { const dir = want.clone().sub(tgt), L = dir.length(); dir.divideScalar(L); let ok = L;
@@ -678,6 +766,13 @@ function updateHUD(dt) {
   const nearNpc = c.npcObj && Math.hypot(H.pos.x - c.nx, H.pos.z - c.nz) < 9;
   $("bTalk").hidden = !(nearNpc && S.phase === "return");
   if (consume("talk") && nearNpc && S.phase === "return") { if (S.mode === "guest") Net.send("talk"); else talkToNpc(); }
+  // vehicle button + speedometer
+  const nv = H.veh ? null : nearestFree(H.pos);
+  $("bCar").hidden = !(H.veh || nv) || H.ko > 0;
+  if (H.veh) $("bCar").innerHTML = "🚪<small>Exit</small>"; else if (nv) $("bCar").innerHTML = `${nv.T.icon}<small>${nv.seats[0] ? "Ride" : "Drive"}</small>`;
+  if (nv && !S.vehHint) { S.vehHint = true; UI.toast(`${nv.T.icon} A ${nv.T.name}! Tap <b>${nv.T.icon} Drive</b> to hop in.`, "gold", 3500); }
+  $("speedo").hidden = !H.veh; if (H.veh) $("speedo").textContent = `${Math.round(Math.abs(H.veh.v.speed) * 3.2)} km/h`;
+  $("bJump").innerHTML = H.veh && H.veh.seat === 0 ? "📯<small>Horn</small>" : "⤒<small>Jump</small>";
   // health
   $("hpFill").style.width = (H.hp / H.maxHp * 100).toFixed(1) + "%"; $("hpFill").className = H.hp / H.maxHp < 0.3 ? "low" : "";
   $("hpTxt").textContent = H.ko > 0 ? "KO" : Math.ceil(H.hp);
@@ -745,13 +840,14 @@ function openMap() {
   };
 }
 function travelTo(c) {
+  for (const H of heroList()) if (H.veh && H.ctrl !== "remote") exitVehicle(H);
   UI.flash(); placeHeroesAt(c.x, c.z + c.pad + 12, Math.PI);
   UI.toast(`✨ Travelled to <b>${c.place}</b>`, "gold");
   if (S.mode !== "solo") Net.send("h", heroMsg(active()));
 }
 
 // ============================================================ networking
-function heroMsg(H) { return { k: H.kind, p: [+H.pos.x.toFixed(2), +H.pos.y.toFixed(2), +H.pos.z.toFixed(2)], y: +H.yaw.toFixed(2), a: H.anim, g: H.ground ? 1 : 0, hp: Math.ceil(H.hp) }; }
+function heroMsg(H) { return { k: H.kind, p: [+H.pos.x.toFixed(2), +H.pos.y.toFixed(2), +H.pos.z.toFixed(2)], y: +H.yaw.toFixed(2), a: H.anim, g: H.ground ? 1 : 0, hp: Math.ceil(H.hp), vh: H.veh ? [H.veh.v.id, H.veh.seat] : null }; }
 let netT = 0, vT = 0;
 const KINDS = ["goon", "brute", "boss"];
 function stateMsg() { return { ch: S.ch, ph: S.phase, done: Save.d.done, orbs: S.orbs.map((o) => [o.got ? 1 : 0, o.carried ? 1 : 0, +o.x.toFixed(1), +o.y.toFixed(1), +o.z.toFixed(1)]) }; }
@@ -759,11 +855,15 @@ function broadcastState() { if (S.mode === "host") Net.send("state", stateMsg())
 function netTick(dt) {
   if (S.mode === "solo" || !Net.open) return;
   netT -= dt; vT -= dt;
-  if (netT <= 0) { netT = 1 / 12; Net.send("h", heroMsg(active())); }
+  if (netT <= 0) { netT = 1 / 12; Net.send("h", heroMsg(active()));
+    const R = active().veh; if (R && R.seat === 0) { const v = R.v; Net.send("veh", { i: v.id, p: [v.pos.x, v.pos.y, v.pos.z].map((n) => +n.toFixed(2)), y: +v.yaw.toFixed(3), s: +v.speed.toFixed(2), st: +v.steer.toFixed(2), pt: +v.pitch.toFixed(2), rl: +v.roll.toFixed(2) }); } }
   if (S.mode === "host" && vT <= 0) { vT = 0.12; Net.send("vil", CB.villains.filter((v) => !v.passive).map((v) => [v.id, KINDS.indexOf(v.kind), +v.pos.x.toFixed(1), +v.pos.z.toFixed(1), +v.yaw.toFixed(2), Math.ceil(v.hp), v.anim || 0, v.dead ? 1 : 0, v.word ?? -1])); }
 }
 function setupNetHandlers() {
-  Net.on.h = (d) => { const H = S.heroes[d.k]; if (H && H.ctrl === "remote") { H.net = d; if (!H.seen) { H.seen = true; H.pos.set(...d.p); } } };
+  Net.on.h = (d) => { const H = S.heroes[d.k]; if (H && H.ctrl === "remote") { H.net = d; syncRemoteSeat(H, d); if (!H.seen) { H.seen = true; H.pos.set(...d.p); } } };
+  Net.on.veh = (d) => { const v = VS.list[d.i]; if (v && !driverIsMe(v)) v.net = d; };
+  Net.on.vseat = (d) => { const v = VS.list[d.i], H = S.heroes[d.k]; if (!v || !H || H.ctrl !== "remote") return; syncRemoteSeat(H, { vh: d.s >= 0 ? [d.i, d.s] : null }); };
+  Net.on.honk = () => Sound.sfx("horn");
   Net.on.hs = (d) => { const H = S.heroes[d.k]; if (!H) return; const dir = new V3(...d.d); H.aim.dir.copy(dir); H.aim.t = 0.5; const W2 = WEAPON[d.k]; shoot(W2.kind, new V3(...d.f), dir, "remote", 0, { speed: W2.speed, range: W2.range, aoe: W2.aoe }); Sound.sfx(d.k === "bangara" ? "zap" : "boom"); };
   Net.on.vs = (d) => { if (S.mode !== "guest") return; shoot("ink", new V3(...d.f), new V3(...d.d), "villain", 7, d.s ? { speed: d.s, range: 60 } : {}); };
   Net.on.fx = (d) => { if (d.a === "pound") { const H = S.heroes[d.k]; Sound.sfx("pound"); ring(H.pos, 0x9b7cff, 1.6); } else Sound.sfx("dash"); };
@@ -814,10 +914,14 @@ function loop(now) {
   worldUniforms.uTime.value = S.t;
   if (S.playing) {
     pollKeys();
+    if (consume("car") && !S.busy && !active().ko) toggleVehicle();
+    if (active().veh && Input.pressed.has("swap")) { Input.pressed.delete("swap"); UI.toast("Get out of the vehicle to swap heroes."); }
+    if (active().veh && Input.pressed.has("team")) Input.pressed.delete("team");
     if (consume("swap") && S.mode === "solo" && !S.busy) { S.me = S.me === "bangara" ? "gundamma" : "bangara"; setupControl(); UI.toast(S.me === "bangara" ? "🐰 Playing as Bangara" : "🐼 Playing as Gundamma"); if (S.tut) S.tut.swaps++; }
     if (consume("team") && !S.busy) teamUp(true);
     if (consume("map")) openMap();
     for (const k in S.heroes) updateHero(S.heroes[k], dt);
+    for (const v of VS.list) { if (!v.seats[0] && !v.net) v.speed *= Math.max(0, 1 - dt * 3); if (v.obj.visible || v.seats[0]) animateVehicle(v, dt); }
     if (S.cheer > 0) S.cheer -= dt;
     updateCombat(dt, S, heroList());
     for (const o of S.orbs) {
@@ -847,7 +951,7 @@ function loop(now) {
   if (W.seaMat) { W.seaMat.uniforms.fogColor.value.copy(scene.fog.color); W.seaMat.uniforms.fogNear.value = scene.fog.near; W.seaMat.uniforms.fogFar.value = scene.fog.far; }
   if (!S.sky) S.sky = scene.children.find((o) => o.material && o.material.uniforms && o.material.uniforms.gloom);
   if (S.sky) { S.sky.material.uniforms.gloom.value = (1 - lv) * 0.7; S.sky.position.copy(camera.position); }
-  cull(camera.position, scene.fog.far);
+  cull(camera.position, scene.fog.far); cullVehicles(camera.position);
   renderer.render(scene, camera);
   requestAnimationFrame(loop);
 }
@@ -904,10 +1008,10 @@ function bindUI() {
   $("mnHelp").onclick = () => { UI.hide("menu"); UI.show("help"); };
   $("hpOk").onclick = () => UI.hide("help");
   $("coachSkip").onclick = () => endTutorial();
-  $("mnQuit").onclick = () => { UI.hide("menu"); S.playing = false; Net.close(); if (Save.guest) { Save.guest = false; Save.load(); applyRestoreFromSave(true); } S.mode = "solo"; clearOrbs(); clearVillains(); UI.hide("hud"); UI.hide("coach"); S.tut = null; UI.screen("title"); refreshTitle(); };
+  $("mnQuit").onclick = () => { for (const H of heroList()) if (H.veh) exitVehicle(H, false); UI.hide("menu"); S.playing = false; Net.close(); if (Save.guest) { Save.guest = false; Save.load(); applyRestoreFromSave(true); } S.mode = "solo"; clearOrbs(); clearVillains(); UI.hide("hud"); UI.hide("coach"); S.tut = null; UI.screen("title"); refreshTitle(); };
   document.addEventListener("visibilitychange", () => { if (document.hidden && S.playing) { const H = active(); Save.d.pos = [H.pos.x, H.pos.z, H.yaw]; Save.write(); } });
 }
 
-window.MAATHU = { S, W, CB, damageVillain, restoreChapter, travelTo, placeHeroesAt, camera, Save, CHAPTERS, groundAt, solidAt, endTutorial };
+window.MAATHU = { S, W, CB, VS, damageVillain, restoreChapter, travelTo, placeHeroesAt, camera, Save, CHAPTERS, groundAt, solidAt, endTutorial };
 boot();
 if ("serviceWorker" in navigator && location.protocol === "https:" && !(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform())) navigator.serviceWorker.register("sw.js").catch(() => {});

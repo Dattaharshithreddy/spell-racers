@@ -57,6 +57,8 @@ const SFX = {
   right() { const t = ctx.currentTime; [0, 4, 7].forEach((d, i) => note(hz(d + 5), t + i * 0.08, 0.5, "triangle", 0.2, sfxBus)); },
   restore() { const t = ctx.currentTime; [0, 2, 4, 5, 7, 9, 10].forEach((d, i) => note(hz(d + 3), t + i * 0.12, 1.4, "triangle", 0.16, sfxBus)); drum(t, 80, 0.6, 1.2, sfxBus); },
   talk() { const t = ctx.currentTime; note(hz(5 + ((Math.random() * 4) | 0)), t, 0.06, "square", 0.025, sfxBus); },
+  horn() { const t = ctx.currentTime; for (const [f, d] of [[392, 0], [330, 0.22]]) { const o = ctx.createOscillator(), a = ctx.createGain(); o.type = "square"; o.frequency.value = f; a.gain.setValueAtTime(0, t + d); a.gain.linearRampToValueAtTime(0.06, t + d + 0.02); a.gain.setValueAtTime(0.06, t + d + 0.16); a.gain.linearRampToValueAtTime(0, t + d + 0.2); o.connect(a); a.connect(sfxBus); o.start(t + d); o.stop(t + d + 0.22); } },
+  crash() { const t = ctx.currentTime; noise(t, 0.35, 700, 0.45); drum(t, 60, 0.6, 0.3, sfxBus); },
   zap() { const t = ctx.currentTime; const o = ctx.createOscillator(), a = ctx.createGain(); o.type = "square"; o.frequency.setValueAtTime(1400, t); o.frequency.exponentialRampToValueAtTime(380, t + 0.09); a.gain.setValueAtTime(0.05, t); a.gain.exponentialRampToValueAtTime(0.001, t + 0.1); o.connect(a); a.connect(sfxBus); o.start(t); o.stop(t + 0.12); },
   boom() { const t = ctx.currentTime; drum(t, 140, 0.5, 0.3, sfxBus); noise(t, 0.2, 900, 0.25); },
   boom2() { const t = ctx.currentTime; drum(t, 70, 0.8, 0.6, sfxBus); noise(t, 0.5, 400, 0.5); },

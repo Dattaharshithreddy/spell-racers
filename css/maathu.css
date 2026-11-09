@@ -81,7 +81,7 @@ input{font:inherit;font-weight:800;font-size:1.3rem;border:3px solid var(--ink);
 .a-spec{right:10px;bottom:106px;width:64px;height:64px;background:linear-gradient(#FF8A7A,#C8102E);color:#fff}
 .a-team{right:84px;bottom:84px;width:56px;height:56px;font-size:1.3rem}
 .a-swap{right:152px;bottom:84px;width:50px;height:50px;font-size:1.15rem}
-.act.talk{right:0;bottom:180px;width:auto;height:52px;border-radius:26px;padding:0 18px;flex-direction:row;gap:6px;background:linear-gradient(#9BE29B,#3E8E3A);color:#fff;animation:pulse 1s infinite}
+.act.talk{right:70px;bottom:190px;width:auto;height:52px;border-radius:26px;padding:0 18px;flex-direction:row;gap:6px;background:linear-gradient(#9BE29B,#3E8E3A);color:#fff;animation:pulse 1s infinite}
 .act.talk small{font-size:.9rem}
 .act.off{opacity:.4}
 @keyframes pulse{50%{transform:scale(1.06)}}
@@ -154,3 +154,6 @@ input{font:inherit;font-weight:800;font-size:1.3rem;border:3px solid var(--ink);
 .ctl{width:100%;border-collapse:collapse;text-align:left;font-size:.95rem} .ctl td{padding:5px 4px;border-bottom:1px dashed #E6D9BB;vertical-align:top} .ctl td:first-child{font-size:1.4rem;width:36px;text-align:center}
 .hh{margin:12px 0 4px;text-align:left;color:var(--kumkum)}
 @media (orientation:landscape) and (max-height:520px){ #coach{bottom:auto;top:calc(70px + var(--safe-t))} .acts{transform:scale(.88);transform-origin:right bottom} #hp{--hp-top:70px} #partner{top:calc(100px + var(--safe-t))} }
+
+.a-car{right:0;bottom:180px;width:64px;height:64px;font-size:1.6rem;background:linear-gradient(#7FD0FF,#2F6FC4);color:#fff;animation:pulse 1.2s infinite}
+#speedo{position:absolute;left:50%;transform:translateX(-50%);top:calc(146px + var(--safe-t));background:rgba(30,27,58,.8);color:#FFD45C;font-weight:800;font-size:1.3rem;border-radius:14px;padding:4px 14px;pointer-events:none}

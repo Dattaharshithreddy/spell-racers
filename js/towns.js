@@ -252,7 +252,7 @@ function streetLine(city, ca, sa, ax, az, bx, bz, R) {
   const P = [], I = [], N = [], D = [];
   for (let i = 0; i < pts.length; i++) {
     const a = pts[Math.max(0, i - 1)], b = pts[Math.min(pts.length - 1, i + 1)]; let dx = b[0] - a[0], dz = b[1] - a[1]; const l = Math.hypot(dx, dz) || 1; dx /= l; dz /= l;
-    for (const s of [-1, 1]) { const x = pts[i][0] - dz * 3.6 * s, z = pts[i][1] + dx * 3.6 * s; if (heightAt(x, z) < 0.4) { P.push(x, -50, z); } else P.push(x, heightAt(x, z) + 0.22, z); N.push(0, 1, 0); D.push(districtAt(pts[i][0], pts[i][1])); }
+    for (const s of [-1, 1]) { const x = pts[i][0] - dz * 3.6 * s, z = pts[i][1] + dx * 3.6 * s; if (heightAt(x, z) < 0.4) { P.push(x, -50, z); } else P.push(x, heightAt(x, z) + 0.05, z); N.push(0, 1, 0); D.push(districtAt(pts[i][0], pts[i][1])); }
     if (i) { const o = (i - 1) * 2; I.push(o, o + 1, o + 2, o + 1, o + 3, o + 2); }
   }
   const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.Float32BufferAttribute(P, 3)); g.setAttribute("normal", new THREE.Float32BufferAttribute(N, 3)); g.setAttribute("aDid", new THREE.Float32BufferAttribute(D, 1)); g.setIndex(I); return g;

@@ -176,7 +176,7 @@ export function drawMap(cv, d, { mini = false, view = 260 } = {}) {
     const P = (px, pz) => { const [ix, iz] = toImg(px, pz); return [(ix - cx) * k + W / 2, (iz - cz) * k + H / 2]; };
     for (const b of d.marks) { let [mx, mz] = P(b.x, b.z); const dd = Math.hypot(mx - W / 2, mz - H / 2), R = W / 2 - 9; if (dd > R) { mx = W / 2 + (mx - W / 2) * R / dd; mz = H / 2 + (mz - H / 2) * R / dd; } dot(x, mx, mz, b.big ? 8 : 5, b.col); }
     if (d.other) { const [ox, oz] = P(d.other.x, d.other.z); dot(x, ox, oz, 6, d.other.col); }
-    x.translate(W / 2, H / 2); x.rotate(-d.me.yaw + Math.PI); x.fillStyle = "#fff"; x.strokeStyle = "#1E1B3A"; x.lineWidth = 3;
+    x.translate(W / 2, H / 2); x.rotate(-d.me.yaw); x.fillStyle = "#fff"; x.strokeStyle = "#1E1B3A"; x.lineWidth = 3;
     x.beginPath(); x.moveTo(0, -12); x.lineTo(8, 9); x.lineTo(0, 5); x.lineTo(-8, 9); x.closePath(); x.stroke(); x.fill();
     x.restore();
     return;

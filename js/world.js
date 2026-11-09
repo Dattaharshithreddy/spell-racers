@@ -236,10 +236,10 @@ export function buildRiversRoads(scene) {
   const rmesh = new THREE.Mesh(mergeGeometries(rivers), rmat); rmesh.name = "rivers"; scene.add(rmesh);
   for (const r of W.meta.roads) {
     const pts = densify(r.pts, 3); const w = r.type === "Major Highway" ? 4.2 : 3.2;
-    roads.push(ribbon(pts, w, (x, z) => heightAt(x, z) + 0.18));
+    roads.push(ribbon(pts, w, (x, z) => heightAt(x, z) + 0.05));
   }
   const tex = roadTexture();
-  const mat = patchRestore(new THREE.MeshLambertMaterial({ map: tex, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 }));
+  const mat = patchRestore(new THREE.MeshLambertMaterial({ map: tex, polygonOffset: true, polygonOffsetFactor: -4, polygonOffsetUnits: -8 }));
   const mesh = new THREE.Mesh(mergeGeometries(roads), mat); mesh.name = "roads"; scene.add(mesh);
 }
 function roadTexture() {

@@ -81,6 +81,7 @@
   <div id="hp"><span>❤️</span><div class="bar"><i id="hpFill"></i></div><b id="hpTxt">100</b></div>
   <div id="bossBar" hidden><small>🤫 MOUNA</small><div class="bar"><i id="bossFill"></i></div></div>
   <div id="compass"><i></i></div>
+  <div id="speedo" hidden></div>
   <div id="partner" hidden></div>
   <div id="joy"><div id="joyKnob"></div></div>
   <div class="acts">
@@ -88,8 +89,9 @@
     <button data-act="swap" id="bSwap" class="act a-swap">🔁<small>Swap</small></button>
     <button data-act="team" id="bTeam" class="act a-team">🤝<small>Throw</small></button>
     <button data-act="special" id="bSpecial" class="act a-spec">⚡<small>Dash</small></button>
-    <button data-act="jump" class="act a-jump">⤒<small>Jump</small></button>
+    <button data-act="jump" id="bJump" class="act a-jump">⤒<small>Jump</small></button>
     <button data-act="fire" id="bFire" class="act a-fire">🔫<small>Fire</small></button>
+    <button data-act="car" id="bCar" class="act a-car" hidden>🛺<small>Drive</small></button>
   </div>
   <div id="coach" hidden><small id="coachN"></small><p id="coachT"></p><button id="coachSkip" class="link">Skip training</button></div>
   <div id="hurt"></div>
@@ -195,8 +197,9 @@
       <tr><td>💥</td><td><b>Pound</b> (Gundamma): smash the ground and hurt every villain around you.</td></tr>
       <tr><td>🤝</td><td><b>Team-up</b>: stand next to each other and Gundamma throws Bangara sky-high. You can land on rooftops!</td></tr>
       <tr><td>🔁</td><td><b>Swap</b> heroes (solo). Your partner follows you and fights by your side.</td></tr>
+      <tr><td>🛺</td><td><b>Drive</b>: walk up to an auto-rickshaw, bike or jeep and tap the vehicle button. Stick = steer and accelerate, pull back to brake/reverse, ⤒ = horn. Your partner rides along and can shoot from the back. Run villains over!</td></tr>
       <tr><td>💬</td><td><b>Talk</b> appears when you're next to the silent friend.</td></tr>
-      <tr><td>⌨️</td><td>Keyboard: WASD move · Space jump · F fire · Shift special · Q team-up · Tab swap · E talk · M map</td></tr>
+      <tr><td>⌨️</td><td>Keyboard: WASD move · Space jump/horn · F fire · Shift special · Q team-up · Tab swap · V vehicle · E talk · M map</td></tr>
     </table>
     <h4 class="hh">📖 Each chapter</h4>
     <ol class="help">
