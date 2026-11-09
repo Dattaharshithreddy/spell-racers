@@ -202,6 +202,7 @@ function drawGround(Wd,d,gy,u,t){
 /* ================= THE CHARACTER RIG =================
    Feet at (0,0), facing right, ~74 units tall. pose = {ph, air, vy, slide, stun, idle, win, t, blink} */
 function drawCritter(c,R,pose,lw){
+  if(typeof drawSpriteRunner==="function"&&drawSpriteRunner(c,R,pose))return;
   lw=lw||2.4;const t=pose.t||0;
   c.save();c.lineJoin="round";c.lineCap="round";
   const air=pose.air,sl=pose.slide||0,ph=pose.ph||0;
@@ -462,8 +463,9 @@ function drawYaksha(x,y,u,talk,c,t){
 function portrait(canvas,R,opts){
   opts=opts||{};const d=Math.min(2,devicePixelRatio||1),w=canvas.clientWidth||canvas.width,h=canvas.clientHeight||canvas.height;
   canvas.width=w*d;canvas.height=h*d;const c=canvas.getContext("2d");c.setTransform(d,0,0,d,0,0);c.clearRect(0,0,w,h);
-  let s=h/104*(opts.zoom||1);
-  if(opts.head){s=h/46;c.translate(w/2-8*s,h*.55+58*s)}else c.translate(w/2-4*s,h-(opts.pad??4));c.scale(s,s);
+  const im=typeof SPR_IMG!=="undefined"&&SPR_IMG[R.id],spr=im&&im.complete&&im.naturalWidth;
+  let s=h/(spr?142:104)*(opts.zoom||1);
+  if(opts.head){s=h/(spr?62:46);c.translate(w/2-(spr?4:8)*s,h*.55+(spr?72:58)*s)}else c.translate(w/2-4*s,h-(opts.pad??4));c.scale(s,s);
   if(opts.locked){c.globalAlpha=.9;c.filter="brightness(0) opacity(.45)"}
   drawCritter(c,R,{idle:!opts.run,ph:opts.ph||0,t:opts.t||0,win:opts.win,happy:true});
   c.filter="none";

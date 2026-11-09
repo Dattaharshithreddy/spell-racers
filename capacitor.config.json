@@ -1,0 +1,7 @@
+{
+  "appId": "com.spellracers.karnataka",
+  "appName": "Spell Racers",
+  "webDir": "www",
+  "backgroundColor": "#170F33",
+  "android": { "allowMixedContent": false }
+}

@@ -1,0 +1,5 @@
+node_modules/
+www/
+android/
+img/runners/_f/
+package-lock.json

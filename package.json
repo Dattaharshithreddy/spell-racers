@@ -1,0 +1,16 @@
+{
+  "name": "spell-racers",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Spell Racers – race across Karnataka and learn English words with Kannada meanings.",
+  "scripts": {
+    "web": "node scripts/build-web.js",
+    "android:add": "npx cap add android",
+    "android:sync": "npm run web && npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.0",
+    "@capacitor/cli": "^7.4.0",
+    "@capacitor/core": "^7.4.0"
+  }
+}
