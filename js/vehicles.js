@@ -3,7 +3,6 @@
 import * as THREE from "three";
 import { GLTFLoader } from "../vendor/addons/loaders/GLTFLoader.js";
 import { heightAt, districtAt, rng, W } from "./world.js";
-import { toonify } from "./chars.js";
 
 const V3 = THREE.Vector3;
 const SCALE = 1.25;
@@ -20,14 +19,64 @@ export const VS = { list: [], src: {}, ctx: null, scene: null };
 export async function loadVehicles(scene, ctx) {
   VS.scene = scene; VS.ctx = ctx;
   const gl = await new GLTFLoader().loadAsync("assets/vehicles.glb");
-  for (const c of gl.scene.children) { toonify(c, { outline: 0.02 }); VS.src[c.name.replace("veh_", "")] = c; }
+  const env = ctx.renderer ? studioEnv(ctx.renderer) : null, mats = new Map();
+  for (const c of gl.scene.children) {
+    c.traverse((o) => {
+      if (/^wheel_/.test(o.name)) o.name = o.name.replace(/\d+$/, "");     // "wheel_fl001" -> "wheel_fl"
+      if (o.isMesh) { o.material = carMat(o.material, env, mats); o.frustumCulled = true; }
+    });
+    c.add(contactShadow(c));
+    VS.src[c.name.replace("veh_", "")] = c;
+  }
+}
+// ---- film-look materials: clear-coated paint, chrome and tinted glass reflecting a sky studio
+function carMat(src, env, cache) {
+  if (cache.has(src)) return cache.get(src);
+  const n = (src.name || "").toLowerCase(), base = { vertexColors: true, envMap: env };
+  let m;
+  if (/paint/.test(n)) m = new THREE.MeshPhysicalMaterial({ ...base, roughness: 0.38, metalness: 0.15, clearcoat: 1, clearcoatRoughness: 0.08, envMapIntensity: 0.55 });
+  else if (/chrome/.test(n)) m = new THREE.MeshStandardMaterial({ ...base, roughness: 0.14, metalness: 1, envMapIntensity: 1.2 });
+  else if (/alloy/.test(n)) m = new THREE.MeshStandardMaterial({ ...base, roughness: 0.3, metalness: 0.85, envMapIntensity: 1.3 });
+  else if (/glass/.test(n)) m = new THREE.MeshPhysicalMaterial({ ...base, roughness: 0.05, metalness: 0.2, clearcoat: 1, envMapIntensity: 0.9, transparent: true, opacity: 0.88 });
+  else if (/lamp|tail|amber/.test(n)) m = new THREE.MeshStandardMaterial({ ...base, roughness: 0.15, emissive: 0xffffff, emissiveIntensity: /lamp/.test(n) ? 0.9 : 0.55, envMapIntensity: 1 });
+  else if (/tyre/.test(n)) m = new THREE.MeshStandardMaterial({ ...base, roughness: 0.92, metalness: 0, envMapIntensity: 0.35 });
+  else m = new THREE.MeshStandardMaterial({ ...base, roughness: Math.max(0.45, src.roughness ?? 0.6), metalness: 0, envMapIntensity: 0.6 });
+  if (/lamp|tail|amber/.test(n)) m.emissiveMap = null;
+  m.name = src.name; cache.set(src, m); return m;
+}
+function studioEnv(renderer) {
+  // a small procedural sky dome: blue zenith, warm bright horizon band, a sun hotspot, dark ground
+  const sc = new THREE.Scene(), geo = new THREE.SphereGeometry(10, 48, 24), col = [];
+  const p = geo.attributes.position, c = new THREE.Color(), sun = new V3(0.45, 0.55, -0.7).normalize(), v = new V3();
+  for (let i = 0; i < p.count; i++) {
+    v.fromBufferAttribute(p, i).normalize(); const y = v.y;
+    if (y > 0) c.setRGB(0.55, 0.72, 1.0).lerp(new THREE.Color(1.0, 0.95, 0.86), Math.pow(1 - y, 4));
+    else c.setRGB(0.32, 0.29, 0.25).lerp(new THREE.Color(0.75, 0.7, 0.62), Math.pow(1 + y, 6));
+    const s = Math.max(0, v.dot(sun)); c.addScalar(Math.pow(s, 60) * 6);
+    col.push(c.r * 1.4, c.g * 1.4, c.b * 1.4);
+  }
+  geo.setAttribute("color", new THREE.Float32BufferAttribute(col, 3));
+  sc.add(new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ vertexColors: true, side: THREE.BackSide })));
+  const pm = new THREE.PMREMGenerator(renderer), rt = pm.fromScene(sc, 0.02); pm.dispose();
+  return rt.texture;
+}
+let shadowTex = null;
+function contactShadow(root) {
+  if (!shadowTex) {
+    const cv = document.createElement("canvas"); cv.width = cv.height = 64; const x = cv.getContext("2d");
+    const g = x.createRadialGradient(32, 32, 4, 32, 32, 32); g.addColorStop(0, "rgba(0,0,0,0.55)"); g.addColorStop(0.6, "rgba(0,0,0,0.3)"); g.addColorStop(1, "rgba(0,0,0,0)");
+    x.fillStyle = g; x.fillRect(0, 0, 64, 64); shadowTex = new THREE.CanvasTexture(cv);
+  }
+  const box = new THREE.Box3().setFromObject(root), sz = new V3(); box.getSize(sz);
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(sz.x * 1.25, sz.z * 1.15), new THREE.MeshBasicMaterial({ map: shadowTex, transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -6, polygonOffsetUnits: -12 }));
+  m.rotation.x = -Math.PI / 2; m.position.y = 0.04; m.name = "shadow"; m.renderOrder = 1; return m;
 }
 export function makeVehicle(type, x, z, yaw) {
   const T = VT[type], obj = VS.src[type].clone(true); obj.scale.setScalar(SCALE);
   const wheels = []; obj.traverse((o) => { if (/^wheel/.test(o.name)) wheels.push(o); });
   VS.scene.add(obj);
   const v = { id: VS.list.length, type, T, obj, wheels, pos: new V3(x, 0, z), yaw, speed: 0, steer: 0, vy: 0, pitch: 0, roll: 0, seats: [null, null], net: null, honk: 0 };
-  v.pos.y = VS.ctx.groundAt(x, z, 999); place(v);
+  v.pos.y = VS.ctx.groundAt(x, z, heightAt(x, z) + 1.5); place(v);
   VS.list.push(v); return v;
 }
 /** deterministic parking spots: one auto + one bike at each landmark, more in towns */
@@ -44,9 +93,14 @@ export function spawnVehicles(chapters) {
     for (let k = 0, tries = 0; k < n && tries < 40; tries++) {
       const a = r() * 6.28, d = 6 + r() * t.r * 0.8, x = t.x + Math.cos(a) * d, z = t.z + Math.sin(a) * d;
       if (heightAt(x, z) < 0.8 || districtAt(x, z) === 0 || VS.ctx.blocked(x, z, 2.4)) continue;
+      if ((W.nearRoad && W.nearRoad(x, z, 2.5)) || onStreet(x, z)) continue;      // park off the carriageway
       makeVehicle(pick(), x, z, r() * 6.28); k++;
     }
   }
+}
+function onStreet(x, z) {
+  for (const s of W.streets || []) for (const p of s) if (Math.abs(p[0] - x) < 6 && Math.abs(p[1] - z) < 6 && Math.hypot(p[0] - x, p[1] - z) < 5.6) return true;
+  return false;
 }
 function place(v) {
   v.obj.position.copy(v.pos);
@@ -85,7 +139,10 @@ export function drive(v, input, dt) {
   const p = { x: v.pos.x, z: v.pos.z, y: v.pos.y + 0.3 }; ctx.collide(p, T.r);
   const pushed = Math.hypot(p.x - v.pos.x, p.z - v.pos.z);
   if (pushed > 0.02) { v.pos.x = p.x; v.pos.z = p.z; if (Math.abs(v.speed) > 9) ctx.crash(v); v.speed *= Math.max(0.2, 1 - pushed * 2); }
-  if (districtAt(v.pos.x, v.pos.z) === 0 || heightAt(v.pos.x, v.pos.z) < 0.35) { v.pos.x = prev.x; v.pos.z = prev.z; v.speed = -v.speed * 0.25; ctx.edge(v); }
+  const bad = (x, z) => districtAt(x, z) === 0 || heightAt(x, z) < 0.35;
+  if (bad(v.pos.x, v.pos.z) && !bad(prev.x, prev.z)) { v.pos.x = prev.x; v.pos.z = prev.z; v.speed = -v.speed * 0.25; ctx.edge(v); }
+  else if (!bad(v.pos.x, v.pos.z)) (v.safe || (v.safe = new V3())).set(v.pos.x, v.pos.y, v.pos.z);
+  else if (v.safe) { v.pos.x += (v.safe.x - v.pos.x) * Math.min(1, dt * 2); v.pos.z += (v.safe.z - v.pos.z) * Math.min(1, dt * 2); }   // already outside: drift back
   // ground follow + airtime off ridges
   const g = ctx.groundAt(v.pos.x, v.pos.z, v.pos.y + 0.8);
   v.vy -= 26 * dt; v.pos.y += v.vy * dt;

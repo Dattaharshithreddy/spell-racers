@@ -2,24 +2,35 @@
 // They brake and honk for anything in front, knock heroes back, and can be carjacked.
 import * as THREE from "three";
 import { VS, VT, animateVehicle } from "./vehicles.js";
-import { W, heightAt } from "./world.js";
+import { W, heightAt, districtAt } from "./world.js";
 
 const V3 = THREE.Vector3;
 export const TR = { paths: [], buckets: new Map(), cars: [], pool: {}, ctx: null, scene: null, max: 16, spawnT: 0 };
 const B = 120;
+// half width / half length (world units, already scaled) used for lane-aware braking
+const DIM = { auto: [0.85, 1.9], bike: [0.45, 1.3], bus: [1.6, 5.8], car: [1.1, 2.35], jeep: [1.15, 2.35] };
+const ext = (type, relYaw) => { const [hw, hl] = DIM[type] || [1, 2]; return Math.abs(Math.sin(relYaw)) * hl + Math.abs(Math.cos(relYaw)) * hw; };
 
 export function initTraffic(scene, ctx) {
   TR.scene = scene; TR.ctx = ctx;
-  const add = (pts, kind) => {
-    if (!pts || pts.length < 3) return;
-    const P = densify(pts, 6); const cum = [0];
+  const push = (P, kind, w) => {
+    if (P.length < 3) return;
+    const cum = [0];
     for (let i = 1; i < P.length; i++) cum.push(cum[i - 1] + Math.hypot(P[i][0] - P[i - 1][0], P[i][1] - P[i - 1][1]));
     if (cum[cum.length - 1] < 40) return;
-    const id = TR.paths.length; TR.paths.push({ P, cum, len: cum[cum.length - 1], kind });
+    const id = TR.paths.length; TR.paths.push({ P, cum, len: cum[cum.length - 1], kind, lane: kind === "hw" ? w / 4 : 1.8 });
     for (let i = 0; i < P.length; i += 3) { const k = `${Math.floor(P[i][0] / B)},${Math.floor(P[i][1] / B)}`; if (!TR.buckets.has(k)) TR.buckets.set(k, []); TR.buckets.get(k).push([id, i]); }
   };
-  for (const r of W.meta.roads) add(r.pts.map((p) => [p[0], p[1]]), "hw");
-  for (const s of W.streets || []) add(s, "st");
+  // split a road wherever it runs into water, the border, a landmark or a building, so cars never drive through things
+  const ok = (x, z) => heightAt(x, z) >= 0.6 && districtAt(x, z) > 0 && !(ctx.blocked && ctx.blocked(x, z, 1.4));
+  const add = (pts, kind, w) => {
+    if (!pts || pts.length < 2) return;
+    let run = [];
+    for (const p of densify(pts, 6)) { if (ok(p[0], p[1])) run.push(p); else { push(run, kind, w); run = []; } }
+    push(run, kind, w);
+  };
+  for (const r of W.meta.roads) add(r.pts.map((p) => [p[0], p[1]]), "hw", r.w || 7.4);
+  for (const s of W.streets || []) add(s, "st", 7.2);
 }
 function densify(pts, step) {
   const out = [];
@@ -51,7 +62,7 @@ function spawn(focus) {
     const [pid, idx] = cands[(Math.random() * cands.length) | 0], path = TR.paths[pid], p = path.P[idx];
     const d = Math.hypot(p[0] - focus.x, p[1] - focus.z); if (d < 70 || d > 260) continue;
     if (heightAt(p[0], p[1]) < 0.6) continue;
-    if (TR.cars.some((c) => Math.hypot(c.pos.x - p[0], c.pos.z - p[1]) < 16)) continue;
+    if (TR.cars.some((c) => Math.hypot(c.pos.x - p[0], c.pos.z - p[1]) < 16) || VS.list.some((v) => Math.hypot(v.pos.x - p[0], v.pos.z - p[1]) < 10)) continue;
     const type = pickType(path.kind), T = VT[type], obj = obtain(type);
     const wheels = []; obj.traverse((o) => { if (/^wheel/.test(o.name)) wheels.push(o); });
     const dir = Math.random() < 0.5 ? 1 : -1;
@@ -62,11 +73,11 @@ function spawn(focus) {
 }
 function place(c, dt, snap) {
   const [x, z, a] = at(c.path, c.s), yaw = c.dir > 0 ? a : a + Math.PI;
-  const lane = c.path.kind === "hw" ? 1.15 : 1.8;            // keep left
+  const lane = c.path.lane;                                     // keep left
   const tx = x + Math.cos(yaw) * lane, tz = z - Math.sin(yaw) * lane;
   if (snap) { c.pos.set(tx, 0, tz); c.yaw = yaw; }
   else { c.pos.x += (tx - c.pos.x) * Math.min(1, dt * 8); c.pos.z += (tz - c.pos.z) * Math.min(1, dt * 8); let d = yaw - c.yaw; while (d > Math.PI) d -= Math.PI * 2; while (d < -Math.PI) d += Math.PI * 2; c.steer = THREE.MathUtils.clamp(-d * 3, -1, 1); c.yaw += d * Math.min(1, dt * 5); }
-  c.pos.y = TR.ctx.groundAt(c.pos.x, c.pos.z, c.pos.y + 1.5);
+  c.pos.y = TR.ctx.groundAt(c.pos.x, c.pos.z, heightAt(c.pos.x, c.pos.z) + 1.2);
 }
 function release(i) { const c = TR.cars[i]; c.obj.visible = false; (TR.pool[c.type] || (TR.pool[c.type] = [])).push(c.obj); TR.cars.splice(i, 1); }
 
@@ -78,11 +89,20 @@ export function updateTraffic(dt, focus, heroes) {
     const fx = Math.sin(c.yaw), fz = Math.cos(c.yaw);
     // anything in my lane ahead?
     let block = false, blockHero = null;
-    const check = (x, z, r) => { const dx = x - c.pos.x, dz = z - c.pos.z, d = Math.hypot(dx, dz); if (d < 0.1 || d > 9 + c.T.r) return false; return (dx * fx + dz * fz) / d > 0.75 && d < 7 + c.T.r + r; };
+    const myW = DIM[c.type][0], myL = DIM[c.type][1];
+    // something in MY lane ahead? (lateral overlap test, so oncoming traffic in the other lane doesn't stop us)
+    const check = (x, z, halfW, halfL = halfW) => {
+      const dx = x - c.pos.x, dz = z - c.pos.z, along = dx * fx + dz * fz;
+      if (along <= 0 || along > myL + halfL + 5.5) return false;
+      return Math.abs(dx * fz - dz * fx) < myW + halfW + 0.35;
+    };
     for (const H of heroes) if (!H.veh && check(H.pos.x, H.pos.z, 0.5)) { block = true; blockHero = H; }
-    for (const v of VS.list) if (check(v.pos.x, v.pos.z, v.T.r)) block = true;
-    for (const o of TR.cars) if (o !== c && check(o.pos.x, o.pos.z, o.T.r)) block = true;
+    for (const v of VS.list) if (check(v.pos.x, v.pos.z, ext(v.type, v.yaw - c.yaw), ext(v.type, v.yaw - c.yaw + Math.PI / 2))) block = true;
+    for (const o of TR.cars) if (o !== c && check(o.pos.x, o.pos.z, ext(o.type, o.yaw - c.yaw), ext(o.type, o.yaw - c.yaw + Math.PI / 2))) block = true;
     if (c.wait > 0) { c.wait -= dt; block = true; }
+    // jammed for too long (parked car, crossing traffic)? turn around
+    c.jam = block && c.wait <= 0 ? (c.jam || 0) + dt : 0;
+    if (c.jam > 5) { c.dir *= -1; c.jam = 0; c.wait = 0.8; }
     const target = block ? 0 : c.cruise;
     c.speed += THREE.MathUtils.clamp(target - c.speed, -30 * dt, 8 * dt);
     if (blockHero && TR.ctx.colourAt(c.pos) && performance.now() / 1000 - c.honk > 2.5) { c.honk = performance.now() / 1000; TR.ctx.honk(c); }

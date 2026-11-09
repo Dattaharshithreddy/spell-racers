@@ -234,10 +234,21 @@ export function buildRiversRoads(scene) {
   }
   const rmat = patchRestore(new THREE.MeshLambertMaterial({ color: 0x3a9ccf, emissive: 0x0e3550 }));
   const rmesh = new THREE.Mesh(mergeGeometries(rivers), rmat); rmesh.name = "rivers"; scene.add(rmesh);
+  // two-lane highways (one lane each way) and a lookup so towns/trees keep off the tarmac
+  const RB = 40, rgrid = new Map();
   for (const r of W.meta.roads) {
-    const pts = densify(r.pts, 3); const w = r.type === "Major Highway" ? 4.2 : 3.2;
+    const pts = densify(r.pts, 3); const w = r.type === "Major Highway" ? 9 : 7.4; r.w = w;
     roads.push(ribbon(pts, w, (x, z) => heightAt(x, z) + 0.05));
+    for (const p of pts) { const k = `${Math.floor(p[0] / RB)},${Math.floor(p[1] / RB)}`; if (!rgrid.has(k)) rgrid.set(k, []); rgrid.get(k).push(p[0], p[1], w / 2); }
   }
+  W.nearRoad = (x, z, pad = 0) => {
+    const cx = Math.floor(x / RB), cz = Math.floor(z / RB);
+    for (let i = -1; i <= 1; i++) for (let j = -1; j <= 1; j++) {
+      const a = rgrid.get(`${cx + i},${cz + j}`); if (!a) continue;
+      for (let k = 0; k < a.length; k += 3) if (Math.hypot(a[k] - x, a[k + 1] - z) < a[k + 2] + pad) return true;
+    }
+    return false;
+  };
   const tex = roadTexture();
   const mat = patchRestore(new THREE.MeshLambertMaterial({ map: tex, polygonOffset: true, polygonOffsetFactor: -4, polygonOffsetUnits: -8 }));
   const mesh = new THREE.Mesh(mergeGeometries(roads), mat); mesh.name = "roads"; scene.add(mesh);
@@ -282,6 +293,7 @@ export function buildVegetation(scene, colliders = []) {
   const mats = {};
   for (const k in kinds) mats[k] = patchRestore(new THREE.MeshLambertMaterial({ vertexColors: true, flatShading: true }), { instanced: true });
   const add = (kind, x, z, s, rot, did) => {
+    if (W.nearRoad && W.nearRoad(x, z, kind === "rock" ? 3.5 : 2)) return;
     const key = `${Math.floor(x / 240)},${Math.floor(z / 240)}`;
     if (!groups.has(key)) groups.set(key, { tree: [], palm: [], rock: [] });
     const y = heightAt(x, z) - 0.2;

@@ -202,6 +202,7 @@ export function buildTowns(scene, colliders) {
       const x = city.x + lx * ca - lz * sa, z = city.z + lx * sa + lz * ca;
       if (heightAt(x, z) < 0.6 || districtAt(x, z) === 0) continue;
       if (W.reserved && W.reserved.some((p) => Math.hypot(p.x - x, p.z - z) < p.r)) continue;
+      if (W.nearRoad && W.nearRoad(x, z, 8.5)) continue;            // keep the highway clear through town
       // face the nearest street row
       const face = sz === 0 ? Math.PI : 0;                       // row 0 faces -z street, row 1 faces +z street
       const t = d / R; let type;

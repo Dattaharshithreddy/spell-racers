@@ -69,7 +69,7 @@ async function boot() {
     step(80, "Arming the heroes…");
     await loadCombat(scene, combatCtx());
     for (const h of [b, g]) { scene.add(h.holder); scene.add(h.holder.userData.shadow); const H = makeHeroState(h); S.heroes[h.kind] = H; equip(H); initLegs(H); }
-    await loadVehicles(scene, vehCtx());
+    await loadVehicles(scene, { ...vehCtx(), renderer });
     step(88, "Placing the landmarks…"); await tick();
     placeLandmarks();
     spawnVehicles(CHAPTERS);
@@ -544,8 +544,15 @@ function exitVehicle(H, announce = true) {
   const R = H.veh; if (!R) return; const v = R.v;
   v.seats[R.seat] = null; H.veh = null;
   const side = R.seat === 0 ? -1 : 1, a = v.yaw;
-  H.pos.set(v.pos.x + Math.cos(a) * (v.T.r + 0.9) * side, 0, v.pos.z - Math.sin(a) * (v.T.r + 0.9) * side);
-  H.pos.y = groundAt(H.pos.x, H.pos.z, 999); H.vel.set(0, 0, 0); H.vy = 0; H.yaw = v.yaw;
+  const off = v.T.r + 0.9, tries = [[side, 0], [-side, 0], [0, -1], [0, 1]];
+  let px = v.pos.x, pz = v.pos.z;
+  for (const [sx, bz] of tries) {
+    const x = v.pos.x + Math.cos(a) * off * sx + Math.sin(a) * (off + 1) * bz, z = v.pos.z - Math.sin(a) * off * sx + Math.cos(a) * (off + 1) * bz;
+    if (landOk(x, z) && !solidAt(x, heightAt(x, z) + 1, z)) { px = x; pz = z; break; }
+  }
+  if (!landOk(px, pz)) { const s = H.safe || nearestLand(px, pz); px = s.x; pz = s.z; }
+  H.pos.set(px, 0, pz);
+  H.pos.y = groundAt(px, pz, Math.max(v.pos.y, heightAt(px, pz)) + 1.5); H.vel.set(0, 0, 0); H.vy = 0; H.yaw = v.yaw;
   H.h.model.rotation.x = 0;
   if (announce && S.mode !== "solo" && H.ctrl === "me") Net.send("vseat", { i: v.id, k: H.kind, s: -1 });
 }
@@ -592,7 +599,7 @@ function updateHeroInVehicle(H, dt) {
 
 function trafficCtx() {
   return {
-    groundAt,
+    groundAt, blocked: vehCtx().blocked,
     colourAt: (p) => restore.levels[districtAt(p.x, p.z)] > 0.5,
     honk: (c) => { if (S.playing && c.pos.distanceTo(active().pos) < 70) Sound.sfx("horn"); },
     crash: (v) => { Sound.sfx("crash"); if (driverIsMe(v)) shake(0.4); },
@@ -629,7 +636,7 @@ function updateHero(H, dt) {
     if (L.veh && L.veh.seat === 0 && !L.veh.v.seats[1] && H.pos.distanceTo(L.pos) < 40) { enterVehicle(H, L.veh.v, 1, false); return; }
     const tx = L.pos.x - Math.sin(L.yaw) * back + Math.cos(L.yaw) * 1.3, tz = L.pos.z - Math.cos(L.yaw) * back - Math.sin(L.yaw) * 1.3;
     const dx = tx - H.pos.x, dz = tz - H.pos.z, d = Math.hypot(dx, dz);
-    if (d > 70) H.pos.set(tx, groundAt(tx, tz, 999), tz);
+    if (d > 70) { const ok = landOk(tx, tz), x = ok ? tx : L.pos.x, z = ok ? tz : L.pos.z; H.pos.set(x, groundAt(x, z, L.pos.y + 1.5), z); H.vel.set(0, 0, 0); }
     else if (d > 1.2) { const k = Math.min(1, (d - 1.2) / 3); mx = dx / d * k; mz = dz / d * k; }
     if (L.pos.y > H.pos.y + 1.6 && H.ground && d < 6 && H.throwT <= 0) wantJump = true;
     // AI partner fights too
@@ -653,9 +660,11 @@ function updateHero(H, dt) {
   collide(H.pos, H.kind === "gundamma" ? 0.5 : 0.38);
   const dI = districtAt(H.pos.x, H.pos.z), hg = heightAt(H.pos.x, H.pos.z);
   if (dI === 0 || hg < 0.25) {
-    H.pos.x = prev.x; H.pos.z = prev.z; H.vel.x *= -0.2; H.vel.z *= -0.2;
-    if (H.ctrl === "me" && S.t - (S.lastWall || 0) > 4) { S.lastWall = S.t; UI.toast(dI === 0 && hg >= 0.25 ? "🌫️ Mouna's silence fog is too thick beyond Karnataka's border." : "🌊 That's the Arabian Sea. Too far to swim!"); }
-  }
+    if (landOk(prev.x, prev.z)) {          // stepping out: bounce back
+      H.pos.x = prev.x; H.pos.z = prev.z; H.vel.x *= -0.2; H.vel.z *= -0.2;
+      if (H.ctrl === "me" && S.t - (S.lastWall || 0) > 4) { S.lastWall = S.t; UI.toast(dI === 0 && hg >= 0.25 ? "🌫️ Mouna's silence fog is too thick beyond Karnataka's border." : "🌊 That's the Arabian Sea. Too far to swim!"); }
+    } else rescue(H, dt);                   // already outside (knocked/dashed/dropped there): never trap them
+  } else { H.offT = 0; if (H.ground) (H.safe || (H.safe = new V3())).copy(H.pos); }
   H.vy -= G_ACC * dt * (H.pound > 0 && !H.ground ? 2.4 : 1); H.pos.y += H.vy * dt;
   const gnd = groundAt(H.pos.x, H.pos.z, H.pos.y);
   if (H.pos.y <= gnd) { if (!H.ground && H.pound > 0) poundImpact(H); H.pos.y = gnd; H.vy = 0; H.ground = true; H.jumps = 0; }
@@ -666,6 +675,26 @@ function updateHero(H, dt) {
   if (H.aim && H.aim.t > 0) { const ty = Math.atan2(H.aim.dir.x, H.aim.dir.z); H.yaw += angDiff(H.yaw, ty) * Math.min(1, dt * 18); }
   else if (sp > 0.6) { const ty = Math.atan2(H.vel.x, H.vel.z); H.yaw += angDiff(H.yaw, ty) * Math.min(1, dt * 12); }
   animateHero(H, dt);
+}
+function landOk(x, z) { return districtAt(x, z) > 0 && heightAt(x, z) >= 0.25; }
+/** pull a hero who ended up past the border/sea back to the last safe ground, then snap them there */
+function rescue(H, dt) {
+  H.offT = (H.offT || 0) + dt;
+  const s = H.safe || nearestLand(H.pos.x, H.pos.z);
+  const dx = s.x - H.pos.x, dz = s.z - H.pos.z, d = Math.hypot(dx, dz) || 1;
+  H.pos.x += dx / d * Math.min(d, 8 * dt); H.pos.z += dz / d * Math.min(d, 8 * dt);
+  if (H.offT > 1.2 || d < 0.5) {
+    H.pos.set(s.x, 0, s.z); H.pos.y = groundAt(s.x, s.z, (s.y ?? heightAt(s.x, s.z)) + 1.5);
+    H.vel.set(0, 0, 0); H.vy = 0; H.offT = 0;
+    if (H.ctrl === "me") UI.toast("↩️ Back to safe ground!", "", 1600);
+  }
+}
+function nearestLand(x, z) {
+  for (let r = 4; r < 400; r += 6) for (let k = 0; k < 16; k++) {
+    const a = k / 16 * Math.PI * 2, px = x + Math.cos(a) * r, pz = z + Math.sin(a) * r;
+    if (landOk(px, pz) && heightAt(px, pz) > 0.8) return new V3(px, heightAt(px, pz), pz);
+  }
+  const c = CHAPTERS[0]; return new V3(c.x, heightAt(c.x, c.z), c.z);
 }
 function fire(H) {
   const W2 = WEAPON[H.kind]; H.fireCd = W2.cd;
@@ -1053,6 +1082,6 @@ function bindUI() {
   document.addEventListener("visibilitychange", () => { if (document.hidden && S.playing) { const H = active(); Save.d.pos = [H.pos.x, H.pos.z, H.yaw]; Save.write(); } });
 }
 
-window.MAATHU = { S, W, CB, VS, TR, Voice, damageVillain, restoreChapter, travelTo, placeHeroesAt, camera, Save, CHAPTERS, groundAt, solidAt, endTutorial };
+window.MAATHU = { S, W, CB, VS, TR, Voice, damageVillain, restoreChapter, travelTo, placeHeroesAt, camera, Save, CHAPTERS, groundAt, solidAt, endTutorial, landOk, heightAt, districtAt, makeVehicle };
 boot();
 if ("serviceWorker" in navigator && location.protocol === "https:" && !(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform())) navigator.serviceWorker.register("sw.js").catch(() => {});
