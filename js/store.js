@@ -59,7 +59,7 @@ function discoveredCount(){return Object.values(PROG.words).filter(r=>r.seen).le
 function dueWords(){const now=Date.now();return allWords().filter(w=>{const r=PROG.words[w.a];return r&&r.seen&&r.due<=now})}
 function allWords(){
   const out=[];
-  WORLDS.forEach((Wd,wi)=>Wd.words.forEach(x=>out.push({...x,world:Wd.name,wi})));
+  PACKS.forEach((P,pk)=>P.words.forEach(x=>out.push({...x,world:P.topic,wi:pk})));
   Object.entries(POWERS).forEach(([w,p])=>out.push({a:w.toLowerCase(),m:p.m,k:p.k,p:p.icon,world:"Power words",wi:-1}));
   return out;
 }
@@ -84,11 +84,14 @@ function checkAchievements(ctx){
   if(discoveredCount()>=25)u("words25");
   if(masteredCount()>=10)u("master10");
   if(PROG.streak.n>=3)u("streak3");
-  if(WORLDS.every((w,i)=>(PROG.stars[i]||0)>=1))u("allworlds");
+  if(PLACES.every((w,i)=>(PROG.stars[i]||0)>=1))u("allworlds");
+  if((PROG.stars[9]||0)>=1)u("lvl10");if((PROG.stars[24]||0)>=1)u("lvl25");if((PROG.stars[PACKS.length-1]||0)>=1)u("allpacks");
+  if(discoveredCount()>=100)u("words100");
   return got;
 }
 
 /* ---------- unlocks ---------- */
 function worldUnlocked(i){return i===0||(PROG.stars[i-1]||0)>=1}
+function frontier(){let i=0;while((PROG.stars[i]||0)>=1)i++;return i}
 function runnerById(id){return RUNNERS.find(r=>r.id===id)||RUNNERS[0]}
 function trailById(id){return TRAILS.find(r=>r.id===id)||TRAILS[0]}

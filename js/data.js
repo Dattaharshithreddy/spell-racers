@@ -94,7 +94,10 @@ const HZ={
   branch:    {kind:"duck",w:30,lo:40, msg:"Branch!"},
   arch:      {kind:"duck",w:26,lo:40, msg:"Low arch!"},
   puddle:    {kind:"slow",w:32, msg:"Splash!"},
-  mud:       {kind:"slow",w:34, msg:"Muddy!"}
+  mud:       {kind:"slow",w:34, msg:"Muddy!"},
+  boat:      {kind:"jump",w:32,h:26, msg:"Boat!"},
+  gulls:     {kind:"duck",w:34,lo:40, msg:"Squawk!"},
+  frond:     {kind:"duck",w:30,lo:40, msg:"Palm leaf!"}
 };
 
 /* Runners: original characters, purely cosmetic (all run at the same speed). */
@@ -129,5 +132,9 @@ const ACHIEVEMENTS=[
   {id:"master10",icon:"🎓",name:"Word Master",   desc:"Fully master 10 words"},
   {id:"streak3",icon:"🔥",name:"On Fire",        desc:"Play 3 days in a row"},
   {id:"flawless",icon:"💎",name:"Flawless",      desc:"Finish a race without getting hit"},
-  {id:"allworlds",icon:"🗺️",name:"Karnataka Explorer",desc:"Earn a star in every world"}
+  {id:"lvl10",  icon:"🧭",name:"Traveller",      desc:"Clear level 10 of the journey"},
+  {id:"lvl25",  icon:"🚀",name:"Voyager",        desc:"Clear level 25 of the journey"},
+  {id:"words100",icon:"📚",name:"Word Hoarder",  desc:"Discover 100 words"},
+  {id:"allworlds",icon:"🗺️",name:"Karnataka Explorer",desc:"Earn a star in all 23 places"},
+  {id:"allpacks",icon:"👑",name:"Word Royalty",  desc:"Clear every word pack and start the Review Tours"}
 ];

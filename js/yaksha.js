@@ -31,7 +31,7 @@ function startYaksha(){
   stopMusic();playMusic("boss");sfx("roar");
   YK.lamps=[null,null,null];G.lampWords=[];
   UI.show("cave");cancelAnimationFrame(YK.raf);ykDraw();renderLamps();
-  const n=WORLDS[(WI+1)%WORLDS.length];
+  const n=LEVEL(WI+1);
   $y("cvTag").textContent="Yaksharaj · Guardian of the path";
   bubble(`<span class="big">Welcome, ${esc(PROG.name||"traveller")}.</span>I am <b>Yaksharaj</b>. Pass my three trials and the path to <b>${n.name}</b> will open.`);
   trial(`<div class="trial-map"><div><i>🧩</i>Riddle</div><div><i>🧱</i>Build</div><div><i>🎙️</i>Speak</div></div><button class="btn primary big" id="ykBegin">I'm ready</button>`);
@@ -118,7 +118,7 @@ function trialSpeak(){
 
 /* ---- the path opens ---- */
 function openPath(){
-  const lit=YK.lamps.filter(Boolean).length,n=WORLDS[(WI+1)%WORLDS.length];
+  const lit=YK.lamps.filter(Boolean).length,n=LEVEL(WI+1);
   $y("cvTag").textContent=lit?"The path is open":"Come back stronger";
   bubble(lit===3?`<span class="big">Splendid!</span>All three lamps burn bright. The path to <b>${n.name}</b> is yours.`:
     lit?`You lit <b>${lit} of 3</b> lamps. Remember the words you missed. The path to <b>${n.name}</b> is open.`:

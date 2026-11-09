@@ -7,7 +7,7 @@
    ============================================================ */
 let G=null,running=false,last=0,WI=0,FIN=10000;
 const GRAV=2600,JUMP1=880,JUMP2=720,BODY=58,BODY_SL=24;
-const WD=()=>WORLDS[WI%WORLDS.length];
+const WD=()=>LEVEL(WI);
 const rnd=(a,b)=>a+Math.random()*(b-a),pick=a=>a[Math.floor(Math.random()*a.length)];
 const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 function mkRng(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
@@ -66,7 +66,7 @@ function buildTrack(seed,study){
       // later in the race: occasional quick pairs
       if(x>FIN*.4&&r()<.25&&kind!=="slow"){const x2=x+rr2(260,320);G.hazards.push({x:x2,type:rp(w.pool[r()<.5?"jump":"duck"]),id:id++});x=x2}
     }
-    x+=rr2(520,780)*dif.hz*(1-WI*.02);
+    x+=rr2(520,780)*dif.hz*(1-Math.min(.22,WI*.007));
   }
   let ci=0;for(let cx=1600;cx<FIN-600;cx+=rr2(1300,1700)){
     if(G.gates.some(g=>Math.abs(g.x-cx)<560))continue;
@@ -81,7 +81,7 @@ function buildTrack(seed,study){
 function startRace(mode,seed,rival,study){
   audio();
   const dif=DIFF[PROG.settings.diff];
-  FIN=9600+WI%WORLDS.length*500;
+  FIN=9600+Math.min(2400,WI*70);
   const me=newRacer(PROG.name||"You",runnerById(PROG.runner),PROG.trail,false);
   G={mode,phase:"count",cnt:3.4,lastBeep:4,t:0,start:0,ts:1,tsT:1,hitstop:0,shake:0,parts:[],floats:[],seen:new Set(),newWords:[],
      host:!!(rival&&rival.host),lanes:[me],gate:null,tut:{on:!PROG.tut&&mode===1,step:0},speedLines:0,flashT:0,camKick:0};
@@ -271,7 +271,7 @@ function stepLane(L,i,dt){
   ["stun","boost","tired","weak","wet","flash","soar","magnet"].forEach(k=>L[k]=Math.max(0,L[k]-dt));
   if(L.wait>0){L.wait-=dt;return}
   const dif=DIFF[PROG.settings.diff],prog=L.d/FIN;
-  let v=(240+WI%5*6)*dif.speed*(1+prog*.12);
+  let v=(240+Math.min(45,WI*1.4))*dif.speed*(1+prog*.12);
   if(L.boost)v*=1.6;if(L.soar)v*=1.15;if(L.tired)v*=.6;if(L.wet)v*=.72;if(L.stun)v*=.32;
   // gentle rubber-banding keeps races close
   if(L.bot&&G.mode!==0){const p=G.lanes[0],gap=p.d-L.d;if(gap>650)v*=1.1;else if(gap<-900)v*=.93}
@@ -330,10 +330,10 @@ function botThink(L,i,v){
 /* ---------- rendering ---------- */
 function drawWorld(){
   const L=G.lanes[0],u=U(),gy=groundY(),px=PX(),t=G.t,Wd=WD();
-  const sec=Math.max(0,secAt(L.d)),wi=WI%WORLDS.length;
+  const sec=Math.max(0,secAt(L.d)),wi=Wd.pi;
   // blend the sky between sections
   const fp=L.d/FIN*4,s0=Math.min(3,Math.floor(fp)),s1=Math.min(3,s0+1),bl=clamp((fp-s0-.8)/.2,0,1);
-  const sk0=Wd.sky[s0],sk1=Wd.sky[s1],night=Wd.theme==="palace"&&sec===2,sunset=sec===3&&Wd.theme!=="falls"&&Wd.theme!=="forest";
+  const sk0=Wd.sky[s0],sk1=Wd.sky[s1],night=Wd.night===sec,sunset=sec===3&&Wd.theme!=="falls"&&Wd.theme!=="forest";
   ctx.save();
   if(G.shake>0&&PROG.settings.motion){const m=G.shake*12;ctx.translate(rnd(-m,m),rnd(-m,m)*.7)}
   drawSky(mix(sk0[0],sk1[0],bl),mix(sk0[1],sk1[1],bl),gy,sunset,night,t,u);
@@ -426,7 +426,7 @@ document.addEventListener("visibilitychange",()=>{if(document.hidden&&G&&running
 /* ---------- attract mode behind the menus ---------- */
 function startAttract(){
   if(G&&G.mode===0&&running)return;
-  FIN=1e9;const wi=WI%WORLDS.length;
+  FIN=1e9;
   G={mode:0,phase:"attract",t:0,ts:1,tsT:1,hitstop:0,shake:0,parts:[],floats:[],seen:new Set(),lanes:[],hazards:[],gates:[],chests:[],pads:[],tut:{on:false},flashT:0,camKick:0};
   const rs=shuffle(RUNNERS.filter(r=>r.id!==PROG.runner));
   [PROG.runner,rs[0].id,rs[1].id].forEach((id,i)=>{const L=newRacer("",runnerById(id),"dust",true,.97);L.d=-i*50;G.lanes.push(L);L.cards=[{w:"RUSH",n:0},{w:"SOAR",n:0},{w:"MANAGE",n:0}]});

@@ -42,9 +42,9 @@ const OPEN={
     $("hName").textContent=PROG.name||"Racer";
     const li=levelInfo(PROG.xp);$("hLvl").textContent=li.lvl;$("hXp").style.width=(li.pct*100)+"%";
     $("hCoins").textContent=PROG.coins;$("hStreak").querySelector("b").textContent=PROG.streak.n||0;
-    if(!worldUnlocked(WI%WORLDS.length))WI=0;
-    const w=WD(),wi=WI%WORLDS.length,st=PROG.stars[wi]||0;
-    $("hWorldTag").textContent=`World ${wi+1} · ${w.tag}`;$("hWorldName").textContent=w.name;$("hWorldKn").textContent=w.kn;
+    if(!worldUnlocked(WI))WI=frontier();
+    const w=WD(),wi=WI,st=PROG.stars[wi]||0;
+    $("hWorldTag").textContent=`Level ${wi+1} · ${w.topic}`;$("hWorldName").textContent=w.name;$("hWorldKn").textContent=w.kn;
     $("hWorldStars").innerHTML=[0,1,2].map(i=>`<i class="${i<st?"on":""}">★</i>`).join("");
     $("hWorldBg").style.background=`linear-gradient(160deg,${w.sky[0][0]},${w.sky[3][0]})`;$("hWorldBg").dataset.e=w.e;
     const dd=PROG.daily.date===today()&&PROG.daily.done;$("hDaily").classList.toggle("done",dd);$("hDailySub").textContent=dd?"Done today ✓":"×2 coins today";
@@ -52,16 +52,20 @@ const OPEN={
     G&&G.mode===0&&G.lanes[0]&&(G.lanes[0].R=R);
   },
   map(){
-    const p=$("mapPath");p.innerHTML="";
-    WORLDS.forEach((w,i)=>{const un=worldUnlocked(i),st=PROG.stars[i]||0;
-      const b=document.createElement("button");b.className="map-node"+(un?"":" locked")+(WI%WORLDS.length===i?" sel":"");b.style.setProperty("--a",w.sky[0][0]);b.style.setProperty("--b",w.sky[3][0]);b.style.setProperty("--off",(i%2?1:-1)*8+"px");
-      b.innerHTML=`<span class="mn-orb"><span>${un?w.e:"🔒"}</span></span><span class="mn-txt"><small>World ${i+1}</small><b>${w.name}</b><span class="kn">${w.kn}</span><span class="mn-stars">${[0,1,2].map(k=>`<i class="${k<st?"on":""}">★</i>`).join("")}</span>${un?"":`<em>Earn a ★ in ${WORLDS[i-1].name}</em>`}</span>`;
+    const p=$("mapPath");p.innerHTML="";const fr=frontier(),last=fr+3;
+    $("mapSub").textContent=`${fr} levels cleared · ${discoveredCount()} words found`;
+    for(let i=0;i<=last;i++){const w=LEVEL(i),un=worldUnlocked(i),st=PROG.stars[i]||0;
+      if(i%PLACES.length===0){const h=document.createElement("div");h.className="tour-head";h.innerHTML=i===0?"<b>Tour 1</b><span>Discover Karnataka</span>":`<b>Tour ${w.tour}</b><span>Faster races${i>=PACKS.length?" · Review words":" · New words"}</span>`;p.appendChild(h)}
+      const b=document.createElement("button");b.className="map-node"+(un?"":" locked")+(WI===i?" sel":"")+(i===fr?" cur":"");b.style.setProperty("--a",w.sky[0][0]);b.style.setProperty("--b",w.sky[3][0]);b.style.setProperty("--off",(i%2?1:-1)*8+"px");
+      b.innerHTML=`<span class="mn-orb"><span>${un?w.e:"🔒"}</span></span><span class="mn-txt"><small>Level ${i+1} · ${w.topic}</small><b>${w.name}</b><span class="kn">${w.kn}</span><span class="mn-stars">${[0,1,2].map(k=>`<i class="${k<st?"on":""}">★</i>`).join("")}</span>${un?"":`<em>Earn a ★ on level ${i}</em>`}</span>`;
       b.onclick=()=>{if(!un){sfx("bad");b.classList.remove("shake");void b.offsetWidth;b.classList.add("shake");return}sfx("ui");WI=i;LAYERS={};if(G&&G.mode===0)G.hazards.forEach(h=>{const k=HZ[h.type].kind;h.type=pick(WD().pool[k==="slow"?"jump":k].filter(t=>!HZ[t].move))});go("intro")};
-      p.appendChild(b)});
+      p.appendChild(b)}
+    const end=document.createElement("div");end.className="map-end";end.innerHTML=`<b>∞</b><span>The road never ends. Every level brings new places and words, and Review Tours keep the old ones fresh.</span>`;p.appendChild(end);
+    setTimeout(()=>{const c=p.querySelector(".map-node.sel")||p.querySelector(".map-node.cur");if(c)c.scrollIntoView({block:"center"})},60);
   },
   intro(){
-    const w=WD(),wi=WI%WORLDS.length;
-    $("inTag").textContent=`World ${wi+1} · ${w.tag}`;$("inTitle").innerHTML=`${w.name} <span class="kn">${w.kn}</span>`;$("inStory").textContent=w.story;$("inEmoji").textContent=w.e;
+    const w=WD(),wi=WI;
+    $("inTag").textContent=`Level ${wi+1} · ${w.tag}`;$("inTopic").textContent=w.review?"Review Tour · your trickiest words":`Word pack: ${w.topic}`;$("inTitle").innerHTML=`${w.name} <span class="kn">${w.kn}</span>`;$("inStory").textContent=w.story;$("inEmoji").textContent=w.e;
     $("inHero").style.background=`linear-gradient(180deg,${w.sky[0][0]},${w.sky[0][1]} 68%,${w.pal.edge} 68%,${w.pal.edge} 72%,${w.pal.ground[0]} 72%)`;
     const box=$("inWords");box.innerHTML="";
     w.words.forEach(x=>{const r=PROG.words[x.a],b=document.createElement("button");b.className="wchip"+(r&&r.seen?" known":"");
@@ -102,7 +106,7 @@ $("inGo").onclick=()=>{sfx("go");startRace(1)};
 $("inHear").onclick=()=>{WD().words.forEach((x,i)=>setTimeout(()=>speak(x.a+". "+x.m),i*1700))};
 function startDaily(){
   const t=today();let h=0;for(const ch of t)h=(h*31+ch.charCodeAt(0))>>>0;
-  const unlocked=WORLDS.map((w,i)=>i).filter(worldUnlocked);WI=unlocked[h%unlocked.length];
+  WI=h%(frontier()+1);
   const due=dueWords().filter(w=>w.wi>=0),pool=WD().words;
   const study=shuffle(due).slice(0,3);while(study.length<3){const c=pick(pool);if(!study.some(s=>s.a===c.a))study.push(c)}
   startRace(2,h,null,study.concat(pool.filter(p=>!study.some(s=>s.a===p.a))).slice(0,8));
@@ -145,7 +149,7 @@ function renderBook(){
   const all=allWords(),found=all.filter(w=>knows(w.a)).length;
   $("bkFound").textContent=found;$("bkMaster").textContent=masteredCount();$("bkDue").textContent=dueWords().length;
   $("bkFill").style.width=(found/all.length*100)+"%";
-  const tabs=[["all","All"],["due","Review"],["pw","Power"]].concat(WORLDS.map((w,i)=>[String(i),w.e+" "+w.name]));
+  const tabs=[["all","All"],["due","Review"],["pw","Power"]].concat(PACKS.map((pk,i)=>[String(i),pk.topic]).filter((t,i)=>i<=frontier()||PACKS[i].words.some(w=>knows(w.a))));
   $("bkTabs").innerHTML="";tabs.forEach(([k,l])=>{const b=document.createElement("button");b.textContent=l;b.className=bookTab===k?"on":"";b.onclick=()=>{sfx("tap");bookTab=k;renderBook()};$("bkTabs").appendChild(b)});
   const due=new Set(dueWords().map(w=>w.a));
   const list=all.filter(w=>bookTab==="all"||(bookTab==="due"?due.has(w.a):bookTab==="pw"?w.wi===-1:w.wi===+bookTab));
@@ -273,7 +277,7 @@ const UI={
     $("pause").hidden=false;sfx("back");
   },
   results(lit){
-    const g=G,L=g.lanes[0],wi=WI%WORLDS.length,w=WORLDS[wi];
+    const g=G,L=g.lanes[0],wi=WI,w=LEVEL(wi);
     stopRace();startAttract();hideAllScreens();$("results").hidden=false;document.body.dataset.screen="results";
     const place=L.place||g.lanes.length;
     // order for the podium
@@ -293,7 +297,7 @@ const UI={
     const newAch=checkAchievements({place,gates:L.gates,lamps:lit,hits:L.hits,finished:true});
     saveProg();
     // render
-    $("rsTag").textContent=g.mode===2?"Daily race · "+w.name:g.mode===3?"Online race · "+w.name:`World ${wi+1} · ${w.name}`;
+    $("rsTag").textContent=g.mode===2?"Daily race · "+w.name:g.mode===3?"Online race · "+w.name:`Level ${wi+1} · ${w.name}`;
     $("rsTitle").textContent=place===1?"Victory!":place===2?"So close!":place===3?"On the podium!":"Race complete!";
     $("rsPodium").innerHTML="";
     order.slice(0,3).forEach((R,i)=>{const d=document.createElement("div");d.className="pod p"+(i+1)+(R===L?" me":"");const c=document.createElement("canvas");d.appendChild(c);
@@ -314,8 +318,8 @@ const UI={
     newAch.forEach((a,i)=>setTimeout(()=>{UI.toast(`<span class="tw-pic">${a.icon}</span><span><small>Award unlocked</small><br><b>${a.name}</b></span>`,"ach");sfx("box")},2400+i*900));
     if(place===1)setTimeout(()=>confetti(90),300);
     playMusic("win");
-    const next=(wi+1)%WORLDS.length,nu=worldUnlocked(next);
-    $("rsNext").textContent=nu?`Next: ${WORLDS[next].name} ›`:`Earn a ★ to unlock ${WORLDS[next].name}`;$("rsNext").disabled=!nu;
+    const next=wi+1,nu=worldUnlocked(next),nw=LEVEL(next);
+    $("rsNext").textContent=nu?`Next: ${nw.name} · ${nw.topic} ›`:`Earn a ★ to unlock ${nw.name}`;$("rsNext").disabled=!nu;
     $("rsNext").onclick=()=>{sfx("ui");WI=next;LAYERS={};navStack=["home"];go("intro")};
     const mode=g.mode;$("rsAgain").onclick=()=>{sfx("ui");if(mode===2)startDaily();else if(mode===3)go("lobby");else startRace(1)};
     $("rsMenu").onclick=()=>{sfx("back");navStack=[];go("home")};
@@ -339,5 +343,5 @@ $("psQuit").onclick=()=>{sfx("back");if(G&&G.mode===3)NET.cleanup();quitRace()};
 /* ---------- boot ---------- */
 resize();
 addEventListener("resize",()=>{if(G&&G.mode!==0&&!$("hud").hidden)_bottomH=($("cards").offsetHeight||96)+14});
-WI=Math.max(0,WORLDS.findIndex((w,i)=>worldUnlocked(i)&&!(PROG.stars[i]>=1)));if(!worldUnlocked(WI))WI=0;
+WI=frontier();
 go("title");
