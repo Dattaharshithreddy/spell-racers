@@ -17,7 +17,7 @@ export const restore = {
   restore.tex.magFilter = restore.tex.minFilter = THREE.NearestFilter;
   restore.tex.needsUpdate = true;
 }
-const RU = { restoreTex: { value: restore.tex }, uTime: { value: 0 }, wave: { value: new THREE.Vector4(0, 0, -1, 0) } };
+const RU = { restoreTex: { value: restore.tex }, uTime: { value: 0 }, wave: { value: new THREE.Vector4(0, 0, -1, 0) }, uPads: { value: Array.from({ length: 8 }, () => new THREE.Vector3(0, 0, -1)) } };
 export const worldUniforms = RU;
 
 export function setDistrictTarget(id, v) { restore.target[id] = v; }
@@ -35,21 +35,38 @@ export function updateRestore(dt) {
 /** Inject per-district desaturation into a built-in material. Geometry needs `aDid` (per vertex or instanced). */
 export function patchRestore(mat, { instanced = false, keepWater = false, detail = false } = {}) {
   mat.onBeforeCompile = (sh) => {
-    sh.uniforms.restoreTex = RU.restoreTex; sh.uniforms.uTime = RU.uTime; sh.uniforms.wave = RU.wave;
+    sh.uniforms.restoreTex = RU.restoreTex; sh.uniforms.uTime = RU.uTime; sh.uniforms.wave = RU.wave; sh.uniforms.uPads = RU.uPads;
     sh.vertexShader = sh.vertexShader
-      .replace("#include <common>", "#include <common>\nattribute float aDid;\nvarying float vDid;\nvarying vec3 vWPos;")
-      .replace("#include <fog_vertex>", "#include <fog_vertex>\nvDid = aDid;\nvec4 wp4 = vec4(transformed,1.0);\n#ifdef USE_INSTANCING\nwp4 = instanceMatrix * wp4;\n#endif\nvWPos = (modelMatrix * wp4).xyz;");
+      .replace("#include <common>", "#include <common>\nattribute float aDid;\nvarying float vDid;\nvarying vec3 vWPos;\nvarying vec3 vWNrm;")
+      .replace("#include <fog_vertex>", "#include <fog_vertex>\nvDid = aDid;\nvec4 wp4 = vec4(transformed,1.0);\n#ifdef USE_INSTANCING\nwp4 = instanceMatrix * wp4;\n#endif\nvWPos = (modelMatrix * wp4).xyz;\nvWNrm = normalize(mat3(modelMatrix) * objectNormal);");
     sh.fragmentShader = sh.fragmentShader
-      .replace("#include <common>", "#include <common>\nuniform sampler2D restoreTex;\nuniform float uTime;\nuniform vec4 wave;\nvarying float vDid;\nvarying vec3 vWPos;")
+      .replace("#include <common>", "#include <common>\nuniform sampler2D restoreTex;\nuniform float uTime;\nuniform vec4 wave;\nuniform vec3 uPads[8];\nvarying float vDid;\nvarying vec3 vWPos;\nvarying vec3 vWNrm;\nfloat hh(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7)))*43758.5453); }\nfloat vnoise(vec2 p){ vec2 i = floor(p), f = fract(p); f = f*f*(3.0-2.0*f); return mix(mix(hh(i), hh(i+vec2(1,0)), f.x), mix(hh(i+vec2(0,1)), hh(i+vec2(1,1)), f.x), f.y); }")
       .replace("#include <fog_fragment>", `
         ${detail ? `{
-          vec2 q = vWPos.xz * 0.11; vec2 i0 = floor(q), f0 = fract(q); f0 = f0*f0*(3.0-2.0*f0);
-          float h00 = fract(sin(dot(i0, vec2(127.1,311.7)))*43758.5), h10 = fract(sin(dot(i0+vec2(1,0), vec2(127.1,311.7)))*43758.5);
-          float h01 = fract(sin(dot(i0+vec2(0,1), vec2(127.1,311.7)))*43758.5), h11 = fract(sin(dot(i0+vec2(1,1), vec2(127.1,311.7)))*43758.5);
-          float n = mix(mix(h00,h10,f0.x), mix(h01,h11,f0.x), f0.y);
-          float sp = fract(sin(dot(floor(vWPos.xz*1.7), vec2(12.9898,78.233)))*43758.5);
-          gl_FragColor.rgb *= 0.86 + 0.26*n;
-          gl_FragColor.rgb = mix(gl_FragColor.rgb, gl_FragColor.rgb*vec3(0.82,1.08,0.78), step(0.86, sp)*0.6);
+          // soft multi-scale variation (no hard-edged squares) + rock on steep slopes + sun-warm/shade-cool tint
+          float n1 = vnoise(vWPos.xz * 0.045), n2 = vnoise(vWPos.xz * 0.17 + 7.3), n3 = vnoise(vWPos.xz * 0.9 + 3.1);
+          float n = n1 * 0.55 + n2 * 0.3 + n3 * 0.15;
+          vec3 base = gl_FragColor.rgb;
+          base *= 0.84 + 0.32 * n;
+          base = mix(base, base * vec3(0.9, 1.06, 0.82), smoothstep(0.55, 0.8, n2) * 0.55);     // lush grass clumps
+          base = mix(base, base * vec3(1.08, 0.98, 0.84), smoothstep(0.6, 0.85, n1) * 0.45);    // dry patches
+          float slope = 1.0 - clamp(vWNrm.y, 0.0, 1.0);
+          vec3 rock = vec3(0.47, 0.42, 0.37) * (0.8 + 0.4 * n3);
+          base = mix(base, rock, smoothstep(0.32, 0.6, slope) * 0.85);
+          // landmark plazas: sandstone paving with grout lines and a border ring
+          for (int k = 0; k < 8; k++) {
+            vec3 pd = uPads[k]; if (pd.z <= 0.0) continue;
+            float d = distance(vWPos.xz, pd.xy); if (d > pd.z + 2.0) continue;
+            vec2 tq = vWPos.xz / 2.6; vec2 tf = fract(tq + vec2(0.5 * mod(floor(tq.y), 2.0), 0.0));
+            float grout = 1.0 - smoothstep(0.035, 0.075, min(min(tf.x, 1.0 - tf.x), min(tf.y, 1.0 - tf.y)));
+            float tone = hh(floor(tq + vec2(0.5 * mod(floor(tq.y), 2.0), 0.0)));
+            vec3 stone = mix(vec3(0.80, 0.71, 0.58), vec3(0.88, 0.80, 0.66), tone) * (0.92 + 0.12 * n3);
+            stone = mix(stone, vec3(0.52, 0.45, 0.38), grout * 0.7);
+            float ring = smoothstep(pd.z - 3.0, pd.z - 2.4, d) * (1.0 - smoothstep(pd.z - 0.6, pd.z, d));
+            stone = mix(stone, vec3(0.62, 0.32, 0.22), ring * 0.8);
+            base = mix(base, stone, 1.0 - smoothstep(pd.z - 0.4, pd.z + 1.5, d));
+          }
+          gl_FragColor.rgb = base;
         }` : ""}
         {
           float lv = texture2D(restoreTex, vec2((floor(vDid + 0.5) + 0.5) / 64.0, 0.5)).r;
@@ -61,7 +78,7 @@ export function patchRestore(mat, { instanced = false, keepWater = false, detail
           }
           vec3 c = gl_FragColor.rgb;
           float g = dot(c, vec3(0.3, 0.59, 0.11));
-          c = max(mix(vec3(g), c, 1.22), 0.0);
+          c = max(mix(vec3(g), c, 1.06), 0.0);
           vec3 silent = mix(vec3(g) * vec3(0.86, 0.88, 0.98) * 0.95 + vec3(0.02, 0.02, 0.05), c, 0.2);
           gl_FragColor.rgb = mix(silent, c, lv);
         }
@@ -183,14 +200,16 @@ export function buildSea(scene) {
     vertexShader: `varying vec3 vW; varying float vFog; void main(){ vec4 w = modelMatrix*vec4(position,1.0); vW=w.xyz; vec4 mv = viewMatrix*w; vFog = -mv.z; gl_Position = projectionMatrix*mv; }`,
     fragmentShader: `uniform float uTime; uniform vec3 fogColor; uniform float fogNear, fogFar; varying vec3 vW; varying float vFog;
       float h(vec2 p){ return sin(p.x*0.08+uTime*0.9)*0.5+sin(p.y*0.11-uTime*0.7)*0.5+sin((p.x+p.y)*0.05+uTime*0.4); }
-      void main(){ float w = h(vW.xz); vec3 deep = vec3(0.09,0.36,0.55), lite = vec3(0.32,0.68,0.82);
+      void main(){ float w = h(vW.xz); vec3 deep = vec3(0.04,0.27,0.45), lite = vec3(0.2,0.62,0.78);
+        vec3 V = normalize(cameraPosition - vW); float fr = pow(1.0 - max(0.0, V.y), 3.0);
         vec3 c = mix(deep, lite, 0.45 + 0.18*w);
-        float sp = pow(max(0.0, sin(vW.x*0.35+uTime*1.3)*sin(vW.z*0.31-uTime*1.1)), 12.0);
-        c += sp*0.35;
+        c = mix(c, vec3(0.78,0.88,0.98), fr * 0.55);
+        float sp = pow(max(0.0, sin(vW.x*0.35+uTime*1.3)*sin(vW.z*0.31-uTime*1.1)), 14.0);
+        c += sp*0.45;
         float f = smoothstep(fogNear, fogFar, vFog); gl_FragColor = vec4(mix(c, fogColor, f), 1.0); }`,
   });
   mat.fog = false;
-  const sea = new THREE.Mesh(g, mat); sea.position.set(0, -0.05, 0); sea.renderOrder = -1;
+  const sea = new THREE.Mesh(g, mat); sea.name = "sea"; sea.position.set(0, -0.05, 0); sea.renderOrder = -1;
   scene.add(sea); W.seaMat = mat;
   return sea;
 }
@@ -337,17 +356,32 @@ export function buildVegetation(scene, colliders = []) {
 
 // ------------------------------------------------------------ sky dome
 export function buildSky(scene) {
-  const g = new THREE.SphereGeometry(1800, 32, 16);
+  const g = new THREE.SphereGeometry(1800, 48, 24);
   const mat = new THREE.ShaderMaterial({
     side: THREE.BackSide, depthWrite: false, fog: false,
-    uniforms: { top: { value: new THREE.Color(0x3d8fe0) }, hor: { value: new THREE.Color(0xffe2b8) }, sunDir: { value: new THREE.Vector3(0.4, 0.5, -0.6).normalize() }, gloom: { value: 0 } },
+    uniforms: { top: { value: new THREE.Color(0x2f7fd8) }, hor: { value: new THREE.Color(0xffe3bd) }, sunDir: { value: new THREE.Vector3(300, 420, -380).normalize() }, gloom: { value: 0 }, uTime: RU.uTime },
     vertexShader: "varying vec3 vD; void main(){ vD = normalize(position); vec4 p = projectionMatrix*modelViewMatrix*vec4(position,1.0); gl_Position = p.xyww; }",
-    fragmentShader: `uniform vec3 top, hor, sunDir; uniform float gloom; varying vec3 vD;
-      void main(){ float t = smoothstep(-0.05, 0.55, vD.y); vec3 c = mix(hor, top, t);
-        float s = max(0.0, dot(vD, sunDir)); c += vec3(1.0,0.85,0.55)*pow(s, 600.0)*3.0 + vec3(1.0,0.75,0.45)*pow(s, 8.0)*0.35;
+    fragmentShader: `uniform vec3 top, hor, sunDir; uniform float gloom, uTime; varying vec3 vD;
+      float h(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7)))*43758.5453); }
+      float n(vec2 p){ vec2 i=floor(p), f=fract(p); f=f*f*(3.0-2.0*f); return mix(mix(h(i),h(i+vec2(1,0)),f.x), mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x), f.y); }
+      float fbm(vec2 p){ float a=0.5, s=0.0; for(int k=0;k<5;k++){ s+=a*n(p); p=p*2.03+vec2(1.7,9.2); a*=0.5; } return s; }
+      void main(){
+        float t = smoothstep(-0.04, 0.6, vD.y); vec3 c = mix(hor, top, pow(t, 0.8));
+        float s = max(0.0, dot(vD, sunDir));
+        c += vec3(1.0,0.82,0.5)*pow(s, 7.0)*0.4 + vec3(1.0,0.95,0.8)*pow(s, 90.0)*0.8 + vec3(1.0)*smoothstep(0.9993, 0.9997, s)*2.5;
+        // drifting cumulus clouds, lit from the sun side
+        if (vD.y > 0.0) {
+          vec2 uv = vD.xz / (vD.y + 0.18) * 1.6 + vec2(uTime * 0.012, uTime * 0.004);
+          float cl = fbm(uv);
+          float cov = smoothstep(0.52, 0.78, cl) * smoothstep(0.0, 0.18, vD.y);
+          float lit = 0.75 + 0.35 * fbm(uv + sunDir.xz * 0.08) - 0.25 * smoothstep(0.7, 0.95, cl);
+          vec3 cc = mix(vec3(0.82,0.84,0.9), vec3(1.0,0.98,0.94), lit) + vec3(1.0,0.8,0.5) * pow(s, 4.0) * 0.25;
+          c = mix(c, cc, cov * 0.92);
+        }
+        c = mix(c, hor * 1.05, (1.0 - smoothstep(0.0, 0.08, abs(vD.y))) * 0.5);   // horizon haze
         vec3 g = vec3(dot(c, vec3(0.3,0.59,0.11)))*vec3(0.8,0.82,0.92); gl_FragColor = vec4(mix(c, g, gloom), 1.0); }`,
   });
-  const sky = new THREE.Mesh(g, mat); sky.frustumCulled = false; sky.renderOrder = -2; scene.add(sky);
+  const sky = new THREE.Mesh(g, mat); sky.name = "sky"; sky.frustumCulled = false; sky.renderOrder = -2; scene.add(sky);
   return sky;
 }
 

@@ -10,6 +10,7 @@ import { Input, initInput, pollKeys, consume } from "./input.js";
 import { Sound } from "./audio.js";
 import { Save } from "./save.js";
 import { Learn } from "./learn.js";
+import { GFX, initGfx, setQuality, shadowFlags, followSun } from "./gfx.js";
 import { Speech } from "./speech.js";
 import { Net, hostRoom, joinRoom, Voice, voiceOn, voiceOff, voicePause, voiceResume } from "./net.js";
 import { TR, initTraffic, updateTraffic, trafficBlock, nearestTraffic, takeTraffic } from "./traffic.js";
@@ -30,8 +31,10 @@ const scene = new THREE.Scene();
 const FOG = new THREE.Color(0xf3dcb8);
 scene.fog = new THREE.Fog(FOG, 70, 560);
 const camera = new THREE.PerspectiveCamera(60, 1, 0.3, 2600);
-const sun = new THREE.DirectionalLight(0xffeccc, 2.9); sun.position.set(300, 420, -380); scene.add(sun);
-const hemi = new THREE.HemisphereLight(0xd6ebff, 0x5c4a30, 1.05); scene.add(hemi);
+const sun = new THREE.DirectionalLight(0xfff0d6, 3.1); sun.position.set(300, 420, -380); scene.add(sun);
+const SUNDIR = sun.position.clone().normalize();
+const hemi = new THREE.HemisphereLight(0xcfe6ff, 0x6b5434, 1.0); scene.add(hemi);
+initGfx(renderer, scene, sun);
 function resize() { renderer.setSize(innerWidth, innerHeight, false); camera.aspect = innerWidth / innerHeight; camera.fov = camera.aspect < 0.8 ? 68 : 58; camera.updateProjectionMatrix(); }
 addEventListener("resize", resize); resize();
 
@@ -56,6 +59,7 @@ async function boot() {
     for (const d of W.meta.districts) S.districtIds[d.name] = d.id;
     W.reserved = [];
     for (const c of CHAPTERS) { const p = lonlat(c.lon, c.lat); c.x = p.x; c.z = p.z; c.y = flattenPad(p.x, p.z, c.pad, 26); W.reserved.push({ x: p.x, z: p.z, r: c.pad + 22 }); }
+    CHAPTERS.forEach((c, i) => worldUniforms.uPads.value[i].set(c.x, c.z, c.pad + 8));
     step(25, "Raising the Western Ghats…"); await tick();
     buildSky(scene); buildTerrain(scene); buildSea(scene);
     step(40, "Filling the rivers…"); await tick();
@@ -77,6 +81,7 @@ async function boot() {
     placeLandmarks();
     spawnVehicles(CHAPTERS);
     initTraffic(scene, trafficCtx());
+    shadowFlags(scene); for (const k in VS.src) shadowFlags(VS.src[k]); shadowFlags(CB.goonSrc);
     mapImg = await new Promise((r) => { const i = new Image(); i.onload = () => r(i); i.src = "world/color.png"; });
     UI.setMapImage(mapImg);
     step(100, "Ready!");
@@ -856,10 +861,29 @@ function animateHero(H, dt) {
   h.model.position.y = down ? 0.35 : 0;
   h.model.rotation.z = H.stun > 0 ? Math.sin(S.t * 30) * 0.15 : 0;
   h.model.visible = !(H.inv > 0 && !down && Math.floor(S.t * 14) % 2 && H.hurtT < 3);
+  faceAnim(H, dt);
   h.holder.updateMatrixWorld(true); applyAim(H);
   const shd = h.holder.userData.shadow, gy = groundAt(H.pos.x, H.pos.z, H.pos.y + 0.1);
-  shd.position.set(H.pos.x, gy + 0.06, H.pos.z); shd.material.opacity = 0.28 * Math.max(0.2, 1 - (H.pos.y - gy) / 8);
+  shd.position.set(H.pos.x, gy + 0.06, H.pos.z); shd.material.opacity = (GFX.sun.castShadow ? 0.12 : 0.28) * Math.max(0.2, 1 - (H.pos.y - gy) / 8);
   H.anim = down ? "ko" : a;
+}
+/** blinking eyes, talking mouth and head nods (face rig parts found by name) */
+function faceAnim(H, dt) {
+  const h = H.h;
+  if (!h.face) {
+    const f = h.face = { eyes: [], mouth: [], head: h.model.getObjectByName("head"), blinkT: 2 + Math.random() * 3, b: 0 };
+    for (const n of ["eye.L", "eye.R"]) { const e = h.model.getObjectByName(n); if (e) f.eyes.push({ o: e, y: e.scale.y }); }
+    h.model.traverse((o) => { if (/mouth/i.test(o.name) && !/_ol$/.test(o.name)) f.mouth.push({ o, y: o.scale.y, x: o.scale.x }); });
+    if (f.head) f.hq = f.head.quaternion.clone();
+  }
+  const f = h.face;
+  f.blinkT -= dt; if (f.blinkT <= 0) { f.b = 0.14; f.blinkT = 2.2 + Math.random() * 3.5; }
+  f.b = Math.max(0, f.b - dt); const close = f.b > 0 ? Math.sin((f.b / 0.14) * Math.PI) : 0;
+  for (const e of f.eyes) e.o.scale.y = e.y * (1 - 0.9 * close);
+  const talking = UI.talk.who === H.kind && performance.now() < UI.talk.until && UI.isOpen("dlg");
+  const open = talking ? 0.5 + 0.5 * Math.abs(Math.sin(S.t * 13) * Math.sin(S.t * 7.3)) : 0;
+  for (const m of f.mouth) { m.o.scale.y = m.y * (1 + open * 1.6); m.o.scale.x = m.x * (1 - open * 0.15); }
+  if (f.head && f.hq) { const nod = talking ? Math.sin(S.t * 5.2) * 0.06 : 0, tilt = talking ? Math.sin(S.t * 2.1) * 0.05 : 0; if (talking) { f.head.rotateX(nod); f.head.rotateZ(tilt); } }   // mixer re-poses the head every frame, so this is additive
 }
 function remoteFollow(H, dt) {
   const n = H.net; if (!n) return;
@@ -1132,6 +1156,7 @@ function loop(now) {
   if (W.seaMat) { W.seaMat.uniforms.fogColor.value.copy(scene.fog.color); W.seaMat.uniforms.fogNear.value = scene.fog.near; W.seaMat.uniforms.fogFar.value = scene.fog.far; }
   if (!S.sky) S.sky = scene.children.find((o) => o.material && o.material.uniforms && o.material.uniforms.gloom);
   if (S.sky) { S.sky.material.uniforms.gloom.value = (1 - lv) * 0.7; S.sky.position.copy(camera.position); }
+  followSun(S.playing ? active().pos : camera.position, SUNDIR);
   cull(camera.position, scene.fog.far); cullVehicles(camera.position);
   renderer.render(scene, camera);
   requestAnimationFrame(loop);
@@ -1190,6 +1215,9 @@ function bindUI() {
   $("mnSound").onclick = () => { Sound.toggle(); $("mnSound").textContent = Sound.muted ? "🔇 Sound off" : "🔊 Sound on"; };
   $("mnHelp").onclick = () => { UI.hide("menu"); UI.show("help"); };
   $("hpOk").onclick = () => UI.hide("help");
+  const qName = { low: "Low (fastest)", medium: "Medium", high: "High (best look)" };
+  const qBtn = () => ($("mnGfx").textContent = `🎨 Graphics: ${qName[GFX.q]}`); qBtn();
+  $("mnGfx").onclick = () => { const order = ["low", "medium", "high"]; setQuality(order[(order.indexOf(GFX.q) + 1) % 3]); qBtn(); };
   $("mnMic").onclick = () => { UI.hide("menu"); UI.micCheck({ standalone: true }); };
   $("hVoice").onclick = async () => {
     if (Voice.on) { voiceOff(); UI.toast("🔇 Voice chat off"); }

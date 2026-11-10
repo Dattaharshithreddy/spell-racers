@@ -24,6 +24,7 @@ export function voice(text, who) {
 
 // ------------------------------------------------------------ dialogue
 let dlgResolve = null, dlgQueue = [], dlgTyping = null, dlgFull = "", dlgNpc = null;
+export const talk = { who: null, until: 0 };
 export function dialogue(lines, npc) {
   return new Promise((res) => {
     dlgQueue = lines.slice(); dlgNpc = npc; dlgResolve = res; show("dlg"); nextLine();
@@ -40,6 +41,7 @@ function nextLine() {
   else if (who === "mouna") { img.hidden = true; icon.hidden = false; icon.textContent = "🤫"; nm.textContent = "Mouna"; }
   else { img.hidden = true; icon.hidden = false; icon.textContent = dlgNpc?.icon || "🦜"; nm.textContent = dlgNpc?.name || "Friend"; }
   dlgFull = text; const el = $("dlgText"); el.textContent = ""; let i = 0;
+  talk.who = who; talk.until = performance.now() + 600 + text.length * 62;
   dlgTyping = setInterval(() => {
     i += 2; el.textContent = text.slice(0, i); if (i % 6 === 0) Sound.sfx("talk");
     if (i >= text.length) { clearInterval(dlgTyping); dlgTyping = null; }
