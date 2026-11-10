@@ -9,6 +9,8 @@ import * as UI from "./ui.js";
 import { Input, initInput, pollKeys, consume } from "./input.js";
 import { Sound } from "./audio.js";
 import { Save } from "./save.js";
+import { Learn } from "./learn.js";
+import { Speech } from "./speech.js";
 import { Net, hostRoom, joinRoom, Voice, voiceOn, voiceOff, voicePause, voiceResume } from "./net.js";
 import { TR, initTraffic, updateTraffic, trafficBlock, nearestTraffic, takeTraffic } from "./traffic.js";
 import { VS, VT, makeVehicle, loadVehicles, spawnVehicles, drive, animateVehicle, cullVehicles, nearestFree, vehicleBlock, seatWorld, initLegs, seatPose } from "./vehicles.js";
@@ -39,6 +41,7 @@ const S = {
   heroes: {}, orbs: [], fest: [], colliders: [], boxes: [], landmarks: [], beacons: [],
   playing: false, busy: false, t: 0, lastLook: 0,
   cam: { yaw: Math.PI, pitch: 0.32, dist: 8, pos: new V3() },
+  wp: { cd: 0, busy: false }, citizens: [],
   districtIds: {}, mouna: null, tut: null, boss: null,
 };
 let props = null, mapImg = null;
@@ -179,6 +182,20 @@ function placeLandmarks() {
     npc.position.set(nx, groundAt(nx, nz, 999), nz); npc.rotation.y = Math.atan2(c.x - nx, c.z - nz) + Math.PI;
     scene.add(npc); c.npcObj = npc; c.nx = nx; c.nz = nz;
     S.colliders.push({ x: nx, z: nz, r: c.npc.model === "npc_elephant" ? 2.4 : c.npc.model === "npc_bull" ? 1.6 : 0.7 });
+    // three townspeople per landmark who need help with an everyday conversation
+    const CS = { npc_parrot: 2.6, npc_elephant: 0.8, npc_monkey: 1.4, npc_bull: 1.0 }, CR = { npc_parrot: 0.6, npc_elephant: 2.0, npc_monkey: 0.6, npc_bull: 1.4 };
+    Learn.talksFor(c.id).forEach((t, k) => {
+      let x = c.x, z = c.z;
+      for (let tries = 0; tries < 40; tries++) {
+        const a = (k / 3) * Math.PI * 2 + 0.9 + tries * 0.47, d = c.pad + 13 + tries * 1.2; x = c.x + Math.cos(a) * d; z = c.z + Math.sin(a) * d;
+        if (landOk(x, z) && heightAt(x, z) > 0.8 && !solidAt(x, heightAt(x, z) + 1, z) && !(W.nearRoad && W.nearRoad(x, z, 4)) && !near(x, z).some((q) => (q.obb ? !!inBox(q, x, z, 2.5) : Math.hypot(q.x - x, q.z - z) < q.r + 2.5)) && Math.hypot(x - nx, z - nz) > 8) break;
+      }
+      const o = placeProp(props[t.model], districtAt(x, z) || did, 0.02); o.scale.setScalar(CS[t.model] || 1);
+      o.position.set(x, groundAt(x, z, heightAt(x, z) + 1), z); o.rotation.y = Math.atan2(c.x - x, c.z - z) + Math.PI; scene.add(o);
+      const tag = new THREE.Sprite(new THREE.SpriteMaterial({ map: emojiTexture("💬", "#7FE0D0"), depthWrite: false, fog: false })); tag.scale.setScalar(1.9); scene.add(tag);
+      S.colliders.push({ x, z, r: CR[t.model] || 0.7 });
+      S.citizens.push({ t, c, x, z, y: o.position.y, top: t.model === "npc_elephant" ? 4.4 : t.model === "npc_bull" ? 3.2 : 2.6, obj: o, tag, done: null });
+    });
     const mat = new THREE.ShaderMaterial({
       transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, fog: false,
       uniforms: { col: { value: new THREE.Color(0xffc93c) }, a: { value: 0 }, uTime: worldUniforms.uTime },
@@ -266,7 +283,11 @@ function combatCtx() {
     inState: (x, z) => districtAt(x, z) > 0,
     makeTag: (e) => { const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: emojiTexture(e, "#E79BFF"), depthWrite: false, fog: false })); s.scale.setScalar(1.6); return s; },
     sfx: (n) => Sound.sfx(n),
-    hitVillain: (v, dmg, pos) => {
+    hitVillain: (v, dmg, pos, word) => {
+      if (!word && (v.kind === "brute" || v.kind === "boss") && !v.passive) {
+        dmg *= v.kind === "boss" ? 0.3 : 0.5;
+        if (!S.shieldHint && S.playing) { S.shieldHint = true; UI.toast("🛡️ Brutes and Mouna wear a <b>silence shield</b>. Blaster shots are weak on them. Use 🗯️ <b>WORD</b> power!", "bad", 5200); }
+      }
       if (S.mode === "guest") { v.hp = Math.max(1, v.hp - dmg); v.bar.visible = true; Net.send("vhit", { id: v.id, d: dmg }); Sound.sfx("hit"); spark(pos, 0xffd45c); return; }
       damageVillain(v, dmg, pos);
     },
@@ -345,7 +366,7 @@ async function prologue() {
   UI.flash(); Sound.sfx("steal");
   await UI.dialogue(c.intro.slice(2), c.npc);
   await UI.dialogue([["mouna", null, "My Mute Gang will guard every word. They carry blasters that fire pure silence!"],
-    ["gundamma", "talk", "Then we fight back. Bangara, take the Akshara Blaster. Its letters sting. I have my Tiffin Cannon."],
+    ["gundamma", "talk", "Then we fight back. Blasters only tickle them. Our real weapon is the WORD POWER: say the right English word, and the silence breaks."],
     ["bangara", "cheer", "Words are our weapons! Let's go!"]], c.npc);
   S.mouna.visible = false; S.busy = false;
   if (!localStorage.getItem("maathu-tut")) startTutorial(); else beginHunt(true);
@@ -354,7 +375,7 @@ function beginHunt(fresh) {
   S.phase = Save.d.phase = "hunt"; Save.write();
   spawnChapterOrbs(S.ch);
   if (S.mode !== "guest") spawnChapterVillains(S.ch);
-  if (fresh) UI.toast(`🔎 Find <b>6 glowing words</b> near ${chap().place.split(",")[0]}. Villains with a 💬 bubble carry stolen words!`, "gold", 5000);
+  if (fresh) UI.toast(`🔎 Find <b>6 glowing words</b> near ${chap().place.split(",")[0]}, and help the townspeople 💬 speak. Use 🗯️ WORD power on villains!`, "gold", 5500);
   broadcastState();
 }
 async function arriveAtChapter() {
@@ -367,7 +388,7 @@ async function arriveAtChapter() {
 function collectOrb(o, byKind) {
   if (o.got || o.carried) return;
   o.got = true; o.obj.visible = false; Sound.sfx("collect");
-  Save.learn(o.wd.w);
+  Learn.meet(o.wd.w);
   if (byKind === S.me || S.mode === "solo") { S.busy = true; UI.wordCard(o.wd).then(() => { S.busy = false; afterCollect(); }); }
   else { UI.toast(`${byKind === "bangara" ? "Bangara" : "Gundamma"} found <b>${o.wd.w}</b> · ${o.wd.k}`, "gold"); afterCollect(); }
   updateWordBadge(); broadcastState();
@@ -377,12 +398,16 @@ function afterCollect() {
   const left = S.orbs.filter((o) => !o.got).length;
   if (left === 0 && S.phase === "hunt") {
     S.phase = Save.d.phase = "return"; Save.write();
-    UI.toast(`All six words found! Now go talk to <b>${chap().npc.name}</b> ${chap().npc.icon}`, "gold", 4200);
+    { const c1 = chap(), left2 = talksNeeded(c1) - Learn.talksDone(c1.id).length;
+      UI.toast(left2 > 0 ? `All six words found! Now help <b>${left2}</b> townspeople 💬 speak, then talk to ${c1.npc.name} ${c1.npc.icon}` : `All six words found! Now go talk to <b>${c1.npc.name}</b> ${c1.npc.icon}`, "gold", 4600); }
     broadcastState();
   } else if (left > 0) UI.toast(`${6 - left}/6 words in the tiffin`, "", 1800);
 }
+function talksNeeded(c) { return Math.min(2, Learn.talksFor(c.id).length); }
 function talkToNpc() {
   if (S.phase !== "return") return;
+  const c0 = chap(), have = Learn.talksDone(c0.id).length, need = talksNeeded(c0);
+  if (have < need) { UI.toast(`${c0.npc.icon} ${c0.npc.name} is still too shy to speak. First help <b>${need - have}</b> more townspeople 💬 find their words.`, "", 4200); return; }
   S.phase = "fill"; S.busy = true; broadcastState();
   if (S.mode !== "solo") Net.send("evt", { e: "fill" });
   UI.fillStory(chap(), onFillDone);
@@ -439,7 +464,7 @@ function refreshFestival() {
 async function collectFestival(f) {
   scene.remove(f.obj); S.fest = S.fest.filter((x) => x !== f); S.busy = true; Sound.sfx("collect");
   const ok = await UI.quiz(f.wd, FESTIVAL);
-  Save.learn(f.wd.w); S.busy = false; updateWordBadge();
+  Learn.meet(f.wd.w); if (!ok) Learn.result(f.wd.w, false); S.busy = false; updateWordBadge();
   UI.toast(ok ? `🌟 <b>${f.wd.w}</b> learned first try!` : `🌟 <b>${f.wd.w}</b> is in your tiffin now.`, "gold");
   if (!S.fest.length) setTimeout(refreshFestival, 2000);
 }
@@ -452,15 +477,16 @@ const TUT = () => {
     { t: "👉 <b>Drag on the RIGHT side</b> of the screen to turn the camera.", hi: null, ok: () => S.tut.look > 140 },
     { t: "Tap <b>⤒ JUMP</b>. Tap it again in the air for a double jump!", hi: "jump", ok: () => S.tut.jumped },
     { t: "Hold <b>🔫 FIRE</b> to shoot. It aims at the nearest villain by itself. Knock down the practice dummy!", hi: "fire", ok: () => S.tut.dummy && S.tut.dummy.dead, enter: spawnDummy },
+    { t: "Now the real weapon. Tap <b>🗯️ WORD</b> and choose the right English word. A correct word makes a <b>word blast</b> that breaks every villain's shield!", hi: "word", ok: () => S.tut.word },
     { t: B ? "Tap <b>⚡ DASH</b> to zoom forward. You can't be hit while dashing!" : "Tap <b>💥 POUND</b> to smash the ground and knock back everyone nearby!", hi: "special", ok: () => S.tut.special },
     { t: B ? "Run right next to Gundamma and tap <b>🤝 LAUNCH</b>. She throws you sky-high!" : "Stand right next to Bangara and tap <b>🤝 THROW</b> to launch him sky-high!", hi: "team", ok: () => S.tut.thrown },
     ...(S.mode === "solo" ? [{ t: "Tap <b>🔁 SWAP</b> to switch heroes. Try Gundamma, then come back!", hi: "swap", ok: () => S.tut.swaps >= 1 }] : []),
-    { t: "You're ready! Find the <b>6 glowing words</b>. Villains with a 💬 bubble carry stolen words, so beat them to free the words. Eat 🟨 Mysore Pak to heal.", hi: null, ok: () => S.tut.tEnd > 6 },
+    { t: "You're ready! Find the <b>6 glowing words</b>, then help the townspeople with a 💬 bubble to <b>speak</b>. Use 🗯️ WORD power on the Mute Gang!", hi: null, ok: () => S.tut.tEnd > 7 },
   ];
 };
 function startTutorial() {
   S.phase = Save.d.phase = "tutorial"; Save.write();
-  S.tut = { i: -1, moved: 0, look: 0, jumped: false, special: false, thrown: false, swaps: 0, dummy: null, tEnd: 0, last: active().pos.clone() };
+  S.tut = { i: -1, moved: 0, look: 0, jumped: false, special: false, word: false, thrown: false, swaps: 0, dummy: null, tEnd: 0, last: active().pos.clone() };
   UI.show("coach"); nextTut();
 }
 function nextTut() {
@@ -503,10 +529,81 @@ function updateSpecialBtn() {
   $("bTeam").innerHTML = isB ? "🤝<small>Launch</small>" : "🤝<small>Throw</small>";
   $("bFire").innerHTML = (isB ? "🔫" : "🥫") + `<small>${isB ? "Blaster" : "Cannon"}</small>`;
 }
+const PHRASE = { bengaluru: "rescue every word", mysuru: "the palace lights", kodagu: "smell fragrant", coast: "every journey", jog: "the mighty falls", hampi: "our stories", badami: "proud of our home", golgumbaz: "stronger than silence" };
 async function startSpeak() {
   const r = await UI.micCheck();
   if (!["fill", "speak"].includes(S.phase) && S.phase !== "speak") return;
-  UI.speakChallenge(chap().speak, onSpeakDone, { typing: r === "type" });
+  // speaking ladder: two words, a phrase, then the whole sentence
+  const c = chap(), ws = [...c.words].sort(() => Math.random() - 0.5).slice(0, 2);
+  const steps = [...ws.map((w) => ({ label: "Say the word", text: w.w, kn: `${w.p} ${w.k}` })), { label: "Say the phrase", text: PHRASE[c.id] }, { label: "Say the whole sentence", text: c.speak }];
+  UI.speakLadder(steps, onSpeakDone, { typing: r === "type", onSpoken: (t) => { if (t.split(" ").length === 1) Learn.said(t); else Learn.sentence(); } });
+}
+
+// ============================================================ word powers (the real weapon) + conversations + daily practice
+async function wordPower() {
+  const H = active(), O = other();
+  if (S.wp.busy || H.ko || S.busy || UI.anyModal()) return;
+  if (S.t < S.wp.cd) { UI.toast("🗯️ Word power is charging…", "", 1100); return; }
+  S.wp.busy = true; H.inv = Math.max(H.inv, 40); if (O.ctrl === "ai") O.inv = Math.max(O.inv, 40);
+  const wd = Learn.powerWord(chap().words), isNew = !Save.d.words[wd.w];
+  const kind = Speech.canListen && !isNew && Math.random() < 0.3 ? "say" : "pick";
+  const r = await UI.ask(Learn.question(wd, kind, chap().words), { title: "🗯️ Word power", timer: S.mode === "solo" ? 0 : 14, sayBonus: "Say it out loud for DOUBLE power" });
+  S.wp.busy = false; H.inv = 1.5; if (O.ctrl === "ai") O.inv = 1.5; H.hurtT = 9;
+  Learn.result(wd.w, r.ok); if (r.said) Learn.said(wd.w); updateWordBadge();
+  if (S.tut) S.tut.word = true;
+  if (r.ok) { wordBlast(H, wd, r.said); S.wp.cd = S.t + 6; }
+  else { S.wp.cd = S.t + 2.5; UI.toast(`Remember: <b>${wd.w}</b> = ${wd.k}. It will come back!`, "", 2600); }
+}
+function wordBlast(H, wd, dbl) {
+  const R = dbl ? 34 : 24, dmg = dbl ? 150 : 85;
+  ring(H.pos, 0xc9a2ff, R / 9); ring(H.pos, 0xffd45c, R / 14); shake(0.6); Sound.sfx("boom2"); Sound.sfx("restore");
+  floatWord(wd.w.toUpperCase(), H.pos);
+  for (const v of CB.villains) if (!v.dead && Math.hypot(v.pos.x - H.pos.x, v.pos.z - H.pos.z) < R + (v.kind === "boss" ? 14 : 0)) combatCtx().hitVillain(v, dmg, H.pos, true);
+  H.hp = Math.min(H.maxHp, H.hp + (dbl ? 40 : 15));
+  UI.toast(dbl ? `🎤 <b>${wd.w.toUpperCase()}!</b> Double word power!` : `🗯️ <b>${wd.w.toUpperCase()}!</b>`, "gold", 1800);
+  if (S.mode !== "solo") Net.send("fx", { k: H.kind, a: "word", w: wd.w });
+}
+const floaters = [];
+function floatWord(text, pos) {
+  const c = document.createElement("canvas"); c.width = 512; c.height = 128; const x = c.getContext("2d");
+  x.font = "800 86px 'Baloo 2', sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.lineWidth = 14; x.strokeStyle = "#1E1B3A"; x.strokeText(text, 256, 68); x.fillStyle = "#FFD45C"; x.fillText(text, 256, 68);
+  const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
+  const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tx, depthTest: false, transparent: true, fog: false })); sp.scale.set(9, 2.25, 1); sp.position.set(pos.x, pos.y + 3.2, pos.z); sp.renderOrder = 9;
+  scene.add(sp); floaters.push({ sp, t: 0 });
+}
+function nearCitizen(H, d = 7.5) { let best = null, bd = d; for (const z of S.citizens) { const q = Math.hypot(H.pos.x - z.x, H.pos.z - z.z); if (q < bd) { bd = q; best = z; } } return best; }
+async function startTalk(z) {
+  if (S.busy) return; S.busy = true;
+  for (const H of heroList()) H.inv = Math.max(H.inv, 2);
+  const r = await UI.conversation(z.t, S.me === "bangara" ? "Bangara" : "Gundamma", { onSentence: () => Learn.sentence() });
+  S.busy = false;
+  if (!r.finished) return;
+  const first = !Learn.talksDone(z.c.id).includes(z.t.id);
+  for (const w of z.t.words) Learn.meet(w.w);
+  Learn.talkDone(z.c.id, z.t.id); updateWordBadge();
+  if (S.mode === "guest") Net.send("talkDone", { c: z.c.id, t: z.t.id });
+  for (const H of heroList()) if (H.ctrl !== "remote") H.hp = H.maxHp;
+  S.wp.cd = 0; Sound.sfx("restore"); S.cheer = 1.6;
+  const c = chap(), have = Learn.talksDone(c.id).length, need = talksNeeded(c);
+  UI.toast(first ? `💬 ${z.t.name} can talk again! <b>+3 words</b> in the tiffin.${z.c === c && have <= need ? ` (${Math.min(have, need)}/${need} townspeople helped)` : ""}` : `💬 Good practice with ${z.t.name}!`, "gold", 4200);
+}
+async function dailyPractice() {
+  const pool = Learn.due(7);
+  if (pool.length < 3) { alertBox("Collect at least 3 words in the story first. Then come back for your daily practice!"); return; }
+  const was = S.busy; S.busy = true; let right = 0, n = 0;
+  for (let i = 0; i < pool.length; i++) {
+    const wd = pool[i], kind = ["pick", "listen", "say"][i % 3];
+    const r = await UI.ask(Learn.question(wd, kind), { title: `🧠 Daily practice · ${i + 1} of ${pool.length}`, closable: true });
+    if (r.quit) break;
+    n++; Learn.result(wd.w, r.ok); if (r.said) Learn.said(wd.w); if (r.ok) right++;
+  }
+  S.busy = was;
+  if (n >= 3) { const st = Learn.touchDay(); alertBox(`You got <b>${right} of ${n}</b> right.<br>🔥 <b>${st}-day</b> practice streak! Come back tomorrow to keep it going.`); }
+  refreshTitle();
+}
+function alertBox(html) { $("alTxt").innerHTML = html; UI.show("alert"); }
+function openWords() {
+  UI.openTiffin(CHAPTERS, FESTIVAL, Save.d.words, { talks: Object.fromEntries(CHAPTERS.map((c) => [c.id, Learn.talksFor(c.id).filter((t) => Learn.talksDone(c.id).includes(t.id) || t.words.some((w) => Save.d.words[w.w]))])), stats: Learn.stats(), strength: (w) => Learn.strength(w), onPractice: dailyPractice });
 }
 function refreshVoiceBtn() { const b = $("hVoice"); b.hidden = S.mode === "solo"; b.textContent = Voice.on ? "🎙️" : "🔇"; b.classList.toggle("on", Voice.on); }
 function updateWordBadge() { const n = Object.keys(Save.d.words).length; $("hWords").textContent = n || ""; $("tWords").textContent = n ? `${n} words learned` : ""; }
@@ -820,9 +917,14 @@ function updateCamera(dt) {
 let hudT = 0, miniT = 0;
 function updateHUD(dt) {
   hudT -= dt; miniT -= dt; const H = active(), c = chap();
-  const nearNpc = c.npcObj && Math.hypot(H.pos.x - c.nx, H.pos.z - c.nz) < 9;
-  $("bTalk").hidden = !(nearNpc && S.phase === "return");
-  if (consume("talk") && nearNpc && S.phase === "return") { if (S.mode === "guest") Net.send("talk"); else talkToNpc(); }
+  const nearNpc = c.npcObj && Math.hypot(H.pos.x - c.nx, H.pos.z - c.nz) < 9 && S.phase === "return";
+  const cz = H.veh || S.phase === "tutorial" ? null : nearCitizen(H);
+  $("bTalk").hidden = !(nearNpc || cz) || S.busy;
+  if (!$("bTalk").hidden) { const lbl = nearNpc ? `Talk to ${c.npc.name}` : `Talk to ${cz.t.name.split(" ")[0]}`; if ($("bTalk").dataset.l !== lbl) { $("bTalk").dataset.l = lbl; $("bTalk").innerHTML = `💬<small>${lbl}</small>`; } }
+  if (consume("talk") && !S.busy) { if (nearNpc) { if (S.mode === "guest") Net.send("talk"); else talkToNpc(); } else if (cz) startTalk(cz); }
+  // word power button: charge ring + glow when villains are close
+  { const left = Math.max(0, S.wp.cd - S.t), danger = CB.villains.some((v) => !v.dead && !v.passive && Math.hypot(v.pos.x - H.pos.x, v.pos.z - H.pos.z) < 26);
+    $("wordCd").style.setProperty("--cd", (left / 6 * 100).toFixed(0) + "%"); $("bWord").classList.toggle("ready", left <= 0 && danger && !H.ko); $("bWord").hidden = !!H.veh && H.veh.seat === 0; }
   // vehicle button + speedometer
   const nv = H.veh ? null : nearestFree(H.pos), nt = H.veh || nv ? null : nearestTraffic(H.pos);
   $("bCar").hidden = !(H.veh || nv || nt) || H.ko > 0;
@@ -836,27 +938,33 @@ function updateHUD(dt) {
   const B = S.boss; $("bossBar").hidden = !(B && !B.dead && Math.hypot(H.pos.x - B.pos.x, H.pos.z - B.pos.z) < 120);
   if (B) $("bossFill").style.width = Math.max(0, B.hp / B.maxHp * 100) + "%";
   if (hudT > 0) return; hudT = 0.2;
-  let tx = c.x, tz = c.z, text = "", chapTxt = `Chapter ${S.ch + 1} · ${c.title}`;
+  let tx = c.x, tz = c.z, text = "", kn = "", chapTxt = `Chapter ${S.ch + 1} · ${c.title}`;
   const dLm = Math.hypot(H.pos.x - c.x, H.pos.z - c.z);
-  if (S.phase === "tutorial") { text = "Training with Gundamma"; tx = H.pos.x; tz = H.pos.z; }
-  else if (S.phase === "explore") text = `Go to ${c.place}`;
+  if (S.phase === "tutorial") { text = "Training with Gundamma"; kn = "ಗುಂಡಮ್ಮನ ಜೊತೆ ತರಬೇತಿ"; tx = H.pos.x; tz = H.pos.z; }
+  else if (S.phase === "explore") { text = `Go to ${c.place}`; kn = "ಚಿನ್ನದ ಬೆಳಕಿನ ಕಡೆಗೆ ಹೋಗಿ"; }
   else if (S.phase === "hunt") {
     const left = S.orbs.filter((o) => !o.got), free = left.filter((o) => !o.carried);
-    text = `Find the glowing words · ${6 - left.length}/6`;
+    text = `Find the glowing words · ${6 - left.length}/6`; kn = "ಹೊಳೆಯುವ ಪದಗಳನ್ನು ಹುಡುಕಿ";
     if (dLm < 170 && left.length) {
       let best = 1e9;
       for (const o of free) { const d = Math.hypot(o.x - H.pos.x, o.z - H.pos.z); if (d < best) { best = d; tx = o.x; tz = o.z; } }
-      if (!free.length) { for (const v of CB.villains) if (!v.dead && v.word != null && !S.orbs[v.word]?.got) { const d = Math.hypot(v.pos.x - H.pos.x, v.pos.z - H.pos.z); if (d < best) { best = d; tx = v.pos.x; tz = v.pos.z; } } text = `Beat the villains carrying words 💬 · ${6 - left.length}/6`; }
-      else if (free.every((o) => o.high)) text = "A word is up high! 🤝 Team-up throw!";
+      if (!free.length) { for (const v of CB.villains) if (!v.dead && v.word != null && !S.orbs[v.word]?.got) { const d = Math.hypot(v.pos.x - H.pos.x, v.pos.z - H.pos.z); if (d < best) { best = d; tx = v.pos.x; tz = v.pos.z; } } text = `Beat the villains carrying words · ${6 - left.length}/6`; kn = "ಪದ ಹೊತ್ತಿರುವ ಖಳರನ್ನು ಸೋಲಿಸಿ"; }
+      else if (free.every((o) => o.high)) { text = "A word is up high! 🤝 Team-up throw!"; kn = "ಪದ ಮೇಲಿದೆ! ಜೊತೆಯಾಗಿ ಎಸೆಯಿರಿ"; }
     }
-  } else if (S.phase === "return") { text = `Talk to ${c.npc.name} ${c.npc.icon}`; tx = c.nx; tz = c.nz; }
+  } else if (S.phase === "return") {
+    const have = Learn.talksDone(c.id).length, need = talksNeeded(c);
+    if (have < need) {
+      text = `Help townspeople speak 💬 · ${have}/${need}`; kn = "ಊರಿನವರಿಗೆ ಮಾತನಾಡಲು ಸಹಾಯ ಮಾಡಿ";
+      let best = 1e9; for (const z of S.citizens) if (z.c === c && !Learn.talksDone(c.id).includes(z.t.id)) { const d = Math.hypot(z.x - H.pos.x, z.z - H.pos.z); if (d < best) { best = d; tx = z.x; tz = z.z; } }
+    } else { text = `Talk to ${c.npc.name} ${c.npc.icon}`; kn = `${c.npc.kn} ಜೊತೆ ಮಾತನಾಡಿ`; tx = c.nx; tz = c.nz; }
+  }
   else if (S.phase === "free") {
     chapTxt = "Karnataka restored · Word Festival";
     let best = 1e9, f0 = null; for (const f of S.fest) { const d = Math.hypot(f.x - H.pos.x, f.z - H.pos.z); if (d < best) { best = d; f0 = f; } }
-    if (f0) { tx = f0.x; tz = f0.z; text = `🌟 Festival word near ${f0.town}`; } else text = "Explore Karnataka!";
+    if (f0) { tx = f0.x; tz = f0.z; text = `🌟 Festival word near ${f0.town}`; kn = "ಹಬ್ಬದ ಪದ ಹತ್ತಿರದಲ್ಲಿದೆ"; } else { text = "Explore Karnataka!"; kn = "ಕರ್ನಾಟಕ ಸುತ್ತಿ ನೋಡಿ"; }
   } else text = "…";
   const d = Math.hypot(tx - H.pos.x, tz - H.pos.z);
-  UI.objective(chapTxt, text, d > 6 ? fmtDist(d) : "");
+  UI.objective(chapTxt, text, d > 6 ? fmtDist(d) : "", kn);
   const ang = Math.atan2(tx - H.pos.x, tz - H.pos.z), rel = angDiff(S.cam.yaw + Math.PI, ang);
   UI.compass(-rel, d > 12 && !S.busy);
   if (miniT <= 0) { miniT = 0.25; drawMini(); }
@@ -873,6 +981,7 @@ function marks(forMap) {
   });
   if (S.phase === "hunt" && !forMap) { for (const o of S.orbs) if (!o.got && !o.carried) out.push({ x: o.x, z: o.z, col: "#FFD45C" }); for (const v of CB.villains) if (!v.dead && !v.passive) out.push({ x: v.pos.x, z: v.pos.z, col: v.word != null ? "#E79BFF" : "#7B3FE4" }); }
   for (const f of S.fest) out.push({ x: f.x, z: f.z, col: "#E79BFF", label: forMap ? "🌟" : "" });
+  if (!forMap && S.playing) { const c = chap(), dn = Learn.talksDone(c.id); for (const z of S.citizens) if (z.c === c && !dn.includes(z.t.id)) out.push({ x: z.x, z: z.z, col: "#3CC9B4" }); }
   return out;
 }
 function mapData(forMap) {
@@ -926,9 +1035,10 @@ function setupNetHandlers() {
   Net.on.voice = (d) => { Voice.partnerOn = !!d.on; if (d.on) UI.toast(`🎙️ ${other().kind === "bangara" ? "Bangara" : "Gundamma"} turned on voice chat. Tap 🎙️ to talk back!`, "gold", 3500); };
   Net.on.hs = (d) => { const H = S.heroes[d.k]; if (!H) return; const dir = new V3(...d.d); H.aim.dir.copy(dir); H.aim.t = 0.5; const W2 = WEAPON[d.k]; shoot(W2.kind, new V3(...d.f), dir, "remote", 0, { speed: W2.speed, range: W2.range, aoe: W2.aoe }); Sound.sfx(d.k === "bangara" ? "zap" : "boom"); };
   Net.on.vs = (d) => { if (S.mode !== "guest") return; shoot("ink", new V3(...d.f), new V3(...d.d), "villain", 7, d.s ? { speed: d.s, range: 60 } : {}); };
-  Net.on.fx = (d) => { if (d.a === "pound") { const H = S.heroes[d.k]; Sound.sfx("pound"); ring(H.pos, 0x9b7cff, 1.6); } else Sound.sfx("dash"); };
+  Net.on.talkDone = (d) => { if (S.mode === "host") { Learn.talkDone(d.c, d.t); UI.toast(`💬 ${other().kind === "bangara" ? "Bangara" : "Gundamma"} helped a townsperson speak!`, "gold"); } };
+  Net.on.fx = (d) => { if (d.a === "word") { const H = S.heroes[d.k]; ring(H.pos, 0xc9a2ff, 2.6); floatWord(String(d.w || "").toUpperCase(), H.pos); Sound.sfx("boom2"); } else if (d.a === "pound") { const H = S.heroes[d.k]; Sound.sfx("pound"); ring(H.pos, 0x9b7cff, 1.6); } else Sound.sfx("dash"); };
   Net.on.team = () => teamUp(false);
-  Net.on.collect = (d) => { const o = S.orbs[d.i]; if (o && !o.got && S.mode === "host") { o.got = true; o.obj.visible = false; Sound.sfx("collect"); Save.learn(o.wd.w); UI.toast(`${other().kind === "bangara" ? "Bangara" : "Gundamma"} found <b>${o.wd.w}</b> · ${o.wd.k}`, "gold"); afterCollect(); broadcastState(); } };
+  Net.on.collect = (d) => { const o = S.orbs[d.i]; if (o && !o.got && S.mode === "host") { o.got = true; o.obj.visible = false; Sound.sfx("collect"); Learn.meet(o.wd.w); UI.toast(`${other().kind === "bangara" ? "Bangara" : "Gundamma"} found <b>${o.wd.w}</b> · ${o.wd.k}`, "gold"); afterCollect(); broadcastState(); } };
   Net.on.vhit = (d) => { const v = CB.villains.find((x) => x.id === d.id); if (v && S.mode === "host") damageVillain(v, d.d); };
   Net.on.talk = () => talkToNpc();
   Net.on.fillDone = () => { if (S.phase === "fill") { UI.hide("fill"); onFillDone(); } };
@@ -981,11 +1091,19 @@ function loop(now) {
     if (consume("swap") && S.mode === "solo" && !S.busy) { S.me = S.me === "bangara" ? "gundamma" : "bangara"; setupControl(); UI.toast(S.me === "bangara" ? "🐰 Playing as Bangara" : "🐼 Playing as Gundamma"); if (S.tut) S.tut.swaps++; }
     if (consume("team") && !S.busy) teamUp(true);
     if (consume("map")) openMap();
+    if (consume("word")) wordPower();
     for (const k in S.heroes) updateHero(S.heroes[k], dt);
     for (const v of VS.list) { if (!v.seats[0] && !v.net) v.speed *= Math.max(0, 1 - dt * 3); if (v.obj.visible || v.seats[0]) animateVehicle(v, dt); }
     updateTraffic(dt, active().pos, heroList());
     if (S.cheer > 0) S.cheer -= dt;
-    updateCombat(dt, S, heroList());
+    const frozen = S.mode === "solo" && (UI.isOpen("ask") || UI.isOpen("conv"));   // the world waits while you think
+    if (!frozen) updateCombat(dt, S, heroList());
+    { const dn = Learn.talksDone, H0 = active();
+      for (const z of S.citizens) {
+        const far = Math.hypot(z.x - H0.pos.x, z.z - H0.pos.z) > 240; z.tag.visible = !far; if (far) continue;
+        const done = dn(z.c.id).includes(z.t.id); if (done !== z.done) { z.done = done; z.tag.material.map = emojiTexture(done ? "✅" : "💬", done ? "#9BE29B" : "#7FE0D0"); z.tag.scale.setScalar(done ? 1.2 : 1.9); }
+        z.tag.position.set(z.x, z.y + z.top + (done ? 0 : Math.sin(S.t * 3 + z.x) * 0.2), z.z);
+      } }
     for (const o of S.orbs) {
       if (o.got || o.carried) continue;
       o.obj.position.y = o.y + Math.sin(S.t * 2.5 + o.i) * 0.25; o.obj.material.rotation = Math.sin(S.t + o.i) * 0.2;
@@ -1004,6 +1122,7 @@ function loop(now) {
     if ((S.saveT = (S.saveT || 0) - dt) <= 0 && S.mode !== "guest") { S.saveT = 5; const H = active(); Save.d.pos = [H.pos.x, H.pos.z, H.yaw]; Save.d.me = S.me; Save.write(); }
   } else { titleCam(dt); updateTraffic(dt, S.heroes.bangara ? S.heroes.bangara.pos : camera.position, []); }
   updateRestore(dt); updateFx(dt);
+  for (let i = floaters.length - 1; i >= 0; i--) { const f = floaters[i]; f.t += dt; f.sp.position.y += dt * 2.2; f.sp.material.opacity = Math.min(1, 2.2 - f.t * 1.5); const k = Math.min(1, f.t * 6); f.sp.scale.set(9 * k, 2.25 * k, 1); if (f.t > 1.5) { scene.remove(f.sp); f.sp.material.map.dispose(); f.sp.material.dispose(); floaters.splice(i, 1); } }
   CHAPTERS.forEach((c, i) => { const b = S.beacons[i]; if (!b) return; const done = Save.d.done.includes(c.id), cur = i === S.ch && !storyDone() && S.playing;
     b.material.uniforms.a.value += ((cur ? 0.9 : done ? 0.18 : 0) - b.material.uniforms.a.value) * Math.min(1, dt * 2);
     b.material.uniforms.col.value.setHex(cur ? 0xffc93c : 0xfff2c0); b.visible = b.material.uniforms.a.value > 0.01; });
@@ -1029,6 +1148,7 @@ function refreshTitle() {
   const started = Save.started;
   $("tPlayTxt").textContent = started ? (storyDone() ? "Explore Karnataka" : `Continue · Ch ${Math.min(Save.d.ch, 7) + 1}`) : "Start the story";
   $("tReset").hidden = !started; updateWordBadge();
+  { const st = Learn.stats(); $("tDue").textContent = st.learned < 3 ? "" : st.practisedToday ? `🔥 ${st.streak}-day streak` : st.due ? `${st.due} waiting` : ""; }
   $("tSound").textContent = Sound.muted ? "🔇" : "🔊";
 }
 function bindUI() {
@@ -1037,9 +1157,10 @@ function bindUI() {
     document.querySelectorAll(".hero").forEach((b) => { b.classList.toggle("taken", b.dataset.hero === taken); b.onclick = () => { Sound.unlock(); cb(b.dataset.hero); }; });
   };
   $("tPlay").onclick = () => { Sound.unlock(); S.mode = "solo"; if (Save.started) { S.me = Save.d.me || "bangara"; startStory(); } else pick((h) => { S.me = h; Save.d.me = h; startStory(); }); };
-  $("tReset").onclick = () => { if (confirm("Start a brand-new story? Your learned words stay in the tiffin.")) { const words = Save.d.words; Save.reset(); Save.d.words = words; Save.write(); try { localStorage.removeItem("maathu-tut"); } catch (e) {} applyRestoreFromSave(true); refreshTitle(); } };
+  $("tReset").onclick = () => { if (confirm("Start a brand-new story? Your learned words stay in the tiffin.")) { const keep = { words: Save.d.words, mem: Save.d.mem, spoken: Save.d.spoken, streak: Save.d.streak }; Save.reset(); Object.assign(Save.d, keep); Save.write(); try { localStorage.removeItem("maathu-tut"); } catch (e) {} applyRestoreFromSave(true); refreshTitle(); } };
   $("tCoop").onclick = () => { Sound.unlock(); UI.screen("lobby"); $("lbCode").hidden = $("lbWait").hidden = true; $("lbMsg").textContent = ""; };
-  $("tTiffin").onclick = () => UI.openTiffin(CHAPTERS, FESTIVAL, Save.d.words);
+  $("tTiffin").onclick = openWords; $("tPractice").onclick = dailyPractice; $("mnPractice").onclick = () => { UI.hide("menu"); dailyPractice(); };
+  $("alOk").onclick = () => UI.hide("alert");
   $("tSound").onclick = () => { Sound.toggle(); refreshTitle(); };
   $("tHelp").onclick = () => UI.show("help");
   document.querySelectorAll("[data-back]").forEach((b) => (b.onclick = () => { Net.close(); UI.screen("title"); refreshTitle(); }));
@@ -1061,7 +1182,7 @@ function bindUI() {
       await joinRoom(code); $("lbMsg").textContent = "Connected! Waiting for your friend to pick a hero…";
     } catch (e) { S.mode = "solo"; $("lbMsg").textContent = "Couldn't find that code. Check it and try again."; }
   };
-  $("hTiffin").onclick = () => UI.openTiffin(CHAPTERS, FESTIVAL, Save.d.words);
+  $("hTiffin").onclick = openWords;
   $("tfClose").onclick = () => UI.hide("tiffin");
   $("hMap").onclick = openMap; $("mpClose").onclick = () => UI.hide("map");
   $("hMenu").onclick = () => { $("mnSound").textContent = Sound.muted ? "🔇 Sound off" : "🔊 Sound on"; UI.show("menu"); };
@@ -1082,6 +1203,6 @@ function bindUI() {
   document.addEventListener("visibilitychange", () => { if (document.hidden && S.playing) { const H = active(); Save.d.pos = [H.pos.x, H.pos.z, H.yaw]; Save.write(); } });
 }
 
-window.MAATHU = { S, W, CB, VS, TR, Voice, damageVillain, restoreChapter, travelTo, placeHeroesAt, camera, Save, CHAPTERS, groundAt, solidAt, endTutorial, landOk, heightAt, districtAt, makeVehicle };
+window.MAATHU = { S, W, CB, VS, TR, Voice, damageVillain, restoreChapter, travelTo, placeHeroesAt, camera, Save, CHAPTERS, groundAt, solidAt, endTutorial, landOk, heightAt, districtAt, makeVehicle, Learn, wordPower, startTalk };
 boot();
 if ("serviceWorker" in navigator && location.protocol === "https:" && !(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform())) navigator.serviceWorker.register("sw.js").catch(() => {});

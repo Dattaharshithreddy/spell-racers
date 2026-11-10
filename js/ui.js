@@ -8,7 +8,7 @@ export const show = (id) => { $(id).hidden = false; };
 export const hide = (id) => { $(id).hidden = true; };
 export const isOpen = (id) => !$(id).hidden;
 export const hooks = { micStart: () => {}, micEnd: () => {} };
-export function anyModal() { return ["wcard", "fill", "speak", "quiz", "map", "tiffin", "menu", "help", "micchk"].some((m) => isOpen(m)) || isOpen("dlg"); }
+export function anyModal() { return ["wcard", "fill", "speak", "quiz", "map", "tiffin", "menu", "help", "micchk", "ask", "conv", "alert"].some((m) => isOpen(m)) || isOpen("dlg"); }
 
 export function toast(html, cls = "", ms = 2600) {
   const t = $("toasts"); const d = document.createElement("div"); d.className = "toast " + cls; d.innerHTML = html; t.appendChild(d);
@@ -142,7 +142,18 @@ export function micCheck({ standalone = false } = {}) {
   });
 }
 
-export function speakChallenge(sentence, onDone, { typing = false } = {}) {
+/** Speaking ladder: a word, another word, a phrase, then the whole sentence. steps: [{ label, text, kn }] */
+export function speakLadder(steps, onDone, opts = {}) {
+  let i = 0;
+  const next = () => {
+    if (i >= steps.length) return onDone();
+    const st = steps[i++];
+    speakChallenge(st.text, next, { ...opts, step: `Step ${i} of ${steps.length} · ${st.label}`, kn: st.kn, onSpoken: opts.onSpoken });
+  };
+  next();
+}
+export function speakChallenge(sentence, onDone, { typing = false, step = "Wake the land", kn = "", onSpoken } = {}) {
+  $("spStep").textContent = step; $("spKn").textContent = kn || ""; $("spKn").hidden = !kn;
   const words = sentence.split(" ");
   const line = $("spLine"); line.innerHTML = words.map((w) => `<span>${w}</span>`).join(" ");
   $("spMsg").textContent = Speech.canListen ? "Tap the mic and read the sentence out loud." : "Your browser can't use the mic. Type the sentence instead.";
@@ -153,7 +164,7 @@ export function speakChallenge(sentence, onDone, { typing = false } = {}) {
     const spans = line.querySelectorAll("span"); const h = heard.toLowerCase();
     spans.forEach((s) => s.classList.toggle("hit", matchScore(h, s.textContent) >= 1));
   };
-  const win = () => { Sound.sfx("right"); $("spMsg").innerHTML = "✨ <b>Wonderful!</b> Listen…"; setTimeout(() => { hide("speak"); hooks.micEnd(); onDone(); }, 900); };
+  const win = (spoke) => { Sound.sfx("right"); if (spoke && onSpoken) onSpoken(sentence); $("spMsg").innerHTML = "✨ <b>Wonderful!</b>"; setTimeout(() => { hide("speak"); hooks.micEnd(); onDone(); }, 900); };
   let misses = 0;
   hooks.micStart();
   $("spMic").onclick = async () => {
@@ -161,14 +172,14 @@ export function speakChallenge(sentence, onDone, { typing = false } = {}) {
     try {
       const heard = await listen({ timeout: 8000, onInterim: highlight });
       highlight(heard); const sc = matchScore(heard, sentence);
-      if (sc >= 0.66) win();
+      if (sc >= 0.66) win(true);
       else { Sound.sfx("wrong"); misses++; $("spMsg").innerHTML = heard ? `I heard “${heard}”. Almost! Try again, a little slower.` : "I didn't hear anything. Try again!";
         if (misses >= 3) { $("spMsg").innerHTML += "<br><small>Still not working? You can <b>type it instead</b> below.</small>"; $("spType").hidden = false; } }
     } catch (e) { $("spMsg").textContent = "Mic not available. Type it instead."; $("spType").hidden = false; }
     $("spMic").classList.remove("rec");
   };
   $("spAlt").onclick = () => { $("spType").hidden = false; $("spIn").focus(); };
-  const check = () => { const v = $("spIn").value; highlight(v); if (matchScore(v, sentence) >= 0.85) win(); else { Sound.sfx("wrong"); $("spMsg").textContent = "Check the spelling and try again."; } };
+  const check = () => { const v = $("spIn").value; highlight(v); if (matchScore(v, sentence) >= 0.85) win(false); else { Sound.sfx("wrong"); $("spMsg").textContent = "Check the spelling and try again."; } };
   $("spGo").onclick = check; $("spIn").onkeydown = (e) => { if (e.key === "Enter") check(); };
   show("speak"); setTimeout(() => say(sentence, { rate: 0.85 }), 300);
 }
@@ -194,8 +205,8 @@ export function quiz(wd, pool) {
 }
 
 // ------------------------------------------------------------ HUD bits
-export function objective(chap, text, dist) {
-  $("hChap").textContent = chap; $("hObj").textContent = text; $("hDist").textContent = dist || "";
+export function objective(chap, text, dist, kn) {
+  $("hChap").textContent = chap; $("hObj").textContent = text; $("hDist").textContent = dist || ""; $("hObjKn").textContent = kn || "";
 }
 export function compass(angle, visible) {
   const c = $("compass"); c.style.display = visible ? "" : "none"; if (visible) c.style.transform = `rotate(${angle}rad)`;
@@ -241,25 +252,150 @@ export function drawMap(cv, d, { mini = false, view = 260 } = {}) {
 }
 function dot(x, px, py, r, col) { x.beginPath(); x.arc(px, py, r, 0, 7); x.fillStyle = col; x.fill(); x.lineWidth = 2.5; x.strokeStyle = "#1E1B3A"; x.stroke(); }
 
-// ------------------------------------------------------------ tiffin (word book)
-export function openTiffin(chapters, festival, learned) {
+// ------------------------------------------------------------ one question (word powers, daily practice)
+/** q: { kind: "pick" | "listen" | "say", wd, opts }. Resolves { ok, said, timeout }. */
+export function ask(q, { title = "Word power", timer = 0, sayBonus = "", closable = false } = {}) {
+  return new Promise((resolve) => {
+    const wd = q.wd; let kind = q.kind; if (kind === "say" && !Speech.canListen) kind = "pick";
+    let done = false, tm = null, t0 = performance.now(), micOn = false;
+    $("askTitle").textContent = title; $("askMsg").textContent = ""; $("askTimer").hidden = !timer;
+    const box = $("askOpts"); box.innerHTML = "";
+    const finish = (ok, said, timeout) => {
+      if (done) return; done = true; clearInterval(tm);
+      for (const b of box.children) { if (b.dataset.w === wd.w) b.classList.add("ok"); b.disabled = true; }
+      $("askMic").hidden = true; $("askSkipSay").hidden = true;
+      $("askMsg").innerHTML = ok ? (said ? `🎤 <b>${wd.w}</b>! Perfectly said.` : `✅ <b>${wd.w}</b> = ${wd.k}`) : `${timeout ? "⏱️ Time!" : "❌"} The word is <b>${wd.w}</b> · ${wd.k}<br><small>${wd.m}</small>`;
+      Sound.sfx(ok ? "right" : "wrong"); if (!micOn) say(wd.w);
+      setTimeout(() => { hide("ask"); if (micOn) hooks.micEnd(); resolve({ ok, said: !!said, timeout: !!timeout }); }, ok ? 1000 : 2100);
+    };
+    const options = () => {
+      box.innerHTML = "";
+      for (const o of q.opts) {
+        const b = document.createElement("button"); b.dataset.w = o.w;
+        b.innerHTML = kind === "listen" ? `${o.m} <span class="kn">· ${o.k}</span>` : `<b>${o.w}</b>`;
+        b.onclick = () => { if (done) return; if (o.w === wd.w) finish(true, false); else { b.classList.add("bad"); finish(false, false); } };
+        box.appendChild(b);
+      }
+    };
+    const listenFor = async () => {
+      if (done) return; micOn = true; hooks.micStart();
+      $("askMic").classList.add("rec"); $("askMsg").textContent = "Listening… say the English word";
+      try {
+        const heard = await listen({ timeout: 4500, onInterim: (t) => ($("askMsg").textContent = `“${t}”`) });
+        if (done) return;
+        if (matchScore(heard, wd.w) >= 1) finish(true, true);
+        else { $("askMsg").innerHTML = heard ? `I heard “${heard}”. Try again or tap the word.` : "I didn't hear you. Try again or tap the word."; Sound.sfx("wrong"); if (kind === "say") { kind = "pick"; options(); } }
+      } catch (e) { $("askMsg").textContent = "Mic not available. Tap the word instead."; if (kind === "say") { kind = "pick"; options(); } }
+      $("askMic").classList.remove("rec");
+    };
+    if (kind === "listen") { $("askPic").textContent = "🔊"; $("askQ").textContent = "Listen. What does it mean?"; $("askQ").className = ""; $("askSub").textContent = "Tap 🔊 to hear it again"; $("askPic").onclick = () => say(wd.w); }
+    else { $("askPic").textContent = wd.p || "🌟"; $("askQ").textContent = wd.k; $("askQ").className = "kn"; $("askSub").textContent = wd.m; $("askPic").onclick = null; }
+    $("askMic").hidden = kind === "listen" || !Speech.canListen; $("askMic").onclick = listenFor;
+    $("askMicTxt").textContent = kind === "say" ? "Say the English word" : (sayBonus || "Or say it out loud");
+    $("askSkipSay").hidden = kind !== "say"; $("askSkipSay").onclick = () => { kind = "pick"; options(); $("askSkipSay").hidden = true; };
+    if (kind !== "say") options();
+    $("askClose").hidden = !closable; $("askClose").onclick = () => { if (done) return; done = true; clearInterval(tm); hide("ask"); if (micOn) hooks.micEnd(); resolve({ ok: false, quit: true }); };
+    if (timer) { const bar = $("askTimerFill"); bar.style.width = "100%"; tm = setInterval(() => { const k = 1 - (performance.now() - t0) / (timer * 1000); bar.style.width = Math.max(0, k * 100) + "%"; if (k <= 0 && !$("askMic").classList.contains("rec")) finish(false, false, true); }, 100); }
+    show("ask"); if (kind === "listen") setTimeout(() => say(wd.w), 250);
+  });
+}
+
+// ------------------------------------------------------------ everyday conversation
+/** talk: { icon, name, title, kn, lines, words }. Resolves { finished, spoken, picks, wrong }. */
+export function conversation(talk, meName, { onSentence } = {}) {
+  return new Promise((resolve) => {
+    const fill = (t) => t.replace(/\{me\}/g, meName);
+    const log = $("cvLog"); log.innerHTML = ""; let i = 0, spoken = 0, wrong = 0, closed = false, micUsed = false;
+    $("cvIcon").textContent = talk.icon; $("cvName").textContent = talk.name; $("cvTitle").textContent = talk.title; $("cvKn").textContent = talk.kn;
+    $("cvEnd").hidden = true; $("cvTurn").hidden = false;
+    const end = (finished) => { if (closed) return; closed = true; hide("conv"); if (window.speechSynthesis) speechSynthesis.cancel(); if (micUsed) hooks.micEnd(); resolve({ finished, spoken, wrong }); };
+    $("cvClose").onclick = () => end(false);
+    const bubble = (cls, en, kn) => { const d = document.createElement("div"); d.className = "bub " + cls; d.innerHTML = `<p>${en}</p>${kn ? `<small class="kn">${kn}</small>` : ""}`; log.appendChild(d); log.scrollTop = log.scrollHeight; return d; };
+    const step = () => {
+      if (closed) return;
+      if (i >= talk.lines.length) return finishScene();
+      const L = talk.lines[i++];
+      if (L[0] === "n") {
+        bubble("npc", L[1], L[2]); voice(L[1], "npc");
+        $("cvWant").textContent = ""; $("cvOpts").innerHTML = ""; $("cvSay").hidden = true; $("cvMsg").textContent = "";
+        setTimeout(step, Math.min(3800, 900 + L[1].length * 38));
+      } else yourTurn(L);
+    };
+    const yourTurn = (L) => {
+      const right = fill(L[2]);
+      $("cvWant").innerHTML = `<small>You want to say</small><span class="kn">${fill(L[1])}</span>`;
+      $("cvMsg").textContent = "Pick the correct English sentence."; $("cvSay").hidden = true;
+      const box = $("cvOpts"); box.innerHTML = "";
+      for (const o of [L[2], L[3], L[4]].map(fill).sort(() => Math.random() - 0.5)) {
+        const b = document.createElement("button"); b.textContent = o;
+        b.onclick = () => {
+          if (o !== right) { wrong++; b.classList.add("bad"); b.disabled = true; Sound.sfx("wrong"); $("cvMsg").textContent = "Not quite. Read each one slowly and try again."; return; }
+          Sound.sfx("right"); box.innerHTML = ""; $("cvWant").textContent = "";
+          const mine = bubble("me", right, ""); sayIt(right, mine);
+        };
+        box.appendChild(b);
+      }
+    };
+    const sayIt = (right, mine) => {
+      say(right, { rate: 0.85 });
+      if (!Speech.canListen) { $("cvMsg").textContent = "Read it out loud, then tap Next."; $("cvSay").hidden = false; $("cvMic").hidden = true; $("cvSkip").textContent = "Next ▶"; $("cvSkip").hidden = false; $("cvSkip").onclick = () => { $("cvSay").hidden = true; step(); }; return; }
+      let misses = 0;
+      $("cvSay").hidden = false; $("cvMic").hidden = false; $("cvSkip").hidden = true; $("cvSkip").textContent = "Skip speaking ▶";
+      $("cvMsg").innerHTML = "Now <b>say it out loud</b>. Tap the mic.";
+      $("cvSkip").onclick = () => { $("cvSay").hidden = true; step(); };
+      $("cvMic").onclick = async () => {
+        if (!micUsed) { micUsed = true; hooks.micStart(); }
+        $("cvMic").classList.add("rec"); $("cvMsg").textContent = "Listening…";
+        try {
+          const heard = await listen({ timeout: 7000, onInterim: (t) => ($("cvMsg").textContent = `“${t}”`) });
+          if (closed) return;
+          if (matchScore(heard, right) >= 0.6) { spoken++; mine.classList.add("said"); Sound.sfx("right"); onSentence && onSentence(right); $("cvMsg").innerHTML = "🎤 <b>Well said!</b>"; $("cvSay").hidden = true; setTimeout(step, 700); }
+          else { misses++; Sound.sfx("wrong"); $("cvMsg").innerHTML = heard ? `I heard “${heard}”. Try once more, slowly.` : "I didn't hear you. Try again!"; $("cvSkip").hidden = false; }
+        } catch (e) { $("cvMsg").textContent = "Mic not available."; $("cvSkip").hidden = false; }
+        $("cvMic").classList.remove("rec");
+      };
+    };
+    const finishScene = () => {
+      $("cvTurn").hidden = true; $("cvEnd").hidden = false;
+      const g = $("cvWords"); g.innerHTML = "";
+      for (const w of talk.words) {
+        const d = document.createElement("div"); d.className = "wi";
+        d.innerHTML = `<b>${w.p || ""} ${w.w}</b><span class="kn">${w.k}</span><br><small>${w.m}</small>`;
+        d.onclick = () => say(`${w.w}. ${w.s ? w.s.replace("___", w.w) : w.m}`); g.appendChild(d);
+      }
+      $("cvSum").innerHTML = `${talk.name} can talk again! You spoke <b>${spoken}</b> sentence${spoken === 1 ? "" : "s"} out loud.`;
+      $("cvDone").onclick = () => end(true);
+    };
+    show("conv"); step();
+  });
+}
+
+// ------------------------------------------------------------ tiffin (word book + progress)
+export function openTiffin(chapters, festival, learned, { talks = {}, stats = null, strength = () => 1, onPractice } = {}) {
   const list = $("tfList"); list.innerHTML = "";
   let total = 0, known = 0;
+  const dots = (n) => `<i class="dots">${"●".repeat(Math.min(5, n))}${"○".repeat(5 - Math.min(5, n))}</i>`;
   const section = (title, words) => {
     const h = document.createElement("h4"); h.textContent = title; list.appendChild(h);
     const g = document.createElement("div"); g.className = "wl";
     for (const w of words) {
       total++; const k = !!learned[w.w]; if (k) known++;
       const d = document.createElement("div"); d.className = "wi" + (k ? "" : " locked");
-      d.innerHTML = k ? `<b>${w.p || ""} ${w.w}</b><span class="kn">${w.k}</span><br><small>${w.m}</small>` : `<b>🔒 ?????</b><small>${title}</small>`;
+      d.innerHTML = k ? `<b>${w.p || ""} ${w.w}</b><span class="kn">${w.k}</span><br><small>${w.m}</small>${dots(strength(w.w))}` : `<b>🔒 ?????</b><small>${title}</small>`;
       if (k) d.onclick = () => say(`${w.w}. ${w.m}`);
       g.appendChild(d);
     }
     list.appendChild(g);
   };
-  chapters.forEach((c, i) => section(`${i + 1}. ${c.title} · ${c.place.split(",")[0]}`, c.words));
+  chapters.forEach((c, i) => section(`${i + 1}. ${c.title} · ${c.place.split(",")[0]}`, [...c.words, ...(talks[c.id] || []).flatMap((t) => t.words)]));
   const fl = festival.filter((w) => learned[w.w]);
   if (fl.length) section("🌟 Word Festival", fl);
-  $("tfSum").textContent = `${known} words in the tiffin. Tap a word to hear it.`;
+  if (stats) {
+    $("tfStats").hidden = false;
+    $("tfStats").innerHTML = `<div><b>${stats.learned}</b><small>words learned</small></div><div><b>${stats.strong}</b><small>strong words</small></div><div><b>${stats.sentences}</b><small>sentences spoken</small></div><div><b>🔥 ${stats.streak}</b><small>day streak</small></div>`;
+    $("tfPractice").hidden = stats.learned < 3; $("tfPractice").textContent = stats.due ? `🧠 Practise now · ${stats.due} word${stats.due === 1 ? "" : "s"} waiting` : "🧠 Practise now";
+    $("tfPractice").onclick = () => { hide("tiffin"); onPractice && onPractice(); };
+  } else { $("tfStats").hidden = true; $("tfPractice").hidden = true; }
+  $("tfSum").textContent = `${known} of ${total} words in the tiffin. ●●●●● = you know it well. Tap a word to hear it.`;
   show("tiffin");
 }

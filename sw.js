@@ -1,8 +1,8 @@
 // Offline cache for MAATHU. Bump V when assets change.
-const V = "maathu-v6";
+const V = "maathu-v7";
 const CORE = ["./", "index.html", "css/maathu.css", "manifest.json", "vendor/three.module.min.js", "vendor/peerjs.min.js",
   "vendor/addons/loaders/GLTFLoader.js", "vendor/addons/utils/SkeletonUtils.js", "vendor/addons/utils/BufferGeometryUtils.js",
-  "js/main.js", "js/world.js", "js/towns.js", "js/combat.js", "js/vehicles.js", "js/traffic.js", "js/chars.js", "js/content.js", "js/ui.js", "js/input.js", "js/speech.js", "js/audio.js", "js/save.js", "js/net.js",
+  "js/main.js", "js/world.js", "js/towns.js", "js/combat.js", "js/vehicles.js", "js/traffic.js", "js/chars.js", "js/content.js", "js/ui.js", "js/input.js", "js/speech.js", "js/audio.js", "js/save.js", "js/net.js", "js/learn.js", "js/talks.js",
   "assets/bangara.glb", "assets/gundamma.glb", "assets/props.glb", "assets/goon.glb", "assets/weapons.glb", "assets/vehicles.glb", "assets/art/duo.webp",
   "world/world.json", "world/height.bin", "world/district.bin", "world/color.png", "world/veg.png"];
 self.addEventListener("install", (e) => e.waitUntil(caches.open(V).then((c) => c.addAll(CORE)).catch(() => {}).then(() => self.skipWaiting())));

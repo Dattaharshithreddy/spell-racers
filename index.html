@@ -34,7 +34,8 @@
       <button id="tPlay" class="big gold">▶ <span id="tPlayTxt">Start the story</span></button>
       <button id="tCoop" class="big green">📱📱 Play with a friend</button>
       <div class="row">
-        <button id="tTiffin">🍱 Word Tiffin <small id="tWords"></small></button>
+        <button id="tTiffin">🍱 My words <small id="tWords"></small></button>
+        <button id="tPractice">🧠 Daily practice <small id="tDue"></small></button>
         <button id="tHelp">❓ How to play</button>
         <button id="tSound">🔊</button>
       </div>
@@ -72,7 +73,7 @@
 <!-- ============ HUD ============ -->
 <section id="hud" hidden>
   <div class="top">
-    <div class="obj"><small id="hChap"></small><b id="hObj"></b><span id="hDist"></span></div>
+    <div class="obj"><small id="hChap"></small><b id="hObj"></b><em class="kn" id="hObjKn"></em><span id="hDist"></span></div>
     <div class="topR">
       <canvas id="mini" width="200" height="200"></canvas>
       <div class="tbtns"><button id="hVoice" title="Voice chat" hidden>🔇</button><button id="hTiffin" title="Word Tiffin">🍱<i id="hWords"></i></button><button id="hMap" title="Map">🗺️</button><button id="hMenu" title="Menu">☰</button></div>
@@ -92,6 +93,7 @@
     <button data-act="jump" id="bJump" class="act a-jump">⤒<small>Jump</small></button>
     <button data-act="fire" id="bFire" class="act a-fire">🔫<small>Fire</small></button>
     <button data-act="car" id="bCar" class="act a-car" hidden>🛺<small>Drive</small></button>
+    <button data-act="word" id="bWord" class="act a-word">🗯️<small>Word</small><i id="wordCd"></i></button>
   </div>
   <div id="coach" hidden><small id="coachN"></small><p id="coachT"></p><button id="coachSkip" class="link">Skip training</button></div>
   <div id="hurt"></div>
@@ -134,9 +136,10 @@
 <!-- ============ SPEAK ============ -->
 <section id="speak" class="modal" hidden>
   <div class="card">
-    <small class="eyebrow">Wake the land</small>
+    <small class="eyebrow" id="spStep">Wake the land</small>
     <h3>Say it out loud!</h3>
     <p class="say" id="spLine"></p>
+    <p class="kn spkn" id="spKn" hidden></p>
     <button id="spMic" class="mic">🎤</button>
     <p class="hint" id="spMsg">Tap the mic and speak clearly.</p>
     <div class="row" id="spType" hidden><input id="spIn" placeholder="Type the sentence…" autocomplete="off"><button id="spGo" class="gold">✓</button></div>
@@ -151,6 +154,41 @@
     <div class="mcmeter"><i id="mcBar"></i></div>
     <p id="mcSt" class="mcst"></p>
     <div class="col"><button id="mcGo" class="big gold" disabled>Continue ✓</button><button id="mcAgain" hidden>🔁 Try again</button><button id="mcType" class="link">No mic? Type instead</button></div>
+  </div>
+</section>
+
+<!-- ============ QUESTION (word power / practice) ============ -->
+<section id="ask" class="modal" hidden>
+  <div class="card ask">
+    <div class="row between"><small class="eyebrow" id="askTitle">Word power</small><button id="askClose" class="link" hidden>✕</button></div>
+    <div class="mcmeter slim" id="askTimer" hidden><i id="askTimerFill"></i></div>
+    <div class="pic" id="askPic"></div>
+    <h3 id="askQ"></h3>
+    <p class="hint" id="askSub"></p>
+    <div id="askOpts" class="col opts"></div>
+    <button id="askMic" class="microw">🎤 <span id="askMicTxt">Or say it out loud</span></button>
+    <button id="askSkipSay" class="link" hidden>I can't speak now. Show me choices.</button>
+    <p class="hint" id="askMsg"></p>
+  </div>
+</section>
+
+<!-- ============ CONVERSATION ============ -->
+<section id="conv" class="modal" hidden>
+  <div class="card wide conv">
+    <div class="row between cvhead"><div class="cvwho"><span id="cvIcon"></span><div><b id="cvName"></b><small><span id="cvTitle"></span> · <span class="kn" id="cvKn"></span></small></div></div><button id="cvClose">✕</button></div>
+    <div id="cvLog"></div>
+    <div id="cvTurn">
+      <div id="cvWant"></div>
+      <div id="cvOpts" class="col opts"></div>
+      <div id="cvSay" class="row" hidden><button id="cvMic" class="mic small">🎤</button><button id="cvSkip" class="link" hidden>Skip speaking ▶</button></div>
+      <p class="hint" id="cvMsg"></p>
+    </div>
+    <div id="cvEnd" hidden>
+      <small class="eyebrow">New words for your tiffin</small>
+      <div id="cvWords" class="wl"></div>
+      <p class="hint" id="cvSum"></p>
+      <button id="cvDone" class="big gold">Done ✓</button>
+    </div>
   </div>
 </section>
 
@@ -177,6 +215,8 @@
 <section id="tiffin" class="modal" hidden>
   <div class="card wide tall">
     <div class="row between"><h3>🍱 Gundamma's Word Tiffin</h3><button id="tfClose">✕</button></div>
+    <div id="tfStats" class="stats" hidden></div>
+    <button id="tfPractice" class="big gold" hidden>🧠 Practise now</button>
     <p class="hint" id="tfSum"></p>
     <div id="tfList"></div>
   </div>
@@ -190,6 +230,7 @@
       <button id="mnResume" class="big gold">Resume</button>
       <button id="mnSound">🔊 Sound</button>
       <button id="mnHelp">❓ How to play</button>
+      <button id="mnPractice">🧠 Daily practice</button>
       <button id="mnMic">🎤 Test microphone</button>
       <button id="mnQuit">🏠 Title screen</button>
     </div>
@@ -202,7 +243,8 @@
     <h4 class="hh">🎮 Controls</h4>
     <table class="ctl">
       <tr><td>🕹️</td><td><b>Left stick</b>: run. <b>Drag the right side</b> of the screen to turn the camera.</td></tr>
-      <tr><td>🔫</td><td><b>Fire</b> (hold): shoots the nearest villain automatically. Bangara's Akshara Blaster fires fast letters; Gundamma's Tiffin Cannon fires exploding tiffin lids.</td></tr>
+      <tr><td>🗯️</td><td><b>Word power</b>: your real weapon. You see a Kannada word; tap (or <b>say</b>) the right English word to release a word blast that hurts every villain around you and heals you. Saying it out loud gives double power. Brutes and Mouna have shields that only word power breaks well.</td></tr>
+      <tr><td>🔫</td><td><b>Fire</b> (hold): shoots the nearest villain automatically. Good against small goons, weak against shields.</td></tr>
       <tr><td>⤒</td><td><b>Jump</b>. Bangara can jump twice in the air.</td></tr>
       <tr><td>⚡</td><td><b>Dash</b> (Bangara): zoom forward and can't be hit for a moment.</td></tr>
       <tr><td>💥</td><td><b>Pound</b> (Gundamma): smash the ground and hurt every villain around you.</td></tr>
@@ -211,20 +253,23 @@
       <tr><td>🛺</td><td><b>Drive</b>: walk up to an auto-rickshaw, bike or jeep and tap the vehicle button. Stick = steer and accelerate, pull back to brake/reverse, ⤒ = horn. Your partner rides along and can shoot from the back. Run villains over!</td></tr>
       <tr><td>🎙️</td><td><b>Voice chat</b> (two phones): tap 🎙️ at the top to talk to your friend. It switches off by itself while you do a speaking challenge.</td></tr>
       <tr><td>💬</td><td><b>Talk</b> appears when you're next to the silent friend.</td></tr>
-      <tr><td>⌨️</td><td>Keyboard: WASD move · Space jump/horn · F fire · Shift special · Q team-up · Tab swap · V vehicle · E talk · M map</td></tr>
+      <tr><td>⌨️</td><td>Keyboard: WASD move · Space jump/horn · F fire · R word power · Shift special · Q team-up · Tab swap · V vehicle · E talk · M map</td></tr>
     </table>
     <h4 class="hh">📖 Each chapter</h4>
     <ol class="help">
       <li>Follow the <b>golden light</b> and the arrow at the top of the screen to the landmark.</li>
       <li>Find <b>6 glowing words</b>. Villains with a <b>💬 bubble</b> carry stolen words, so beat them to free the words. One word is always <b>up high</b>: use the team-up throw.</li>
       <li>Watch your <b>❤️ health</b>. Eat 🟨 <b>Mysore Pak</b> dropped by villains to heal. If you're knocked out, you get back up near the landmark.</li>
-      <li>Talk to the silent friend, <b>put the words back into the story</b>, then <b>say the sentence out loud</b>. Colour comes back to the whole district!</li>
+      <li>Help <b>two townspeople with a 💬 bubble</b>. Each one has an everyday conversation (taking an auto, ordering food, asking the way): pick the right English reply, then say it out loud. You get 3 new words each time.</li>
+      <li>Talk to the silent friend, <b>put the words back into the story</b>, then climb the <b>speaking ladder</b>: two words, a phrase, then the whole sentence. Colour comes back to the whole district!</li>
+      <li>Old words come back in word powers and in <b>🧠 Daily practice</b>, so you don't forget them. Open <b>🍱 My words</b> to see your progress.</li>
       <li>After a chapter, <b>🌟 festival words</b> appear in restored towns every day. The Mute Gang guards them.</li>
     </ol>
     <button id="hpOk" class="big gold">Got it</button>
   </div>
 </section>
 
+<section id="alert" class="modal" hidden><div class="card"><p id="alTxt" class="altxt"></p><button id="alOk" class="big gold">OK</button></div></section>
 <div id="flash" hidden></div>
 <script src="vendor/peerjs.min.js"></script>
 <script type="module" src="js/main.js"></script>

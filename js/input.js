@@ -59,7 +59,7 @@ export function initInput(root) {
     b.addEventListener("touchstart", down, { passive: false }); b.addEventListener("mousedown", down);
     b.addEventListener("touchend", up); b.addEventListener("mouseup", up); b.addEventListener("mouseleave", up);
   }
-  const KM = { " ": "jump", Shift: "special", q: "team", Q: "team", e: "talk", E: "talk", Tab: "swap", m: "map", M: "map", f: "fire", F: "fire", j: "fire", J: "fire", v: "car", V: "car", g: "car", G: "car" };
+  const KM = { " ": "jump", Shift: "special", q: "team", Q: "team", e: "talk", E: "talk", Tab: "swap", m: "map", M: "map", f: "fire", F: "fire", j: "fire", J: "fire", v: "car", V: "car", g: "car", G: "car", r: "word", R: "word" };
   window.addEventListener("keydown", (e) => {
     if (e.target.tagName === "INPUT") return;
     keys.add(e.key.toLowerCase()); const a = KM[e.key]; if (a) { Input.pressed.add(a); Input.held.add(a); e.preventDefault(); }
