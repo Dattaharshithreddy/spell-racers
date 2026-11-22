@@ -1,0 +1,8 @@
+{
+  "appId": "com.bangara.englishcoach",
+  "appName": "Bangara",
+  "webDir": "www",
+  "backgroundColor": "#FFF8EC",
+  "android": { "allowMixedContent": false, "webContentsDebuggingEnabled": false },
+  "plugins": { "LocalNotifications": { "iconColor": "#F2B705" } }
+}

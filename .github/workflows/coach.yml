@@ -1,0 +1,54 @@
+name: Build Bangara Coach APK
+
+on:
+  push:
+    branches: [main]
+    paths: ["coach/**", ".github/workflows/coach.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: coach
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 22 }
+      - uses: actions/setup-java@v5
+        with: { distribution: temurin, java-version: 21 }
+      - name: Install Capacitor + plugins
+        run: npm install
+      - name: Build web bundle
+        run: npm run web
+      - name: Create Android project
+        run: |
+          npx cap add android
+          sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick >/dev/null
+          VERSION_CODE=${{ github.run_number }} ./scripts/android-setup.sh
+          npx cap sync android
+      - name: Build APK
+        working-directory: coach/android
+        run: |
+          sed -i 's/networkTimeout=[0-9]*/networkTimeout=120000/' gradle/wrapper/gradle-wrapper.properties
+          for i in 1 2 3; do ./gradlew assembleDebug --no-daemon && break; echo "retry $i"; sleep 15; done
+          test -f app/build/outputs/apk/debug/app-debug.apk
+      - name: Rename APK
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk Bangara-English-Coach.apk
+      - name: Publish download link
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: bangara-coach-apk
+          name: Bangara English Coach – Android APK (latest)
+          make_latest: false
+          files: coach/Bangara-English-Coach.apk
+          body: |
+            **Bangara 🐰 English Coach**: 10 minutes a day of new words, fast recall, shadowing and real conversations (daily life, work, study, doctor), with Kannada help.
+
+            1. On the Android phone, tap **Bangara-English-Coach.apk** below to download.
+            2. Open it and allow "Install unknown apps" when asked.
+            3. Allow the microphone and notifications.
