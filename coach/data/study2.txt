@@ -1,0 +1,118 @@
+# study · level 2 · academic words
+abstract|ಸಾರಾಂಶ / ಅಮೂರ್ತ|a short summary of research; not concrete|Read the abstract first.
+academic|ಶೈಕ್ಷಣಿಕ|related to education|Her academic record is excellent.
+accurate|ನಿಖರ|correct in every detail|Your answer is accurate.
+acquire|ಗಳಿಸು|to get or learn|She acquired good clinical skills.
+adequate|ಸಾಕಷ್ಟು|enough|Get adequate sleep before the exam.
+affect|ಪ್ರಭಾವ ಬೀರು|to make a change in|Stress affects your health.
+aim|ಉದ್ದೇಶ|purpose|The aim of this study is to compare two drugs.
+alternative|ಪರ್ಯಾಯ|another choice|Is there an alternative treatment?
+approach|ವಿಧಾನ|a way of dealing with something|We need a new approach.
+appropriate|ಸೂಕ್ತ|suitable|Use appropriate examples.
+argument|ವಾದ|reasons for an opinion|Her argument was strong.
+aspect|ಅಂಶ|one part or side|Consider every aspect of the problem.
+assess|ಮೌಲ್ಯಮಾಪನ ಮಾಡು|to judge|Teachers assess our work every month.
+assume|ಊಹಿಸು|to accept as true without proof|Don't assume. Check the facts.
+benefit|ಲಾಭ|an advantage|What are the benefits of exercise?
+category|ವರ್ಗ|a group of similar things|Put these drugs into categories.
+challenge|ಸವಾಲು|a difficult task|Anatomy is a big challenge.
+characteristic|ಲಕ್ಷಣ|a typical feature|List the characteristics of a virus.
+classify|ವರ್ಗೀಕರಿಸು|to arrange in groups|Classify the bones by shape.
+complex|ಸಂಕೀರ್ಣ|having many parts|The brain is a complex organ.
+component|ಘಟಕ|a part of something|Blood has four main components.
+comprehensive|ಸಮಗ್ರ|including everything|This is a comprehensive textbook.
+consequence|ಪರಿಣಾಮ|a result, often bad|Think about the consequences.
+considerable|ಗಣನೀಯ|large in amount|There was considerable improvement.
+consist of|ಒಳಗೊಂಡಿರು|to be made of|The heart consists of four chambers.
+constant|ಸ್ಥಿರ|not changing|Body temperature stays constant.
+context|ಸಂದರ್ಭ|the situation around something|Understand the word in context.
+contrast|ವ್ಯತಿರಿಕ್ತತೆ|a clear difference|In contrast, type 2 diabetes develops slowly.
+contribute|ಕೊಡುಗೆ ನೀಡು|to help cause|Poor diet contributes to heart disease.
+criteria|ಮಾನದಂಡಗಳು|standards for judging|What are the criteria for selection?
+data|ದತ್ತಾಂಶ|facts and numbers|Collect data from fifty patients.
+decline|ಇಳಿಕೆ|a decrease|There's a decline in malaria cases.
+demonstrate|ತೋರಿಸು|to show clearly|The results demonstrate the drug's effect.
+derive|ಪಡೆ|to get from a source|Many medicines are derived from plants.
+determine|ನಿರ್ಧರಿಸು / ಕಂಡುಹಿಡಿ|to find out|Tests determine the cause.
+distinguish|ಪ್ರತ್ಯೇಕಿಸು|to see the difference|Distinguish between bacteria and viruses.
+distribution|ವಿತರಣೆ|how something is spread|Study the distribution of the disease.
+element|ಅಂಶ / ಮೂಲವಸ್ತು|a basic part|Iron is an important element.
+emphasis|ಒತ್ತು|special importance|There is emphasis on practical skills.
+enable|ಸಾಧ್ಯವಾಗಿಸು|to make possible|This app enables quick revision.
+estimate|ಅಂದಾಜು ಮಾಡು|to guess the size or amount|Estimate the blood loss.
+evaluate|ಮೌಲ್ಯಮಾಪನ ಮಾಡು|to judge value|Evaluate both treatments.
+evidence|ಪುರಾವೆ|facts that prove something|There is strong evidence for vaccination.
+examine|ಪರೀಕ್ಷಿಸು|to look at closely|Examine the slide carefully.
+expand|ವಿಸ್ತರಿಸು|to make bigger|The lungs expand when we breathe in.
+explanation|ವಿವರಣೆ|words that make something clear|Thank you for the clear explanation.
+factor|ಅಂಶ|something that affects a result|Age is a risk factor.
+feature|ವೈಶಿಷ್ಟ್ಯ|an important part|What are the clinical features?
+findings|ಕಂಡುಹಿಡಿದ ಅಂಶಗಳು|results of research|Present your findings.
+focus|ಕೇಂದ್ರಬಿಂದು|the main point|The focus of today's class is the liver.
+framework|ಚೌಕಟ್ಟು|a basic structure|The study follows a clear framework.
+generate|ಉತ್ಪಾದಿಸು|to produce|The heart generates electrical signals.
+hypothesis|ಊಹಾ ಸಿದ್ಧಾಂತ|an idea to be tested|Our hypothesis was correct.
+identify|ಗುರುತಿಸು|to recognise|Identify the bone in the picture.
+illustrate|ಉದಾಹರಣೆಯಿಂದ ವಿವರಿಸು|to explain with pictures or examples|Illustrate your answer with a diagram.
+impact|ಪ್ರಭಾವ|a strong effect|Lack of sleep has an impact on memory.
+indicate|ಸೂಚಿಸು|to show|High fever indicates infection.
+interpret|ಅರ್ಥೈಸು|to explain the meaning|Can you interpret this ECG?
+investigate|ತನಿಖೆ ಮಾಡು|to examine to find facts|Investigate the cause of the fever.
+involve|ಒಳಗೊಳ್ಳು|to include as a part|Surgery involves some risk.
+issue|ವಿಷಯ / ಸಮಸ್ಯೆ|an important topic or problem|Mental health is an important issue.
+justify|ಸಮರ್ಥಿಸು|to give good reasons for|Justify your answer.
+limitation|ಮಿತಿ|a weakness or restriction|What are the limitations of this test?
+logical|ತಾರ್ಕಿಕ|making sense|Give a logical answer.
+major|ಪ್ರಮುಖ|very important; large|Heart disease is a major problem.
+minor|ಸಣ್ಣ|small; not serious|It's a minor injury.
+method|ವಿಧಾನ|a way of doing|Describe the method used.
+modify|ಮಾರ್ಪಡಿಸು|to change a little|Modify the diet for diabetic patients.
+normal|ಸಾಮಾನ್ಯ|usual; healthy|His blood test is normal.
+abnormal|ಅಸಹಜ|not normal|The X-ray shows an abnormal shadow.
+objective|ಉದ್ದೇಶ / ವಸ್ತುನಿಷ್ಠ|a goal; based on facts|State the objectives of the study.
+obtain|ಪಡೆ|to get|Obtain consent before the test.
+occur|ಸಂಭವಿಸು|to happen|When did the pain occur?
+outcome|ಫಲಿತಾಂಶ|the final result|The outcome of the surgery was good.
+overall|ಒಟ್ಟಾರೆ|in general|Overall, the patient is improving.
+participate|ಭಾಗವಹಿಸು|to take part|Participate actively in class.
+period|ಅವಧಿ|a length of time|Over a period of six months.
+phase|ಹಂತ|a stage|The first phase of the trial is over.
+potential|ಸಂಭಾವ್ಯ|possible|What are the potential side effects?
+previous|ಹಿಂದಿನ|earlier|In the previous class, we learned about blood.
+primary|ಪ್ರಾಥಮಿಕ|first; most important|The primary cause is infection.
+principle|ತತ್ವ|a basic rule|Learn the principles of first aid.
+proportion|ಪ್ರಮಾಣ / ಅನುಪಾತ|a part of a whole|A large proportion of patients recovered.
+range|ವ್ಯಾಪ್ತಿ|limits between numbers|The normal range is 70 to 110.
+rate|ದರ|speed or amount|What's his heart rate?
+ratio|ಅನುಪಾತ|the relation between two numbers|The nurse-patient ratio is one to four.
+relevant|ಸಂಬಂಧಿತ|connected|Write only relevant points.
+rely on|ಅವಲಂಬಿಸು|to depend on|Don't rely only on memory.
+require|ಅಗತ್ಯಪಡು|to need|This answer requires a diagram.
+role|ಪಾತ್ರ|function|What's the role of insulin?
+section|ವಿಭಾಗ|a part|Answer section B first.
+significant|ಗಮನಾರ್ಹ|important; large enough to notice|There was a significant drop in sugar.
+similar|ಸಮಾನ|almost the same|The symptoms are similar.
+source|ಮೂಲ|where something comes from|Milk is a good source of calcium.
+specific|ನಿರ್ದಿಷ್ಟ|exact; particular|Give a specific example.
+stage|ಹಂತ|a step in development|The disease is in an early stage.
+statistics|ಅಂಕಿಅಂಶಗಳು|numbers about facts|Statistics show an increase in diabetes.
+sufficient|ಸಾಕಷ್ಟು|enough|Is the evidence sufficient?
+technique|ತಂತ್ರ|a special way of doing|Learn the correct injection technique.
+theory|ಸಿದ್ಧಾಂತ|an explained idea|Germ theory changed medicine.
+transfer|ವರ್ಗಾಯಿಸು|to move from one place to another|Oxygen transfers from lungs to blood.
+trend|ಪ್ರವೃತ್ತಿ|a general direction of change|There's a rising trend in obesity.
+valid|ಮಾನ್ಯ|acceptable; correct|Your ID is not valid.
+variable|ಚರ|something that can change|Age is an important variable.
+vary|ಬದಲಾಗು|to be different|Symptoms vary from person to person.
+whereas|ಆದರೆ|but in contrast|Arteries carry blood away, whereas veins bring it back.
+therefore|ಆದ್ದರಿಂದ|for that reason|He had a fever; therefore, he stayed home.
+moreover|ಇದಲ್ಲದೆ|also; in addition|The drug is cheap. Moreover, it's safe.
+furthermore|ಮತ್ತಷ್ಟು|in addition|Furthermore, exercise improves mood.
+thus|ಹೀಗೆ / ಆದ್ದರಿಂದ|so; as a result|Thus, we conclude that the drug works.
+in addition|ಜೊತೆಗೆ|also|In addition, drink more water.
+in conclusion|ಕೊನೆಯದಾಗಿ (ತೀರ್ಮಾನದಲ್ಲಿ)|to finish|In conclusion, early diagnosis saves lives.
+for instance|ಉದಾಹರಣೆಗೆ|for example|Some fruits, for instance oranges, are rich in vitamin C.
+on the other hand|ಇನ್ನೊಂದು ಕಡೆ|from another point of view|On the other hand, surgery is costly.
+as a result|ಪರಿಣಾಮವಾಗಿ|because of that|As a result, the patient recovered quickly.
+due to|ಕಾರಣದಿಂದಾಗಿ|because of|The class was cancelled due to rain.
+according to|ಪ್ರಕಾರ|as said by|According to the report, his sugar is high.

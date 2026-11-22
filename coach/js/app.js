@@ -1,6 +1,8 @@
 // Bangara English Coach: daily vocabulary, fast recall, shadowing and conversation practice (Kannada help).
 import { Store, PHRASES, WORDS, dayNum } from "./store.js";
-import { CONVS } from "./convs.js";
+import { CONVS as C1 } from "./convs.js";
+import { CONVS2 } from "./convs2.js";
+const CONVS = [...C1, ...CONVS2];
 import { Speech, say, stopSpeaking, listen, heardWord, sentenceScore, micPermission } from "./speech.js";
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -277,7 +279,7 @@ function shadowMenu() {
 }
 function phraseList() {
   const groups = {}; for (const ph of PHRASES) (groups[ph[2]] = groups[ph[2]] || []).push(ph);
-  const NAMES = { listening: "When you don't understand", thinking: "When you need time to think", opinion: "Giving your opinion", linking: "Joining your ideas", polite: "Being polite", social: "Friendly talk", doctor: "With patients", work: "At work" };
+  const NAMES = { listening: "When you don't understand", thinking: "When you need time to think", opinion: "Giving your opinion", linking: "Joining your ideas", polite: "Being polite", social: "Friendly talk", doctor: "As a doctor", work: "At work", study: "In college" };
   show(`${top("🧩 Speaking phrases")}
     <p class="muted">Fluent speakers use these all the time. Learn them and you'll never get stuck in the middle of a sentence.</p>
     <button class="btn gold" id="drill">▶ Practise 6 phrases</button>
@@ -381,7 +383,8 @@ function progress() {
   for (let d = dayNum() - 13; d <= dayNum(); d++) days.push(st.days.find((x) => x.d === d) || { d, ms: null, n: 0 });
   const max = Math.max(4000, ...days.map((d) => d.ms || 0));
   const trend = st.avgMs && st.avgMsBefore ? Math.round((1 - st.avgMs / st.avgMsBefore) * 100) : null;
-  const byTrack = {}; for (const w of Store.learned()) byTrack[w.t] = (byTrack[w.t] || 0) + 1;
+  const byTrack = {}, totals = {}; for (const w of Store.learned()) byTrack[w.t] = (byTrack[w.t] || 0) + 1;
+  for (const w of WORDS) totals[w.t] = (totals[w.t] || 0) + 1; totals.mine = Store.p.mine.length;
   show(`${top("📈 My progress")}
     <div class="stats">
       <div class="stat"><b>${st.learned}</b><small>words learned</small></div>
@@ -397,8 +400,8 @@ function progress() {
       <div class="chart">${days.map((d) => `<div class="${d.ms ? "" : "none"}" style="height:${d.ms ? Math.max(6, (d.ms / max) * 100) : 4}%" title="${d.ms ? secs(d.ms) : ""}"></div>`).join("")}</div>
       <div class="chart-x">${days.map((d, i) => `<span>${i % 2 ? "" : new Date(d.d * 864e5).getDate()}</span>`).join("")}</div>
     </div>
-    <div class="card col"><h3>Words by topic</h3>${Object.entries(TRACK).map(([t, [i, n]]) => byTrack[t] ? `<div class="row between"><span>${i} ${n}</span><b>${byTrack[t]}</b></div>` : "").join("") || `<p class="muted">Start a session to see this.</p>`}</div>
-    <p class="muted center">Words left to learn: ${Math.max(0, st.total - st.learned)}</p>`);
+    <div class="card col"><h3>Words by topic</h3>${Object.entries(TRACK).map(([t, [i, n]]) => totals[t] ? `<div class="col" style="gap:4px"><div class="row between"><span>${i} ${n}</span><b>${byTrack[t] || 0} / ${totals[t]}</b></div><div class="prog"><i style="width:${(((byTrack[t] || 0) / totals[t]) * 100).toFixed(1)}%"></i></div></div>` : "").join("")}</div>
+    <p class="muted center">${Math.max(0, st.total - st.learned)} words left to learn · about ${Math.ceil(Math.max(0, st.total - st.learned) / Store.p.perDay)} days at ${Store.p.perDay} a day</p>`);
 }
 
 // ============================================================ share with a friend

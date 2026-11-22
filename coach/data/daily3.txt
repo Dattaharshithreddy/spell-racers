@@ -1,0 +1,167 @@
+# daily · level 2 · describing people and things
+active|ಚುರುಕಾದ|always busy and moving|My grandfather is still very active.
+angry|ಕೋಪಗೊಂಡ|feeling strong displeasure|Why are you angry with me?
+ashamed|ನಾಚಿಕೆಪಟ್ಟ|feeling bad about something you did|I'm ashamed of my behaviour.
+awake|ಎಚ್ಚರವಾಗಿರುವ|not sleeping|Are you still awake?
+bored|ಬೇಸರಗೊಂಡ|not interested; nothing to do|I'm bored at home.
+boring|ಬೇಸರ ತರಿಸುವ|not interesting|The movie was boring.
+brave|ಧೈರ್ಯಶಾಲಿ|not afraid|She was brave during the surgery.
+bright|ಪ್ರಕಾಶಮಾನ / ಬುದ್ಧಿವಂತ|full of light; clever|He's a bright student.
+busy|ಕಾರ್ಯನಿರತ|having a lot to do|The road is very busy.
+calm|ಶಾಂತ|quiet and not worried|Stay calm and think.
+careful|ಎಚ್ಚರಿಕೆಯ|giving attention to avoid mistakes|Be careful on the wet floor.
+careless|ಅಜಾಗರೂಕ|not giving enough attention|It was a careless mistake.
+cheap|ಅಗ್ಗ|low in price|Vegetables are cheap today.
+cheerful|ಹರ್ಷಚಿತ್ತದ|happy and positive|She's always cheerful.
+clever|ಬುದ್ಧಿವಂತ|quick to learn|What a clever idea!
+comfortable|ಆರಾಮದಾಯಕ|nice and relaxed|These shoes are comfortable.
+common|ಸಾಮಾನ್ಯ|happening often|Fever is common in the rainy season.
+cruel|ಕ್ರೂರ|causing pain on purpose|Don't be cruel to animals.
+dangerous|ಅಪಾಯಕಾರಿ|could cause harm|Driving fast is dangerous.
+dark|ಕತ್ತಲೆಯ|with no light|It's getting dark.
+dirty|ಕೊಳಕು|not clean|Your hands are dirty.
+disappointed|ನಿರಾಶೆಗೊಂಡ|sad because things were not as hoped|I was disappointed with my marks.
+easy|ಸುಲಭ|not difficult|This question is easy.
+empty|ಖಾಲಿ|with nothing inside|The bottle is empty.
+excited|ಉತ್ಸುಕ|very happy about something coming|I'm excited about the trip.
+exciting|ರೋಮಾಂಚಕ|making you feel excited|The match was exciting.
+expensive|ದುಬಾರಿ|costing a lot|This phone is too expensive.
+famous|ಪ್ರಸಿದ್ಧ|known by many people|Mysuru is famous for its palace.
+fat|ದಪ್ಪ|having a big body|The cat is getting fat.
+favourite|ಅಚ್ಚುಮೆಚ್ಚಿನ|liked the most|Masala dosa is my favourite.
+fit|ಸದೃಢ|healthy and strong|She exercises to stay fit.
+foolish|ಮೂರ್ಖ|not wise|It was foolish to go out in the storm.
+free|ಉಚಿತ / ಬಿಡುವಾದ|costing nothing; not busy|Are you free this evening?
+friendly|ಸ್ನೇಹಪರ|kind and nice to others|Our neighbours are friendly.
+frightened|ಭಯಗೊಂಡ|afraid|The child was frightened by the thunder.
+full|ತುಂಬಿದ|with no more space|The bus is full.
+funny|ತಮಾಷೆಯ|making you laugh|He told a funny story.
+gentle|ಸೌಮ್ಯ|soft and kind|Be gentle with the baby.
+glad|ಸಂತೋಷಗೊಂಡ|pleased|I'm glad you came.
+handsome|ಸುಂದರ (ಪುರುಷ)|good-looking (man)|Her brother is handsome.
+hard-working|ಶ್ರಮಜೀವಿ|working with a lot of effort|She is very hard-working.
+healthy|ಆರೋಗ್ಯಕರ|not sick; good for the body|Eat healthy food.
+heavy|ಭಾರವಾದ|weighing a lot|This box is heavy.
+helpful|ಸಹಾಯಕ|ready to help|The staff were very helpful.
+honest|ಪ್ರಾಮಾಣಿಕ|telling the truth|He's an honest man.
+huge|ಬೃಹತ್|very big|They live in a huge house.
+ill|ಅಸ್ವಸ್ಥ|sick|She's been ill for a week.
+important|ಮುಖ್ಯ|having great value|This meeting is important.
+impossible|ಅಸಾಧ್ಯ|cannot happen|Nothing is impossible.
+interested|ಆಸಕ್ತಿಯುಳ್ಳ|wanting to know more|I'm interested in music.
+interesting|ಆಸಕ್ತಿಕರ|making you want to know more|This book is interesting.
+kind|ದಯಾಳು|caring about others|She is kind to everyone.
+lazy|ಸೋಮಾರಿ|not wanting to work|Don't be lazy, get up!
+light|ಹಗುರ / ಬೆಳಕು|not heavy; brightness|This bag is very light.
+little|ಸ್ವಲ್ಪ / ಚಿಕ್ಕ|small; a small amount|Add a little sugar.
+loud|ಜೋರಾದ|making a lot of sound|The music is too loud.
+lovely|ಸುಂದರ / ಚೆನ್ನಾದ|very nice|What a lovely day!
+lucky|ಅದೃಷ್ಟಶಾಲಿ|having good luck|You're lucky to have such friends.
+married|ಮದುವೆಯಾದ|having a husband or wife|Are you married?
+modern|ಆಧುನಿಕ|new and up to date|It's a modern hospital.
+narrow|ಕಿರಿದಾದ|not wide|The lane is too narrow for a car.
+naughty|ತುಂಟ|behaving badly (children)|My nephew is very naughty.
+neat|ಅಚ್ಚುಕಟ್ಟಾದ|clean and tidy|Keep your room neat.
+noisy|ಗದ್ದಲದ|full of noise|The classroom is noisy.
+old-fashioned|ಹಳೆಯ ಶೈಲಿಯ|not modern|My father's phone is old-fashioned.
+pale|ಬಿಳಿಚಿಕೊಂಡ|having less colour than usual|You look pale. Are you okay?
+peaceful|ಶಾಂತಿಯುತ|quiet and calm|The village is peaceful.
+perfect|ಪರಿಪೂರ್ಣ|with no mistakes|Your English is almost perfect.
+pleasant|ಹಿತಕರ|nice and enjoyable|The weather is pleasant.
+poor|ಬಡ|having little money|They helped poor families.
+popular|ಜನಪ್ರಿಯ|liked by many people|This is a popular restaurant.
+pretty|ಸುಂದರ|nice to look at|What a pretty dress!
+proud|ಹೆಮ್ಮೆಯ|happy about what you or others did|My parents are proud of me.
+quick|ಬೇಗ / ತ್ವರಿತ|fast|Let's have a quick lunch.
+quiet|ನಿಶ್ಯಬ್ದ|with little noise|Please be quiet in the library.
+ready|ಸಿದ್ಧ|prepared|Are you ready to go?
+rich|ಶ್ರೀಮಂತ|having a lot of money|He comes from a rich family.
+right|ಸರಿ / ಬಲ|correct; the opposite of left|You're right.
+rough|ಒರಟಾದ|not smooth|The road is rough here.
+safe|ಸುರಕ್ಷಿತ|not in danger|Keep your documents in a safe place.
+same|ಅದೇ|not different|We have the same phone.
+scared|ಹೆದರಿದ|afraid|I'm scared of the dark.
+selfish|ಸ್ವಾರ್ಥಿ|thinking only of yourself|Don't be selfish, share it.
+serious|ಗಂಭೀರ|important; not joking|Is it serious?
+shy|ನಾಚಿಕೆ ಸ್ವಭಾವದ|nervous with other people|She's shy at first.
+sick|ಅಸ್ವಸ್ಥ|ill|I feel sick today.
+silly|ಸಿಲ್ಲಿ / ಮೂರ್ಖತನದ|not sensible|Don't ask silly questions.
+simple|ಸರಳ|easy; not complicated|The answer is simple.
+slow|ನಿಧಾನ|not fast|The internet is slow.
+smart|ಚುರುಕು|clever; well dressed|You look smart today.
+smooth|ನಯವಾದ|flat, with no rough parts|The baby's skin is smooth.
+soft|ಮೃದು|not hard|The idlis are soft.
+special|ವಿಶೇಷ|different and better|Today is a special day.
+strange|ವಿಚಿತ್ರ|unusual|I heard a strange noise.
+strict|ಕಟ್ಟುನಿಟ್ಟಾದ|wanting rules to be followed|Our principal is very strict.
+strong|ಬಲಶಾಲಿ|having power|He's strong enough to lift it.
+sure|ಖಚಿತ|certain|Are you sure?
+surprised|ಆಶ್ಚರ್ಯಗೊಂಡ|feeling shock at something unexpected|I was surprised to see him.
+sweet|ಸಿಹಿ / ಮುದ್ದಾದ|sugary; kind and lovely|What a sweet child!
+tall|ಎತ್ತರ|high|My brother is very tall.
+terrible|ಭಯಾನಕ / ತುಂಬಾ ಕೆಟ್ಟ|very bad|I had a terrible headache.
+thick|ದಪ್ಪ|wide from one side to the other|This book is thick.
+thin|ತೆಳ್ಳಗಿನ|not thick; not fat|She's tall and thin.
+tidy|ಅಚ್ಚುಕಟ್ಟಾದ|neat|Keep your desk tidy.
+tiny|ಅತಿ ಚಿಕ್ಕ|very small|The kitten is tiny.
+true|ನಿಜ|correct, real|Is it true?
+ugly|ಕುರೂಪ|not nice to look at|That building is ugly.
+unhappy|ಅಸಂತೋಷ|sad|Why are you unhappy?
+unusual|ಅಸಾಮಾನ್ಯ|not common|It's unusual for him to be late.
+useful|ಉಪಯುಕ್ತ|helpful for doing something|This app is useful.
+useless|ನಿಷ್ಪ್ರಯೋಜಕ|not useful|This old charger is useless.
+weak|ದುರ್ಬಲ|not strong|I feel weak after the fever.
+wide|ಅಗಲವಾದ|large from side to side|The river is very wide here.
+wise|ಜ್ಞಾನಿ|having good judgement|My grandmother is very wise.
+wonderful|ಅದ್ಭುತ|very good|We had a wonderful time.
+wrong|ತಪ್ಪು|not correct|Sorry, wrong number.
+young|ಚಿಕ್ಕ ವಯಸ್ಸಿನ|not old|She is too young to drive.
+above|ಮೇಲೆ|higher than|The fan is above the bed.
+across|ಆಚೆ / ಅಡ್ಡಲಾಗಿ|on the other side|The bank is across the road.
+against|ವಿರುದ್ಧ|opposite to; touching|I'm against this idea.
+ahead|ಮುಂದೆ|in front|Go straight ahead.
+along|ಉದ್ದಕ್ಕೂ|following the length of|Walk along the river.
+behind|ಹಿಂದೆ|at the back of|The car is behind the house.
+below|ಕೆಳಗೆ|lower than|Sign below this line.
+beside|ಪಕ್ಕದಲ್ಲಿ|next to|Sit beside me.
+between|ನಡುವೆ|in the middle of two things|The shop is between the bank and the temple.
+during|ಸಮಯದಲ್ಲಿ|while something happens|Don't use phones during class.
+inside|ಒಳಗೆ|in|Come inside, it's raining.
+instead|ಬದಲಾಗಿ|in place of|Let's have tea instead of coffee.
+nearby|ಹತ್ತಿರದಲ್ಲಿ|not far away|Is there an ATM nearby?
+opposite|ಎದುರು|facing; completely different|The school is opposite the park.
+outside|ಹೊರಗೆ|not inside|Wait outside.
+through|ಮೂಲಕ|from one side to the other|We drove through the forest.
+towards|ಕಡೆಗೆ|in the direction of|Walk towards the gate.
+until|ತನಕ|up to the time|Wait until I come.
+within|ಒಳಗೆ (ಅವಧಿಯ)|inside a limit of time or space|Reply within two days.
+already|ಈಗಾಗಲೇ|before now|I've already eaten.
+also|ಸಹ / ಕೂಡ|too|I also want to come.
+always|ಯಾವಾಗಲೂ|every time|She is always on time.
+early|ಬೇಗ|before the usual time|I came early today.
+enough|ಸಾಕಷ್ಟು|as much as needed|Do we have enough rice?
+ever|ಎಂದಾದರೂ|at any time|Have you ever been to Goa?
+finally|ಕೊನೆಗೂ|at last|Finally, the rain stopped.
+hardly|ಅಷ್ಟೇನೂ ಇಲ್ಲ|almost not|I can hardly hear you.
+just|ಈಗಷ್ಟೇ / ಕೇವಲ|a moment ago; only|I just reached home.
+later|ಆಮೇಲೆ|after some time|Call me later.
+never|ಎಂದಿಗೂ ಇಲ್ಲ|not at any time|I never eat meat.
+often|ಆಗಾಗ|many times|I often visit my grandmother.
+once|ಒಮ್ಮೆ|one time|I've been there once.
+perhaps|ಬಹುಶಃ|maybe|Perhaps he missed the bus.
+probably|ಬಹುಶಃ (ಹೆಚ್ಚು ಸಾಧ್ಯತೆ)|very likely|It will probably rain.
+quite|ಸಾಕಷ್ಟು|fairly|The test was quite easy.
+really|ನಿಜವಾಗಿಯೂ|very; truly|I really like it.
+sometimes|ಕೆಲವೊಮ್ಮೆ|at some times|Sometimes I walk to work.
+soon|ಬೇಗನೆ|in a short time|See you soon.
+still|ಇನ್ನೂ|continuing up to now|Are you still at the office?
+suddenly|ಇದ್ದಕ್ಕಿದ್ದಂತೆ|quickly and unexpectedly|Suddenly, the lights went off.
+together|ಒಟ್ಟಿಗೆ|with each other|Let's study together.
+too|ತುಂಬಾ / ಕೂಡ|more than needed; also|It's too hot.
+yet|ಇನ್ನೂ|up to now|Has he called yet?
+although|ಆದರೂ|but; even if|Although it was raining, we went out.
+because|ಏಕೆಂದರೆ|for the reason that|I'm late because of the traffic.
+however|ಆದಾಗ್ಯೂ|but|It's expensive. However, it's good quality.
+unless|ಹೊರತು|except if|We'll go unless it rains.
+whether|ಹೌದೋ ಅಲ್ಲವೋ|if (one of two choices)|I don't know whether he'll come.
+while|ಆಗ / ವೇಳೆ|during the time that|I listen to music while cooking.

@@ -1,0 +1,87 @@
+# doctor · level 3 · specialties and what patients say
+blurred vision|ಮಸುಕಾದ ದೃಷ್ಟಿ|not seeing clearly|I have blurred vision since last week.
+watery eyes|ಕಣ್ಣಲ್ಲಿ ನೀರು ಸುರಿಯುವಿಕೆ|eyes that keep making tears|Dust gives me watery eyes.
+red eye|ಕೆಂಪು ಕಣ್ಣು|eye that looks red|Conjunctivitis causes red eyes.
+cataract|ಕಣ್ಣಿನ ಪೊರೆ|clouding of the lens of the eye|Cataract surgery restores vision.
+glaucoma|ಗ್ಲುಕೋಮಾ|high pressure inside the eye|Glaucoma can cause blindness.
+spectacles|ಕನ್ನಡಕ|glasses|You need spectacles for reading.
+squint|ಓರೆಗಣ್ಣು|eyes not looking in the same direction|The child has a squint.
+ear discharge|ಕಿವಿ ಸೋರುವಿಕೆ|liquid coming from the ear|There's discharge from the left ear.
+hearing loss|ಶ್ರವಣ ನಷ್ಟ|not hearing well|Old age can cause hearing loss.
+ringing in the ears|ಕಿವಿಯಲ್ಲಿ ಗುಂಯ್ ಶಬ್ದ|a sound in the ears that isn't real|I hear ringing in my ears at night.
+nosebleed|ಮೂಗಿನಿಂದ ರಕ್ತಸ್ರಾವ|bleeding from the nose|Lean forward during a nosebleed.
+sinus|ಸೈನಸ್|air spaces in the face bones|Sinus infection causes face pain.
+tonsils|ಟಾನ್ಸಿಲ್ಸ್|glands at the back of the throat|Her tonsils are swollen.
+hoarse voice|ಗೊಗ್ಗರು ಧ್ವನಿ|a rough, weak voice|Teachers often get a hoarse voice.
+difficulty swallowing|ನುಂಗಲು ಕಷ್ಟ|pain or trouble swallowing|Do you have difficulty swallowing?
+dandruff|ಹೊಟ್ಟು|white flakes from the scalp|Use this shampoo for dandruff.
+acne|ಮೊಡವೆ|spots on the face|Acne is common in teenagers.
+pimple|ಮೊಡವೆ|a small red spot on the skin|Don't squeeze the pimples.
+hair fall|ಕೂದಲು ಉದುರುವಿಕೆ|losing hair|Hair fall can be due to low iron.
+fungal infection|ಶಿಲೀಂಧ್ರ ಸೋಂಕು|infection by fungus|Fungal infections are common in humid weather.
+eczema|ಎಸ್ಜಿಮಾ|dry, itchy skin|Use moisturiser for eczema.
+psoriasis|ಸೋರಿಯಾಸಿಸ್|thick scaly patches on the skin|Psoriasis is not contagious.
+scabies|ಕಜ್ಜಿ|itchy skin from tiny mites|Scabies spreads through close contact.
+wart|ನರಹುಲಿ|a small hard growth on the skin|There's a wart on his finger.
+mole|ಮಚ್ಚೆ|a dark spot on the skin|Tell me if the mole changes size.
+blister|ಬೊಬ್ಬೆ|a bubble of fluid under the skin|New shoes gave me blisters.
+cavity|ಹುಳುಕು ಹಲ್ಲು|a hole in a tooth|You have a cavity.
+sensitive teeth|ಸೂಕ್ಷ್ಮ ಹಲ್ಲುಗಳು|teeth that hurt with cold|I have sensitive teeth.
+bad breath|ಬಾಯಿ ದುರ್ವಾಸನೆ|unpleasant smell from the mouth|Brush twice to avoid bad breath.
+mouth ulcer|ಬಾಯಿ ಹುಣ್ಣು|a painful sore in the mouth|Mouth ulcers heal in a week.
+vaccination card|ಲಸಿಕೆ ಕಾರ್ಡ್|a card that records vaccines|Bring the baby's vaccination card.
+milestones|ಬೆಳವಣಿಗೆಯ ಹಂತಗಳು|skills a child learns at certain ages|Is the baby reaching her milestones?
+crawl|ತೆವಳು|to move on hands and knees|The baby started crawling.
+teething|ಹಲ್ಲು ಬರುವುದು|when a baby's teeth are coming|She's irritable because of teething.
+colic|ಹೊಟ್ಟೆಯ ಸೆಳೆತ (ಶಿಶು)|crying in babies from stomach pain|The baby cries every evening; it may be colic.
+feeding|ಆಹಾರ ಉಣಿಸುವಿಕೆ|giving food|Is the baby feeding well?
+weight gain|ತೂಕ ಹೆಚ್ಚಳ|becoming heavier|The baby's weight gain is good.
+irritable|ಕಿರಿಕಿರಿಗೊಳ್ಳುವ|easily upset|The child is irritable and not eating.
+drowsy|ಜೋಂಪು / ನಿದ್ದೆಯ ಮಂಪರು|sleepy|This medicine may make you drowsy.
+irregular periods|ಅನಿಯಮಿತ ಮುಟ್ಟು|periods that don't come on time|Irregular periods can be due to PCOS.
+heavy bleeding|ಅತಿಯಾದ ರಕ್ತಸ್ರಾವ|losing a lot of blood|Do you have heavy bleeding during periods?
+white discharge|ಬಿಳಿ ಸೆರಗು|white fluid from the vagina|White discharge with itching may be an infection.
+antenatal check-up|ಪ್ರಸವಪೂರ್ವ ತಪಾಸಣೆ|check-ups during pregnancy|Come for your antenatal check-up every month.
+due date|ಹೆರಿಗೆಯ ನಿರೀಕ್ಷಿತ ದಿನ|the expected date of delivery|Your due date is 15th March.
+morning sickness|ಬೆಳಗಿನ ವಾಕರಿಕೆ|nausea in early pregnancy|Morning sickness usually stops by the fourth month.
+labour pain|ಹೆರಿಗೆ ನೋವು|pain when the baby is being born|She came in with labour pains.
+contraception|ಗರ್ಭನಿರೋಧ|preventing pregnancy|We can discuss contraception options.
+menopause|ಋತುಬಂಧ|when periods stop permanently|Hot flushes are common in menopause.
+mental health|ಮಾನಸಿಕ ಆರೋಗ್ಯ|health of the mind|Mental health is as important as physical health.
+counselling|ಆಪ್ತಸಮಾಲೋಚನೆ|talking with a trained person about problems|Counselling can help with stress.
+mood swings|ಮನಸ್ಥಿತಿಯ ಏರಿಳಿತ|quick changes in mood|She has mood swings.
+panic attack|ಭೀತಿಯ ಆಘಾತ|sudden intense fear with fast heartbeat|A panic attack feels like a heart attack.
+hallucination|ಭ್ರಮೆ|seeing or hearing things that are not there|He has hallucinations at night.
+confusion|ಗೊಂದಲ|not thinking clearly|Elderly patients may have confusion after surgery.
+memory loss|ಜ್ಞಾಪಕಶಕ್ತಿ ನಷ್ಟ|forgetting things|Memory loss may be due to dementia.
+self-care|ಸ್ವ-ಆರೈಕೆ|looking after yourself|Doctors also need self-care.
+suicidal thoughts|ಆತ್ಮಹತ್ಯೆಯ ಆಲೋಚನೆಗಳು|thoughts of ending one's life|Always ask gently about suicidal thoughts and get help.
+chest tightness|ಎದೆಯ ಬಿಗಿತ|a squeezing feeling in the chest|Chest tightness on walking needs an ECG.
+wheezing|ಸೀಟಿ ಶಬ್ದದ ಉಸಿರಾಟ|a whistling sound while breathing|The child is wheezing.
+swollen feet|ಊದಿಕೊಂಡ ಕಾಲುಗಳು|feet bigger than usual with fluid|Swollen feet may mean heart or kidney problems.
+frequent urination|ಆಗಾಗ ಮೂತ್ರ ವಿಸರ್ಜನೆ|passing urine many times|Frequent urination is a sign of diabetes.
+excessive thirst|ಅತಿಯಾದ ಬಾಯಾರಿಕೆ|feeling very thirsty|Excessive thirst with weight loss suggests diabetes.
+night sweats|ರಾತ್ರಿ ಬೆವರು|sweating a lot at night|Night sweats can be a sign of TB.
+loss of appetite|ಹಸಿವಿಲ್ಲದಿರುವುದು|not feeling like eating|He has fever and loss of appetite.
+weight gain|ತೂಕ ಏರಿಕೆ|becoming heavier|Sudden weight gain may be thyroid related.
+joint pain|ಕೀಲು ನೋವು|pain in the joints|Joint pain is worse in the cold.
+low back pain|ಕೆಳ ಬೆನ್ನು ನೋವು|pain in the lower back|Low back pain is common in nurses.
+neck pain|ಕುತ್ತಿಗೆ ನೋವು|pain in the neck|Using phones causes neck pain.
+leg swelling|ಕಾಲು ಊತ|swollen legs|Is the leg swelling on one side or both?
+giddiness|ತಲೆ ತಿರುಗುವಿಕೆ|feeling dizzy|She has giddiness when standing up.
+blackout|ಕಣ್ಣು ಕತ್ತಲು ಬರುವುದು|sudden loss of sight or consciousness|He had a blackout while driving.
+slurred speech|ತೊದಲು ಮಾತು|unclear speech|Slurred speech can be a sign of stroke.
+shivering|ನಡುಕ|shaking from cold or fever|She's shivering with fever.
+yellow eyes|ಹಳದಿ ಕಣ್ಣುಗಳು|eyes turning yellow|Yellow eyes suggest jaundice.
+dark urine|ಗಾಢ ಬಣ್ಣದ ಮೂತ್ರ|urine darker than normal|Dark urine may mean dehydration.
+blood in urine|ಮೂತ್ರದಲ್ಲಿ ರಕ್ತ|red or brown urine|Blood in urine needs tests.
+vomiting blood|ರಕ್ತ ವಾಂತಿ|bringing up blood|Vomiting blood is an emergency.
+coughing up blood|ಕೆಮ್ಮಿನಲ್ಲಿ ರಕ್ತ|blood in phlegm|Coughing up blood needs a chest X-ray.
+black stools|ಕಪ್ಪು ಮಲ|stool that is black|Black stools may mean bleeding in the stomach.
+burning feet|ಪಾದಗಳ ಉರಿ|a burning feeling in the feet|Burning feet are common in diabetes.
+sleepless nights|ನಿದ್ರೆಯಿಲ್ಲದ ರಾತ್ರಿಗಳು|nights without sleep|Pain gives him sleepless nights.
+since yesterday|ನಿನ್ನೆಯಿಂದ|starting from yesterday|I've had a fever since yesterday.
+on and off|ಆಗಾಗ|sometimes, not all the time|The pain comes on and off.
+all of a sudden|ಇದ್ದಕ್ಕಿದ್ದಂತೆ|suddenly|All of a sudden, I couldn't breathe.
+getting worse|ಹದಗೆಡುತ್ತಿದೆ|becoming more serious|The cough is getting worse.
+much better|ತುಂಬಾ ಉತ್ತಮ|a lot improved|I'm feeling much better today, doctor.

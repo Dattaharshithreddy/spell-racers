@@ -1,0 +1,84 @@
+# phrase|kannada|group
+Can you say that in a different way?|ಅದನ್ನು ಬೇರೆ ರೀತಿಯಲ್ಲಿ ಹೇಳುತ್ತೀರಾ?|listening
+I'm not sure I understood. Do you mean…?|ನನಗೆ ಅರ್ಥವಾಯಿತೋ ಗೊತ್ತಿಲ್ಲ. ನೀವು ಹೇಳುತ್ತಿರುವುದು…?|listening
+Sorry, could you spell that?|ಕ್ಷಮಿಸಿ, ಅದರ ಕಾಗುಣಿತ ಹೇಳುತ್ತೀರಾ?|listening
+What does this word mean?|ಈ ಪದದ ಅರ್ಥ ಏನು?|listening
+How do you pronounce this?|ಇದನ್ನು ಹೇಗೆ ಉಚ್ಚರಿಸುವುದು?|listening
+Let me put it another way.|ಬೇರೆ ರೀತಿಯಲ್ಲಿ ಹೇಳುತ್ತೇನೆ.|thinking
+It's on the tip of my tongue.|ನಾಲಿಗೆ ತುದಿಯಲ್ಲೇ ಇದೆ (ನೆನಪಾಗುತ್ತಿಲ್ಲ).|thinking
+I can't remember the word, but it's like…|ಪದ ನೆನಪಾಗುತ್ತಿಲ್ಲ, ಆದರೆ ಅದು ಹೀಗಿದೆ…|thinking
+Give me a moment to think.|ಯೋಚಿಸಲು ಒಂದು ಕ್ಷಣ ಕೊಡಿ.|thinking
+Well, it depends.|ಸರಿ, ಅದು ಸಂದರ್ಭವನ್ನು ಅವಲಂಬಿಸಿದೆ.|thinking
+As far as I know,|ನನಗೆ ತಿಳಿದ ಮಟ್ಟಿಗೆ,|opinion
+I completely agree.|ನಾನು ಸಂಪೂರ್ಣವಾಗಿ ಒಪ್ಪುತ್ತೇನೆ.|opinion
+I see what you mean.|ನೀವು ಏನು ಹೇಳುತ್ತಿದ್ದೀರಿ ಎಂದು ಅರ್ಥವಾಯಿತು.|opinion
+I'm afraid I disagree.|ಕ್ಷಮಿಸಿ, ನಾನು ಒಪ್ಪುವುದಿಲ್ಲ.|opinion
+That's a good idea, but…|ಅದು ಒಳ್ಳೆಯ ಯೋಚನೆ, ಆದರೆ…|opinion
+If I were you, I would…|ನಾನು ನಿಮ್ಮ ಸ್ಥಾನದಲ್ಲಿದ್ದರೆ, ನಾನು…|opinion
+What do you think?|ನಿಮಗೇನು ಅನಿಸುತ್ತದೆ?|opinion
+Personally, I prefer…|ವೈಯಕ್ತಿಕವಾಗಿ, ನನಗೆ … ಇಷ್ಟ.|opinion
+Also,|ಜೊತೆಗೆ,|linking
+Besides that,|ಅದಲ್ಲದೆ,|linking
+In the end,|ಕೊನೆಯಲ್ಲಿ,|linking
+At the same time,|ಅದೇ ಸಮಯದಲ್ಲಿ,|linking
+That's why…|ಅದಕ್ಕಾಗಿಯೇ…|linking
+The main reason is…|ಮುಖ್ಯ ಕಾರಣ ಏನೆಂದರೆ…|linking
+To be honest,|ನಿಜ ಹೇಳಬೇಕೆಂದರೆ,|linking
+Anyway, as I was saying,|ಹೇಗಿದ್ದರೂ, ನಾನು ಹೇಳುತ್ತಿದ್ದಂತೆ,|linking
+Excuse me, may I come in?|ಕ್ಷಮಿಸಿ, ನಾನು ಒಳಗೆ ಬರಬಹುದೇ?|polite
+Could I ask you a quick question?|ನಾನು ಒಂದು ಚಿಕ್ಕ ಪ್ರಶ್ನೆ ಕೇಳಬಹುದೇ?|polite
+I really appreciate it.|ನಾನು ಇದನ್ನು ತುಂಬಾ ಮೆಚ್ಚುತ್ತೇನೆ.|polite
+Sorry for the trouble.|ತೊಂದರೆಗಾಗಿ ಕ್ಷಮಿಸಿ.|polite
+Sorry, I'm running a little late.|ಕ್ಷಮಿಸಿ, ನಾನು ಸ್ವಲ್ಪ ತಡವಾಗಿ ಬರುತ್ತಿದ್ದೇನೆ.|polite
+Please don't mind.|ದಯವಿಟ್ಟು ಬೇಸರಿಸಬೇಡಿ.|polite
+You're welcome.|ಪರವಾಗಿಲ್ಲ / ಸ್ವಾಗತ.|polite
+That's very kind of you.|ನೀವು ತುಂಬಾ ಒಳ್ಳೆಯವರು.|polite
+What do you do?|ನೀವು ಏನು ಕೆಲಸ ಮಾಡುತ್ತೀರಿ?|social
+Where are you from?|ನೀವು ಎಲ್ಲಿಯವರು?|social
+How was your day?|ನಿಮ್ಮ ದಿನ ಹೇಗಿತ್ತು?|social
+What are your plans for the weekend?|ವಾರಾಂತ್ಯಕ್ಕೆ ನಿಮ್ಮ ಯೋಜನೆ ಏನು?|social
+It was nice talking to you.|ನಿಮ್ಮೊಂದಿಗೆ ಮಾತನಾಡಿ ಸಂತೋಷವಾಯಿತು.|social
+Let's catch up soon.|ಬೇಗ ಸಿಗೋಣ.|social
+Congratulations! I'm so happy for you.|ಅಭಿನಂದನೆಗಳು! ನಿಮಗಾಗಿ ತುಂಬಾ ಸಂತೋಷ.|social
+I'm sorry to hear that.|ಅದನ್ನು ಕೇಳಿ ಬೇಸರವಾಯಿತು.|social
+How long have you had this problem?|ಈ ತೊಂದರೆ ಎಷ್ಟು ದಿನದಿಂದ ಇದೆ?|doctor
+Can you describe the pain?|ನೋವನ್ನು ವರ್ಣಿಸುತ್ತೀರಾ?|doctor
+Does anything make it better or worse?|ಯಾವುದರಿಂದಾದರೂ ಕಡಿಮೆ ಅಥವಾ ಹೆಚ್ಚಾಗುತ್ತದೆಯೇ?|doctor
+Are you taking any medicines right now?|ನೀವು ಈಗ ಯಾವುದಾದರೂ ಔಷಧಿ ತಗೊಳ್ಳುತ್ತಿದ್ದೀರಾ?|doctor
+Have you had this before?|ಇದು ಮೊದಲು ಆಗಿತ್ತೇ?|doctor
+Does anyone in your family have this?|ನಿಮ್ಮ ಕುಟುಂಬದಲ್ಲಿ ಯಾರಿಗಾದರೂ ಇದು ಇದೆಯೇ?|doctor
+I'm going to examine you now. Is that okay?|ಈಗ ನಿಮ್ಮನ್ನು ಪರೀಕ್ಷಿಸುತ್ತೇನೆ. ಸರಿಯೇ?|doctor
+Please lie down and relax.|ದಯವಿಟ್ಟು ಮಲಗಿ, ಆರಾಮವಾಗಿರಿ.|doctor
+You may feel a small prick.|ನಿಮಗೆ ಸಣ್ಣ ಚುಚ್ಚಿದಂತೆ ಅನಿಸಬಹುದು.|doctor
+Tell me if it hurts.|ನೋವಾದರೆ ಹೇಳಿ.|doctor
+You're doing very well.|ನೀವು ತುಂಬಾ ಚೆನ್ನಾಗಿ ಸಹಕರಿಸುತ್ತಿದ್ದೀರಿ.|doctor
+Your reports are normal.|ನಿಮ್ಮ ವರದಿಗಳು ಸಾಮಾನ್ಯವಾಗಿವೆ.|doctor
+We need to do a few more tests.|ಇನ್ನೂ ಕೆಲವು ಪರೀಕ್ಷೆಗಳು ಮಾಡಬೇಕು.|doctor
+This medicine will help with the pain.|ಈ ಔಷಧಿ ನೋವಿಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆ.|doctor
+Take this medicine after food, twice a day.|ಈ ಔಷಧಿಯನ್ನು ಊಟದ ನಂತರ, ದಿನಕ್ಕೆ ಎರಡು ಬಾರಿ ತಗೊಳ್ಳಿ.|doctor
+Drink plenty of water and take rest.|ಸಾಕಷ್ಟು ನೀರು ಕುಡಿದು ವಿಶ್ರಾಂತಿ ತಗೊಳ್ಳಿ.|doctor
+If you have any problem, call us immediately.|ಏನಾದರೂ ತೊಂದರೆ ಆದರೆ, ತಕ್ಷಣ ನಮಗೆ ಕರೆ ಮಾಡಿ.|doctor
+Please come for a review next week.|ದಯವಿಟ್ಟು ಮುಂದಿನ ವಾರ ಮರುತಪಾಸಣೆಗೆ ಬನ್ನಿ.|doctor
+I understand you're worried.|ನಿಮಗೆ ಚಿಂತೆ ಇದೆ ಎಂದು ನನಗೆ ಅರ್ಥವಾಗುತ್ತದೆ.|doctor
+We will take good care of him.|ನಾವು ಅವರನ್ನು ಚೆನ್ನಾಗಿ ನೋಡಿಕೊಳ್ಳುತ್ತೇವೆ.|doctor
+Sir, may I present the case?|ಸರ್, ನಾನು ಕೇಸ್ ಪ್ರಸ್ತುತಪಡಿಸಬಹುದೇ?|doctor
+The patient is a 30-year-old woman who came with…|ರೋಗಿ 30 ವರ್ಷದ ಮಹಿಳೆ, ಇವರು … ತೊಂದರೆಯೊಂದಿಗೆ ಬಂದಿದ್ದಾರೆ.|doctor
+On examination, the patient was…|ಪರೀಕ್ಷೆಯಲ್ಲಿ, ರೋಗಿ…|doctor
+My provisional diagnosis is…|ನನ್ನ ತಾತ್ಕಾಲಿಕ ರೋಗನಿರ್ಣಯ…|doctor
+Could you show me how to do it, sir?|ಸರ್, ಅದನ್ನು ಹೇಗೆ ಮಾಡುವುದು ಎಂದು ತೋರಿಸುತ್ತೀರಾ?|doctor
+I'll inform my senior.|ನಾನು ನನ್ನ ಹಿರಿಯರಿಗೆ ತಿಳಿಸುತ್ತೇನೆ.|doctor
+Shall I start the IV fluids?|ನಾನು ಐವಿ ದ್ರವಗಳನ್ನು ಶುರು ಮಾಡಲೇ?|doctor
+I have a doubt in this topic.|ಈ ವಿಷಯದಲ್ಲಿ ನನಗೆ ಒಂದು ಸಂದೇಹವಿದೆ.|study
+Could you explain it once more, please?|ದಯವಿಟ್ಟು ಮತ್ತೊಮ್ಮೆ ವಿವರಿಸುತ್ತೀರಾ?|study
+Which book should I refer to?|ನಾನು ಯಾವ ಪುಸ್ತಕ ಓದಬೇಕು?|study
+Is this important for the exam?|ಇದು ಪರೀಕ್ಷೆಗೆ ಮುಖ್ಯವೇ?|study
+Can I borrow your notes?|ನಿಮ್ಮ ನೋಟ್ಸ್ ಕೊಡುತ್ತೀರಾ?|study
+Let's revise together.|ಒಟ್ಟಿಗೆ ಪುನರಾವರ್ತನೆ ಮಾಡೋಣ.|study
+Today, I'm going to talk about…|ಇವತ್ತು ನಾನು … ಬಗ್ಗೆ ಮಾತನಾಡುತ್ತೇನೆ.|study
+Thank you for listening. Any questions?|ಕೇಳಿದ್ದಕ್ಕೆ ಧನ್ಯವಾದ. ಏನಾದರೂ ಪ್ರಶ್ನೆಗಳಿವೆಯೇ?|study
+I'll send you the details by email.|ವಿವರಗಳನ್ನು ಇಮೇಲ್‌ನಲ್ಲಿ ಕಳುಹಿಸುತ್ತೇನೆ.|work
+Can we schedule a call?|ನಾವು ಒಂದು ಕರೆ ನಿಗದಿಪಡಿಸಬಹುದೇ?|work
+I'm working on it.|ನಾನು ಅದರ ಮೇಲೆ ಕೆಲಸ ಮಾಡುತ್ತಿದ್ದೇನೆ.|work
+It will be done by tomorrow.|ಅದು ನಾಳೆಯೊಳಗೆ ಮುಗಿಯುತ್ತದೆ.|work
+I need a little more time.|ನನಗೆ ಇನ್ನೂ ಸ್ವಲ್ಪ ಸಮಯ ಬೇಕು.|work
+Thank you for your support.|ನಿಮ್ಮ ಬೆಂಬಲಕ್ಕೆ ಧನ್ಯವಾದ.|work

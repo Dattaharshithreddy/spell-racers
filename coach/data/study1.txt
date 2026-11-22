@@ -1,0 +1,89 @@
+# study · level 1 · college life
+college|ಕಾಲೇಜು|a place for higher study|Which college are you in?
+university|ವಿಶ್ವವಿದ್ಯಾಲಯ|a large institution for degrees|RGUHS is the health university of Karnataka.
+course|ಕೋರ್ಸ್ / ಪಠ್ಯಕ್ರಮ|a set of classes|The MBBS course is five and a half years.
+subject|ವಿಷಯ|an area of study|Which subject do you like most?
+semester|ಸೆಮಿಸ್ಟರ್|half of an academic year|The semester ends in May.
+year|ವರ್ಷ (ಶೈಕ್ಷಣಿಕ)|a level of study|I'm in my second year.
+timetable|ವೇಳಾಪಟ್ಟಿ|a list of class times|Check the timetable for Monday.
+classroom|ತರಗತಿ ಕೊಠಡಿ|a room where classes happen|The classroom is on the first floor.
+lecture hall|ಉಪನ್ಯಾಸ ಸಭಾಂಗಣ|a big room for lectures|The lecture hall is full.
+lab|ಪ್ರಯೋಗಾಲಯ|a room for experiments|We have lab every Thursday.
+practical|ಪ್ರಾಯೋಗಿಕ|hands-on work|The practical exam is next week.
+theory|ಸಿದ್ಧಾಂತ|ideas that explain something|We finished the theory part.
+professor|ಪ್ರಾಧ್ಯಾಪಕ|a senior teacher at college|Our professor is very strict.
+lecturer|ಉಪನ್ಯಾಸಕ|a college teacher|The new lecturer explains well.
+principal|ಪ್ರಾಂಶುಪಾಲ|the head of a college|The principal gave a speech.
+classmate|ಸಹಪಾಠಿ|a student in your class|My classmate helped me with notes.
+batch|ತಂಡ / ಬ್ಯಾಚ್|a group of students who joined together|Our batch has 150 students.
+notes|ಟಿಪ್ಪಣಿಗಳು|written points from class|Can I borrow your notes?
+textbook|ಪಠ್ಯಪುಸ್ತಕ|a book for study|Buy the textbook from the library store.
+journal|ಜರ್ನಲ್ / ಪತ್ರಿಕೆ|a magazine with research; a record book|Submit your lab journal.
+record|ದಾಖಲೆ ಪುಸ್ತಕ|a book of practical work|Complete your record before the exam.
+homework|ಮನೆಗೆಲಸ|work to do at home|Did you finish your homework?
+test|ಪರೀಕ್ಷೆ|a short exam|We have a test on Friday.
+exam|ಪರೀಕ್ಷೆ|a formal test|My exams start next month.
+marks|ಅಂಕಗಳು|points for answers|I got good marks in physiology.
+grade|ಶ್ರೇಣಿ|a letter or level for performance|She got an A grade.
+rank|ಶ್ರೇಯಾಂಕ|position compared to others|He got the first rank.
+pass mark|ಉತ್ತೀರ್ಣ ಅಂಕ|the lowest mark to pass|The pass mark is fifty.
+question paper|ಪ್ರಶ್ನೆ ಪತ್ರಿಕೆ|a paper with exam questions|The question paper was long.
+answer sheet|ಉತ್ತರ ಪತ್ರಿಕೆ|paper to write answers|Write your roll number on the answer sheet.
+roll number|ಕ್ರಮ ಸಂಖ್ಯೆ|your number in class|What's your roll number?
+hall ticket|ಪ್ರವೇಶ ಪತ್ರ|a card to enter the exam|Don't forget your hall ticket.
+admission|ಪ್ರವೇಶಾತಿ|being accepted into a college|She got admission in a government college.
+fees|ಶುಲ್ಕ|money paid to study|The fees are due this week.
+uniform|ಸಮವಸ್ತ್ರ|clothes all students wear|Wear your apron in the lab.
+apron|ಏಪ್ರನ್|a white coat for medical students|Don't forget your apron.
+canteen|ಕ್ಯಾಂಟೀನ್|a place to eat in college|Let's have tea in the canteen.
+holiday|ರಜೆ|time with no classes|We have a holiday for Rajyotsava.
+vacation|ದೀರ್ಘ ರಜೆ|long holidays|Summer vacation starts in April.
+project|ಯೋಜನೆ / ಪ್ರಾಜೆಕ್ಟ್|a piece of planned work|Our group project is on diabetes.
+group|ಗುಂಪು|a few people together|We study in a group.
+discussion|ಚರ್ಚೆ|talking about a topic|We had a useful discussion.
+debate|ಚರ್ಚಾಸ್ಪರ್ಧೆ|a formal argument between sides|She won the debate competition.
+quiz|ರಸಪ್ರಶ್ನೆ|a short test of knowledge|Let's have a quick quiz.
+competition|ಸ್ಪರ್ಧೆ|a contest|I took part in the poster competition.
+prize|ಬಹುಮಾನ|something you win|She won first prize.
+certificate|ಪ್ರಮಾಣಪತ್ರ|an official paper|I got a certificate for participation.
+diagram|ರೇಖಾಚಿತ್ರ|a simple drawing to explain|Draw a neat diagram.
+label|ಹೆಸರಿಸು|to write names on parts|Label the parts of the heart.
+table|ಕೋಷ್ಟಕ|data in rows and columns|Make a table of the results.
+graph|ಆಲೇಖ / ಗ್ರಾಫ್|a drawing showing numbers|Plot a graph of the readings.
+formula|ಸೂತ್ರ|a rule written with symbols|Learn the formula for BMI.
+calculate|ಲೆಕ್ಕ ಹಾಕು|to find a number using maths|Calculate the dose.
+measure|ಅಳೆ|to find the size or amount|Measure the height of each student.
+observe|ಗಮನಿಸು|to watch carefully|Observe the slide under the microscope.
+microscope|ಸೂಕ್ಷ್ಮದರ್ಶಕ|a tool to see tiny things|Focus the microscope slowly.
+sample|ಮಾದರಿ|a small part for testing|Collect a blood sample.
+method|ವಿಧಾನ|a way of doing something|Explain the method.
+step|ಹಂತ|one action in a process|Follow each step carefully.
+process|ಪ್ರಕ್ರಿಯೆ|a series of steps|Digestion is a long process.
+function|ಕಾರ್ಯ|what something does|What's the function of the kidney?
+structure|ರಚನೆ|how parts are arranged|Describe the structure of a cell.
+type|ವಿಧ|a kind|There are two types of diabetes.
+cause|ಕಾರಣ|what makes something happen|What's the cause of anaemia?
+effect|ಪರಿಣಾಮ|a result|Smoking has bad effects on the lungs.
+fact|ಸತ್ಯಾಂಶ|something true|That's a scientific fact.
+information|ಮಾಹಿತಿ|facts about something|I need more information.
+knowledge|ಜ್ಞಾನ|what you know|Reading increases knowledge.
+skill|ಕೌಶಲ್ಯ|an ability|Clinical skills come with practice.
+mark|ಗುರುತು ಹಾಕು|to put a sign|Mark the correct answer.
+underline|ಅಡಿಗೆರೆ ಹಾಕು|to draw a line under|Underline the important words.
+spell|ಕಾಗುಣಿತ ಹೇಳು|to say or write letters of a word|How do you spell "pneumonia"?
+pronunciation|ಉಚ್ಚಾರಣೆ|how a word is said|Check the pronunciation online.
+recall|ನೆನಪಿಸಿಕೊ|to remember|I can't recall the name.
+learn by heart|ಕಂಠಪಾಠ ಮಾಡು|to memorise|Learn this poem by heart.
+revise|ಪುನರಾವರ್ತಿಸು|to study again|Revise one chapter every day.
+practise|ಅಭ್ಯಾಸ ಮಾಡು|to do again and again|Practise writing answers.
+improve|ಸುಧಾರಿಸು|to get better|My handwriting has improved.
+mistake|ತಪ್ಪು|an error|Correct your mistakes.
+guess|ಊಹೆ|an answer without being sure|Make a guess.
+attempt|ಪ್ರಯತ್ನಿಸು|to try|Attempt all questions.
+skip|ಬಿಟ್ಟುಬಿಡು|to leave out|Don't skip breakfast before exams.
+bunk|ತರಗತಿ ತಪ್ಪಿಸು|to miss class without permission (informal)|Don't bunk classes.
+absent|ಗೈರುಹಾಜರಾದ|not present|She was absent yesterday.
+present|ಹಾಜರಿರುವ|here|"Roll number 12?" "Present, sir."
+late|ತಡವಾಗಿ|after the right time|Sorry I'm late, ma'am.
+permission|ಅನುಮತಿ|being allowed|May I have permission to leave early?
+excuse me|ಕ್ಷಮಿಸಿ|polite way to get attention|Excuse me, ma'am, may I come in?

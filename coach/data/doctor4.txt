@@ -1,0 +1,85 @@
+# doctor · level 3 · talking to patients (doctor's language)
+complain of|ದೂರು ಹೇಳು (ತೊಂದರೆ)|to say you have a symptom|The patient complains of chest pain.
+present with|ತೊಂದರೆಯೊಂದಿಗೆ ಬರು|to come to the doctor with a problem|She presented with fever and cough.
+onset|ಆರಂಭ|the start of a symptom|What was the onset of the pain, sudden or gradual?
+duration|ಅವಧಿ|how long something lasts|What's the duration of the fever?
+frequency|ಆವರ್ತನ|how often|What's the frequency of urination?
+episode|ಸಂದರ್ಭ / ಸಲ|one time something happens|She had three episodes of vomiting.
+radiate|ಹರಡು (ನೋವು)|to spread from one point|Does the pain radiate to your left arm?
+aggravate|ಹೆಚ್ಚಿಸು|to make worse|What aggravates the pain?
+relieve|ಕಡಿಮೆ ಮಾಡು / ನಿವಾರಿಸು|to make less|Does rest relieve the pain?
+associated|ಸಂಬಂಧಿತ|happening together|Is the headache associated with vomiting?
+tenderness|ಮುಟ್ಟಿದಾಗ ನೋವು|pain when touched|There's tenderness in the right lower abdomen.
+press|ಒತ್ತು|to push|Tell me if it hurts when I press here.
+lie down|ಮಲಗು|to rest flat|Please lie down on the bed.
+sit up|ಎದ್ದು ಕುಳಿತುಕೊ|to move to a sitting position|Can you sit up for me?
+turn over|ಮಗ್ಗುಲು ಬದಲಿಸು|to roll your body|Please turn over onto your left side.
+take a deep breath|ದೀರ್ಘ ಉಸಿರು ತೆಗೆದುಕೊ|to breathe in fully|Take a deep breath and hold it.
+breathe out|ಉಸಿರು ಬಿಡು|to let air out|Now breathe out slowly.
+open your mouth|ಬಾಯಿ ತೆರೆಯಿರಿ|to open wide|Open your mouth and say "aah".
+roll up|ಮಡಚು (ತೋಳು)|to fold up a sleeve|Please roll up your sleeve.
+relax|ಸಡಿಲಿಸು|to make loose|Relax your arm.
+squeeze|ಹಿಸುಕು|to press tightly|Squeeze my fingers.
+follow my finger|ನನ್ನ ಬೆರಳನ್ನು ನೋಡಿ|to move your eyes with a finger|Follow my finger with your eyes.
+hold still|ಅಲುಗಾಡದೆ ಇರಿ|to not move|Hold still for a moment.
+it may hurt a little|ಸ್ವಲ್ಪ ನೋವಾಗಬಹುದು|a warning before something painful|It may hurt a little. Ready?
+reassure|ಧೈರ್ಯ ಹೇಳು|to remove worry|She reassured the nervous child.
+explain|ವಿವರಿಸು|to make clear|Let me explain your condition.
+in simple words|ಸರಳ ಮಾತುಗಳಲ್ಲಿ|easy to understand|Explain the diagnosis in simple words.
+recommend|ಶಿಫಾರಸು ಮಾಡು|to suggest|I recommend a few tests.
+advise|ಸಲಹೆ ನೀಡು|to tell someone what to do|I advise complete rest.
+prescribe|ಔಷಧ ಬರೆದುಕೊಡು|to order a medicine|I'll prescribe an antibiotic.
+refer|ಕಳುಹಿಸು (ತಜ್ಞರಿಗೆ)|to send to another doctor|I'll refer you to a neurologist.
+admit|ದಾಖಲಿಸು|to keep in hospital|We need to admit her for observation.
+observation|ನಿಗಾ|watching closely|Keep him under observation for 24 hours.
+monitor|ನಿಗಾ ವಹಿಸು|to watch over time|We'll monitor your sugar levels.
+review|ಮರುಪರಿಶೀಲನೆ|to check again|Come for review after five days.
+improve|ಸುಧಾರಿಸು|to get better|Your blood count has improved.
+deteriorate|ಹದಗೆಡು|to become worse|His condition deteriorated overnight.
+respond|ಪ್ರತಿಕ್ರಿಯಿಸು|to react to treatment|She is responding well to the medicine.
+tolerate|ಸಹಿಸು|to take without problems|Is he tolerating oral feeds?
+compliance|ಸೂಚನೆ ಪಾಲನೆ|following treatment instructions|Poor compliance is a big problem in TB.
+lifestyle changes|ಜೀವನಶೈಲಿಯ ಬದಲಾವಣೆಗಳು|changes in habits like diet and exercise|Lifestyle changes can control BP.
+balanced diet|ಸಮತೋಲಿತ ಆಹಾರ|food with all nutrients|Eat a balanced diet.
+regularly|ನಿಯಮಿತವಾಗಿ|at regular times|Take your tablets regularly.
+without fail|ತಪ್ಪದೆ|always|Take this medicine without fail.
+course|ಪೂರ್ಣ ಅವಧಿ (ಔಷಧ)|the full period of a medicine|Finish the full course of antibiotics.
+stop|ನಿಲ್ಲಿಸು|to not continue|Don't stop the tablets on your own.
+continue|ಮುಂದುವರಿಸು|to keep taking|Continue the same medicines.
+taper|ಕ್ರಮೇಣ ಕಡಿಮೆ ಮಾಡು|to reduce the dose slowly|We will taper the steroid.
+warning signs|ಎಚ್ಚರಿಕೆಯ ಲಕ್ಷಣಗಳು|symptoms that need urgent help|If you see these warning signs, come immediately.
+immediately|ತಕ್ಷಣ|at once|Come to the hospital immediately.
+emergency number|ತುರ್ತು ಸಂಖ್ಯೆ|phone number for urgent help|The emergency number is 108.
+bad news|ಕೆಟ್ಟ ಸುದ್ದಿ|unhappy information|Breaking bad news needs care and time.
+I'm afraid|ಕ್ಷಮಿಸಿ, ಹೇಳಲು ಬೇಸರ|polite way to give bad news|I'm afraid the results are not good.
+I understand|ನನಗೆ ಅರ್ಥವಾಗುತ್ತದೆ|showing you know how they feel|I understand this is hard for you.
+take your time|ನಿಧಾನವಾಗಿ ಹೇಳಿ|no need to hurry|Take your time and tell me.
+any questions|ಏನಾದರೂ ಪ್ರಶ್ನೆ|inviting the patient to ask|Do you have any questions?
+privacy|ಖಾಸಗಿತನ|being away from others|We will examine you behind the curtain for privacy.
+consent form|ಸಮ್ಮತಿ ಪತ್ರ|a form agreeing to treatment|Please read and sign the consent form.
+risk and benefit|ಅಪಾಯ ಮತ್ತು ಲಾಭ|the good and bad of a treatment|Let me explain the risks and benefits.
+second opinion|ಎರಡನೇ ಅಭಿಪ್ರಾಯ|asking another doctor|You can take a second opinion.
+follow the instructions|ಸೂಚನೆಗಳನ್ನು ಪಾಲಿಸಿ|do as told|Follow the instructions on the label.
+history taking|ರೋಗದ ಇತಿಹಾಸ ಸಂಗ್ರಹ|asking questions about the illness|Good history taking gives most diagnoses.
+examination|ಪರೀಕ್ಷೆ (ದೈಹಿಕ)|checking the body|General examination is normal.
+investigations|ತನಿಖಾ ಪರೀಕ್ಷೆಗಳು|lab tests and scans|We'll start some investigations.
+differential diagnosis|ಸಂಭಾವ್ಯ ರೋಗಗಳ ಪಟ್ಟಿ|list of possible diseases|What's your differential diagnosis?
+provisional diagnosis|ತಾತ್ಕಾಲಿಕ ರೋಗನಿರ್ಣಯ|the likely diagnosis before tests|The provisional diagnosis is pneumonia.
+management|ಚಿಕಿತ್ಸಾ ನಿರ್ವಹಣೆ|the plan of treatment|What's the management of dengue?
+case presentation|ಕೇಸ್ ಪ್ರಸ್ತುತಿ|telling seniors about a patient|I have a case presentation tomorrow.
+ward rounds|ವಾರ್ಡ್ ಸುತ್ತು|doctors visiting each patient|Ward rounds start at eight.
+on call|ಕರೆಗೆ ಲಭ್ಯ|available for emergencies|Who is the doctor on call tonight?
+duty doctor|ಕರ್ತವ್ಯದ ವೈದ್ಯ|the doctor working at that time|Call the duty doctor.
+house surgeon|ಹೌಸ್ ಸರ್ಜನ್ / ಇಂಟರ್ನ್|a junior doctor in internship|The house surgeon took the history.
+postgraduate|ಸ್ನಾತಕೋತ್ತರ ವಿದ್ಯಾರ್ಥಿ|a student doing MD or MS|She's a postgraduate in medicine.
+consultant|ಹಿರಿಯ ತಜ್ಞ ವೈದ್ಯ|a senior specialist doctor|The consultant will see the patient.
+unit|ಘಟಕ|a team of doctors|Which unit is the patient admitted under?
+handover|ಹಸ್ತಾಂತರ|passing information to the next shift|Give a clear handover to the night team.
+sign|ಲಕ್ಷಣ (ವೈದ್ಯರು ಕಾಣುವ)|something the doctor finds on examination|Pallor is a sign of anaemia.
+pallor|ಬಿಳಿಚಿಕೊಳ್ಳುವಿಕೆ|pale skin|Look for pallor in the eyelids.
+oedema|ಊತ (ದ್ರವದ)|swelling from fluid|There's pedal oedema.
+cyanosis|ನೀಲಿಗಟ್ಟುವಿಕೆ|blue colour from low oxygen|Check for cyanosis of the lips.
+dehydrated|ನಿರ್ಜಲೀಕರಣಗೊಂಡ|lacking water|The child is moderately dehydrated.
+afebrile|ಜ್ವರವಿಲ್ಲದ|without fever|The patient is afebrile today.
+conscious and oriented|ಪ್ರಜ್ಞೆಯಿದ್ದು ಎಚ್ಚರವಾಗಿರುವ|awake and knows time and place|The patient is conscious and oriented.
+vitals are stable|ಪ್ರಮುಖ ಲಕ್ಷಣಗಳು ಸ್ಥಿರವಾಗಿವೆ|pulse, BP, temperature are normal|Vitals are stable since morning.

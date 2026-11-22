@@ -1,0 +1,94 @@
+# doctor · level 2 · hospital, tests and treatment
+outpatient|ಹೊರರೋಗಿ|a patient who doesn't stay overnight|Outpatients wait in the OPD.
+inpatient|ಒಳರೋಗಿ|a patient admitted in the hospital|She's an inpatient in ward six.
+OPD|ಹೊರರೋಗಿ ವಿಭಾಗ|outpatient department|The OPD opens at nine.
+casualty|ತುರ್ತು ವಿಭಾಗ|emergency department|Bring him to casualty immediately.
+ICU|ತೀವ್ರ ನಿಗಾ ಘಟಕ|intensive care unit|The patient is shifted to the ICU.
+operation theatre|ಶಸ್ತ್ರಚಿಕಿತ್ಸಾ ಕೊಠಡಿ|the room where surgery is done|The patient is in the operation theatre.
+labour room|ಹೆರಿಗೆ ಕೊಠಡಿ|the room where babies are born|She's been taken to the labour room.
+stretcher|ಸ್ಟ್ರೆಚರ್|a bed for carrying patients|Bring a stretcher.
+wheelchair|ಗಾಲಿಕುರ್ಚಿ|a chair with wheels|He needs a wheelchair.
+bed|ಹಾಸಿಗೆ|a place for a patient to lie|Is there a free bed in the ward?
+nurse|ದಾದಿ / ನರ್ಸ್|a trained person who cares for patients|The nurse will give you the injection.
+surgeon|ಶಸ್ತ್ರಚಿಕಿತ್ಸಕ|a doctor who does operations|The surgeon will see you tomorrow.
+physician|ವೈದ್ಯ|a doctor who treats with medicine|Consult a physician for your BP.
+specialist|ತಜ್ಞ|a doctor expert in one area|You need to see a specialist.
+paediatrician|ಮಕ್ಕಳ ವೈದ್ಯ|a doctor for children|Take the baby to a paediatrician.
+gynaecologist|ಸ್ತ್ರೀರೋಗ ತಜ್ಞ|a doctor for women's health|She's seeing a gynaecologist.
+cardiologist|ಹೃದ್ರೋಗ ತಜ್ಞ|a heart specialist|I'm referring you to a cardiologist.
+dentist|ದಂತವೈದ್ಯ|a doctor for teeth|Visit the dentist every six months.
+pharmacist|ಔಷಧ ವಿತರಕ|a person who gives out medicines|Ask the pharmacist about the dose.
+attendant|ರೋಗಿಯ ಸಹಾಯಕ|a family member staying with the patient|Only one attendant is allowed.
+case sheet|ರೋಗಿಯ ದಾಖಲೆ ಪತ್ರ|the file with the patient's details|Write the findings in the case sheet.
+chief complaint|ಮುಖ್ಯ ತೊಂದರೆ|the main problem the patient comes with|What's the chief complaint?
+past history|ಹಿಂದಿನ ಕಾಯಿಲೆಗಳು|illnesses the patient had before|Any past history of TB?
+family history|ಕುಟುಂಬದ ಕಾಯಿಲೆಗಳು|diseases in the family|Is there a family history of diabetes?
+vital signs|ಪ್ರಮುಖ ಲಕ್ಷಣಗಳು|pulse, BP, temperature, breathing|Check her vital signs every hour.
+temperature|ಉಷ್ಣಾಂಶ|how hot the body is|His temperature is 101 degrees.
+thermometer|ಉಷ್ಣಮಾಪಕ|a device to measure temperature|Keep the thermometer under your tongue.
+stethoscope|ಸ್ಟೆತೊಸ್ಕೋಪ್|a tool to listen to the heart and lungs|The doctor listened with a stethoscope.
+oxygen level|ಆಮ್ಲಜನಕದ ಮಟ್ಟ|amount of oxygen in blood|His oxygen level is 95 percent.
+weight|ತೂಕ|how heavy you are|What's your weight?
+height|ಎತ್ತರ|how tall you are|Let me measure your height.
+blood test|ರಕ್ತ ಪರೀಕ್ಷೆ|checking a sample of blood|You need a blood test on an empty stomach.
+blood sugar|ರಕ್ತದ ಸಕ್ಕರೆ|amount of glucose in blood|Your fasting blood sugar is high.
+haemoglobin|ಹಿಮೋಗ್ಲೋಬಿನ್|the part of blood that carries oxygen|Her haemoglobin is low.
+X-ray|ಎಕ್ಸ್-ರೇ|a picture of bones using rays|We need a chest X-ray.
+ultrasound|ಅಲ್ಟ್ರಾಸೌಂಡ್|a scan using sound waves|The ultrasound shows a stone.
+ECG|ಇಸಿಜಿ|a test of the heart's electrical activity|Let's do an ECG.
+MRI|ಎಂಆರ್‌ಐ|a detailed scan using magnets|The MRI shows a slipped disc.
+biopsy|ಅಂಗಾಂಶ ಪರೀಕ್ಷೆ|testing a small piece of tissue|We need a biopsy to confirm.
+culture|ಸೂಕ್ಷ್ಮಾಣು ಪರೀಕ್ಷೆ|growing germs from a sample to identify them|Send the urine for culture.
+positive|ಪಾಸಿಟಿವ್ (ರೋಗ ಇದೆ)|the test shows the disease|The dengue test is positive.
+negative|ನೆಗೆಟಿವ್ (ರೋಗ ಇಲ್ಲ)|the test does not show the disease|The malaria test is negative.
+normal range|ಸಾಮಾನ್ಯ ವ್ಯಾಪ್ತಿ|the healthy values|Your results are in the normal range.
+injection|ಚುಚ್ಚುಮದ್ದು|medicine given with a needle|You'll need an injection.
+needle|ಸೂಜಿ|a thin sharp metal tube|It's a small needle. It won't hurt much.
+syringe|ಸಿರಿಂಜ್|a tube used to give injections|Use a new syringe every time.
+drip|ಡ್ರಿಪ್ / ಸಲೈನ್|liquid given slowly into a vein|He's on a drip.
+cannula|ಕ್ಯಾನುಲಾ|a small tube put in a vein|I'm putting a cannula in your hand.
+tablet|ಮಾತ್ರೆ|a small solid medicine|Take one tablet at night.
+capsule|ಗುಳಿಗೆ|medicine in a small soft shell|Swallow the capsule with water.
+syrup|ಸಿರಪ್|liquid medicine|Give the child five ml of syrup.
+ointment|ಮುಲಾಮು|a cream for the skin|Apply the ointment twice a day.
+drops|ಹನಿಗಳು|liquid medicine given by drops|Put two drops in each eye.
+inhaler|ಇನ್ಹೇಲರ್|a device to breathe in medicine|Use your inhaler when you feel breathless.
+antibiotic|ಪ್ರತಿಜೀವಕ|medicine that kills bacteria|Complete the full course of antibiotics.
+painkiller|ನೋವು ನಿವಾರಕ|medicine for pain|Take a painkiller if needed.
+vaccine|ಲಸಿಕೆ|medicine that prevents a disease|The baby is due for a vaccine.
+dressing|ಗಾಯಕ್ಕೆ ಕಟ್ಟು|a cover put on a wound|Change the dressing daily.
+bandage|ಬ್ಯಾಂಡೇಜ್|a cloth strip to cover a wound|Wrap the bandage firmly.
+stitches|ಹೊಲಿಗೆಗಳು|threads that close a wound|The stitches will be removed in a week.
+plaster|ಪ್ಲಾಸ್ಟರ್|a hard cover for a broken bone|He has a plaster on his leg.
+oxygen|ಆಮ್ಲಜನಕ|a gas needed to breathe|Start oxygen immediately.
+ventilator|ವೆಂಟಿಲೇಟರ್|a machine that helps breathing|He's on a ventilator.
+blood transfusion|ರಕ್ತ ಪೂರಣ|giving blood to a patient|She needs a blood transfusion.
+dialysis|ಡಯಾಲಿಸಿಸ್|cleaning blood with a machine|He needs dialysis twice a week.
+physiotherapy|ಭೌತಚಿಕಿತ್ಸೆ|treatment with exercises|Physiotherapy will help your knee.
+diet|ಆಹಾರ ಪದ್ಧತಿ|the food you eat|Follow a low-salt diet.
+fasting|ಉಪವಾಸ|not eating for some time|Come fasting for the test.
+anaesthesia|ಅರಿವಳಿಕೆ|medicine that stops pain or makes you sleep|You'll be under general anaesthesia.
+recovery|ಚೇತರಿಕೆ|getting well again|Wishing you a quick recovery.
+complication|ತೊಡಕು|a new problem from a disease or treatment|There were no complications.
+risk|ಅಪಾಯ|chance of something bad|What are the risks of this surgery?
+prognosis|ಮುನ್ನರಿವು|the likely outcome of a disease|The prognosis is good.
+relapse|ಮರುಕಳಿಕೆ|the illness coming back|Take the medicine to prevent a relapse.
+precaution|ಮುನ್ನೆಚ್ಚರಿಕೆ|something done to prevent harm|Wear a mask as a precaution.
+hygiene|ನೈರ್ಮಲ್ಯ|keeping clean|Good hygiene prevents infection.
+sterile|ಕ್ರಿಮಿರಹಿತ|free from germs|Use sterile gloves.
+gloves|ಕೈಗವಸುಗಳು|covers for the hands|Wear gloves before touching the wound.
+mask|ಮುಖಗವಸು|a cover for the nose and mouth|Wear a mask in the ward.
+sanitiser|ಸ್ಯಾನಿಟೈಸರ್|liquid to kill germs on hands|Use sanitiser before and after each patient.
+isolation|ಪ್ರತ್ಯೇಕತೆ|keeping a patient away from others|He's in the isolation ward.
+contagious|ಸಾಂಕ್ರಾಮಿಕ|spreading from person to person|Chickenpox is contagious.
+germs|ಸೂಕ್ಷ್ಮಾಣುಗಳು|tiny living things that cause disease|Wash your hands to kill germs.
+bacteria|ಬ್ಯಾಕ್ಟೀರಿಯಾ|tiny living cells, some cause disease|Antibiotics kill bacteria.
+virus|ವೈರಸ್|a tiny germ that causes disease|Antibiotics don't work against a virus.
+dose|ಪ್ರಮಾಣ|amount of medicine|Don't double the dose.
+twice a day|ದಿನಕ್ಕೆ ಎರಡು ಬಾರಿ|two times daily|Take it twice a day after food.
+before food|ಊಟಕ್ಕೆ ಮುಂಚೆ|before eating|This tablet is before food.
+after food|ಊಟದ ನಂತರ|after eating|Take this after food.
+at bedtime|ಮಲಗುವ ಮುನ್ನ|just before sleeping|Take one tablet at bedtime.
+overdose|ಅತಿಯಾದ ಪ್ರಮಾಣ|too much medicine|An overdose can be dangerous.
+expiry date|ಅವಧಿ ಮುಗಿಯುವ ದಿನಾಂಕ|the last date to use|Check the expiry date.
+side effects|ಅಡ್ಡ ಪರಿಣಾಮಗಳು|unwanted effects|This tablet has few side effects.

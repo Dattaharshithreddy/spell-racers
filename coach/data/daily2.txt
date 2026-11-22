@@ -1,0 +1,159 @@
+# daily · level 1 · people, home, food, places
+aunt|ಚಿಕ್ಕಮ್ಮ / ಅತ್ತೆ|your mother's or father's sister|My aunt lives in Mysuru.
+uncle|ಚಿಕ್ಕಪ್ಪ / ಮಾವ|your mother's or father's brother|My uncle has a farm.
+cousin|ಸೋದರ ಸಂಬಂಧಿ|your aunt's or uncle's child|My cousin is studying in Mangaluru.
+grandparents|ಅಜ್ಜ-ಅಜ್ಜಿ|your parents' parents|My grandparents live in a village.
+husband|ಗಂಡ|the man a woman is married to|Her husband is a teacher.
+wife|ಹೆಂಡತಿ|the woman a man is married to|His wife is a nurse.
+nephew|ಸೋದರಳಿಯ|your brother's or sister's son|My nephew is five years old.
+niece|ಸೋದರ ಸೊಸೆ|your brother's or sister's daughter|My niece loves drawing.
+in-laws|ಅತ್ತೆ-ಮಾವ|the family of your husband or wife|She gets along well with her in-laws.
+friend|ಗೆಳೆಯ / ಗೆಳತಿ|a person you like and trust|She is my best friend.
+stranger|ಅಪರಿಚಿತ|a person you don't know|Don't open the door for strangers.
+adult|ವಯಸ್ಕ|a grown-up person|This movie is only for adults.
+teenager|ಹದಿಹರೆಯದವರು|a person aged 13 to 19|Teenagers love their phones.
+baby|ಮಗು|a very young child|The baby is sleeping.
+owner|ಮಾಲೀಕ|a person who owns something|The shop owner was very kind.
+landlord|ಮನೆ ಮಾಲೀಕ|a person who rents a house to you|I pay rent to the landlord on the fifth.
+tenant|ಬಾಡಿಗೆದಾರ|a person who pays rent to live somewhere|The new tenants moved in yesterday.
+driver|ಚಾಲಕ|a person who drives|The driver is waiting outside.
+shopkeeper|ಅಂಗಡಿಯವನು|a person who runs a shop|The shopkeeper gave me change.
+apartment|ಅಪಾರ್ಟ್‌ಮೆಂಟ್ / ಫ್ಲಾಟ್|a home in a big building|We live in a third-floor apartment.
+balcony|ಬಾಲ್ಕನಿ|a small open area outside a room upstairs|I dry clothes on the balcony.
+bedroom|ಮಲಗುವ ಕೋಣೆ|a room for sleeping|Our house has two bedrooms.
+kitchen|ಅಡುಗೆಮನೆ|a room for cooking|Mother is in the kitchen.
+bathroom|ಸ್ನಾನಗೃಹ|a room for bathing|The bathroom is next to the bedroom.
+ceiling|ಮೇಲ್ಛಾವಣಿ (ಒಳಭಾಗ)|the top inside surface of a room|There's a crack in the ceiling.
+floor|ನೆಲ / ಮಹಡಿ|the surface you walk on; a level of a building|The floor is wet.
+stairs|ಮೆಟ್ಟಿಲುಗಳು|steps to go up and down|Take the stairs, the lift is broken.
+lift|ಲಿಫ್ಟ್|a machine that carries people up and down|The lift is on the ground floor.
+furniture|ಪೀಠೋಪಕರಣ|chairs, tables, beds|We bought new furniture.
+cupboard|ಬೀರು|a piece of furniture with doors for storing things|Keep the plates in the cupboard.
+drawer|ಡ್ರಾಯರ್ / ಖಾನೆ|a box that slides out of furniture|The scissors are in the top drawer.
+pillow|ತಲೆದಿಂಬು|a soft thing for your head in bed|I need a soft pillow.
+blanket|ಕಂಬಳಿ|a thick cover to keep you warm|It's cold, take a blanket.
+mirror|ಕನ್ನಡಿ|glass in which you see yourself|Look in the mirror.
+fan|ಫ್ಯಾನ್|a machine that moves air|Switch on the fan.
+switch|ಸ್ವಿಚ್|a button to turn power on or off|Where's the light switch?
+plug|ಪ್ಲಗ್|the part you push into a socket|The plug is loose.
+bucket|ಬಕೆಟ್|an open container for water|Fill the bucket with water.
+broom|ಪೊರಕೆ|a brush for sweeping|Where's the broom?
+garbage|ಕಸ|things thrown away|Take out the garbage.
+tap|ನಲ್ಲಿ|a device that lets water out|Close the tap.
+electricity|ವಿದ್ಯುತ್|power for lights and machines|There's no electricity since morning.
+neighbourhood|ನೆರೆಹೊರೆ|the area around your home|It's a quiet neighbourhood.
+breakfast|ಬೆಳಗಿನ ತಿಂಡಿ|the morning meal|I had idli for breakfast.
+dinner|ರಾತ್ರಿ ಊಟ|the evening meal|Dinner is ready.
+snack|ಲಘು ತಿಂಡಿ|a small quick food|I eat a snack at four.
+vegetables|ತರಕಾರಿಗಳು|plants we eat, like carrots and beans|Eat more vegetables.
+fruit|ಹಣ್ಣು|sweet food that grows on trees|Bananas are my favourite fruit.
+rice|ಅಕ್ಕಿ / ಅನ್ನ|grain we cook and eat|We eat rice every day.
+wheat|ಗೋಧಿ|grain used for chapati|Chapati is made from wheat.
+lentils|ಬೇಳೆ|small dried seeds used in dal|Soak the lentils for an hour.
+curd|ಮೊಸರು|milk made thick and sour|Curd rice is good for the stomach.
+oil|ಎಣ್ಣೆ|liquid fat for cooking|Use less oil.
+salt|ಉಪ್ಪು|white powder that makes food salty|Add a pinch of salt.
+sugar|ಸಕ್ಕರೆ|sweet white powder|No sugar in my coffee, please.
+sweet|ಸಿಹಿ|tasting like sugar|This mango is very sweet.
+sour|ಹುಳಿ|tasting like lemon|Tamarind is sour.
+bitter|ಕಹಿ|having a strong unpleasant taste|Bitter gourd is bitter but healthy.
+salty|ಉಪ್ಪಿನ / ಉಪ್ಪುಪ್ಪಾದ|having too much salt|The soup is too salty.
+raw|ಹಸಿ|not cooked|Don't eat raw chicken.
+fried|ಕರಿದ|cooked in hot oil|I don't eat much fried food.
+fresh|ತಾಜಾ|new, not old|Buy fresh vegetables.
+stale|ಹಳಸಿದ|old and not good to eat|This bread is stale.
+plate|ತಟ್ಟೆ|a flat dish for food|Wash your plate.
+spoon|ಚಮಚ|a tool for eating|Can I have a spoon?
+bottle|ಬಾಟಲಿ|a container for liquids|Fill your water bottle.
+packet|ಪೊಟ್ಟಣ|a small bag or box|Buy a packet of biscuits.
+market|ಮಾರುಕಟ್ಟೆ|a place to buy and sell|I'm going to the market.
+shop|ಅಂಗಡಿ|a place to buy things|The shop opens at nine.
+bank|ಬ್ಯಾಂಕ್|a place to keep money|I need to go to the bank.
+post office|ಅಂಚೆ ಕಚೇರಿ|a place to send letters|The post office is near the bus stand.
+temple|ದೇವಸ್ಥಾನ|a place of worship|We go to the temple on Fridays.
+park|ಉದ್ಯಾನವನ|a public garden|Children play in the park.
+library|ಗ್ರಂಥಾಲಯ|a place with books to read or borrow|I study in the library.
+hospital|ಆಸ್ಪತ್ರೆ|a place where sick people are treated|The hospital is open all night.
+pharmacy|ಔಷಧಾಲಯ|a shop that sells medicines|Is there a pharmacy nearby?
+restaurant|ಹೋಟೆಲ್ / ಉಪಾಹಾರ ಗೃಹ|a place to eat food you pay for|Let's eat at a restaurant tonight.
+bus stop|ಬಸ್ ನಿಲ್ದಾಣ|a place where buses stop|Wait at the bus stop.
+airport|ವಿಮಾನ ನಿಲ್ದಾಣ|a place where planes land|Reach the airport two hours early.
+platform|ಪ್ಲಾಟ್‌ಫಾರ್ಮ್|the place to get on a train|The train comes on platform three.
+signal|ಸಿಗ್ನಲ್|traffic lights|Turn right at the signal.
+corner|ಮೂಲೆ|where two roads or walls meet|The shop is on the corner.
+address|ವಿಳಾಸ|where someone lives|What's your address?
+area|ಪ್ರದೇಶ|a part of a city|Which area do you live in?
+city|ನಗರ|a big town|Bengaluru is a busy city.
+village|ಹಳ್ಳಿ|a small place in the countryside|My father grew up in a village.
+country|ದೇಶ|a nation|India is a big country.
+state|ರಾಜ್ಯ|a part of a country with its own government|Karnataka is a southern state.
+map|ನಕ್ಷೆ|a drawing of places|Check the map on your phone.
+ticket|ಟಿಕೆಟ್|a paper that lets you travel or enter|I booked the ticket online.
+seat|ಆಸನ|a place to sit|Is this seat free?
+journey|ಪ್ರಯಾಣ|a trip from one place to another|The journey took six hours.
+trip|ಪ್ರವಾಸ|a short journey for fun or work|We went on a trip to Coorg.
+holiday|ರಜೆ|a day off; a vacation|We have a holiday on Monday.
+weekend|ವಾರಾಂತ್ಯ|Saturday and Sunday|What are your plans for the weekend?
+morning|ಬೆಳಿಗ್ಗೆ|the early part of the day|I walk in the morning.
+afternoon|ಮಧ್ಯಾಹ್ನ|the time after twelve noon|Let's meet in the afternoon.
+evening|ಸಂಜೆ|the time before night|We drink tea in the evening.
+midnight|ಮಧ್ಯರಾತ್ರಿ|twelve o'clock at night|I slept after midnight.
+yesterday|ನಿನ್ನೆ|the day before today|I called you yesterday.
+tomorrow|ನಾಳೆ|the day after today|See you tomorrow.
+tonight|ಇವತ್ತು ರಾತ್ರಿ|this night|What are we eating tonight?
+week|ವಾರ|seven days|I'll finish it this week.
+month|ತಿಂಗಳು|about thirty days|My exam is next month.
+year|ವರ್ಷ|twelve months|Happy new year!
+minute|ನಿಮಿಷ|sixty seconds|Wait a minute.
+hour|ಗಂಟೆ|sixty minutes|The class is one hour long.
+calendar|ಕ್ಯಾಲೆಂಡರ್|a chart of days and months|Mark the date on the calendar.
+birthday|ಹುಟ್ಟುಹಬ್ಬ|the day you were born|Today is my birthday.
+wedding|ಮದುವೆ|a marriage ceremony|The wedding is in Udupi.
+festival|ಹಬ್ಬ|a special day of celebration|Deepavali is a festival of lights.
+gift|ಉಡುಗೊರೆ|something given to someone|Thank you for the gift.
+money|ಹಣ|coins and notes used to buy|I don't have money with me.
+cash|ನಗದು|money in coins and notes|Do you accept cash?
+price|ಬೆಲೆ|how much something costs|What's the price of this?
+cost|ಬೆಲೆ / ವೆಚ್ಚ|the money needed|How much does it cost?
+bill|ಬಿಲ್|a paper showing money to pay|Can I have the bill, please?
+change|ಚಿಲ್ಲರೆ|money given back|Keep the change.
+weather|ಹವಾಮಾನ|how hot, cold or rainy it is|The weather is nice today.
+rain|ಮಳೆ|water from clouds|Take an umbrella, it may rain.
+sun|ಸೂರ್ಯ / ಬಿಸಿಲು|the bright star in the sky|Don't stand in the sun.
+cloud|ಮೋಡ|white or grey thing in the sky|Dark clouds mean rain.
+wind|ಗಾಳಿ|moving air|The wind is strong today.
+hot|ಬಿಸಿ / ಸೆಖೆ|very warm|It's too hot today.
+cold|ತಣ್ಣಗಿನ / ಚಳಿ|not warm|The water is cold.
+warm|ಬೆಚ್ಚಗಿನ|a little hot|Drink warm water.
+wet|ಒದ್ದೆಯಾದ|covered with water|My shoes are wet.
+dry|ಒಣ|not wet|Are the clothes dry?
+clothes|ಬಟ್ಟೆಗಳು|things you wear|I need new clothes.
+shirt|ಅಂಗಿ|clothing for the upper body|He's wearing a white shirt.
+pocket|ಜೇಬು|a small bag sewn into clothes|Keep the money in your pocket.
+size|ಗಾತ್ರ|how big something is|What's your shoe size?
+colour|ಬಣ್ಣ|red, blue, green and others|What's your favourite colour?
+phone|ಫೋನ್|a device for calling|My phone battery is low.
+charger|ಚಾರ್ಜರ್|a device to charge a battery|Did you bring your charger?
+battery|ಬ್ಯಾಟರಿ|it stores power|The battery is dead.
+password|ಪಾಸ್‌ವರ್ಡ್|a secret word to open something|Don't share your password.
+internet|ಅಂತರ್ಜಾಲ|the network that connects computers|The internet is slow today.
+photo|ಫೋಟೋ|a picture from a camera|Send me the photo.
+video|ವಿಡಿಯೋ|moving pictures|I watched a funny video.
+news|ಸುದ್ದಿ|information about recent events|Did you hear the news?
+newspaper|ದಿನಪತ್ರಿಕೆ|printed daily news|My father reads the newspaper every morning.
+key|ಬೀಗದ ಕೈ|a metal thing to open a lock|I lost my house key.
+bag|ಚೀಲ|something to carry things in|Your bag is heavy.
+wallet|ಪರ್ಸ್|a small case for money and cards|My wallet is in my bag.
+umbrella|ಛತ್ರಿ|it protects you from rain|Don't forget your umbrella.
+watch|ಕೈಗಡಿಯಾರ|a small clock on your wrist|My watch is five minutes fast.
+glasses|ಕನ್ನಡಕ|lenses in a frame to help you see|I can't read without my glasses.
+problem|ಸಮಸ್ಯೆ|something difficult to deal with|What's the problem?
+question|ಪ್ರಶ್ನೆ|something you ask|Can I ask a question?
+answer|ಉತ್ತರ|a reply to a question|I know the answer.
+idea|ಆಲೋಚನೆ|a thought or plan|That's a great idea!
+reason|ಕಾರಣ|why something happens|What's the reason for the delay?
+truth|ಸತ್ಯ|what is real|Always tell the truth.
+secret|ರಹಸ್ಯ|something not told to others|Can you keep a secret?
+luck|ಅದೃಷ್ಟ|good things that happen by chance|Good luck for your exam!
+noise|ಶಬ್ದ / ಗದ್ದಲ|loud unpleasant sound|There's too much noise here.
+smell|ವಾಸನೆ|what you notice with your nose|What's that smell?

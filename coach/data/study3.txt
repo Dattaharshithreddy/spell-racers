@@ -1,0 +1,84 @@
+# study · level 3 · exams, writing, presenting, research
+aptitude|ಅಭಿರುಚಿ / ಸಾಮರ್ಥ್ಯ|natural ability|She has an aptitude for surgery.
+attentive|ಗಮನವಿಟ್ಟ|listening carefully|Be attentive in the lecture.
+audience|ಪ್ರೇಕ್ಷಕರು|people listening to a talk|Look at the audience while speaking.
+bibliography|ಗ್ರಂಥಸೂಚಿ|list of books used|Add a bibliography at the end.
+case study|ಪ್ರಕರಣ ಅಧ್ಯಯನ|a detailed study of one example|We discussed a case study on dengue.
+cite|ಉಲ್ಲೇಖಿಸು|to mention a source|Cite the journal article correctly.
+clarity|ಸ್ಪಷ್ಟತೆ|being clear|Write with clarity.
+coherent|ಸುಸಂಬದ್ಧ|logical and clear|Your answer should be coherent.
+concise|ಸಂಕ್ಷಿಪ್ತ|short and clear|Keep your answers concise.
+critical thinking|ವಿಮರ್ಶಾತ್ಮಕ ಚಿಂತನೆ|thinking carefully before believing|Medicine needs critical thinking.
+curriculum|ಪಠ್ಯಕ್ರಮ|all subjects in a course|The new curriculum has more clinical work.
+deadline|ಗಡುವು|last date|The deadline for the thesis is June.
+draft|ಕರಡು|a first version|Show me the first draft.
+edit|ತಿದ್ದು|to correct and improve writing|Edit your essay before submitting.
+elaborate|ವಿಸ್ತರಿಸಿ ಹೇಳು|to explain in more detail|Can you elaborate on that point?
+entrance exam|ಪ್ರವೇಶ ಪರೀಕ್ಷೆ|exam to get admission|NEET is an entrance exam.
+essay|ಪ್ರಬಂಧ|a short piece of writing|Write an essay on health.
+evaluate|ಮೌಲ್ಯಮಾಪನ ಮಾಡು|to judge|Evaluate the article critically.
+external examiner|ಬಾಹ್ಯ ಪರೀಕ್ಷಕ|an examiner from another college|The external examiner was strict.
+viva|ಮೌಖಿಕ ಪರೀಕ್ಷೆ|an oral exam|I was nervous in the viva.
+OSCE|ಒಎಸ್‌ಸಿಇ ಪರೀಕ್ಷೆ|a practical clinical exam with stations|We have an OSCE on Monday.
+spotters|ಗುರುತಿಸುವ ಪರೀಕ್ಷೆ|identifying specimens in an exam|Practise spotters for anatomy.
+long case|ದೀರ್ಘ ಕೇಸ್|a detailed patient case in exams|I got a long case of heart failure.
+short case|ಸಣ್ಣ ಕೇಸ್|a brief patient case in exams|The short case was a thyroid swelling.
+explain briefly|ಸಂಕ್ಷಿಪ್ತವಾಗಿ ವಿವರಿಸಿ|explain in a few lines|Explain briefly the causes of anaemia.
+enumerate|ಪಟ್ಟಿ ಮಾಡು|to list one by one|Enumerate the complications of diabetes.
+discuss|ಚರ್ಚಿಸು|to write about in detail|Discuss the management of asthma.
+justify|ಸಮರ್ಥಿಸು|to give reasons|Justify your diagnosis.
+format|ವಿನ್ಯಾಸ|the layout|Follow the given format.
+heading|ಶೀರ್ಷಿಕೆ|the title of a section|Use clear headings.
+introduction|ಪೀಠಿಕೆ|the beginning|Start with a short introduction.
+body|ಮುಖ್ಯ ಭಾಗ|the main part|The body of the essay has three points.
+conclusion|ಉಪಸಂಹಾರ|the end|End with a strong conclusion.
+paragraph|ಪರಿಚ್ಛೇದ|a group of sentences about one idea|Each paragraph should have one idea.
+point|ಅಂಶ|an idea|Write in points.
+key words|ಮುಖ್ಯ ಪದಗಳು|important words|Underline key words in your answer.
+flowchart|ಹರಿವು ನಕ್ಷೆ|a diagram showing steps|Draw a flowchart of the pathway.
+mnemonic|ಸ್ಮರಣ ಸೂತ್ರ|a trick to remember|I use mnemonics for cranial nerves.
+concentration|ಏಕಾಗ್ರತೆ|focus|Meditation improves concentration.
+memory|ಸ್ಮರಣಶಕ್ತಿ|ability to remember|Sleep helps memory.
+motivation|ಪ್ರೇರಣೆ|reason to work hard|I lose motivation sometimes.
+procrastinate|ಮುಂದೂಡು (ಕೆಲಸ)|to delay doing something|Stop procrastinating and start studying.
+productive|ಉತ್ಪಾದಕ|getting a lot done|Mornings are my most productive time.
+burn the midnight oil|ತಡರಾತ್ರಿಯವರೆಗೆ ಓದು|to study late at night|I burned the midnight oil before the exam.
+time management|ಸಮಯ ನಿರ್ವಹಣೆ|using time well|Time management is key in exams.
+mock test|ಅಣಕು ಪರೀಕ್ಷೆ|a practice exam|Take a mock test every Sunday.
+previous year papers|ಹಿಂದಿನ ವರ್ಷದ ಪ್ರಶ್ನೆ ಪತ್ರಿಕೆಗಳು|old exam papers|Solve previous year papers.
+important questions|ಮುಖ್ಯ ಪ್ರಶ್ನೆಗಳು|questions likely to come|My senior gave me the important questions.
+syllabus coverage|ಪಠ್ಯಕ್ರಮ ಪೂರ್ಣಗೊಳಿಸುವಿಕೆ|how much of the syllabus is done|What's your syllabus coverage?
+result|ಫಲಿತಾಂಶ|exam outcome|The results are out!
+distinction|ವಿಶಿಷ್ಟ ಶ್ರೇಣಿ|very high marks|She passed with distinction.
+supplementary exam|ಪೂರಕ ಪರೀಕ್ಷೆ|a re-exam for those who failed|The supplementary exam is in July.
+revaluation|ಮರುಮೌಲ್ಯಮಾಪನ|checking an answer paper again|I applied for revaluation.
+topper|ಅಗ್ರಸ್ಥಾನಿ|the student with the highest marks|She was the university topper.
+presentation skills|ಪ್ರಸ್ತುತಿ ಕೌಶಲ್ಯ|ability to present well|Presentation skills improve with practice.
+slide|ಸ್ಲೈಡ್|one page of a presentation|Don't put too much text on a slide.
+eye contact|ಕಣ್ಣಲ್ಲಿ ಕಣ್ಣಿಟ್ಟು ನೋಡುವುದು|looking at people while talking|Maintain eye contact.
+pause|ವಿರಾಮ|a short stop|Pause after each important point.
+stage fear|ವೇದಿಕೆಯ ಭಯ|fear of speaking in front of people|I'm working on my stage fear.
+summarise|ಸಾರಾಂಶ ಹೇಳು|to give the main points|Let me summarise what we discussed.
+question and answer|ಪ್ರಶ್ನೋತ್ತರ|time for questions|We'll have a question and answer session at the end.
+research paper|ಸಂಶೋಧನಾ ಲೇಖನ|a written report of research|She published a research paper.
+thesis|ಪ್ರಬಂಧ (ಸಂಶೋಧನೆ)|a long research document|PG students must submit a thesis.
+guide|ಮಾರ್ಗದರ್ಶಕ|a teacher who supervises research|My thesis guide is very supportive.
+sample size|ಮಾದರಿ ಗಾತ್ರ|number of people in a study|The sample size is 200.
+questionnaire|ಪ್ರಶ್ನಾವಳಿ|a list of questions|Fill in the questionnaire.
+consent|ಒಪ್ಪಿಗೆ|permission|Take written consent from each participant.
+ethics committee|ನೈತಿಕ ಸಮಿತಿ|a group that approves research|Get approval from the ethics committee.
+observation|ವೀಕ್ಷಣೆ|what you notice|Write your observations.
+inference|ಅನುಮಾನ|a conclusion from facts|What's your inference from this graph?
+plagiarism|ಕೃತಿಚೌರ್ಯ|copying others' work as your own|Plagiarism is a serious offence.
+original|ಮೂಲ|your own; first|Write in your own original words.
+review article|ಪರಿಶೀಲನಾ ಲೇಖನ|an article summarising other studies|Read a review article first.
+online course|ಆನ್‌ಲೈನ್ ಕೋರ್ಸ್|a course on the internet|I joined an online course.
+self-study|ಸ್ವಾಧ್ಯಾಯ|studying on your own|Self-study is important.
+group study|ಗುಂಪು ಅಧ್ಯಯನ|studying with friends|Group study helps before exams.
+clear a doubt|ಸಂದೇಹ ಪರಿಹರಿಸಿಕೊ|to get an answer to a question|I'll clear my doubts with ma'am.
+fall behind|ಹಿಂದೆ ಬೀಳು|to not keep up|I fell behind because of illness.
+catch up|ಸರಿಸಮನಾಗು|to reach the same level|I'll catch up on the missed classes.
+grasp|ಗ್ರಹಿಸು|to understand|She grasps new concepts quickly.
+in depth|ಆಳವಾಗಿ|in detail|Study this topic in depth.
+at a glance|ಒಂದು ನೋಟದಲ್ಲಿ|quickly|This table shows the drugs at a glance.
+step by step|ಹಂತ ಹಂತವಾಗಿ|one step at a time|Learn the procedure step by step.

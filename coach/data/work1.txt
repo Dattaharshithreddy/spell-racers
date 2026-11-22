@@ -1,0 +1,89 @@
+# work · level 1 · office basics
+office|ಕಚೇರಿ|a place where people work|I reach the office at nine.
+company|ಕಂಪನಿ|a business organisation|Which company do you work for?
+department|ವಿಭಾಗ|a part of an organisation|I work in the accounts department.
+team|ತಂಡ|a group working together|Our team has eight members.
+boss|ಮೇಲಧಿಕಾರಿ|the person in charge of you|My boss is on leave today.
+staff|ಸಿಬ್ಬಂದಿ|the people who work somewhere|The staff are very friendly.
+employee|ಉದ್ಯೋಗಿ|a person paid to work for someone|The company has 500 employees.
+employer|ಉದ್ಯೋಗದಾತ|a person or company that pays workers|My employer gives two days of leave a month.
+client|ಗ್ರಾಹಕ / ಕಕ್ಷಿದಾರ|a person who pays for a service|The client wants a meeting today.
+customer|ಗ್ರಾಹಕ|a person who buys|The customer is always right.
+job|ಕೆಲಸ / ಉದ್ಯೋಗ|paid work|I'm looking for a new job.
+career|ವೃತ್ತಿಜೀವನ|the jobs you do in your life|She wants a career in medicine.
+position|ಹುದ್ದೆ|a job in a company|I applied for the position of nurse.
+designation|ಪದನಾಮ|your job title|What's your designation?
+apply|ಅರ್ಜಿ ಸಲ್ಲಿಸು|to ask formally for a job|I applied for three jobs.
+application|ಅರ್ಜಿ|a formal request|Send your application by email.
+hire|ನೇಮಿಸು|to give someone a job|They hired two new nurses.
+join|ಸೇರು|to start working at a place|I joined this hospital last month.
+resign|ರಾಜೀನಾಮೆ ನೀಡು|to leave a job officially|He resigned last week.
+retire|ನಿವೃತ್ತಿ ಹೊಂದು|to stop working because of age|My father retired last year.
+work from home|ಮನೆಯಿಂದ ಕೆಲಸ|to do your job at home|I work from home on Fridays.
+overtime|ಹೆಚ್ಚುವರಿ ಸಮಯ|extra hours of work|I worked overtime this week.
+break|ವಿರಾಮ|a short rest|Let's take a ten-minute break.
+lunch break|ಊಟದ ವಿರಾಮ|time to eat lunch at work|The lunch break is from one to two.
+holiday list|ರಜಾ ಪಟ್ಟಿ|list of holidays|Check the holiday list for this year.
+sick leave|ಅನಾರೋಗ್ಯ ರಜೆ|leave because you are ill|I took sick leave yesterday.
+email|ಇಮೇಲ್|an electronic message|I'll send you an email.
+reply all|ಎಲ್ಲರಿಗೂ ಉತ್ತರಿಸು|to answer everyone in an email|Don't reply all to this email.
+subject|ವಿಷಯ|the topic line of an email|Write a clear subject line.
+file|ಕಡತ|a document or folder|Save the file on the drive.
+document|ದಾಖಲೆ|an official paper or file|Please sign this document.
+form|ಅರ್ಜಿ ನಮೂನೆ|a paper with spaces to fill|Fill in this form.
+signature|ಸಹಿ|your name written in your way|I need your signature here.
+stamp|ಮುದ್ರೆ|an official mark|The letter needs the office stamp.
+copy|ಪ್ರತಿ|one of the same documents|Keep a copy for yourself.
+print|ಮುದ್ರಿಸು|to put text on paper using a printer|Can you print this for me?
+scan|ಸ್ಕ್ಯಾನ್ ಮಾಡು|to copy into a computer|Scan and email the certificate.
+upload|ಅಪ್‌ಲೋಡ್ ಮಾಡು|to send a file to the internet|Upload your documents on the portal.
+download|ಡೌನ್‌ಲೋಡ್ ಮಾಡು|to take a file from the internet|Download the form from the website.
+log in|ಲಾಗ್ ಇನ್ ಮಾಡು|to enter a system with a password|I can't log in to the system.
+desk|ಮೇಜು|a table for work|Leave the file on my desk.
+calendar invite|ಕ್ಯಾಲೆಂಡರ್ ಆಹ್ವಾನ|a meeting request by email|I've sent you a calendar invite.
+call|ಕರೆ|a phone or video conversation|I have a call at three.
+conference|ಸಮ್ಮೇಳನ|a large meeting|She is attending a medical conference.
+appointment|ಭೇಟಿಯ ಸಮಯ|a fixed time to meet|I have an appointment with the doctor.
+visitor|ಸಂದರ್ಶಕ|a person who visits|Visitors must sign at the gate.
+reception|ಸ್ವಾಗತ ಕಕ್ಷೆ|the front desk of a building|Ask at the reception.
+ID card|ಗುರುತಿನ ಚೀಟಿ|a card showing who you are|Always wear your ID card.
+uniform|ಸಮವಸ್ತ್ರ|special clothes for a job|Nurses wear a uniform.
+duty|ಕರ್ತವ್ಯ|a task you must do|I'm on duty tonight.
+in charge|ಹೊಣೆ ಹೊತ್ತಿರುವ|responsible for|Who is in charge here?
+instruction|ಸೂಚನೆ|information about how to do something|Follow the instructions carefully.
+rule|ನಿಯಮ|what you must or must not do|It's against the rules.
+notice|ಸೂಚನೆ / ನೋಟಿಸ್|written information for people|Read the notice on the board.
+announcement|ಪ್ರಕಟಣೆ|official news|There's an important announcement.
+complaint|ದೂರು|a statement that something is wrong|We received a complaint from a patient.
+request|ವಿನಂತಿ|a polite ask|I have a small request.
+response|ಪ್ರತಿಕ್ರಿಯೆ|an answer|Thank you for your quick response.
+progress|ಪ್ರಗತಿ|moving forward|What's the progress on the report?
+status|ಸ್ಥಿತಿ|the current situation|What's the status of my request?
+pending|ಬಾಕಿ ಇರುವ|not yet done|Two tasks are still pending.
+done|ಮುಗಿದ|finished|The report is done.
+on time|ಸಮಯಕ್ಕೆ ಸರಿಯಾಗಿ|at the correct time|Please submit it on time.
+in advance|ಮುಂಚಿತವಾಗಿ|before the time|Tell me in advance if you need leave.
+as soon as possible|ಆದಷ್ಟು ಬೇಗ|very quickly|Please reply as soon as possible.
+reminder|ಜ್ಞಾಪನೆ|a message to help remember|I'll send a reminder tomorrow.
+training|ತರಬೇತಿ|teaching a job skill|We have training on the new software.
+workshop|ಕಾರ್ಯಾಗಾರ|a practical training session|I attended a workshop on first aid.
+certificate|ಪ್ರಮಾಣಪತ್ರ|an official paper showing you completed something|You'll get a certificate after the course.
+qualification|ಅರ್ಹತೆ|a degree or skill needed for a job|What are your qualifications?
+degree|ಪದವಿ|what you get after college|She has a degree in nursing.
+salary slip|ಸಂಬಳದ ಚೀಟಿ|a paper showing your pay|Download your salary slip.
+increment|ವೇತನ ಹೆಚ್ಚಳ|an increase in pay|I got a good increment this year.
+bonus|ಬೋನಸ್|extra money for good work|We got a Diwali bonus.
+tax|ತೆರಿಗೆ|money paid to the government|Tax is cut from my salary.
+contract|ಒಪ್ಪಂದ|a written legal agreement|Read the contract before signing.
+notice period|ನೋಟಿಸ್ ಅವಧಿ|time you must work after resigning|My notice period is one month.
+probation|ಪರೀಕ್ಷಾರ್ಥ ಅವಧಿ|a trial period in a new job|I'm on six months' probation.
+appraisal|ಮೌಲ್ಯಮಾಪನ|a review of your work|My appraisal is next week.
+target|ಗುರಿ|an amount to achieve|We met our target this month.
+performance|ಕಾರ್ಯಕ್ಷಮತೆ|how well you work|Her performance was excellent.
+colleague|ಸಹೋದ್ಯೋಗಿ|a person you work with|My colleagues are very helpful.
+teamwork|ತಂಡದ ಕೆಲಸ|working well together|Teamwork made it possible.
+support staff|ಬೆಂಬಲ ಸಿಬ್ಬಂದಿ|people who help the main workers|The support staff work very hard.
+supervisor|ಮೇಲ್ವಿಚಾರಕ|a person who watches over work|Ask your supervisor.
+trainee|ತರಬೇತಿ ಪಡೆಯುವವರು|a person learning a job|The trainees start on Monday.
+expert|ಪರಿಣಿತ|a person with special knowledge|She's an expert in heart surgery.
+professional|ವೃತ್ತಿಪರ|related to a job; skilled|Be professional with patients.

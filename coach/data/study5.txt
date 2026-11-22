@@ -1,0 +1,52 @@
+# study · level 3 · learning skills and student life
+active learning|ಸಕ್ರಿಯ ಕಲಿಕೆ|learning by doing and discussing|Active learning helps memory.
+retain|ಉಳಿಸಿಕೊ (ನೆನಪಿನಲ್ಲಿ)|to keep in memory|Teaching others helps you retain information.
+spaced repetition|ಅಂತರದ ಪುನರಾವರ್ತನೆ|reviewing at increasing gaps|This app uses spaced repetition.
+flashcard|ಫ್ಲ್ಯಾಶ್‌ಕಾರ್ಡ್|a card with a question and answer|Make flashcards for drug names.
+self-test|ಸ್ವಯಂ ಪರೀಕ್ಷೆ|testing yourself|Self-test after every chapter.
+weak area|ದುರ್ಬಲ ವಿಷಯ|a topic you don't know well|Focus on your weak areas.
+strong area|ಬಲವಾದ ವಿಷಯ|a topic you know well|Biochemistry is my strong area.
+target score|ಗುರಿ ಅಂಕ|the marks you aim for|My target score is 600.
+schedule|ವೇಳಾಪಟ್ಟಿ|plan of time|Stick to your study schedule.
+break time|ವಿರಾಮದ ಸಮಯ|time to rest|Take a five-minute break every hour.
+distraction|ಗಮನಭಂಗ|something that takes your attention|Phones are the biggest distraction.
+quiet place|ಶಾಂತ ಸ್ಥಳ|a place without noise|Find a quiet place to study.
+well-rested|ಚೆನ್ನಾಗಿ ವಿಶ್ರಾಂತಿ ಪಡೆದ|having had enough sleep|Go to the exam well-rested.
+last-minute|ಕೊನೆಯ ಕ್ಷಣದ|at the very end|Avoid last-minute studying.
+cramming|ತುರುಕುವಿಕೆ|studying a lot in a short time|Cramming doesn't help long-term memory.
+understand deeply|ಆಳವಾಗಿ ಅರ್ಥಮಾಡಿಕೊ|to know the reason behind facts|Understand deeply; don't just memorise.
+apply|ಅನ್ವಯಿಸು|to use knowledge in practice|Apply what you learn on patients.
+connect ideas|ಆಲೋಚನೆಗಳನ್ನು ಜೋಡಿಸು|to link topics together|Connect anatomy with physiology.
+mind map|ಮನೋನಕ್ಷೆ|a diagram of linked ideas|Make a mind map of the chapter.
+outline|ರೂಪುರೇಷೆ|main points|Write an outline before the essay.
+handwriting|ಕೈಬರಹ|the way you write by hand|Neat handwriting gets better marks.
+legible|ಓದಲು ಸಾಧ್ಯವಾದ|easy to read|Write legibly.
+spelling mistake|ಕಾಗುಣಿತ ದೋಷ|a word written wrongly|Check for spelling mistakes.
+proofread|ತಿದ್ದಿ ಓದು|to read to find errors|Proofread your thesis.
+word limit|ಪದಮಿತಿ|maximum number of words|The word limit is 500.
+assignment deadline|ನಿಯೋಜನೆಯ ಗಡುವು|last date for submission|The assignment deadline is Friday.
+extension request|ಗಡುವು ವಿಸ್ತರಣೆ ವಿನಂತಿ|asking for more time|I sent an extension request.
+attendance shortage|ಹಾಜರಾತಿ ಕೊರತೆ|less attendance than required|He has attendance shortage.
+condonation|ಮನ್ನಾ|officially excusing a shortage|Apply for condonation of attendance.
+internal assessment|ಆಂತರಿಕ ಮೌಲ್ಯಮಾಪನ|tests by the college|Internal assessment marks matter.
+university exam|ವಿಶ್ವವಿದ್ಯಾಲಯ ಪರೀಕ್ಷೆ|the final exam by the university|University exams are in August.
+clinical posting|ಚಿಕಿತ್ಸಾ ಸೇವಾವಧಿ|time working in hospital departments|My clinical posting is in surgery.
+log book|ಲಾಗ್ ಪುಸ್ತಕ|a record of skills done|Get your log book signed.
+bedside teaching|ಹಾಸಿಗೆ ಬದಿ ಬೋಧನೆ|teaching next to patients|Bedside teaching is the best way to learn.
+demonstration|ಪ್ರದರ್ಶನ|showing how to do something|Watch the demonstration carefully.
+hands-on|ಪ್ರಾಯೋಗಿಕ|learning by doing yourself|We had a hands-on session on suturing.
+simulation|ಅನುಕರಣೆ|practice using a model|We practised CPR in simulation.
+mannequin|ಮಾದರಿ ಗೊಂಬೆ|a model of the human body|Practise injections on a mannequin.
+peer|ಸಮವಯಸ್ಕ / ಸಹಪಾಠಿ|a person of the same level|Learn from your peers.
+role model|ಆದರ್ಶ ವ್ಯಕ್ತಿ|a person you want to be like|My professor is my role model.
+inspire|ಸ್ಫೂರ್ತಿ ನೀಡು|to motivate|Her journey inspires many students.
+graduation|ಪದವಿ ಪ್ರದಾನ|finishing a degree|My graduation is next year.
+convocation|ಘಟಿಕೋತ್ಸವ|ceremony to give degrees|Parents attend the convocation.
+alumni|ಹಳೆಯ ವಿದ್ಯಾರ್ಥಿಗಳು|former students|The alumni meet is in December.
+farewell|ಬೀಳ್ಕೊಡುಗೆ|a goodbye event|The juniors organised our farewell.
+freshers' day|ಹೊಸಬರ ದಿನ|a welcome event for new students|Freshers' day was fun.
+cultural fest|ಸಾಂಸ್ಕೃತಿಕ ಉತ್ಸವ|college celebration with events|I sang at the cultural fest.
+extracurricular|ಪಠ್ಯೇತರ|activities outside study|Take part in extracurricular activities.
+hobby club|ಹವ್ಯಾಸ ಕ್ಲಬ್|a group for a shared interest|Join the photography club.
+balance|ಸಮತೋಲನ|equal attention to different things|Balance study and rest.
+burnout|ಮಾನಸಿಕ ದಣಿವು|exhaustion from stress|Watch out for burnout before exams.

@@ -1,0 +1,88 @@
+# doctor · level 3 · diseases and conditions
+diabetes|ಮಧುಮೇಹ|a disease with high blood sugar|Diabetes needs lifelong care.
+hypertension|ಅಧಿಕ ರಕ್ತದೊತ್ತಡ|high blood pressure|Hypertension often has no symptoms.
+asthma|ಅಸ್ತಮಾ / ಉಬ್ಬಸ|a disease that makes breathing difficult|Her asthma gets worse with dust.
+anaemia|ರಕ್ತಹೀನತೆ|too little haemoglobin in blood|Anaemia is common in pregnant women.
+tuberculosis|ಕ್ಷಯರೋಗ|a lung infection (TB)|Tuberculosis needs six months of treatment.
+pneumonia|ನ್ಯುಮೋನಿಯಾ|an infection of the lungs|The X-ray confirms pneumonia.
+malaria|ಮಲೇರಿಯಾ|fever spread by mosquitoes|Malaria causes fever with chills.
+dengue|ಡೆಂಗ್ಯೂ|a viral fever spread by mosquitoes|Platelets fall in dengue.
+typhoid|ವಿಷಮಶೀತ ಜ್ವರ|fever from contaminated food or water|Typhoid spreads through dirty water.
+jaundice|ಕಾಮಾಲೆ|yellow skin and eyes from liver problems|His eyes are yellow; it may be jaundice.
+chickenpox|ಸಿಡುಬು (ಚಿಕನ್‌ಪಾಕ್ಸ್)|a viral illness with itchy spots|Chickenpox spreads easily among children.
+measles|ದಡಾರ|a viral illness with rash and fever|Measles can be prevented by vaccine.
+infection|ಸೋಂಕು|disease caused by germs|The wound shows signs of infection.
+inflammation|ಉರಿಯೂತ|redness, swelling, heat and pain|There's inflammation in the joint.
+allergy|ಅಲರ್ಜಿ|a reaction to something harmless|She has a peanut allergy.
+arthritis|ಸಂಧಿವಾತ|pain and swelling in joints|Arthritis is common in old age.
+obesity|ಸ್ಥೂಲಕಾಯ|being very overweight|Obesity increases the risk of diabetes.
+heart attack|ಹೃದಯಾಘಾತ|sudden blockage of blood to the heart|Chest pain with sweating may be a heart attack.
+stroke|ಪಾರ್ಶ್ವವಾಯು|sudden loss of blood to the brain|Facial weakness can be a sign of stroke.
+paralysis|ಲಕ್ವ|loss of movement|The stroke caused paralysis of the left side.
+epilepsy|ಅಪಸ್ಮಾರ|a condition with repeated fits|He's on medicine for epilepsy.
+cancer|ಕ್ಯಾನ್ಸರ್|uncontrolled growth of cells|Early detection of cancer saves lives.
+tumour|ಗೆಡ್ಡೆ|an abnormal mass of tissue|The tumour is not cancerous.
+benign|ಹಾನಿಕಾರಕವಲ್ಲದ|not cancerous|Good news, the lump is benign.
+malignant|ಮಾರಕ|cancerous|The biopsy shows a malignant growth.
+ulcer|ಹುಣ್ಣು|an open sore|He has a stomach ulcer.
+kidney stone|ಮೂತ್ರಪಿಂಡದ ಕಲ್ಲು|a hard deposit in the kidney|Kidney stones cause severe pain.
+appendicitis|ಅಪೆಂಡಿಸೈಟಿಸ್|inflammation of the appendix|Pain in the lower right abdomen may be appendicitis.
+gastritis|ಜಠರದ ಉರಿಯೂತ|inflammation of the stomach lining|Gastritis causes burning pain.
+dehydration|ನಿರ್ಜಲೀಕರಣ|not enough water in the body|Loose motions can cause dehydration.
+sunstroke|ಬಿಸಿಲ ಆಘಾತ|illness from too much heat|Stay indoors to avoid sunstroke.
+food poisoning|ಆಹಾರ ವಿಷಬಾಧೆ|illness from bad food|The whole family had food poisoning.
+thyroid problem|ಥೈರಾಯ್ಡ್ ಸಮಸ್ಯೆ|a problem with the thyroid gland|She takes a tablet for her thyroid.
+cholesterol|ಕೊಲೆಸ್ಟ್ರಾಲ್|a fat in blood|High cholesterol can block arteries.
+depression|ಖಿನ್ನತೆ|a long-lasting sadness and low mood|Depression is an illness, not weakness.
+anxiety|ಆತಂಕ|strong worry and fear|Anxiety can cause palpitations.
+insomnia|ನಿದ್ರಾಹೀನತೆ|difficulty sleeping|Stress can cause insomnia.
+pregnancy|ಗರ್ಭಾವಸ್ಥೆ|carrying a baby in the womb|She's in the seventh month of pregnancy.
+pregnant|ಗರ್ಭಿಣಿ|carrying a baby|Are you pregnant?
+delivery|ಹೆರಿಗೆ|giving birth|It was a normal delivery.
+caesarean|ಸಿಸೇರಿಯನ್|delivery by operation|She had a caesarean section.
+miscarriage|ಗರ್ಭಪಾತ|loss of pregnancy early|She had a miscarriage last year.
+period|ಮುಟ್ಟು|monthly bleeding in women|When was your last period?
+menstrual cramps|ಮುಟ್ಟಿನ ನೋವು|pain during periods|She gets bad menstrual cramps.
+breastfeeding|ಎದೆಹಾಲುಣಿಸುವಿಕೆ|feeding a baby with breast milk|Breastfeeding is best for babies.
+newborn|ನವಜಾತ ಶಿಶು|a baby just born|The newborn weighs three kilos.
+premature|ಅವಧಿಪೂರ್ವ|born too early|The baby was premature.
+growth|ಬೆಳವಣಿಗೆ|getting bigger|The child's growth is normal.
+malnutrition|ಅಪೌಷ್ಟಿಕತೆ|poor nutrition|Malnutrition is still common in villages.
+vitamin deficiency|ಜೀವಸತ್ವದ ಕೊರತೆ|not enough vitamins|Vitamin D deficiency is very common.
+elderly|ವೃದ್ಧರು|old people|Elderly patients need extra care.
+disability|ಅಂಗವೈಕಲ್ಯ|a condition that limits movement or senses|Make the clinic accessible for people with disabilities.
+blind|ಅಂಧ|not able to see|He's blind in one eye.
+deaf|ಕಿವುಡ|not able to hear|Speak slowly; she's a little deaf.
+addiction|ವ್ಯಸನ|not able to stop using something harmful|He needs help for his alcohol addiction.
+smoking|ಧೂಮಪಾನ|breathing in tobacco smoke|Smoking causes lung cancer.
+alcohol|ಮದ್ಯ|drinks like beer and whisky|Do you drink alcohol?
+snakebite|ಹಾವು ಕಡಿತ|a bite from a snake|Bring the snakebite patient quickly.
+dog bite|ನಾಯಿ ಕಡಿತ|a bite from a dog|After a dog bite, take the rabies vaccine.
+poisoning|ವಿಷಬಾಧೆ|harm from swallowing poison|Pesticide poisoning is an emergency.
+accident|ಅಪಘಾತ|a sudden harmful event|He was injured in a road accident.
+head injury|ತಲೆಗೆ ಪೆಟ್ಟು|damage to the head|Watch for vomiting after a head injury.
+unconscious|ಪ್ರಜ್ಞಾಹೀನ|not awake and not responding|The patient is unconscious.
+conscious|ಪ್ರಜ್ಞೆಯಿರುವ|awake and aware|Is he conscious?
+shock|ಆಘಾತ|a dangerous drop in blood flow|The patient is in shock.
+cardiac arrest|ಹೃದಯ ಸ್ತಂಭನ|the heart stops beating|Start CPR for cardiac arrest.
+CPR|ಸಿಪಿಆರ್|pressing the chest to restart the heart|She knows how to do CPR.
+first aid|ಪ್ರಥಮ ಚಿಕಿತ್ಸೆ|immediate help before a doctor|Every home should have a first aid kit.
+ambulance|ಆಂಬ್ಯುಲೆನ್ಸ್|a vehicle for sick people|Call 108 for an ambulance.
+recover|ಗುಣವಾಗು|to become healthy again|He recovered fully.
+heal|ವಾಸಿಯಾಗು|to become healthy (wounds)|The wound is healing well.
+cure|ಗುಣಪಡಿಸು|to make a disease go away completely|Is there a cure for this disease?
+control|ನಿಯಂತ್ರಣ|keeping something within limits|His diabetes is under control.
+manage|ನಿರ್ವಹಿಸು|to deal with|We can manage the pain with medicine.
+prevent|ತಡೆಗಟ್ಟು|to stop from happening|Vaccines prevent diseases.
+spread|ಹರಡು|to move to more people or places|The infection has spread to the blood.
+symptomatic|ಲಕ್ಷಣಗಳಿರುವ|showing symptoms|She is still symptomatic.
+mild|ಸೌಮ್ಯ|not severe|It's a mild case.
+moderate|ಮಧ್ಯಮ|in the middle|Moderate dehydration needs ORS.
+severe|ತೀವ್ರ|very serious|Severe cases need admission.
+sudden|ಹಠಾತ್|happening quickly|Sudden chest pain is an emergency.
+gradual|ಕ್ರಮೇಣ|happening slowly|There's a gradual loss of weight.
+persistent|ನಿರಂತರ|continuing for a long time|A persistent cough for more than two weeks needs testing.
+recurrent|ಮರುಕಳಿಸುವ|happening again and again|She has recurrent urine infections.
+hereditary|ಆನುವಂಶಿಕ|passed from parents|Is this condition hereditary?
+fatal|ಮಾರಣಾಂತಿಕ|causing death|Untreated, it can be fatal.
+life-threatening|ಪ್ರಾಣಕ್ಕೆ ಅಪಾಯಕಾರಿ|could cause death|This is a life-threatening condition.

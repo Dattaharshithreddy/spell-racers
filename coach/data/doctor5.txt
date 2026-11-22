@@ -1,0 +1,91 @@
+# doctor · level 4 · medical science words (study)
+anatomy|ಅಂಗರಚನಾಶಾಸ್ತ್ರ|the study of body structure|Anatomy is the first subject in MBBS.
+physiology|ಶರೀರಕ್ರಿಯಾಶಾಸ್ತ್ರ|the study of how the body works|Physiology explains how the heart pumps.
+biochemistry|ಜೀವರಸಾಯನಶಾಸ್ತ್ರ|the chemistry of living things|Biochemistry explains how sugar is used.
+pathology|ರೋಗಶಾಸ್ತ್ರ|the study of disease|Pathology helps us understand cancer.
+pharmacology|ಔಷಧಶಾಸ್ತ್ರ|the study of drugs|Pharmacology has a lot of drug names to learn.
+microbiology|ಸೂಕ್ಷ್ಮಜೀವಿಶಾಸ್ತ್ರ|the study of germs|In microbiology, we studied bacteria.
+forensic medicine|ನ್ಯಾಯ ವೈದ್ಯಶಾಸ್ತ್ರ|medicine related to law|Forensic medicine deals with injuries and death.
+community medicine|ಸಮುದಾಯ ವೈದ್ಯಶಾಸ್ತ್ರ|health of populations|Community medicine teaches prevention.
+cell|ಜೀವಕೋಶ|the smallest unit of life|Every cell has a nucleus.
+tissue|ಅಂಗಾಂಶ|a group of similar cells|Muscle tissue can contract.
+organ|ಅಂಗ|a body part with a job|The liver is the largest organ inside the body.
+system|ವ್ಯವಸ್ಥೆ|a group of organs working together|The digestive system breaks down food.
+gland|ಗ್ರಂಥಿ|an organ that makes a substance|The thyroid is a gland in the neck.
+hormone|ಹಾರ್ಮೋನ್|a chemical messenger in blood|Insulin is a hormone.
+enzyme|ಕಿಣ್ವ|a protein that speeds up reactions|Saliva has an enzyme that digests starch.
+protein|ಪ್ರೋಟೀನ್|a body-building nutrient|Eggs are rich in protein.
+carbohydrate|ಕಾರ್ಬೋಹೈಡ್ರೇಟ್|an energy-giving nutrient|Rice is mainly carbohydrate.
+fat|ಕೊಬ್ಬು|a nutrient that stores energy|Too much fat is bad for the heart.
+glucose|ಗ್ಲೂಕೋಸ್|a simple sugar|The brain uses glucose for energy.
+insulin|ಇನ್ಸುಲಿನ್|a hormone that lowers blood sugar|He takes insulin before meals.
+platelets|ಕಿರುಬಿಲ್ಲೆಗಳು|blood cells that help clotting|Platelets fall in dengue.
+red blood cells|ಕೆಂಪು ರಕ್ತ ಕಣಗಳು|cells that carry oxygen|Red blood cells live for 120 days.
+white blood cells|ಬಿಳಿ ರಕ್ತ ಕಣಗಳು|cells that fight infection|His white cell count is high.
+plasma|ಪ್ಲಾಸ್ಮಾ|the liquid part of blood|Plasma is mostly water.
+clot|ಹೆಪ್ಪುಗಟ್ಟು|blood becoming solid|A clot blocked the artery.
+circulation|ರಕ್ತಪರಿಚಲನೆ|movement of blood around the body|Exercise improves circulation.
+respiration|ಉಸಿರಾಟ|breathing; using oxygen|The respiration rate is 18 per minute.
+digestion|ಜೀರ್ಣಕ್ರಿಯೆ|breaking down food|Digestion starts in the mouth.
+absorption|ಹೀರಿಕೊಳ್ಳುವಿಕೆ|taking in nutrients|Absorption happens in the small intestine.
+excretion|ವಿಸರ್ಜನೆ|removing waste|The kidneys help in excretion.
+metabolism|ಚಯಾಪಚಯ|all chemical processes in the body|Thyroid hormone controls metabolism.
+immunity|ರೋಗನಿರೋಧಕ ಶಕ್ತಿ|the body's defence against disease|Vaccines build immunity.
+antibody|ಪ್ರತಿಕಾಯ|a protein that fights germs|Antibodies protect us from infection.
+antigen|ಪ್ರತಿಜನಕ|a substance that triggers immunity|Vaccines contain antigens.
+reflex|ಪ್ರತಿವರ್ತನ|an automatic response|Check the knee reflex.
+pressure|ಒತ್ತಡ|force on an area|Blood pressure is measured in mmHg.
+pulse rate|ನಾಡಿ ದರ|heartbeats per minute|Normal pulse rate is 60 to 100.
+fluid|ದ್ರವ|a liquid|Give intravenous fluids.
+oral|ಬಾಯಿಯ ಮೂಲಕ|by mouth|Start oral feeds tomorrow.
+intravenous|ರಕ್ತನಾಳದ ಮೂಲಕ|into a vein|Give the antibiotic intravenously.
+intramuscular|ಸ್ನಾಯುವಿನೊಳಗೆ|into a muscle|The vaccine is given intramuscularly.
+topical|ಚರ್ಮದ ಮೇಲೆ ಹಚ್ಚುವ|applied on the skin|Use a topical cream.
+indication|ಬಳಕೆಯ ಕಾರಣ|a reason to use a treatment|What are the indications for this drug?
+contraindication|ಬಳಸಬಾರದ ಸ್ಥಿತಿ|a reason not to use a treatment|Pregnancy is a contraindication for this drug.
+mechanism of action|ಕಾರ್ಯವಿಧಾನ|how a drug works|Explain the mechanism of action of aspirin.
+adverse effect|ಪ್ರತಿಕೂಲ ಪರಿಣಾಮ|a harmful effect|Report any adverse effect.
+drug interaction|ಔಷಧ ಪರಸ್ಪರ ಕ್ರಿಯೆ|one drug affecting another|Check for drug interactions.
+generic|ಜೆನೆರಿಕ್|the chemical name of a drug|Prescribe by generic name.
+etiology|ರೋಗಕಾರಣ|the cause of a disease|The etiology is unknown.
+pathogenesis|ರೋಗೋತ್ಪತ್ತಿ|how a disease develops|Explain the pathogenesis of TB.
+clinical features|ಚಿಕಿತ್ಸಾ ಲಕ್ಷಣಗಳು|signs and symptoms|List the clinical features of typhoid.
+incidence|ಹೊಸ ಪ್ರಕರಣಗಳ ಪ್ರಮಾಣ|new cases in a period|The incidence of dengue rises in monsoon.
+prevalence|ಒಟ್ಟು ಪ್ರಕರಣಗಳ ಪ್ರಮಾಣ|total cases at a time|The prevalence of diabetes is high in cities.
+epidemic|ಸಾಂಕ್ರಾಮಿಕ ರೋಗದ ಹರಡುವಿಕೆ|a sudden rise in cases|There's a cholera epidemic.
+pandemic|ಜಾಗತಿಕ ಸಾಂಕ್ರಾಮಿಕ|an epidemic across the world|COVID-19 was a pandemic.
+endemic|ಸ್ಥಳೀಯವಾಗಿ ನಿರಂತರ|always present in an area|Malaria is endemic in some districts.
+outbreak|ಏಕಾಏಕಿ ಹರಡುವಿಕೆ|a sudden start of disease|There's an outbreak of food poisoning.
+screening|ತಪಾಸಣೆ|testing people without symptoms|Screening for cervical cancer saves lives.
+prevention|ತಡೆಗಟ್ಟುವಿಕೆ|stopping disease before it starts|Prevention is better than cure.
+sanitation|ನೈರ್ಮಲ್ಯ ವ್ಯವಸ್ಥೆ|clean water and toilets|Good sanitation prevents diarrhoea.
+nutrition|ಪೋಷಣೆ|food and health|Good nutrition is important for children.
+immunisation|ಲಸಿಕೀಕರಣ|giving vaccines|Complete the immunisation schedule.
+public health|ಸಾರ್ವಜನಿಕ ಆರೋಗ್ಯ|health of the whole community|She works in public health.
+primary health centre|ಪ್ರಾಥಮಿಕ ಆರೋಗ್ಯ ಕೇಂದ್ರ|a basic government clinic|I worked at a primary health centre.
+rural posting|ಗ್ರಾಮೀಣ ಸೇವೆ|working in a village hospital|Rural posting is part of internship.
+specimen|ಮಾದರಿ|a sample for testing|Label the specimen correctly.
+slide|ಸ್ಲೈಡ್|glass for viewing under a microscope|Prepare a blood slide.
+stain|ಬಣ್ಣಹಾಕು|to colour cells for viewing|Gram stain the sample.
+dissection|ಛೇದನ|cutting a body to study it|Dissection starts in the first week.
+cadaver|ಶವ (ಅಧ್ಯಯನಕ್ಕಾಗಿ)|a dead body used for study|We respect the cadaver as our first teacher.
+skeleton|ಅಸ್ಥಿಪಂಜರ|all the bones of the body|The adult skeleton has 206 bones.
+skull|ತಲೆಬುರುಡೆ|the bones of the head|The skull protects the brain.
+pelvis|ಸೊಂಟದ ಮೂಳೆ|the hip bones|The pelvis supports the spine.
+femur|ತೊಡೆಮೂಳೆ|the thigh bone|The femur is the longest bone.
+ligament|ಅಸ್ಥಿರಜ್ಜು|tissue joining bones|He tore a knee ligament.
+tendon|ಸ್ನಾಯುರಜ್ಜು|tissue joining muscle to bone|The Achilles tendon is at the heel.
+cartilage|ಮೃದ್ವಸ್ಥಿ|soft bone at joints|Cartilage wears away in arthritis.
+spinal cord|ಮೆದುಳುಬಳ್ಳಿ|nerves running down the spine|The spinal cord carries messages.
+oesophagus|ಅನ್ನನಾಳ|the food pipe|Food passes through the oesophagus.
+trachea|ಶ್ವಾಸನಾಳ|the windpipe|The trachea carries air to the lungs.
+diaphragm|ವಪೆ|the muscle below the lungs|The diaphragm helps breathing.
+pancreas|ಮೇದೋಜೀರಕ ಗ್ರಂಥಿ|the organ that makes insulin|The pancreas makes insulin.
+gall bladder|ಪಿತ್ತಕೋಶ|stores bile|She has stones in her gall bladder.
+spleen|ಗುಲ್ಮ|an organ that filters blood|The spleen is enlarged in malaria.
+uterus|ಗರ್ಭಕೋಶ|the womb|The baby grows in the uterus.
+ovary|ಅಂಡಾಶಯ|organ that makes eggs|The ultrasound shows a cyst in the ovary.
+prostate|ಪ್ರಾಸ್ಟೇಟ್ ಗ್ರಂಥಿ|a gland in men|An enlarged prostate is common in old age.
+thyroid|ಥೈರಾಯ್ಡ್|a gland in the neck|The thyroid controls metabolism.
+retina|ಅಕ್ಷಿಪಟಲ|the back layer of the eye|Diabetes can damage the retina.
+eardrum|ಕಿವಿತಮಟೆ|a thin layer inside the ear|The eardrum is perforated.

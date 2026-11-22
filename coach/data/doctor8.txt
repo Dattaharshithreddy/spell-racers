@@ -1,0 +1,87 @@
+# doctor · level 4 · more conditions, findings and patient care
+abrasion|ತರಚು ಗಾಯ|a scrape on the skin|Clean the abrasion with saline.
+laceration|ಸೀಳು ಗಾಯ|a deep cut|The laceration needs five stitches.
+contusion|ಜಜ್ಜು ಗಾಯ|a bruise|There's a contusion on the forehead.
+dislocation|ಕೀಲು ತಪ್ಪುವಿಕೆ|a bone moved out of its joint|It's a shoulder dislocation.
+concussion|ಮೆದುಳಿನ ಆಘಾತ|a brain injury from a hit|He has a mild concussion.
+haemorrhage|ಅತಿ ರಕ್ತಸ್ರಾವ|heavy bleeding|There's internal haemorrhage.
+clot-buster|ಹೆಪ್ಪು ಕರಗಿಸುವ ಔಷಧ|medicine that dissolves clots|Give the clot-buster within the golden hour.
+golden hour|ಸುವರ್ಣ ಗಂಟೆ|the first hour after injury|Treatment in the golden hour saves lives.
+hypoglycaemia|ಕಡಿಮೆ ರಕ್ತದ ಸಕ್ಕರೆ|very low blood sugar|Give sugar for hypoglycaemia.
+hyperglycaemia|ಅತಿಯಾದ ರಕ್ತದ ಸಕ್ಕರೆ|very high blood sugar|Hyperglycaemia causes thirst.
+heart failure|ಹೃದಯ ವೈಫಲ್ಯ|the heart can't pump well|Heart failure causes swollen legs.
+angina|ಎದೆ ಶೂಲೆ|chest pain from low blood to the heart|Angina comes on walking.
+arrhythmia|ಅನಿಯಮಿತ ಹೃದಯಬಡಿತ|irregular heartbeat|The ECG shows an arrhythmia.
+bronchitis|ಶ್ವಾಸನಾಳದ ಉರಿಯೂತ|inflammation of the airways|Smokers often get bronchitis.
+COPD|ದೀರ್ಘಕಾಲೀನ ಶ್ವಾಸಕೋಶ ಕಾಯಿಲೆ|long-term lung disease|COPD is common in smokers.
+meningitis|ಮೆದುಳುಪೊರೆಯ ಉರಿಯೂತ|infection around the brain|Neck stiffness with fever may be meningitis.
+hepatitis|ಯಕೃತ್ತಿನ ಉರಿಯೂತ|inflammation of the liver|Hepatitis B can be prevented by vaccine.
+cirrhosis|ಯಕೃತ್ತಿನ ಸಿರೋಸಿಸ್|scarring of the liver|Alcohol causes cirrhosis.
+kidney failure|ಮೂತ್ರಪಿಂಡ ವೈಫಲ್ಯ|kidneys stop working|Kidney failure needs dialysis.
+UTI|ಮೂತ್ರನಾಳದ ಸೋಂಕು|urinary tract infection|Burning urine may be a UTI.
+gallstones|ಪಿತ್ತಕಲ್ಲುಗಳು|stones in the gall bladder|Gallstones cause pain after fatty food.
+piles|ಮೂಲವ್ಯಾಧಿ|swollen veins near the anus|Piles cause bleeding during stools.
+hernia|ಅಂಡವಾಯು|a bulge through a weak muscle|He needs surgery for a hernia.
+varicose veins|ಉಬ್ಬಿದ ಸಿರೆಗಳು|swollen leg veins|Standing long causes varicose veins.
+osteoporosis|ಮೂಳೆ ಸವೆತ|weak, thin bones|Osteoporosis is common after menopause.
+gout|ಗೌಟ್ / ವಾತ|painful joint swelling from uric acid|Gout often affects the big toe.
+slipped disc|ಡಿಸ್ಕ್ ಜಾರುವಿಕೆ|a spine disc pressing a nerve|A slipped disc causes leg pain.
+sciatica|ಸಯಾಟಿಕಾ|pain down the leg from the back|Sciatica pain goes down the back of the leg.
+frozen shoulder|ಗಟ್ಟಿಯಾದ ಭುಜ|stiff, painful shoulder|Frozen shoulder is common in diabetics.
+carpal tunnel|ಕಾರ್ಪಲ್ ಟನಲ್|wrist nerve pressure|Carpal tunnel causes numb fingers.
+conjunctivitis|ಕಣ್ಣಿನ ಉರಿಯೂತ (ಮದ್ರಾಸ್ ಐ)|eye infection with red eyes|Conjunctivitis spreads quickly in schools.
+otitis media|ಮಧ್ಯ ಕಿವಿಯ ಸೋಂಕು|middle ear infection|Children often get otitis media.
+tonsillitis|ಟಾನ್ಸಿಲ್ ಉರಿಯೂತ|infection of the tonsils|Tonsillitis causes painful swallowing.
+PCOS|ಪಿಸಿಒಎಸ್|a hormone problem in women|PCOS causes irregular periods.
+anaemia in pregnancy|ಗರ್ಭಾವಸ್ಥೆಯಲ್ಲಿ ರಕ್ತಹೀನತೆ|low haemoglobin while pregnant|Iron tablets prevent anaemia in pregnancy.
+gestational diabetes|ಗರ್ಭಾವಸ್ಥೆಯ ಮಧುಮೇಹ|diabetes during pregnancy|Screen all pregnant women for gestational diabetes.
+pre-eclampsia|ಪ್ರಿ-ಎಕ್ಲಾಂಪ್ಸಿಯಾ|high BP in pregnancy|Pre-eclampsia needs careful monitoring.
+low birth weight|ಕಡಿಮೆ ಜನನ ತೂಕ|baby weighing less than 2.5 kg|Low birth weight babies need extra care.
+jaundice in newborns|ನವಜಾತ ಶಿಶು ಕಾಮಾಲೆ|yellow skin in new babies|Jaundice in newborns is common in the first week.
+diarrhoea|ಅತಿಸಾರ|frequent loose stools|ORS is the treatment for diarrhoea.
+worm infestation|ಹುಳುಗಳ ಸೋಂಕು|worms in the intestine|Give deworming tablets every six months.
+deworming|ಜಂತುಹುಳು ನಿವಾರಣೆ|removing intestinal worms|National Deworming Day is in February.
+rabies|ರೇಬೀಸ್|a deadly disease from animal bites|Rabies is 100% preventable with vaccine.
+tetanus|ಧನುರ್ವಾಯು|a disease from dirty wounds|Take a tetanus injection after a rusty nail injury.
+leprosy|ಕುಷ್ಠರೋಗ|a disease of skin and nerves|Leprosy is curable.
+HIV|ಎಚ್‌ಐವಿ|a virus that weakens immunity|HIV is managed with lifelong medicines.
+stigma|ಕಳಂಕ|shame society attaches to something|We must reduce the stigma around mental illness.
+counsel|ಸಮಾಲೋಚನೆ ನೀಡು|to give advice and support|Counsel the patient about the diet.
+educate|ಶಿಕ್ಷಣ ನೀಡು / ತಿಳಿವಳಿಕೆ ನೀಡು|to teach|Educate mothers about breastfeeding.
+empathise|ಅನುಭೂತಿ ತೋರು|to understand others' feelings|Empathise with the patient's fear.
+listen actively|ಗಮನವಿಟ್ಟು ಆಲಿಸು|to listen with full attention|Listen actively before giving advice.
+open-ended question|ಮುಕ್ತ ಪ್ರಶ್ನೆ|a question that needs a long answer|Start with an open-ended question.
+closed question|ಮುಚ್ಚಿದ ಪ್ರಶ್ನೆ|a yes or no question|Use closed questions to confirm details.
+jargon|ಪರಿಭಾಷೆ|special words only experts understand|Avoid medical jargon with patients.
+layman's terms|ಸಾಮಾನ್ಯರ ಭಾಷೆ|simple language|Explain it in layman's terms.
+informed consent|ತಿಳುವಳಿಕೆಯ ಸಮ್ಮತಿ|agreement after full explanation|Take informed consent for surgery.
+autonomy|ಸ್ವಾಯತ್ತತೆ|the right to decide for yourself|Respect the patient's autonomy.
+chaperone|ಜೊತೆಗಾರ (ಪರೀಕ್ಷೆಯಲ್ಲಿ)|a person present during an examination|A female chaperone must be present.
+interpreter|ದುಭಾಷಿ|a person who translates speech|We need an interpreter for this patient.
+breaking bad news|ಕೆಟ್ಟ ಸುದ್ದಿ ತಿಳಿಸುವುದು|telling difficult news|Breaking bad news needs a quiet room.
+palliative care|ಉಪಶಾಮಕ ಆರೈಕೆ|comfort care for serious illness|She's receiving palliative care.
+terminally ill|ಅಂತಿಮ ಹಂತದ ರೋಗಿ|with an illness that cannot be cured|He is terminally ill.
+grief|ದುಃಖ|deep sadness after a loss|Give the family time to grieve.
+condolences|ಸಂತಾಪ|words of sympathy after a death|Please accept my condolences.
+check-up|ತಪಾಸಣೆ|a routine medical examination|Get a health check-up every year.
+healthy weight|ಆರೋಗ್ಯಕರ ತೂಕ|right weight for your height|Maintain a healthy weight.
+BMI|ಬಿಎಂಐ|body mass index|Your BMI is 27, slightly overweight.
+sedentary|ಕುಳಿತುಕೊಂಡೇ ಇರುವ|sitting most of the day|A sedentary lifestyle causes many diseases.
+brisk walking|ವೇಗದ ನಡಿಗೆ|walking fast|Do brisk walking for thirty minutes.
+portion size|ಊಟದ ಪ್ರಮಾಣ|how much food you eat at a time|Reduce your portion size.
+junk food|ಜಂಕ್ ಆಹಾರ|unhealthy fast food|Avoid junk food.
+processed food|ಸಂಸ್ಕರಿತ ಆಹಾರ|food changed in factories|Processed food has too much salt.
+whole grains|ಪೂರ್ಣ ಧಾನ್ಯಗಳು|grains with the outer layer|Ragi and brown rice are whole grains.
+hydration|ಜಲಸಂಚಯನ|having enough water|Hydration is important in summer.
+sleep hygiene|ನಿದ್ರಾ ನೈರ್ಮಲ್ಯ|good sleep habits|No screens before bed is good sleep hygiene.
+screen time|ಪರದೆಯ ಸಮಯ|time spent on phones and TV|Reduce children's screen time.
+posture|ಭಂಗಿ|the way you sit or stand|Bad posture causes back pain.
+stress management|ಒತ್ತಡ ನಿರ್ವಹಣೆ|ways to handle stress|Yoga helps in stress management.
+quit smoking|ಧೂಮಪಾನ ಬಿಡು|to stop smoking|It's never too late to quit smoking.
+relapse prevention|ಮರುಕಳಿಕೆ ತಡೆ|stopping a habit or illness from returning|We'll plan relapse prevention together.
+support group|ಬೆಂಬಲ ಗುಂಪು|people with the same problem helping each other|Join a diabetes support group.
+caregiver|ಆರೈಕೆದಾರ|a person who looks after a patient|Caregivers also need rest.
+bedridden|ಹಾಸಿಗೆ ಹಿಡಿದ|unable to leave bed|Her mother is bedridden.
+home care|ಮನೆಯ ಆರೈಕೆ|treatment at home|Home care is possible after discharge.
+telemedicine|ದೂರ ವೈದ್ಯಕೀಯ|consulting a doctor by phone or video|Telemedicine helps rural patients.
+health card|ಆರೋಗ್ಯ ಕಾರ್ಡ್|a card for health services|Bring your health card.

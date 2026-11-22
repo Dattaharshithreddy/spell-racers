@@ -1,0 +1,88 @@
+# work · level 3 · interviews, money, leadership
+ambitious|ಮಹತ್ವಾಕಾಂಕ್ಷಿ|wanting to succeed very much|She is ambitious and hard-working.
+adaptable|ಹೊಂದಿಕೊಳ್ಳುವ|able to change for new situations|I'm adaptable to new environments.
+background|ಹಿನ್ನೆಲೆ|your past education and experience|Tell me about your background.
+candidate|ಅಭ್ಯರ್ಥಿ|a person applying for a job|There are twenty candidates for one post.
+cover letter|ಜೊತೆ ಪತ್ರ|a letter sent with a job application|Write a short cover letter.
+eligible|ಅರ್ಹ|meeting the conditions|You are eligible for the scholarship.
+fresher|ಹೊಸಬ|a person with no work experience|We are hiring freshers.
+graduate|ಪದವೀಧರ|a person with a degree|She's a medical graduate.
+offer letter|ನೇಮಕಾತಿ ಪತ್ರ|a letter offering a job|I received my offer letter today.
+reference|ಶಿಫಾರಸುದಾರ|a person who can speak about your work|Can I give your name as a reference?
+shortlist|ಆಯ್ಕೆ ಪಟ್ಟಿ|a list of the best candidates|I'm on the shortlist.
+stipend|ಭತ್ಯೆ|a small fixed payment for trainees|Interns get a monthly stipend.
+strengths and weaknesses|ಸಾಮರ್ಥ್ಯ ಮತ್ತು ದೌರ್ಬಲ್ಯ|what you are good and not good at|Interviewers often ask about strengths and weaknesses.
+team player|ತಂಡದಲ್ಲಿ ಕೆಲಸ ಮಾಡುವವರು|a person who works well with others|I'm a good team player.
+vacancy|ಖಾಲಿ ಹುದ್ದೆ|a job that is free|There's a vacancy for a staff nurse.
+walk-in interview|ನೇರ ಸಂದರ್ಶನ|an interview without appointment|There's a walk-in interview on Saturday.
+work-life balance|ಕೆಲಸ-ಜೀವನ ಸಮತೋಲನ|time for work and personal life|Work-life balance is important.
+account|ಖಾತೆ|a bank record of your money|I opened a savings account.
+balance|ಬಾಕಿ ಮೊತ್ತ|money left in an account|Check your account balance.
+deposit|ಠೇವಣಿ ಇಡು|to put money in a bank|I deposited the cheque.
+withdraw|ಹಿಂಪಡೆ|to take money out|I need to withdraw cash.
+transfer|ವರ್ಗಾಯಿಸು|to move money or a person|Transfer the money by UPI.
+loan|ಸಾಲ|money borrowed to pay back|He took a loan for his education.
+interest|ಬಡ್ಡಿ|extra money paid on a loan|What's the interest rate?
+EMI|ಮಾಸಿಕ ಕಂತು|a fixed monthly payment for a loan|My car EMI is due on the tenth.
+insurance|ವಿಮೆ|protection money against loss|Do you have health insurance?
+invoice|ಸರಕುಪಟ್ಟಿ|a bill for goods or services|Please send the invoice.
+payment|ಪಾವತಿ|money paid|The payment is pending.
+expense|ಖರ್ಚು|money spent|Keep a record of your expenses.
+income|ಆದಾಯ|money you earn|Her income has increased.
+savings|ಉಳಿತಾಯ|money kept for later|I put my savings in a fixed deposit.
+profit|ಲಾಭ|money gained|The shop made a profit.
+loss|ನಷ್ಟ|money lost|The company had a loss this year.
+investment|ಹೂಡಿಕೆ|money put in to grow|Education is the best investment.
+due date|ಕೊನೆಯ ದಿನಾಂಕ|the date something must be paid or done|The due date for the fee is Monday.
+refundable|ಮರುಪಾವತಿಸಬಹುದಾದ|money can be returned|The deposit is refundable.
+authority|ಅಧಿಕಾರ / ಅಧಿಕಾರಿ|power; an official group|Only the authority can approve this.
+leadership|ನಾಯಕತ್ವ|the ability to lead|She showed good leadership.
+decision-making|ನಿರ್ಧಾರ ತೆಗೆದುಕೊಳ್ಳುವಿಕೆ|the process of deciding|Good decision-making needs facts.
+delegate|ಕೆಲಸ ಹಂಚು|to give work to others|Learn to delegate.
+mentor|ಮಾರ್ಗದರ್ಶಕ|an experienced guide|My senior is my mentor.
+guidance|ಮಾರ್ಗದರ್ಶನ|help and advice|Thank you for your guidance.
+conflict|ಸಂಘರ್ಷ|a serious disagreement|Try to solve conflicts calmly.
+pressure|ಒತ್ತಡ|stress from demands|Work under pressure is common in hospitals.
+burnout|ಅತಿಯಾದ ಆಯಾಸ|being exhausted from too much work|Take breaks to avoid burnout.
+morale|ಮನೋಬಲ|team spirit and confidence|The team's morale is high.
+recognition|ಮನ್ನಣೆ|praise for work done|She got recognition for her work.
+reward|ಬಹುಮಾನ|something given for good work|Hard work brings rewards.
+policy|ನೀತಿ|official rules|Follow the hospital policy.
+procedure|ಕಾರ್ಯವಿಧಾನ|the official way of doing something|What's the procedure for leave?
+guideline|ಮಾರ್ಗಸೂಚಿ|official advice|Follow the new guidelines.
+standard|ಮಾನದಂಡ|a level of quality|We follow international standards.
+quality|ಗುಣಮಟ್ಟ|how good something is|Quality is more important than speed.
+efficiency|ದಕ್ಷತೆ|working well without waste|The new system improved efficiency.
+innovation|ನಾವೀನ್ಯತೆ|a new idea or method|We need innovation in rural healthcare.
+strategy|ಕಾರ್ಯತಂತ್ರ|a plan to achieve a goal|What's our strategy?
+resource|ಸಂಪನ್ಮೂಲ|something useful like money or people|We have limited resources.
+facility|ಸೌಲಭ್ಯ|a building or service for a purpose|The hospital has good facilities.
+equipment|ಉಪಕರಣ|tools and machines|The equipment is new.
+supplies|ಸರಬರಾಜು|things needed for work|We are running out of supplies.
+stock|ದಾಸ್ತಾನು|goods available|Check the medicine stock.
+schedule|ವೇಳಾಪಟ್ಟಿ|a plan of times|The duty schedule is on the board.
+roster|ಪಾಳಿ ಪಟ್ಟಿ|a list of who works when|Check the roster for night duty.
+handover|ಹಸ್ತಾಂತರ|giving responsibility to the next person|Do a proper handover before you leave.
+protocol|ನಿಯಮಾವಳಿ|official rules for doing something|Follow the fire safety protocol.
+audit|ಲೆಕ್ಕ ಪರಿಶೋಧನೆ|an official check of records|There's an audit next week.
+feedback form|ಅಭಿಪ್ರಾಯ ನಮೂನೆ|a form for opinions|Please fill in the feedback form.
+survey|ಸಮೀಕ್ಷೆ|questions to many people|We did a patient survey.
+data|ದತ್ತಾಂಶ|facts and numbers|The data shows an improvement.
+chart|ಚಾರ್ಟ್|a diagram of information|Look at this chart.
+increase|ಏರಿಕೆ|a rise|There's an increase in dengue cases.
+decrease|ಇಳಿಕೆ|a fall|There's a decrease in waiting time.
+average|ಸರಾಸರಿ|the usual amount|The average age is forty.
+percentage|ಶೇಕಡಾವಾರು|a number out of hundred|What percentage passed?
+approximately|ಸುಮಾರು|about|Approximately fifty people came.
+deadline|ಅಂತಿಮ ಗಡುವು|last date|We missed the deadline.
+extension|ವಿಸ್ತರಣೆ|extra time|Can I get an extension?
+urgent|ತುರ್ತು|needs action now|This is an urgent case.
+routine|ವಾಡಿಕೆಯ|normal and regular|It's a routine check.
+regular|ನಿಯಮಿತ|happening often at fixed times|Regular exercise is important.
+occasional|ಆಗಾಗ ನಡೆಯುವ|happening sometimes|I have an occasional headache.
+punctuality|ಸಮಯಪಾಲನೆ|being on time|Punctuality is important at work.
+dedication|ಶ್ರದ್ಧೆ|hard work and commitment|Her dedication inspires us.
+commitment|ಬದ್ಧತೆ|a promise to do something|We have a commitment to our patients.
+integrity|ಸಮಗ್ರತೆ / ನೈತಿಕತೆ|being honest and having strong values|Doctors must work with integrity.
+ethics|ನೈತಿಕತೆ|rules of right and wrong|Medical ethics are very important.
+accountable|ಹೊಣೆಗಾರ|responsible and must explain|We are all accountable for our actions.

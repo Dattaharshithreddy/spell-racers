@@ -1,0 +1,82 @@
+# daily · level 2 · home, cooking, body actions and feelings
+chop|ಸಣ್ಣಗೆ ಹೆಚ್ಚು|to cut into small pieces|Chop the coriander finely.
+grate|ತುರಿ|to rub into small pieces|Grate the coconut.
+grind|ರುಬ್ಬು|to crush into powder or paste|Grind the batter for dosa.
+peel|ಸಿಪ್ಪೆ ತೆಗೆ|to remove the skin of fruit|Peel the potatoes.
+soak|ನೆನೆಸು|to keep in water|Soak the rice overnight.
+stir|ಕಲಕು|to mix by moving a spoon|Stir the sambar slowly.
+mix|ಬೆರೆಸು|to combine|Mix the flour and water.
+fry|ಹುರಿ / ಕರಿ|to cook in oil|Fry the mustard seeds.
+roast|ಹುರಿ|to cook in dry heat|Roast the groundnuts.
+steam|ಹಬೆಯಲ್ಲಿ ಬೇಯಿಸು|to cook with steam|Idlis are steamed.
+heat|ಬಿಸಿ ಮಾಡು|to make hot|Heat the oil in a pan.
+taste|ರುಚಿ|the flavour of food|This has a nice taste.
+flavour|ಸ್ವಾದ|the special taste|Cardamom adds flavour.
+crispy|ಗರಿಗರಿಯಾದ|hard and breaking easily|I like crispy dosas.
+tasty|ರುಚಿಯಾದ|having a good taste|The chutney is tasty.
+leftover|ಉಳಿದ|remaining after a meal|Don't throw leftover food.
+vessel|ಪಾತ್ರೆ|a pot or container|Wash the vessels.
+pressure cooker|ಕುಕ್ಕರ್|a closed pot for fast cooking|Cook the dal in the pressure cooker.
+stove|ಒಲೆ|a cooker for heating|Turn off the stove.
+fridge|ಫ್ರಿಜ್|machine that keeps food cold|Keep the milk in the fridge.
+mixer|ಮಿಕ್ಸರ್|machine for grinding|The mixer is too loud.
+sweep|ಗುಡಿಸು|to clean with a broom|Sweep the floor.
+mop|ಒರೆಸು|to clean the floor with water|Mop the kitchen floor.
+dust|ಧೂಳು ಒರೆಸು|to remove dust|Dust the shelves.
+laundry|ಬಟ್ಟೆ ಒಗೆತ|washing clothes|I do laundry on Sundays.
+fold clothes|ಬಟ್ಟೆ ಮಡಚು|to fold washed clothes|Help me fold the clothes.
+arrange|ಜೋಡಿಸು|to put in order|Arrange the books on the shelf.
+decorate|ಅಲಂಕರಿಸು|to make beautiful|We decorate the house for Deepavali.
+rangoli|ರಂಗೋಲಿ|coloured designs on the floor|She draws rangoli every morning.
+lamp|ದೀಪ|a light|Light the lamp in the evening.
+repair work|ದುರಸ್ತಿ ಕೆಲಸ|fixing things|There's some repair work in the bathroom.
+leak|ಸೋರು|to let water escape|The tap is leaking.
+power cut|ವಿದ್ಯುತ್ ಕಡಿತ|loss of electricity|There's a power cut from ten to two.
+water tank|ನೀರಿನ ಟ್ಯಾಂಕ್|a container for storing water|The water tank is empty.
+plumber|ನಲ್ಲಿ ರಿಪೇರಿಯವನು|person who fixes pipes|Call the plumber.
+electrician|ವಿದ್ಯುತ್ ಕೆಲಸಗಾರ|person who fixes electrical things|The electrician will come at four.
+maid|ಮನೆಗೆಲಸದವರು|a person who helps with housework|Our maid is on leave today.
+nod|ತಲೆ ಆಡಿಸು|to move your head up and down|She nodded to say yes.
+wave|ಕೈ ಬೀಸು|to move your hand to say hello or bye|Wave goodbye to grandma.
+point|ಬೆರಳು ತೋರಿಸು|to show with a finger|Point to where it hurts.
+clap|ಚಪ್ಪಾಳೆ ತಟ್ಟು|to hit hands together|Everyone clapped.
+blink|ಕಣ್ಣು ಮಿಟುಕಿಸು|to close and open the eyes quickly|Don't blink when I take the photo.
+yawn|ಆಕಳಿಸು|to open the mouth wide when sleepy|He keeps yawning in class.
+stretch|ಮೈಮುರಿ / ಚಾಚು|to extend your body|Stretch your legs every hour.
+bend|ಬಾಗು|to curve your body|Bend your knees, not your back.
+kneel|ಮಂಡಿಯೂರು|to rest on your knees|Kneel down to pray.
+lean|ಒರಗು|to rest against something|Don't lean on the wall; it's wet.
+crawl|ತೆವಳು|to move on hands and knees|The baby is crawling now.
+limp|ಕುಂಟು|to walk unevenly because of pain|He's limping after the match.
+slip|ಜಾರು|to slide and fall|Be careful, you might slip.
+trip|ಎಡವು|to hit your foot and fall|I tripped on the stairs.
+scratch|ಕೆರೆ|to rub with nails|Don't scratch the mosquito bite.
+swallow|ನುಂಗು|to make food go down the throat|Swallow the tablet with water.
+chew|ಅಗಿ|to crush food with teeth|Chew your food properly.
+bite|ಕಚ್ಚು|to cut with teeth|The dog bit him.
+lick|ನೆಕ್ಕು|to touch with the tongue|The cat licked the milk.
+spit|ಉಗುಳು|to push out from the mouth|Don't spit on the road.
+sniff|ಮೂಸು|to breathe in through the nose|The dog sniffed the bag.
+shiver|ನಡುಗು|to shake from cold|I'm shivering, it's so cold.
+sweat|ಬೆವರು|to make water on the skin|I sweat a lot in summer.
+blush|ನಾಚಿ ಕೆಂಪಾಗು|to turn red from shyness|She blushed when they praised her.
+frown|ಹುಬ್ಬು ಗಂಟಿಕ್ಕು|to make an unhappy face|Why are you frowning?
+grin|ಹಲ್ಲು ಬಿಟ್ಟು ನಗು|to smile widely|He grinned at me.
+sigh|ನಿಟ್ಟುಸಿರು ಬಿಡು|to breathe out loudly when sad or tired|She sighed and sat down.
+scream|ಕಿರುಚು|to cry out loudly|The child screamed when he saw the snake.
+giggle|ಕಿಸಕ್ಕನೆ ನಗು|to laugh in a silly way|The girls were giggling.
+sob|ಬಿಕ್ಕಿ ಬಿಕ್ಕಿ ಅಳು|to cry loudly|She sobbed after the news.
+homesick|ಮನೆಯ ನೆನಪಿನಲ್ಲಿ ಬೇಸರಗೊಂಡ|missing home|I felt homesick in the hostel.
+heartbroken|ಎದೆಯೊಡೆದ|very sad|She was heartbroken.
+thrilled|ಪುಳಕಿತ|very excited|I'm thrilled with the result!
+puzzled|ಗೊಂದಲಗೊಂಡ|confused|He looked puzzled.
+shocked|ಆಘಾತಗೊಂಡ|very surprised in a bad way|We were shocked by the news.
+irritating|ಕಿರಿಕಿರಿ ಉಂಟುಮಾಡುವ|annoying|That noise is irritating.
+pleased|ಸಂತುಷ್ಟ|happy|I'm pleased with your work.
+satisfied|ತೃಪ್ತಿಗೊಂಡ|happy with something|Are you satisfied?
+moody|ಮನಸ್ಥಿತಿ ಬದಲಾಗುವ|changing moods often|Teenagers can be moody.
+tense|ಉದ್ವಿಗ್ನ|nervous and worried|She looks tense before the exam.
+relaxed|ನಿರಾಳ|calm and comfortable|I feel relaxed after yoga.
+energetic|ಚೈತನ್ಯಶೀಲ|full of energy|Children are so energetic.
+sleepy|ನಿದ್ದೆ ಬರುತ್ತಿರುವ|wanting to sleep|I feel sleepy after lunch.
+restless|ಚಡಪಡಿಸುವ|unable to stay still|The patient is restless at night.

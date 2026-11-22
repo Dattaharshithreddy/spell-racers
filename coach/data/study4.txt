@@ -1,0 +1,88 @@
+# study · level 2 · science, numbers and general knowledge
+atom|ಪರಮಾಣು|the smallest unit of an element|Everything is made of atoms.
+molecule|ಅಣು|atoms joined together|Water is a molecule of H2O.
+compound|ಸಂಯುಕ್ತ|a substance made of two or more elements|Salt is a compound.
+mixture|ಮಿಶ್ರಣ|things mixed but not joined|Air is a mixture of gases.
+solution|ದ್ರಾವಣ|a liquid with something dissolved|Prepare a saline solution.
+dissolve|ಕರಗಿಸು|to mix into a liquid completely|Sugar dissolves in water.
+acid|ಆಮ್ಲ|a sour chemical|Lemon juice is an acid.
+base|ಪ್ರತ್ಯಾಮ್ಲ|the opposite of an acid|Soap is a base.
+reaction|ಕ್ರಿಯೆ / ಪ್ರತಿಕ್ರಿಯೆ|a chemical change|This reaction produces heat.
+energy|ಶಕ್ತಿ|power to do work|Food gives us energy.
+force|ಬಲ|a push or pull|Gravity is a force.
+gravity|ಗುರುತ್ವಾಕರ್ಷಣೆ|the force that pulls things down|Gravity keeps us on the ground.
+pressure|ಒತ್ತಡ|force on an area|Air pressure falls at heights.
+volume|ಪರಿಮಾಣ|amount of space|Measure the volume of urine.
+mass|ದ್ರವ್ಯರಾಶಿ|amount of matter|Mass is measured in kilograms.
+density|ಸಾಂದ್ರತೆ|mass per volume|Oil has less density than water.
+temperature|ತಾಪಮಾನ|how hot|Normal body temperature is 98.6 °F.
+boiling point|ಕುದಿಯುವ ಬಿಂದು|temperature at which liquid boils|Water's boiling point is 100 °C.
+evaporate|ಆವಿಯಾಗು|to change from liquid to gas|Water evaporates in the sun.
+condense|ಘನೀಭವಿಸು|to change from gas to liquid|Steam condenses on a cold glass.
+electricity|ವಿದ್ಯುತ್|electric power|The ECG records the heart's electricity.
+current|ವಿದ್ಯುತ್ ಪ್ರವಾಹ|flow of electricity|Don't touch wires with current.
+magnet|ಅಯಸ್ಕಾಂತ|metal that attracts iron|MRI uses a strong magnet.
+radiation|ವಿಕಿರಣ|energy that travels as rays|Too much radiation is harmful.
+light|ಬೆಳಕು|what makes things visible|Light travels very fast.
+sound|ಶಬ್ದ|what we hear|Ultrasound uses sound waves.
+wave|ತರಂಗ|movement of energy|Radio waves carry signals.
+lens|ಮಸೂರ|curved glass that bends light|The eye has a lens.
+species|ಪ್ರಭೇದ|a group of similar living things|There are many species of mosquitoes.
+evolution|ವಿಕಾಸ|slow change of living things over time|Darwin explained evolution.
+gene|ವಂಶವಾಹಿ|a unit of heredity|Eye colour is decided by genes.
+DNA|ಡಿಎನ್‌ಎ|the material that carries genes|DNA is found in every cell.
+chromosome|ವರ್ಣತಂತು|a thread of DNA|Humans have 46 chromosomes.
+mutation|ರೂಪಾಂತರ|a change in a gene|A mutation can cause disease.
+organism|ಜೀವಿ|a living thing|Bacteria are tiny organisms.
+microorganism|ಸೂಕ್ಷ್ಮಜೀವಿ|a tiny living thing|Microorganisms are everywhere.
+photosynthesis|ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ|plants making food from sunlight|Leaves do photosynthesis.
+oxygen|ಆಮ್ಲಜನಕ|gas we breathe in|We need oxygen to live.
+carbon dioxide|ಇಂಗಾಲದ ಡೈಆಕ್ಸೈಡ್|gas we breathe out|We breathe out carbon dioxide.
+nutrient|ಪೋಷಕಾಂಶ|food substance needed for health|Fruits are full of nutrients.
+fibre|ನಾರಿನಂಶ|part of food that helps digestion|Eat food rich in fibre.
+calorie|ಕ್ಯಾಲೊರಿ|unit of energy in food|This sweet has 300 calories.
+mineral|ಖನಿಜ|a natural substance like iron or calcium|Milk is rich in minerals.
+vitamin|ಜೀವಸತ್ವ|a nutrient needed in small amounts|Vitamin C helps healing.
+number|ಸಂಖ್ಯೆ|a value like 1, 2, 3|Write the number in words.
+digit|ಅಂಕೆ|a single number from 0 to 9|Your PIN has four digits.
+add up|ಕೂಡಿಸು|to find the total|Add up the bill.
+subtract|ಕಳೆ|to take away|Subtract 10 from 50.
+multiply|ಗುಣಿಸು|to increase by times|Multiply the dose by the weight.
+divide|ಭಾಗಿಸು|to split into parts|Divide the tablet into two.
+equal to|ಸಮಾನ|the same as|Two plus two is equal to four.
+fraction|ಭಿನ್ನರಾಶಿ|a part of a whole|Half is a fraction.
+decimal|ದಶಮಾಂಶ|a number with a point|Write it as a decimal.
+percent|ಶೇಕಡಾ|out of a hundred|Ninety percent of students passed.
+double|ಎರಡರಷ್ಟು|two times|The price has doubled.
+triple|ಮೂರರಷ್ಟು|three times|The risk is triple in smokers.
+maximum|ಗರಿಷ್ಠ|the highest|The maximum dose is 4 grams a day.
+minimum|ಕನಿಷ್ಠ|the lowest|Sleep a minimum of seven hours.
+estimate|ಅಂದಾಜು|a rough calculation|It's just an estimate.
+exact|ನಿಖರ|completely correct|What's the exact time?
+length|ಉದ್ದ|how long|Measure the length of the wound.
+width|ಅಗಲ|how wide|What's the width of the door?
+depth|ಆಳ|how deep|Check the depth of the wound.
+weight|ತೂಕ|how heavy|Record the baby's weight.
+circle|ವೃತ್ತ|a round shape|Draw a circle.
+square|ಚೌಕ|a shape with four equal sides|Cut the paper into squares.
+triangle|ತ್ರಿಕೋನ|a shape with three sides|The sign is a red triangle.
+straight line|ನೇರ ರೇಖೆ|a line without curves|Draw a straight line.
+centre|ಕೇಂದ್ರ|the middle|The pain is in the centre of the chest.
+surface|ಮೇಲ್ಮೈ|the outside layer|Clean the surface with spirit.
+edge|ಅಂಚು|the outer line|The edges of the wound are clean.
+layer|ಪದರ|one level of something|The skin has three layers.
+government|ಸರ್ಕಾರ|the people who rule a country|The government runs free hospitals.
+citizen|ನಾಗರಿಕ|a member of a country|Every citizen has rights.
+election|ಚುನಾವಣೆ|choosing leaders by voting|The election is next month.
+vote|ಮತ ಚಲಾಯಿಸು|to choose in an election|I voted for the first time.
+law|ಕಾನೂನು|official rules of a country|It's against the law.
+rights|ಹಕ್ಕುಗಳು|what people are allowed by law|Patients have rights.
+history|ಇತಿಹಾಸ|the study of the past|I love Karnataka's history.
+geography|ಭೂಗೋಳ|the study of the earth|Geography explains the monsoon.
+economy|ಆರ್ಥಿಕತೆ|the money system of a country|India's economy is growing.
+population|ಜನಸಂಖ್ಯೆ|number of people|Bengaluru has a huge population.
+technology|ತಂತ್ರಜ್ಞಾನ|use of science in daily life|Technology is changing medicine.
+invention|ಆವಿಷ್ಕಾರ|something new created|The X-ray was a great invention.
+discovery|ಅನ್ವೇಷಣೆ|finding something unknown|Penicillin was an accidental discovery.
+scientist|ವಿಜ್ಞಾನಿ|a person who studies science|C. V. Raman was a great scientist.
+artificial intelligence|ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ|computers that think|AI can read X-rays.

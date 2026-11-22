@@ -1,0 +1,96 @@
+# work · level 2 · communicating at work
+acknowledge|ಸ್ವೀಕೃತಿ ತಿಳಿಸು|to say you received something|Please acknowledge this email.
+address|ಪರಿಹರಿಸು / ಉದ್ದೇಶಿಸಿ ಮಾತನಾಡು|to deal with a problem|We need to address this issue quickly.
+align|ಹೊಂದಿಸು|to agree and move in the same direction|Let's align on the plan before the meeting.
+allocate|ಹಂಚಿಕೆ ಮಾಡು|to give for a purpose|We allocated two nurses to each ward.
+analyse|ವಿಶ್ಲೇಷಿಸು|to study in detail|Analyse the data before deciding.
+anticipate|ನಿರೀಕ್ಷಿಸು|to expect and prepare|We anticipate more patients in winter.
+appreciate|ಮೆಚ್ಚು|to be thankful for|I appreciate your quick reply.
+assess|ಮೌಲ್ಯಮಾಪನ ಮಾಡು|to judge the quality or amount|Let's assess the situation first.
+assign|ವಹಿಸು|to give a task|The manager assigned me a new project.
+assist|ಸಹಾಯ ಮಾಡು|to help|I'll assist you with the paperwork.
+brief|ಸಂಕ್ಷಿಪ್ತ ಮಾಹಿತಿ ನೀಡು|to give short information|Let me brief you on the case.
+brainstorm|ಆಲೋಚನೆಗಳನ್ನು ಹಂಚಿಕೊ|to share many ideas quickly|Let's brainstorm some solutions.
+collaborate|ಸಹಯೋಗ ಮಾಡು|to work together|We collaborate with other hospitals.
+communicate|ಸಂವಹನ ಮಾಡು|to share information|Communicate clearly with your team.
+compromise|ರಾಜಿ ಮಾಡಿಕೊ|to accept less to agree|Both sides had to compromise.
+concentrate|ಗಮನ ಕೇಂದ್ರೀಕರಿಸು|to focus|I can't concentrate in this noise.
+conduct|ನಡೆಸು|to organise and do|We will conduct a survey.
+consult|ಸಲಹೆ ಕೇಳು|to ask an expert for advice|Consult your senior before deciding.
+contact|ಸಂಪರ್ಕಿಸು|to call or write to|Contact me if you need anything.
+contribute|ಕೊಡುಗೆ ನೀಡು|to give or add something|Everyone contributed to the project.
+cooperate|ಸಹಕರಿಸು|to work together helpfully|Thank you for cooperating.
+criticise|ಟೀಕಿಸು|to say what is wrong|Don't criticise people in public.
+deal with|ನಿಭಾಯಿಸು|to handle|How do you deal with stress?
+demonstrate|ಪ್ರದರ್ಶಿಸು|to show how something works|Let me demonstrate the machine.
+emphasise|ಒತ್ತಿ ಹೇಳು|to show something is important|I want to emphasise safety.
+ensure|ಖಚಿತಪಡಿಸಿಕೊ|to make sure|Ensure all forms are signed.
+escalate|ಮೇಲಧಿಕಾರಿಗಳಿಗೆ ತಿಳಿಸು|to take a problem to a higher level|If it's not solved, escalate it to the manager.
+evaluate|ಮೌಲ್ಯಮಾಪನ ಮಾಡು|to judge carefully|We will evaluate your work.
+finalise|ಅಂತಿಮಗೊಳಿಸು|to complete the last details|Let's finalise the schedule.
+focus|ಗಮನ ಕೊಡು|to give attention|Let's focus on the main issue.
+implement|ಜಾರಿಗೆ ತರು|to put a plan into action|We will implement the new system next month.
+inform|ತಿಳಿಸು|to tell officially|I'd like to inform you that the meeting is cancelled.
+initiate|ಆರಂಭಿಸು|to start|She initiated the cleanliness drive.
+instruct|ಸೂಚಿಸು|to tell someone what to do|The doctor instructed the nurse to give the injection.
+maintain|ನಿರ್ವಹಿಸು|to keep in good condition|We must maintain clean records.
+monitor|ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡು|to watch carefully over time|Monitor the patient every hour.
+motivate|ಪ್ರೇರೇಪಿಸು|to make someone want to work|A good leader motivates the team.
+organise|ಆಯೋಜಿಸು|to plan and arrange|She organised the health camp.
+outline|ರೂಪರೇಖೆ ನೀಡು|to describe the main points|Let me outline the plan.
+overlook|ಕಡೆಗಣಿಸು|to fail to notice|I overlooked a small mistake.
+persuade|ಮನವೊಲಿಸು|to make someone agree|I persuaded him to see a doctor.
+plan|ಯೋಜಿಸು|to decide in advance|Plan your week on Monday morning.
+point out|ತೋರಿಸು / ಗಮನಕ್ಕೆ ತರು|to bring to attention|Thank you for pointing out the error.
+prioritise|ಆದ್ಯತೆ ನೀಡು|to decide what is most important|Prioritise urgent cases.
+proceed|ಮುಂದುವರಿ|to continue|Shall we proceed?
+propose|ಪ್ರಸ್ತಾಪಿಸು|to suggest a plan|I propose that we meet weekly.
+recommend|ಶಿಫಾರಸು ಮಾಡು|to suggest as best|I recommend this course.
+record|ದಾಖಲಿಸು|to write down for the future|Record the readings every hour.
+reflect|ಪ್ರತಿಬಿಂಬಿಸು / ಚಿಂತಿಸು|to think deeply|Take time to reflect on your work.
+remind|ನೆನಪಿಸು|to help someone remember|Please remind me about the meeting.
+report|ವರದಿ ಮಾಡು|to tell officially|Report any problem to the supervisor.
+represent|ಪ್ರತಿನಿಧಿಸು|to speak for|She represents our hospital at the conference.
+resolve|ಬಗೆಹರಿಸು|to solve|The issue has been resolved.
+review|ಪರಿಶೀಲಿಸು|to look at again carefully|Please review my report.
+revise|ಪರಿಷ್ಕರಿಸು|to change and improve|We revised the timetable.
+share|ಹಂಚಿಕೊ|to give information to others|Please share the file with me.
+specify|ನಿರ್ದಿಷ್ಟಪಡಿಸು|to say exactly|Please specify the date.
+submit|ಸಲ್ಲಿಸು|to give in officially|Submit the bills by Friday.
+summarise|ಸಂಕ್ಷೇಪಿಸು|to give the main points|Can you summarise the meeting?
+train|ತರಬೇತಿ ನೀಡು|to teach skills|We train new staff for two weeks.
+verify|ಪರಿಶೀಲಿಸು|to check that something is true|Verify the patient's name before the injection.
+accurate|ನಿಖರ|correct and exact|Keep accurate records.
+appropriate|ಸೂಕ್ತ|right for a situation|Wear appropriate clothes.
+complicated|ಜಟಿಲ|difficult to understand|The process is complicated.
+confidential|ಗೌಪ್ಯ|secret|This information is confidential.
+convenient|ಅನುಕೂಲಕರ|easy and suitable|Is Monday convenient for you?
+detailed|ವಿವರವಾದ|with many details|I need a detailed report.
+effective|ಪರಿಣಾಮಕಾರಿ|working well|It's an effective method.
+essential|ಅತ್ಯಗತ್ಯ|very necessary|Hand washing is essential.
+flexible|ಹೊಂದಿಕೊಳ್ಳುವ|able to change easily|My hours are flexible.
+formal|ಔಪಚಾರಿಕ|official; not casual|Use formal language in emails.
+informal|ಅನೌಪಚಾರಿಕ|casual; relaxed|It's an informal meeting.
+mandatory|ಕಡ್ಡಾಯ|required by rules|Attendance is mandatory.
+optional|ಐಚ್ಛಿಕ|not required|The second session is optional.
+productive|ಉತ್ಪಾದಕ|getting a lot done|It was a productive day.
+relevant|ಸಂಬಂಧಿತ|connected to the subject|Share only relevant details.
+sufficient|ಸಾಕಷ್ಟು|enough|We don't have sufficient staff.
+temporary|ತಾತ್ಕಾಲಿಕ|for a short time|This is a temporary arrangement.
+permanent|ಶಾಶ್ವತ|lasting forever|She got a permanent job.
+workload|ಕೆಲಸದ ಹೊರೆ|the amount of work to do|My workload is heavy this week.
+responsibility|ಜವಾಬ್ದಾರಿ|a duty you must do|Patient safety is everyone's responsibility.
+initiative|ಉಪಕ್ರಮ|the ability to act without being told|She takes initiative.
+achievement|ಸಾಧನೆ|something good done with effort|Finishing early was a great achievement.
+challenge|ಸವಾಲು|something hard|Night shifts are a challenge.
+goal|ಗುರಿ|an aim|What's our goal for this year?
+progress report|ಪ್ರಗತಿ ವರದಿ|a report about how work is going|Send the progress report every Friday.
+minutes|ಸಭೆಯ ನಡಾವಳಿ|written notes of a meeting|Who will take the minutes?
+point|ಅಂಶ|an idea or fact|That's a good point.
+suggestion|ಸಲಹೆ|an idea you offer|Any suggestions?
+decision|ನಿರ್ಧಾರ|a choice made|The final decision is the manager's.
+approval|ಅನುಮೋದನೆ|official permission|We are waiting for approval.
+delay|ವಿಳಂಬ|being late|Sorry for the delay in replying.
+mistake|ತಪ್ಪು|an error|I made a mistake in the bill.
+apology|ಕ್ಷಮಾಪಣೆ|saying sorry|Please accept my apology.
+misunderstanding|ತಪ್ಪುತಿಳುವಳಿಕೆ|a failure to understand correctly|It was just a misunderstanding.

@@ -1,0 +1,99 @@
+# doctor · level 1 · body parts (what patients say)
+head|ತಲೆ|the top part of the body|Does your head hurt?
+forehead|ಹಣೆ|the part of the face above the eyes|Her forehead feels hot.
+scalp|ನೆತ್ತಿ|the skin on the head under the hair|There's a small cut on his scalp.
+face|ಮುಖ|the front of the head|Is there any swelling on the face?
+eyebrow|ಹುಬ್ಬು|hair above the eye|There's a cut above the left eyebrow.
+eyelid|ಕಣ್ಣುರೆಪ್ಪೆ|the skin that covers the eye|Her eyelids are swollen.
+cheek|ಕೆನ್ನೆ|the side of the face|He has a rash on his cheeks.
+jaw|ದವಡೆ|the bone of the mouth|Open your jaw slowly.
+chin|ಗಲ್ಲ|the bottom of the face|He fell and hurt his chin.
+gums|ವಸಡು|the pink flesh around the teeth|Do your gums bleed when you brush?
+tongue|ನಾಲಿಗೆ|the organ in the mouth for taste|Show me your tongue.
+throat|ಗಂಟಲು|the passage at the back of the mouth|Do you have a sore throat?
+neck|ಕುತ್ತಿಗೆ|the part between head and body|Can you move your neck?
+shoulder|ಭುಜ|where the arm joins the body|My right shoulder hurts.
+armpit|ಕಂಕುಳು|the hollow under the arm|Keep the thermometer in your armpit.
+elbow|ಮೊಣಕೈ|the joint in the middle of the arm|He fractured his elbow.
+wrist|ಮಣಿಕಟ್ಟು|the joint between hand and arm|Let me check the pulse at your wrist.
+palm|ಅಂಗೈ|the inside of the hand|Her palms are pale.
+finger|ಬೆರಳು|one of the five parts of the hand|Prick the finger for a sugar test.
+thumb|ಹೆಬ್ಬೆರಳು|the short thick finger|Press with your thumb.
+nail|ಉಗುರು|the hard cover at the end of a finger|His nails are blue.
+chest|ಎದೆ|the front of the body between neck and stomach|Do you have chest pain?
+breast|ಸ್ತನ|the part of a woman's chest that makes milk|She noticed a lump in her breast.
+rib|ಪಕ್ಕೆಲುಬು|one of the curved bones of the chest|He broke a rib in the fall.
+back|ಬೆನ್ನು|the rear part of the body|I have back pain.
+spine|ಬೆನ್ನುಮೂಳೆ|the backbone|The injury is in the lower spine.
+waist|ಸೊಂಟ|the middle of the body|Measure the waist.
+stomach|ಹೊಟ್ಟೆ / ಜಠರ|the organ where food goes; the belly|Do you have stomach pain?
+abdomen|ಉದರ|the belly area|Let me examine your abdomen.
+navel|ಹೊಕ್ಕುಳು|the belly button|The pain started around the navel.
+hip|ಸೊಂಟದ ಕೀಲು|the joint at the top of the leg|Elderly people often fracture their hip.
+thigh|ತೊಡೆ|the upper part of the leg|There's a bruise on his thigh.
+knee|ಮೊಣಕಾಲು|the joint in the middle of the leg|My knees hurt when I climb stairs.
+calf|ಕಾಲಿನ ಹಿಂಭಾಗದ ಮಾಂಸಖಂಡ|the back of the lower leg|I have a cramp in my calf.
+ankle|ಪಾದದ ಕೀಲು|the joint between leg and foot|She twisted her ankle.
+heel|ಹಿಮ್ಮಡಿ|the back of the foot|I have pain in my heel in the morning.
+sole|ಅಂಗಾಲು|the bottom of the foot|There's a wound on the sole of his foot.
+toe|ಕಾಲ್ಬೆರಳು|one of the five parts of the foot|Check the toes of diabetic patients daily.
+skin|ಚರ್ಮ|the outer covering of the body|There's a rash on her skin.
+muscle|ಸ್ನಾಯು|tissue that helps you move|He has muscle pain.
+bone|ಮೂಳೆ|the hard parts of the skeleton|The bone is broken.
+joint|ಕೀಲು|where two bones meet|My joints are stiff in the morning.
+heart|ಹೃದಯ|the organ that pumps blood|Your heart is healthy.
+lungs|ಶ್ವಾಸಕೋಶಗಳು|the organs for breathing|Let me listen to your lungs.
+liver|ಯಕೃತ್ತು|the organ that cleans blood|Alcohol damages the liver.
+kidney|ಮೂತ್ರಪಿಂಡ|the organ that makes urine|Drink water to protect your kidneys.
+bladder|ಮೂತ್ರಕೋಶ|the bag that holds urine|Is your bladder full?
+intestine|ಕರುಳು|the long tube after the stomach|The infection is in the intestine.
+brain|ಮಿದುಳು|the organ for thinking|The scan of the brain is normal.
+nerve|ನರ|a fibre that carries signals|The nerve in his arm is damaged.
+blood|ರಕ್ತ|the red liquid in the body|We need to take a blood sample.
+vein|ಅಭಿಧಮನಿ|a tube that carries blood to the heart|I'll put the drip in this vein.
+artery|ಅಪಧಮನಿ|a tube that carries blood from the heart|The artery is blocked.
+urine|ಮೂತ್ರ|liquid waste from the body|Give a urine sample in this bottle.
+stool|ಮಲ|solid waste from the body|Is there blood in your stool?
+sweat|ಬೆವರು|water from the skin|He was sweating a lot.
+saliva|ಜೊಲ್ಲು|liquid in the mouth|Saliva helps digestion.
+phlegm|ಕಫ|thick liquid from the lungs when coughing|What colour is the phlegm?
+tear|ಕಣ್ಣೀರು|water from the eyes|His eyes are full of tears.
+pain|ನೋವು|an unpleasant feeling of hurt|On a scale of 1 to 10, how bad is the pain?
+ache|ನೋವು (ನಿರಂತರ)|a continuous dull pain|I have a stomach ache.
+sore|ನೋಯುತ್ತಿರುವ|painful|My throat is sore.
+itch|ತುರಿಕೆ|a feeling that makes you scratch|The rash itches a lot.
+burning|ಉರಿ|a hot painful feeling|I have burning while passing urine.
+cramp|ಸೆಳೆತ|sudden painful tightening of a muscle|I get leg cramps at night.
+numb|ಜಡವಾದ|without feeling|My fingers feel numb.
+tingling|ಜುಮ್ಮೆನಿಸುವಿಕೆ|a pins-and-needles feeling|Tingling in the feet is common in diabetes.
+stiff|ಬಿಗಿಯಾದ|hard to move|My neck is stiff.
+weakness|ದೌರ್ಬಲ್ಯ|loss of strength|She complains of weakness.
+tiredness|ಆಯಾಸ|feeling tired|Tiredness can be a sign of anaemia.
+cold|ನೆಗಡಿ|a common infection with a runny nose|I have a cold.
+runny nose|ಮೂಗು ಸೋರುವಿಕೆ|liquid coming out of the nose|The child has a runny nose.
+blocked nose|ಮೂಗು ಕಟ್ಟುವಿಕೆ|a nose you can't breathe through|I have a blocked nose.
+sneeze|ಸೀನು|air forced out through the nose|He sneezes a lot in the morning.
+loose motions|ಭೇದಿ|watery stool many times|The child has loose motions since morning.
+constipation|ಮಲಬದ್ಧತೆ|difficulty passing stool|Eat fibre to avoid constipation.
+gas|ಹೊಟ್ಟೆ ಉಬ್ಬರ / ಗ್ಯಾಸ್|air in the stomach|I have gas after eating.
+acidity|ಆಮ್ಲೀಯತೆ / ಎದೆಯುರಿ|a burning feeling from stomach acid|Spicy food gives me acidity.
+heartburn|ಎದೆಯುರಿ|burning in the chest after eating|Do you get heartburn after meals?
+bloating|ಉಬ್ಬುವಿಕೆ|the stomach feels full and swollen|I feel bloating after dinner.
+headache|ತಲೆನೋವು|pain in the head|I have a headache since morning.
+migraine|ಅರೆತಲೆನೋವು|a severe headache, often on one side|Bright light makes her migraine worse.
+toothache|ಹಲ್ಲುನೋವು|pain in a tooth|You need to see a dentist for the toothache.
+earache|ಕಿವಿನೋವು|pain in the ear|The child has an earache.
+backache|ಬೆನ್ನುನೋವು|pain in the back|Backache is common in office workers.
+fainting|ಮೂರ್ಛೆ ಹೋಗುವುದು|losing consciousness for a short time|She had a fainting episode.
+fit|ಸೆಳವು / ಅಪಸ್ಮಾರ|a sudden attack of shaking|The child had a fit at home.
+breathlessness|ಉಸಿರಾಟದ ತೊಂದರೆ|difficulty in breathing|Breathlessness is worse at night.
+palpitations|ಎದೆಬಡಿತ|feeling your heart beating fast|Do you get palpitations?
+chills|ಚಳಿ (ಜ್ವರದ)|feeling cold and shaking|Fever with chills may be malaria.
+rash|ದದ್ದು|red spots on the skin|When did the rash appear?
+bruise|ಕಂದುಗಟ್ಟಿದ ಗಾಯ|a dark mark on the skin after a hit|There's a bruise on her arm.
+cut|ಕತ್ತರಿಸಿದ ಗಾಯ|an opening in the skin from something sharp|Clean the cut with water.
+burn|ಸುಟ್ಟ ಗಾಯ|an injury from fire or heat|Put cool water on the burn.
+lump|ಗಡ್ಡೆ|a hard swelling|I found a lump in my neck.
+pus|ಕೀವು|thick yellow liquid in an infection|There's pus in the wound.
+sprain|ಉಳುಕು|an injury to a joint|It's a sprain, not a fracture.
+fracture|ಮೂಳೆ ಮುರಿತ|a broken bone|The X-ray shows a fracture.

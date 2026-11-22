@@ -1,0 +1,65 @@
+# work · level 3 · healthcare workplace and careers
+healthcare|ಆರೋಗ್ಯ ರಕ್ಷಣೆ|services for health|She wants to work in healthcare.
+health worker|ಆರೋಗ್ಯ ಕಾರ್ಯಕರ್ತ|a person who gives health services|ASHA workers are front-line health workers.
+patient care|ರೋಗಿಗಳ ಆರೈಕೆ|looking after patients|Patient care comes first.
+patient safety|ರೋಗಿಯ ಸುರಕ್ಷತೆ|keeping patients safe from harm|Patient safety is our top priority.
+medical records|ವೈದ್ಯಕೀಯ ದಾಖಲೆಗಳು|files about patients' health|Medical records are confidential.
+billing|ಬಿಲ್ಲಿಂಗ್|preparing bills|Ask the billing counter for the final bill.
+claim|ಹಕ್ಕು ಕೋರಿಕೆ / ಕ್ಲೈಮ್|a request for insurance money|The insurance claim is approved.
+cashless|ನಗದುರಹಿತ|paid directly by insurance|Is cashless treatment available?
+reimbursement|ಮರುಪಾವತಿ|paying back money spent|Submit bills for reimbursement.
+government scheme|ಸರ್ಕಾರಿ ಯೋಜನೆ|a government health programme|Treatment is free under the government scheme.
+registration|ನೋಂದಣಿ|signing up officially|Registration is at counter one.
+token|ಟೋಕನ್|a number for your turn|Take a token and wait.
+waiting area|ಕಾಯುವ ಪ್ರದೇಶ|where patients wait|Please sit in the waiting area.
+visiting hours|ಭೇಟಿಯ ಸಮಯ|times visitors can come|Visiting hours are four to six.
+pass|ಪ್ರವೇಶ ಚೀಟಿ|a card allowing entry|Show your visitor's pass.
+emergency contact|ತುರ್ತು ಸಂಪರ್ಕ|person to call in an emergency|Write an emergency contact number.
+duty roster|ಕರ್ತವ್ಯ ಪಟ್ಟಿ|list of who works when|Check the duty roster.
+night duty|ರಾತ್ರಿ ಕರ್ತವ್ಯ|working at night|I have night duty this week.
+day off|ರಜೆಯ ದಿನ|a day without work|Tomorrow is my day off.
+swap shifts|ಪಾಳಿ ಬದಲಿಸಿಕೊ|to exchange working times|Can we swap shifts on Friday?
+cover for|ಬದಲಿಗೆ ಕೆಲಸ ಮಾಡು|to do someone's work while they are away|Can you cover for me tonight?
+handover notes|ಹಸ್ತಾಂತರ ಟಿಪ್ಪಣಿಗಳು|written notes for the next shift|Read the handover notes carefully.
+workplace|ಕೆಲಸದ ಸ್ಥಳ|place where you work|Keep the workplace clean.
+occupational hazard|ವೃತ್ತಿ ಅಪಾಯ|a risk that comes with a job|Needle injuries are an occupational hazard.
+needle-stick injury|ಸೂಜಿ ಚುಚ್ಚು ಗಾಯ|being pricked by a used needle|Report a needle-stick injury immediately.
+biomedical waste|ಜೈವಿಕ ವೈದ್ಯಕೀಯ ತ್ಯಾಜ್ಯ|hospital waste like used needles|Dispose of biomedical waste in the right bin.
+infection control|ಸೋಂಕು ನಿಯಂತ್ರಣ|preventing spread of infection|Follow infection control rules.
+quality check|ಗುಣಮಟ್ಟ ಪರಿಶೀಲನೆ|checking standards|There's a quality check every month.
+accreditation|ಮಾನ್ಯತೆ|official approval of standards|The hospital got NABH accreditation.
+continuing education|ನಿರಂತರ ಶಿಕ್ಷಣ|learning after your degree|Doctors need continuing education.
+CME|ಸಿಎಂಇ|continuing medical education session|There's a CME on Saturday.
+license|ಪರವಾನಗಿ|official permission to practise|You need a license to practise.
+registration number|ನೋಂದಣಿ ಸಂಖ್ಯೆ|official doctor number|Write your registration number on the prescription.
+private practice|ಖಾಸಗಿ ವೃತ್ತಿ|working in your own clinic|He started a private practice.
+government hospital|ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆ|hospital run by the government|Treatment is free in government hospitals.
+private hospital|ಖಾಸಗಿ ಆಸ್ಪತ್ರೆ|hospital owned privately|Private hospitals are expensive.
+clinic|ಚಿಕಿತ್ಸಾಲಯ|a small medical centre|She runs a clinic in her village.
+nursing home|ನರ್ಸಿಂಗ್ ಹೋಂ|a small private hospital|He was admitted to a nursing home.
+camp|ಶಿಬಿರ|a free check-up event|We held a free eye camp.
+outreach|ಹೊರಗೆ ತಲುಪುವ ಸೇವೆ|taking services to people|Rural outreach programmes help villages.
+team leader|ತಂಡದ ನಾಯಕ|person who leads a team|She's the team leader for the night shift.
+head nurse|ಮುಖ್ಯ ದಾದಿ|senior nurse in charge|Ask the head nurse.
+medical superintendent|ವೈದ್ಯಕೀಯ ಅಧೀಕ್ಷಕ|head of a hospital|Meet the medical superintendent.
+administration|ಆಡಳಿತ|management of an organisation|Talk to the administration about the bill.
+staff meeting|ಸಿಬ್ಬಂದಿ ಸಭೆ|meeting of workers|The staff meeting is on Monday.
+incident report|ಘಟನಾ ವರದಿ|a record of a problem|Fill an incident report.
+root cause|ಮೂಲ ಕಾರಣ|the main reason|Find the root cause of the error.
+best practice|ಉತ್ತಮ ಅಭ್ಯಾಸ|the most effective method|Hand hygiene is a best practice.
+evidence-based|ಪುರಾವೆ ಆಧಾರಿತ|based on research|Use evidence-based treatment.
+career growth|ವೃತ್ತಿ ಬೆಳವಣಿಗೆ|moving up in your career|This job has good career growth.
+specialisation|ವಿಶೇಷತೆ|a special area of study|Which specialisation do you want?
+fellowship|ಫೆಲೋಶಿಪ್|advanced training after PG|He did a fellowship in cardiology.
+residency|ರೆಸಿಡೆನ್ಸಿ|training period for doctors|Residency is very demanding.
+salary negotiation|ಸಂಬಳ ಮಾತುಕತೆ|discussing pay|Be confident in salary negotiation.
+job satisfaction|ಕೆಲಸದ ತೃಪ್ತಿ|being happy with your job|Job satisfaction matters more than money.
+networking|ಸಂಪರ್ಕ ಬೆಳೆಸುವಿಕೆ|meeting people for work|Conferences are good for networking.
+LinkedIn profile|ಲಿಂಕ್ಡ್‌ಇನ್ ಪ್ರೊಫೈಲ್|a professional profile online|Update your LinkedIn profile.
+public speaking|ಸಾರ್ವಜನಿಕ ಭಾಷಣ|speaking to a group|Public speaking gets easier with practice.
+communication skills|ಸಂವಹನ ಕೌಶಲ್ಯ|ability to talk and listen well|Doctors need good communication skills.
+soft skills|ಮೃದು ಕೌಶಲ್ಯಗಳು|people skills like teamwork|Soft skills are as important as knowledge.
+body language|ದೇಹ ಭಾಷೆ|messages from posture and gestures|Your body language shows confidence.
+first impression|ಮೊದಲ ಅಭಿಪ್ರಾಯ|what people think when they first meet you|Make a good first impression.
+introduce yourself|ನಿಮ್ಮನ್ನು ಪರಿಚಯಿಸಿಕೊಳ್ಳಿ|tell people who you are|Introduce yourself to the patient.
+small talk|ಲಘು ಮಾತುಕತೆ|light polite conversation|Small talk helps patients relax.

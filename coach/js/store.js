@@ -1,5 +1,15 @@
 // Progress storage (per profile, on this phone) + spaced repetition + share codes.
-import { WORDS, PHRASES } from "./words.js";
+import { WORDS as W0, PHRASES as P0 } from "./words.js";
+import { BANK, PHRASES2 } from "./bank.js";
+
+// one combined, de-duplicated word list: the hand-picked starter words first, then the big bank in level order
+const WORDS = [], PHRASES = [];
+{ const seen = new Set();
+  for (const w of [...W0.map((x) => ({ ...x, lv: 1 })), ...BANK.map(([w, k, m, s, t, lv]) => ({ w, k, m, s, t, lv }))]) {
+    const key = w.w.toLowerCase(); if (seen.has(key)) continue; seen.add(key); WORDS.push(w);
+  }
+  const ps = new Set(); for (const p of [...P0, ...PHRASES2]) { if (ps.has(p[0])) continue; ps.add(p[0]); PHRASES.push(p); } }
+const INDEX = new Map(WORDS.map((w) => [w.w, w]));
 
 const MIN = 60e3, DAY = 864e5;
 const GAP = [0, 10 * MIN, DAY, 3 * DAY, 7 * DAY, 16 * DAY, 35 * DAY];
@@ -27,13 +37,13 @@ export const Store = {
     }
     return out;
   },
-  word(w) { return this.p.mine.find((m) => m.w === w) || WORDS.find((x) => x.w === w) || null; },
+  word(w) { return this.p.mine.find((m) => m.w === w) || INDEX.get(w) || null; },
   mem(w) { return this.p.mem[w] || null; },
   learned() { return Object.keys(this.p.mem).map((w) => this.word(w)).filter(Boolean); },
   /** next unseen words, cycling through the chosen tracks so each day mixes topics */
   newWords(n) {
     const p = this.p, order = [...p.tracks]; const pools = { mine: p.mine.filter((m) => !p.mem[m.w]) };
-    for (const t of order) pools[t] = WORDS.filter((w) => w.t === t && !p.mem[w.w]);
+    for (const t of order) pools[t] = WORDS.filter((w) => w.t === t && !p.mem[w.w]).slice(0, n + 5);
     const out = [], seq = ["mine", ...order]; let k = 0, guard = 0;
     while (out.length < n && guard++ < 400) { const t = seq[k++ % seq.length]; const w = pools[t] && pools[t].shift(); if (w && !out.some((o) => o.w === w.w)) out.push(w); if (seq.every((s) => !pools[s] || !pools[s].length)) break; }
     return out;

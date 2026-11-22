@@ -1,0 +1,118 @@
+# daily · level 2 · travel, shopping, nature, technology
+abroad|ವಿದೇಶದಲ್ಲಿ|in another country|She wants to study abroad.
+accommodation|ವಸತಿ|a place to stay|We booked accommodation near the beach.
+backpack|ಬೆನ್ನುಚೀಲ|a bag carried on the back|Pack light, just a backpack.
+boarding pass|ಬೋರ್ಡಿಂಗ್ ಪಾಸ್|a card to get on a plane|Show your boarding pass at the gate.
+check in|ಚೆಕ್ ಇನ್ ಮಾಡು|to register at a hotel or airport|We check in at two o'clock.
+check out|ಚೆಕ್ ಔಟ್ ಮಾಡು|to leave a hotel and pay|Check out is at eleven.
+coach|ಬೋಗಿ|a carriage of a train|Our coach is S4.
+berth|ಮಲಗುವ ಆಸನ|a bed on a train|I got the lower berth.
+confirm ticket|ಟಿಕೆಟ್ ದೃಢೀಕರಣ|a ticket that is not waiting list|Is your ticket confirmed?
+waiting list|ಕಾಯುವ ಪಟ್ಟಿ|a list of people waiting for seats|My ticket is still on the waiting list.
+departure|ನಿರ್ಗಮನ|leaving|The departure time is 6:40.
+arrival|ಆಗಮನ|reaching|Check the arrival time on the board.
+direct|ನೇರ|without stopping|Is there a direct bus to Udupi?
+fare|ಪ್ರಯಾಣ ದರ|money for a ride|What's the bus fare?
+highway|ಹೆದ್ದಾರಿ|a main road between cities|Take the highway to Mysuru.
+landmark|ಗುರುತಿನ ಸ್ಥಳ|a well-known place used to find the way|Is there any landmark near your house?
+lane|ಓಣಿ / ಲೇನ್|a narrow road|Turn into the second lane.
+crossroad|ಚೌಕ / ಕೂಡು ರಸ್ತೆ|where two roads cross|Stop at the crossroad.
+footpath|ಪಾದಚಾರಿ ಮಾರ್ಗ|a path for walking|Walk on the footpath.
+flyover|ಮೇಲ್ಸೇತುವೆ|a bridge over a road|Take the flyover to avoid traffic.
+metro|ಮೆಟ್ರೋ|a city train|I go to work by metro.
+pick-up point|ಕರೆದುಕೊಳ್ಳುವ ಸ್ಥಳ|where a vehicle collects you|The pick-up point is the main gate.
+route|ಮಾರ್ಗ|the way from one place to another|Which route is faster?
+sightseeing|ಪ್ರೇಕ್ಷಣೀಯ ಸ್ಥಳಗಳ ವೀಕ್ಷಣೆ|visiting famous places|We went sightseeing in Hampi.
+souvenir|ನೆನಪಿನ ಕಾಣಿಕೆ|something bought to remember a place|I bought a sandalwood souvenir.
+tourist|ಪ್ರವಾಸಿ|a person travelling for fun|Mysuru is full of tourists in Dasara.
+guide|ಮಾರ್ಗದರ್ಶಿ|a person who shows a place|The guide explained the history.
+view|ನೋಟ|what you can see|The view from the hill is beautiful.
+brand|ಬ್ರಾಂಡ್|a company's name for its products|Which brand of phone do you use?
+quality|ಗುಣಮಟ್ಟ|how good something is|The quality of this cloth is good.
+offer|ಕೊಡುಗೆ|a special lower price|There's an offer on rice this week.
+sale|ರಿಯಾಯಿತಿ ಮಾರಾಟ|a time of low prices|There's a sale at the mall.
+exchange offer|ಬದಲಿ ಕೊಡುಗೆ|giving an old item for a discount|I bought a new phone with an exchange offer.
+warranty|ಖಾತರಿ|a promise to repair for free|The TV has a two-year warranty.
+trial room|ಉಡುಪು ಪ್ರಯತ್ನ ಕೊಠಡಿ|a room to try on clothes|Where's the trial room?
+loose|ಸಡಿಲ|not tight|This shirt is too loose.
+tight|ಬಿಗಿ|fitting closely|These shoes are tight.
+out of stock|ದಾಸ್ತಾನು ಮುಗಿದಿದೆ|not available now|Sorry, it's out of stock.
+home delivery|ಮನೆಗೆ ತಲುಪಿಸುವುದು|bringing goods to your home|Do you have home delivery?
+online|ಆನ್‌ಲೈನ್|on the internet|I ordered it online.
+cash on delivery|ತಲುಪಿದಾಗ ಹಣ ಪಾವತಿ|pay when the item arrives|Is cash on delivery available?
+return policy|ಹಿಂತಿರುಗಿಸುವ ನಿಯಮ|rules for returning items|What's your return policy?
+UPI|ಯುಪಿಐ|instant phone payment in India|Can I pay by UPI?
+scan|ಸ್ಕ್ಯಾನ್ ಮಾಡು|to read a QR code with a phone|Scan the QR code to pay.
+OTP|ಒಟಿಪಿ|a one-time password|Never share your OTP with anyone.
+app|ಆ್ಯಪ್|a program on a phone|Download the app.
+update|ನವೀಕರಿಸು|to get the newest version|Update your phone software.
+notification|ಅಧಿಸೂಚನೆ|a message that pops up on a phone|Turn on notifications.
+screen|ಪರದೆ|the display of a phone or TV|My phone screen is cracked.
+storage|ಸಂಗ್ರಹ ಸ್ಥಳ|space to keep files|My phone storage is full.
+delete|ಅಳಿಸು|to remove|Delete the old photos.
+forward|ಮುಂದಕ್ಕೆ ಕಳುಹಿಸು|to send a received message to others|Don't forward fake news.
+voice note|ಧ್ವನಿ ಸಂದೇಶ|a recorded audio message|Send me a voice note.
+video call|ವಿಡಿಯೋ ಕರೆ|a call where you can see each other|Let's do a video call on Sunday.
+network|ನೆಟ್‌ವರ್ಕ್ / ಸಂಪರ್ಕ|phone signal|There's no network here.
+signal|ಸಿಗ್ನಲ್|the strength of a phone connection|The signal is weak inside the hospital.
+recharge|ರೀಚಾರ್ಜ್ ಮಾಡು|to add money or data to a phone|I need to recharge my phone.
+fraud|ವಂಚನೆ|cheating to get money|Beware of online fraud.
+nature|ಪ್ರಕೃತಿ|the natural world|I love nature.
+forest|ಅರಣ್ಯ|a large area of trees|Bandipur forest has tigers.
+hill|ಬೆಟ್ಟ|a raised area of land|We climbed the hill at sunrise.
+valley|ಕಣಿವೆ|low land between hills|The valley is green after the rains.
+river|ನದಿ|a large flow of water|The Kaveri is a holy river.
+lake|ಕೆರೆ / ಸರೋವರ|a large area of still water|Bengaluru once had many lakes.
+waterfall|ಜಲಪಾತ|water falling from a height|Jog Falls is a famous waterfall.
+beach|ಕಡಲತೀರ|land beside the sea|Let's go to Malpe beach.
+coast|ಕರಾವಳಿ|land near the sea|Udupi is on the coast.
+island|ದ್ವೀಪ|land surrounded by water|St Mary's Island is near Malpe.
+soil|ಮಣ್ಣು|earth where plants grow|The soil is red here.
+crop|ಬೆಳೆ|plants grown for food|Ragi is an important crop in Karnataka.
+farmer|ರೈತ|a person who grows crops|My grandfather is a farmer.
+harvest|ಸುಗ್ಗಿ|gathering crops|Sankranti is a harvest festival.
+season|ಋತು|a time of year|Monsoon is my favourite season.
+monsoon|ಮುಂಗಾರು|the rainy season|The monsoon starts in June.
+summer|ಬೇಸಿಗೆ|the hot season|Summer is very hot in north Karnataka.
+winter|ಚಳಿಗಾಲ|the cold season|Winter mornings are foggy.
+humid|ಆರ್ದ್ರ|hot and damp|It's very humid in Mangaluru.
+fog|ಮಂಜು|cloud near the ground|Drive slowly in fog.
+storm|ಬಿರುಗಾಳಿ|strong wind and rain|There was a storm last night.
+thunder|ಗುಡುಗು|loud sound in a storm|The thunder scared the dog.
+lightning|ಮಿಂಚು|a flash of light in a storm|Don't stand under a tree during lightning.
+flood|ಪ್ರವಾಹ|too much water covering land|The flood damaged many homes.
+drought|ಬರಗಾಲ|a long time without rain|The farmers suffered due to drought.
+pollution|ಮಾಲಿನ್ಯ|harmful things in air or water|Air pollution is high in the city.
+recycle|ಮರುಬಳಕೆ ಮಾಡು|to use again|Recycle plastic bottles.
+plastic|ಪ್ಲಾಸ್ಟಿಕ್|a man-made material|Avoid single-use plastic.
+tree|ಮರ|a tall plant with a trunk|Plant a tree on your birthday.
+flower|ಹೂವು|the coloured part of a plant|Mallige is a fragrant flower.
+leaf|ಎಲೆ|a flat green part of a plant|We eat on banana leaves at weddings.
+seed|ಬೀಜ|a small part from which a plant grows|Plant the seeds in rows.
+animal|ಪ್ರಾಣಿ|a living creature|Elephants are gentle animals.
+bird|ಹಕ್ಕಿ|an animal with feathers and wings|Many birds come to Ranganathittu.
+insect|ಕೀಟ|a small creature with six legs|Mosquitoes are dangerous insects.
+mosquito|ಸೊಳ್ಳೆ|a small flying insect that bites|Use a mosquito net.
+cow|ಹಸು|a farm animal that gives milk|We have two cows at home.
+pet|ಸಾಕುಪ್ರಾಣಿ|an animal kept at home|Do you have a pet?
+stray dog|ಬೀದಿ ನಾಯಿ|a dog without a home|Be careful of stray dogs at night.
+sky|ಆಕಾಶ|the space above the earth|The sky is clear today.
+moon|ಚಂದ್ರ|the bright object in the night sky|It's a full moon tonight.
+star|ನಕ್ಷತ್ರ|a bright point in the night sky|You can see many stars in the village.
+sunrise|ಸೂರ್ಯೋದಯ|when the sun comes up|Let's watch the sunrise from Nandi Hills.
+sunset|ಸೂರ್ಯಾಸ್ತ|when the sun goes down|The sunset at the beach is beautiful.
+temperature|ತಾಪಮಾನ|how hot or cold|The temperature is 35 degrees today.
+degree|ಡಿಗ್ರಿ|a unit for temperature|It's 22 degrees in the morning.
+kilometre|ಕಿಲೋಮೀಟರ್|1000 metres|The hospital is two kilometres away.
+kilogram|ಕಿಲೋಗ್ರಾಂ|1000 grams|One kilogram of tomatoes, please.
+litre|ಲೀಟರ್|a unit for liquids|Drink at least two litres of water.
+half|ಅರ್ಧ|one of two equal parts|Give me half a kilo of beans.
+quarter|ಕಾಲು|one of four equal parts|It's a quarter past five.
+dozen|ಡಜನ್|twelve|Buy a dozen bananas.
+pair|ಜೋಡಿ|two of the same|I need a new pair of shoes.
+plenty|ಸಾಕಷ್ಟು / ಹೇರಳ|a lot|We have plenty of time.
+few|ಕೆಲವು|a small number|A few people came.
+several|ಹಲವಾರು|more than two but not many|I called you several times.
+whole|ಇಡೀ|complete|I ate the whole pizza.
+extra|ಹೆಚ್ಚುವರಿ|more than usual|Can I get an extra pillow?
+total|ಒಟ್ಟು|the whole amount|What's the total?

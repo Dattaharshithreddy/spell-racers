@@ -1,0 +1,87 @@
+# doctor · level 4 · procedures, drugs and the ward
+catheter|ಕ್ಯಾಥೆಟರ್|a tube to drain urine|Insert a urinary catheter.
+Ryle's tube|ರೈಲ್ಸ್ ಟ್ಯೂಬ್|a tube through the nose to the stomach|He is being fed through a Ryle's tube.
+suction|ಹೀರುವಿಕೆ|removing fluid with a machine|Do suction to clear the airway.
+nebulisation|ನೆಬ್ಯುಲೈಸೇಶನ್|breathing medicine as mist|Give nebulisation every six hours.
+intubation|ಇಂಟ್ಯುಬೇಶನ್|putting a tube into the windpipe|The patient needs intubation.
+suture|ಹೊಲಿಗೆ ಹಾಕು|to stitch a wound|Suture the wound under local anaesthesia.
+incision|ಛೇದನ|a surgical cut|A small incision was made.
+drainage|ಒಳಚರಂಡಿ / ದ್ರವ ಹೊರತೆಗೆಯುವಿಕೆ|removing fluid or pus|The abscess needs drainage.
+abscess|ಕೀವುಗಟ್ಟು|a swelling full of pus|He has an abscess on his thigh.
+debridement|ಗಾಯ ಶುದ್ಧೀಕರಣ|removing dead tissue|The wound needs debridement.
+amputation|ಅಂಗಚ್ಛೇದನ|cutting off a limb|Diabetic foot can lead to amputation.
+transplant|ಅಂಗಾಂಗ ಕಸಿ|moving an organ to another person|She needs a kidney transplant.
+donor|ದಾನಿ|a person who gives blood or organs|Blood donors save lives.
+blood group|ರಕ್ತದ ಗುಂಪು|type of blood like A, B, O|What's your blood group?
+cross-match|ಹೊಂದಾಣಿಕೆ ಪರೀಕ್ಷೆ|testing blood compatibility|Send blood for cross-match.
+endoscopy|ಎಂಡೋಸ್ಕೋಪಿ|looking inside with a camera tube|Endoscopy shows an ulcer.
+angiography|ಆಂಜಿಯೋಗ್ರಫಿ|X-ray of blood vessels with dye|Angiography shows two blocks.
+angioplasty|ಆಂಜಿಯೋಪ್ಲಾಸ್ಟಿ|opening a blocked artery|He had angioplasty with a stent.
+stent|ಸ್ಟೆಂಟ್|a small tube to keep an artery open|A stent was placed in the artery.
+pacemaker|ಪೇಸ್‌ಮೇಕರ್|a device that controls heartbeat|He has a pacemaker.
+CT scan|ಸಿಟಿ ಸ್ಕ್ಯಾನ್|a detailed X-ray scan|A CT scan of the head is normal.
+lumbar puncture|ಸೊಂಟದ ಸೂಜಿ ಪರೀಕ್ಷೆ|taking fluid from the spine|A lumbar puncture confirms meningitis.
+injection site|ಚುಚ್ಚುಮದ್ದಿನ ಸ್ಥಳ|where an injection is given|There's redness at the injection site.
+fasting blood sugar|ಉಪವಾಸದ ರಕ್ತದ ಸಕ್ಕರೆ|sugar test before eating|Fasting blood sugar is 140.
+HbA1c|ಹೆಚ್‌ಬಿಎ1ಸಿ|test of average sugar for 3 months|Her HbA1c is 8 percent.
+complete blood count|ಸಂಪೂರ್ಣ ರಕ್ತ ಎಣಿಕೆ|CBC test|Send a complete blood count.
+liver function test|ಯಕೃತ್ತಿನ ಕಾರ್ಯ ಪರೀಕ್ಷೆ|LFT|Liver function tests are deranged.
+kidney function test|ಮೂತ್ರಪಿಂಡ ಕಾರ್ಯ ಪರೀಕ್ಷೆ|creatinine and urea|Kidney function is normal.
+urine routine|ಮೂತ್ರ ಸಾಮಾನ್ಯ ಪರೀಕ್ಷೆ|basic urine test|Urine routine shows pus cells.
+deranged|ಅಸಹಜ (ಪರೀಕ್ಷೆ)|abnormal (test values)|His electrolytes are deranged.
+elevated|ಹೆಚ್ಚಾದ|raised|The ESR is elevated.
+within normal limits|ಸಾಮಾನ್ಯ ಮಿತಿಯಲ್ಲಿ|normal|All tests are within normal limits.
+paracetamol|ಪ್ಯಾರಸಿಟಮಾಲ್|medicine for fever and pain|Take paracetamol 500 mg if fever is above 100.
+antacid|ಆಮ್ಲ ನಿವಾರಕ|medicine for acidity|Take an antacid before food.
+antihistamine|ಆಂಟಿಹಿಸ್ಟಮಿನ್|medicine for allergy|This antihistamine may make you sleepy.
+antihypertensive|ರಕ್ತದೊತ್ತಡ ನಿವಾರಕ|medicine for high BP|Continue your antihypertensive.
+antiplatelet|ಆಂಟಿಪ್ಲೇಟ್‌ಲೆಟ್|medicine that thins blood|Aspirin is an antiplatelet.
+steroid|ಸ್ಟೀರಾಯ್ಡ್|strong anti-inflammatory medicine|Don't stop steroids suddenly.
+ORS|ಒಆರ್‌ಎಸ್|oral rehydration solution|Give ORS after every loose stool.
+iron tablets|ಕಬ್ಬಿಣಾಂಶದ ಮಾತ್ರೆಗಳು|medicine for anaemia|Iron tablets may make your stool black.
+calcium supplements|ಕ್ಯಾಲ್ಸಿಯಂ ಪೂರಕಗಳು|tablets for bones|Take calcium supplements after food.
+multivitamin|ಬಹುಜೀವಸತ್ವ|a tablet with many vitamins|Take one multivitamin daily.
+over the counter|ಚೀಟಿ ಇಲ್ಲದೆ ಸಿಗುವ|bought without prescription|Don't take antibiotics over the counter.
+self-medication|ಸ್ವಯಂ ಔಷಧಿ ಸೇವನೆ|taking medicine without a doctor|Self-medication can be dangerous.
+drug allergy|ಔಷಧ ಅಲರ್ಜಿ|bad reaction to a medicine|Note the drug allergy on the case sheet.
+test dose|ಪರೀಕ್ಷಾ ಪ್ರಮಾಣ|a small dose to check for allergy|Give a test dose before the injection.
+loading dose|ಆರಂಭಿಕ ಹೆಚ್ಚು ಪ್ರಮಾಣ|a big first dose|Give a loading dose of aspirin.
+maintenance dose|ನಿರ್ವಹಣಾ ಪ್ರಮಾಣ|regular dose after starting|Continue the maintenance dose.
+stat|ತಕ್ಷಣ (ಔಷಧ)|immediately (in prescriptions)|Give the injection stat.
+SOS|ಅಗತ್ಯವಿದ್ದಾಗ|only when needed|Paracetamol SOS for fever.
+nil by mouth|ಬಾಯಿಯಿಂದ ಏನೂ ಇಲ್ಲ|nothing to eat or drink|Keep him nil by mouth before surgery.
+fluid chart|ದ್ರವ ಪಟ್ಟಿ|record of fluids in and out|Maintain a fluid chart.
+intake and output|ಸೇವನೆ ಮತ್ತು ವಿಸರ್ಜನೆ|fluids taken and passed|Monitor intake and output.
+bedsore|ಹಾಸಿಗೆ ಹುಣ್ಣು|skin damage from lying long|Turn the patient every two hours to prevent bedsores.
+fall risk|ಬೀಳುವ ಅಪಾಯ|chance of falling|Elderly patients are a fall risk.
+pain score|ನೋವಿನ ಅಂಕ|rating of pain from 0 to 10|What's your pain score now?
+discharge summary|ಬಿಡುಗಡೆ ಸಾರಾಂಶ|a report given when leaving hospital|Keep the discharge summary safe.
+death certificate|ಮರಣ ಪ್ರಮಾಣಪತ್ರ|official record of death|The doctor signed the death certificate.
+post-mortem|ಶವಪರೀಕ್ಷೆ|examination after death|A post-mortem is required by law.
+medico-legal case|ವೈದ್ಯಕೀಯ-ಕಾನೂನು ಪ್ರಕರಣ|a case involving police|Accidents are medico-legal cases.
+triage|ಆದ್ಯತೆ ವಿಂಗಡಣೆ|sorting patients by urgency|Triage the patients at the entrance.
+resuscitation|ಪುನಶ್ಚೇತನ|reviving someone|Start resuscitation immediately.
+defibrillator|ಡಿಫಿಬ್ರಿಲೇಟರ್|a machine that shocks the heart|Bring the defibrillator!
+code blue|ಕೋಡ್ ಬ್ಲೂ|hospital alarm for cardiac arrest|Code blue in ward five!
+airway|ಶ್ವಾಸಮಾರ್ಗ|the path for air|First, check the airway.
+breathing|ಉಸಿರಾಟ|taking air in and out|Is he breathing?
+pulseless|ನಾಡಿ ಇಲ್ಲದ|without a pulse|The patient is pulseless.
+recovery position|ಚೇತರಿಕೆ ಭಂಗಿ|lying on the side safely|Put him in the recovery position.
+burns ward|ಸುಟ್ಟ ಗಾಯಗಳ ವಾರ್ಡ್|ward for burn patients|She's in the burns ward.
+labour ward|ಹೆರಿಗೆ ವಾರ್ಡ್|ward for deliveries|Call the labour ward.
+NICU|ನವಜಾತ ಶಿಶು ತೀವ್ರ ನಿಗಾ ಘಟಕ|ICU for newborns|The baby is in NICU.
+incubator|ಇನ್ಕ್ಯುಬೇಟರ್|a warm box for small babies|The premature baby is in an incubator.
+nursing care|ಶುಶ್ರೂಷೆ|care given by nurses|Good nursing care speeds recovery.
+sponge bath|ಒದ್ದೆ ಬಟ್ಟೆಯ ಸ್ನಾನ|washing with a wet cloth|Give a tepid sponge bath for fever.
+tepid|ಉಗುರುಬೆಚ್ಚಗಿನ|slightly warm|Use tepid water.
+bed rest|ಹಾಸಿಗೆ ವಿಶ್ರಾಂತಿ|staying in bed|Strict bed rest for one week.
+mobilise|ನಡೆದಾಡಿಸು|to help a patient move|Mobilise the patient on day two.
+physio exercises|ಭೌತಚಿಕಿತ್ಸಾ ವ್ಯಾಯಾಮಗಳು|exercises to regain movement|Do your physio exercises daily.
+crutches|ಊರುಗೋಲುಗಳು|sticks to help walking|Use crutches for six weeks.
+walker|ವಾಕರ್|a frame to help walking|Grandma uses a walker.
+splint|ಸ್ಪ್ಲಿಂಟ್|a support for a broken bone|Put a splint before moving him.
+sling|ಜೋಲಿ|a cloth to support an arm|Keep your arm in a sling.
+ice pack|ಐಸ್ ಪ್ಯಾಕ್|cold pack to reduce swelling|Put an ice pack on the ankle.
+hot fomentation|ಬಿಸಿ ಶಾಖ|applying heat|Do hot fomentation for the back pain.
+steam inhalation|ಹಬೆ ತೆಗೆದುಕೊಳ್ಳುವುದು|breathing in steam|Steam inhalation helps a blocked nose.
+salt water gargle|ಉಪ್ಪುನೀರಿನ ಮುಕ್ಕಳಿಕೆ|rinsing the throat with salt water|Do salt water gargles thrice a day.

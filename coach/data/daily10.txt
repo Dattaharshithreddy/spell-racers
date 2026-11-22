@@ -1,0 +1,67 @@
+# daily · level 3 · social life and opinions
+agreement|ಒಪ್ಪಂದ|having the same opinion|We reached an agreement.
+apologetic|ಕ್ಷಮೆಯಾಚಿಸುವ|showing you are sorry|He was very apologetic.
+argument|ವಾಗ್ವಾದ|an angry disagreement|They had an argument about money.
+attract|ಆಕರ್ಷಿಸು|to pull towards|The festival attracts many tourists.
+bond|ಬಾಂಧವ್ಯ|close connection|Sisters share a special bond.
+ceremony|ಸಮಾರಂಭ|a formal event|The naming ceremony is on Sunday.
+charity|ದಾನ|giving help to people in need|She gives to charity every month.
+comment|ಟಿಪ್ಪಣಿ / ಅಭಿಪ್ರಾಯ|an opinion said or written|Thanks for your comment.
+compromise|ರಾಜಿ|an agreement where both give a little|Marriage needs compromise.
+convince|ಮನವರಿಕೆ ಮಾಡು|to make believe|I couldn't convince my father.
+criticism|ಟೀಕೆ|saying what is wrong|Take criticism positively.
+custom|ಪದ್ಧತಿ|a traditional practice|It's a custom to touch elders' feet.
+debate|ಚರ್ಚೆ|discussion with different views|There's a debate about online classes.
+disagreement|ಭಿನ್ನಾಭಿಪ್ರಾಯ|different opinions|A small disagreement is normal.
+encouragement|ಪ್ರೋತ್ಸಾಹ|support and confidence|Thank you for the encouragement.
+engagement|ನಿಶ್ಚಿತಾರ್ಥ|an agreement to marry|Their engagement is next month.
+reception|ಆರತಕ್ಷತೆ|a party after a wedding|The reception is in the evening.
+fair|ನ್ಯಾಯಯುತ|treating everyone equally|That's not fair!
+unfair|ಅನ್ಯಾಯ|not fair|It's unfair to blame him.
+favour|ಉಪಕಾರ|a kind act|Can you do me a favour?
+gathering|ಕೂಟ|a meeting of people|We had a family gathering.
+generation|ಪೀಳಿಗೆ|people born around the same time|The new generation loves technology.
+get-together|ಸಮಾವೇಶ|an informal meeting|Let's plan a get-together.
+host|ಆತಿಥೇಯ|a person who invites guests|Thank the host before leaving.
+influence|ಪ್ರಭಾವ|power to change others|Friends influence our habits.
+insult|ಅವಮಾನಿಸು|to say something rude|Don't insult anyone.
+interfere|ಹಸ್ತಕ್ಷೇಪ ಮಾಡು|to get involved where not wanted|Don't interfere in their matters.
+invitation|ಆಹ್ವಾನ|a request to come|Thank you for the invitation.
+misunderstand|ತಪ್ಪಾಗಿ ಅರ್ಥಮಾಡಿಕೊ|to understand wrongly|Please don't misunderstand me.
+occasion|ಸಂದರ್ಭ|a special event|It's a special occasion.
+point of view|ಅಭಿಪ್ರಾಯ|opinion|I understand your point of view.
+praise|ಹೊಗಳು|to say good things about|The teacher praised her work.
+reputation|ಖ್ಯಾತಿ|what people think of you|The hospital has a good reputation.
+rumour|ವದಂತಿ|a story that may not be true|Don't believe rumours.
+society|ಸಮಾಜ|people living together|Doctors serve society.
+sympathise|ಸಹಾನುಭೂತಿ ತೋರು|to feel sorry for someone|I sympathise with your loss.
+tolerance|ಸಹಿಷ್ಣುತೆ|accepting differences|Tolerance makes society peaceful.
+united|ಒಗ್ಗಟ್ಟಾದ|together|The family stayed united.
+viewpoint|ದೃಷ್ಟಿಕೋನ|opinion|Everyone has a different viewpoint.
+I believe|ನಾನು ನಂಬುತ್ತೇನೆ|I think strongly|I believe practice is the key.
+I feel that|ನನಗೆ ಅನಿಸುತ್ತದೆ|I think|I feel that we should wait.
+personally|ವೈಯಕ್ತಿಕವಾಗಿ|in my own opinion|Personally, I prefer tea.
+honestly|ಪ್ರಾಮಾಣಿಕವಾಗಿ|truthfully|Honestly, I don't know.
+to be honest|ನಿಜ ಹೇಳಬೇಕೆಂದರೆ|truthfully|To be honest, I was scared.
+I agree with you|ನಾನು ನಿಮ್ಮೊಂದಿಗೆ ಒಪ್ಪುತ್ತೇನೆ|I have the same opinion|I agree with you completely.
+I don't think so|ನನಗೆ ಹಾಗೆ ಅನಿಸುವುದಿಲ್ಲ|I disagree politely|I don't think so. Let's check.
+that's true|ಅದು ನಿಜ|you are right|That's true, but it's expensive.
+exactly|ನಿಖರವಾಗಿ / ಹೌದು ಹಾಗೆಯೇ|completely right|Exactly! That's what I meant.
+I see|ಅರ್ಥವಾಯಿತು|I understand|I see. Thanks for explaining.
+not really|ಅಷ್ಟೇನೂ ಇಲ್ಲ|not very much|"Are you tired?" "Not really."
+it seems|ಹಾಗೆ ತೋರುತ್ತದೆ|it appears|It seems the shop is closed.
+on second thought|ಮತ್ತೆ ಯೋಚಿಸಿದಾಗ|after thinking again|On second thought, let's stay home.
+in other words|ಬೇರೆ ಮಾತಿನಲ್ಲಿ|said differently|In other words, we need more time.
+as far as I know|ನನಗೆ ತಿಳಿದ ಮಟ್ಟಿಗೆ|from what I know|As far as I know, the clinic opens at nine.
+more or less|ಹೆಚ್ಚುಕಡಿಮೆ|almost|I've finished more or less.
+sooner or later|ಬೇಗನೋ ತಡವಾಗಿಯೋ|at some time in the future|Sooner or later, you'll be fluent.
+step by step|ಹಂತ ಹಂತವಾಗಿ|slowly|Improve step by step.
+little by little|ಸ್ವಲ್ಪ ಸ್ವಲ್ಪವಾಗಿ|gradually|Little by little, my English is getting better.
+once in a while|ಒಮ್ಮೊಮ್ಮೆ|sometimes|We eat out once in a while.
+these days|ಈ ದಿನಗಳಲ್ಲಿ|nowadays|These days I'm very busy.
+nowadays|ಇತ್ತೀಚಿನ ದಿನಗಳಲ್ಲಿ|at the present time|Nowadays everyone uses UPI.
+in the meantime|ಅಷ್ಟರಲ್ಲಿ|while waiting|In the meantime, fill this form.
+right away|ತಕ್ಷಣ|immediately|I'll do it right away.
+on time|ಸಮಯಕ್ಕೆ|at the planned time|The train left on time.
+ahead of time|ಮುಂಚಿತವಾಗಿ|early|Finish your work ahead of time.
+all the best|ಶುಭವಾಗಲಿ|good luck|All the best for your interview!
