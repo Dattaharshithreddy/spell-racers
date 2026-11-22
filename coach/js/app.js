@@ -2,6 +2,7 @@
 import { Store, PHRASES, WORDS, dayNum } from "./store.js";
 import { CONVS as C1 } from "./convs.js";
 import { CONVS2 } from "./convs2.js";
+import { STORIES, GLOSS } from "./stories.js";
 const CONVS = [...C1, ...CONVS2];
 import { Speech, say, stopSpeaking, listen, heardWord, sentenceScore, micPermission } from "./speech.js";
 
@@ -23,7 +24,7 @@ const exHtml = (s, w) => esc(s).replace(new RegExp(`\\b(${w.replace(/[.*+?^${}()
 const secs = (ms) => (ms / 1000).toFixed(1) + " s";
 
 // ============================================================ routing
-const ROUTES = { home, welcome, session: () => runSession(), recall: () => recallDrill(), shadow: shadowMenu, convs: convList, phrases: phraseList, mine: myWords, progress, share, settings };
+const ROUTES = { home, welcome, session: () => runSession(), recall: () => recallDrill(), shadow: shadowMenu, convs: convList, stories: storyList, phrases: phraseList, mine: myWords, progress, share, settings };
 function go(r) { (ROUTES[r] || home)(); }
 
 // ============================================================ welcome / profiles
@@ -75,6 +76,7 @@ function home() {
       <button class="tile t3" data-go="convs"><i>💬</i><b>Conversations</b><small>Doctor, work, study, daily life</small></button>
       <button class="tile t4" data-go="phrases"><i>🧩</i><b>Speaking phrases</b><small>Words that keep you talking</small></button>
     </div>
+    <button class="item story-cta" data-go="stories"><i>📚</i><div class="grow"><b>Stories with friends</b><small class="muted">Bangara, Kumbu, Gundamma, Teju & Harshith · ${Object.keys(p.stories || {}).length} / ${STORIES.length} read</small></div><span>›</span></button>
     <button class="item" data-go="mine"><i>✍️</i><div class="grow"><b>My words</b><small class="muted">Add words you meet while reading</small></div><span>›</span></button>
     <button class="item" data-go="progress"><i>📈</i><div class="grow"><b>My progress</b><small class="muted">${st.strong} strong words · ${st.sentences} sentences spoken</small></div><span>›</span></button>
     <button class="item" data-go="share"><i>${f ? "🤝" : "📤"}</i><div class="grow"><b>${f ? `${esc(f.n)}'s progress` : "Share progress with a friend"}</b><small class="muted">${f ? `${f.l} words · 🔥 ${f.k} days · updated ${ago(f.ts)}` : "Send your progress on WhatsApp"}</small></div><span>›</span></button>
@@ -351,6 +353,94 @@ function runConv(cv) {
     };
   };
   step();
+}
+
+// ============================================================ stories
+const WMAP = new Map(WORDS.map((w) => [w.w.toLowerCase(), w]));
+for (const [w, [k, m]] of Object.entries(GLOSS)) if (!WMAP.has(w)) WMAP.set(w, { w, k, m, gloss: true });
+const lookup = (raw) => { const t = raw.toLowerCase().replace(/[^a-z'-]/g, "").replace(/'s$/, ""); if (!t) return null;
+  for (const c of [t, t.replace(/s$/, ""), t.replace(/es$/, ""), t.replace(/ed$/, ""), t.replace(/d$/, ""), t.replace(/ing$/, ""), t.replace(/ing$/, "e"), t.replace(/ies$/, "y"), t.replace(/ied$/, "y"), t.replace(/ly$/, "")]) { const w = WMAP.get(c); if (w) return w; }
+  return { w: t, k: "", m: "" }; };
+const CAST = [["🐰", "Bangara", "kind, wants to be a doctor"], ["🍛", "Kumbu", "always hungry, very funny"], ["💪", "Gundamma", "brave and practical"], ["🌀", "Teju", "good heart, slightly crazy ideas"], ["😇", "Harshith", "good boy, innocent and honest"]];
+function storyList() {
+  const p = Store.p; p.stories = p.stories || {};
+  show(`${top("📚 Stories with friends")}
+    <p class="muted">Short stories about five friends. Listen, read along, <b>tap any word</b> for its meaning, say lines out loud, then answer 3 questions.</p>
+    <div class="cast">${CAST.map(([i, n, d]) => `<div><i>${i}</i><b>${n}</b><small>${d}</small></div>`).join("")}</div>
+    <div class="list">${STORIES.map((s) => { const d = p.stories[s.id];
+      return `<button class="item" data-s="${s.id}"><i>${s.icon}</i><div class="grow"><b>${esc(s.title)}</b><small class="muted"><span class="chip">${esc(s.genre)}</span> <span class="kn">${esc(s.kn)}</span></small></div><span>${d ? `✅ ${d.best}/3` : "›"}</span></button>`; }).join("")}</div>`);
+  app.querySelectorAll("[data-s]").forEach((b) => (b.onclick = () => runStory(STORIES.find((s) => s.id === b.dataset.s))));
+}
+function runStory(st) {
+  const p = Store.p, t0 = Date.now(); p.stories = p.stories || {};
+  let i = 0, spoken = 0, closed = false, kn = p.storyKn !== false;
+  show(`<div class="top"><button class="back" id="x">‹</button><div class="grow"><h3>${st.icon} ${esc(st.title)}</h3><small class="muted">${esc(st.genre)} · <span class="kn">${esc(st.kn)}</span></small></div><button class="btn small ghost" id="kn">ಕನ್ನಡ</button></div>
+    <div class="prog"><i id="pr" style="width:0"></i></div>
+    <div class="story" id="past"></div><div id="now" class="col"></div><div id="wsheet" class="wsheet" hidden></div>`);
+  const close = () => { closed = true; Store.addMinutes((Date.now() - t0) / 60000); storyList(); };
+  $("#x").onclick = close; leaving = () => { closed = true; };
+  const setKn = () => { $("#kn").classList.toggle("on", kn); app.querySelectorAll(".story .kn, #now .kn").forEach((e) => (e.hidden = !kn)); };
+  $("#kn").onclick = () => { kn = !kn; p.storyKn = kn; Store.save(); setKn(); };
+  const words = (en) => en.split(/(\s+)/).map((t) => (/\S/.test(t) ? `<span class="w">${esc(t)}</span>` : t)).join("");
+  app.addEventListener("click", function tap(e) {
+    if (closed) return app.removeEventListener("click", tap);
+    const sp = e.target.closest(".w"); if (!sp) return;
+    const w = lookup(sp.textContent), ws = $("#wsheet"), sent = sp.closest("[data-en]")?.dataset.en || "";
+    say(w.w, { rate: 0.8 });
+    ws.innerHTML = `<div class="row between"><b class="big">${esc(w.w)}</b><button class="speak-ico" data-say="${esc(w.w)}">🔊</button></div>${w.k ? `<div class="kn">${esc(w.k)}</div>` : ""}${w.m ? `<small class="muted">${esc(w.m)}</small>` : w.k ? "" : `<small class="muted">Not in the word list yet.</small>`}
+      <div class="row"><button class="btn small" id="addw">＋ My words</button><button class="btn small ghost" id="cw">Close</button></div>`;
+    ws.hidden = false;
+    $("#cw").onclick = () => (ws.hidden = true);
+    $("#addw").onclick = () => { const inBank = WMAP.has(w.w) && !WMAP.get(w.w).gloss;
+      if (!inBank && !p.mine.some((m) => m.w === w.w)) p.mine.push({ w: w.w, k: w.k || "", m: w.m || "", s: sent }); else if (inBank) Store.meet(w.w); Store.save(); ws.hidden = true; toast(`“${esc(w.w)}” saved for practice`); };
+  });
+  const past = $("#past"), now = $("#now");
+  const line = () => {
+    if (closed) return;
+    $("#pr").style.width = (i / st.lines.length) * 100 + "%";
+    if (i >= st.lines.length) return quiz();
+    const [en, k] = st.lines[i];
+    now.innerHTML = `<div class="sline" data-en="${esc(en)}"><p class="en">${words(en)}</p><p class="kn">${esc(k)}</p></div>
+      <p class="heard" id="msg">${Speech.canListen ? "Listen, then say it — or tap Next." : "Listen and read along."}</p>
+      <div class="row"><button class="speak-ico" id="hear">🔊</button>${Speech.canListen ? `<button class="mic" id="mic">🎤</button>` : ""}<button class="btn gold" id="nx">Next ›</button></div>`;
+    setKn();
+    say(en, { rate: 0.88 });
+    $("#hear").onclick = () => say(en, { rate: 0.75 });
+    $("#nx").onclick = () => { stopSpeaking(); const d = document.createElement("div"); d.className = "pl"; d.dataset.en = en; d.innerHTML = `<span>${words(en)}</span> <small class="kn">${esc(k)}</small>`; past.appendChild(d); i++; setKn(); line(); now.scrollIntoView({ behavior: "smooth", block: "end" }); };
+    const mic = $("#mic"); if (mic) mic.onclick = async () => {
+      if (mic.classList.contains("rec")) return; stopSpeaking(); mic.classList.add("rec"); $("#msg").textContent = "Listening…";
+      try {
+        const r = await listen({ timeout: 10000, onInterim: (t) => ($("#msg").textContent = `“${t}”`), done: (x) => sentenceScore(x, en).score >= 0.999 });
+        const sc = Math.round(sentenceScore(r.text, en).score * 100);
+        if (sc >= 70) { spoken++; Store.spoke("sentence"); $("#msg").innerHTML = `🌟 Well said! (${sc}%)`; await wait(650); if (!closed) $("#nx").click(); return; }
+        $("#msg").innerHTML = r.text ? `I heard “${esc(r.text)}” (${sc}%). Try again or tap Next.` : "I didn't hear you. Try again.";
+      } catch (e) { $("#msg").textContent = "Mic not available. Tap Next."; }
+      mic.classList.remove("rec");
+    };
+  };
+  const quiz = () => {
+    let q = 0, score = 0;
+    const ask = () => {
+      if (closed) return;
+      if (q >= st.quiz.length) {
+        const d = p.stories[st.id] || (p.stories[st.id] = { n: 0, best: 0 }); d.n++; d.best = Math.max(d.best, score); Store.addMinutes((Date.now() - t0) / 60000); Store.save();
+        now.innerHTML = `<div class="result ${score === 3 ? "ok" : "mid"}">${score === 3 ? "🎉" : "👍"} Story finished! Questions: ${score}/3 · You said ${spoken} line${spoken === 1 ? "" : "s"} out loud.</div>
+          <p class="muted">Try telling this story to a friend in your own words, in English. That is the best practice.</p>
+          <div class="row"><button class="btn" id="again">↻ Read again</button><button class="btn gold" id="done">More stories</button></div>`;
+        $("#again").onclick = () => runStory(st); $("#done").onclick = close; now.scrollIntoView({ behavior: "smooth", block: "end" }); return;
+      }
+      const [qq, right, ...wrong] = st.quiz[q], opts = shuffle([right, ...wrong]); let first = true;
+      now.innerHTML = `<div class="want"><small>Question ${q + 1} of ${st.quiz.length}</small><span>${esc(qq)}</span></div><div class="opts">${opts.map((o, k) => `<button class="btn" data-k="${k}">${esc(o)}</button>`).join("")}</div>`;
+      say(qq, { rate: 0.9 }); now.scrollIntoView({ behavior: "smooth", block: "end" });
+      now.querySelectorAll("[data-k]").forEach((b) => (b.onclick = () => {
+        const o = opts[+b.dataset.k];
+        if (o !== right) { first = false; b.classList.add("bad"); b.disabled = true; return; }
+        if (first) score++; b.classList.add("ok"); say(right, { rate: 0.9 }); q++; setTimeout(ask, 900);
+      }));
+    };
+    ask();
+  };
+  line();
 }
 
 // ============================================================ my words

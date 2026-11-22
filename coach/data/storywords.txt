@@ -1,0 +1,361 @@
+# Story glossary: word|kannada|english note (optional). Used when a tapped story word is not in the main word bank.
+rainy|ಮಳೆಯ|with rain
+sunday|ಭಾನುವಾರ
+found|ಕಂಡುಕೊಂಡ / ಸಿಕ್ಕಿತು|past of find
+old|ಹಳೆಯ / ವಯಸ್ಸಾದ
+grandfather|ಅಜ್ಜ|father's or mother's father
+red|ಕೆಂಪು
+near|ಹತ್ತಿರ
+big|ದೊಡ್ಡ
+banyan|ಆಲದ ಮರ|a large Indian tree
+treasure|ನಿಧಿ|hidden gold or valuables
+lot|ತುಂಬಾ|a lot = many
+brought|ತಂದ|past of bring
+torch|ಟಾರ್ಚ್|a small hand light
+rope|ಹಗ್ಗ
+in case|ಬೇಕಾದರೆ ಇರಲಿ|to be ready if needed
+said|ಹೇಳಿದ|past of say
+roots|ಬೇರುಗಳು|parts of a tree under the ground
+small|ಸಣ್ಣ
+metal|ಲೋಹ
+box|ಪೆಟ್ಟಿಗೆ / ಡಬ್ಬಿ
+hands|ಕೈಗಳು
+gold|ಚಿನ್ನ
+diamonds|ವಜ್ರಗಳು
+children|ಮಕ್ಕಳು|more than one child
+real|ನಿಜವಾದ
+came|ಬಂದ|past of come
+took|ತೆಗೆದುಕೊಂಡ|past of take
+new|ಹೊಸ
+better|ಇನ್ನೂ ಚೆನ್ನಾಗಿ|more good
+bought|ಕೊಂಡ|past of buy
+clock|ಗಡಿಯಾರ
+street|ಬೀದಿ
+rupees|ರೂಪಾಯಿ
+backwards|ಹಿಂದಕ್ಕೆ
+times|ಸಲ / ಬಾರಿ
+flash|ಮಿಂಚು|a sudden bright light
+room|ಕೋಣೆ
+became|ಆಯಿತು|past of become
+nobody|ಯಾರೂ ಇಲ್ಲ
+cars|ಕಾರುಗಳು
+bullock|ಎತ್ತು
+carts|ಗಾಡಿಗಳು
+buildings|ಕಟ್ಟಡಗಳು
+road|ರಸ್ತೆ
+went|ಹೋದ|past of go
+anything|ಏನಾದರೂ
+happily|ಖುಷಿಯಿಂದ
+best|ಅತ್ಯುತ್ತಮ
+life|ಜೀವನ
+hugged|ಅಪ್ಪಿಕೊಂಡ|past of hug
+built|ಕಟ್ಟಿದ / ತಯಾರಿಸಿದ|past of build
+robot|ರೋಬೋಟ್
+broken|ಒಡೆದ / ಮುರಿದ
+named|ಹೆಸರಿಟ್ಟ
+eyes|ಕಣ್ಣುಗಳು
+teacher|ಶಿಕ್ಷಕ / ಟೀಚರ್
+made|ಮಾಡಿದ|past of make
+mistakes|ತಪ್ಪುಗಳು
+power|ಶಕ್ತಿ / ಕರೆಂಟ್
+stopped|ನಿಲ್ಲಿಸಿದ|past of stop
+ran|ಓಡಿದ|past of run
+woke up|ಎಚ್ಚರಗೊಂಡ|past of wake up
+clapped|ಚಪ್ಪಾಳೆ ತಟ್ಟಿದರು
+won|ಗೆದ್ದರು|past of win
+captain|ನಾಯಕ / ಕ್ಯಾಪ್ಟನ್
+button|ಬಟನ್ / ಗುಂಡಿ
+twice|ಎರಡು ಸಲ
+take-off|ಹಾರಾಟ ಆರಂಭ|when a plane or rocket leaves the ground
+heartbeat|ಹೃದಯ ಬಡಿತ
+fast|ವೇಗವಾಗಿ
+space|ಬಾಹ್ಯಾಕಾಶ
+rocket|ರಾಕೆಟ್
+shook|ಅಲುಗಾಡಿತು|past of shake
+roared|ಘರ್ಜಿಸಿತು|made a loud deep sound
+floated|ತೇಲಿತು|stayed up in the air or on water
+juice|ರಸ / ಜ್ಯೂಸ್
+flew|ಹಾರಿತು|past of fly
+hair|ಕೂದಲು
+mango|ಮಾವು
+rabbits|ಮೊಲಗಳು
+saw|ನೋಡಿದ|past of see
+earth|ಭೂಮಿ
+blue|ನೀಲಿ
+beautiful|ಸುಂದರ
+families|ಕುಟುಂಬಗಳು
+mother|ಅಮ್ಮ / ತಾಯಿ
+lunch|ಮಧ್ಯಾಹ್ನದ ಊಟ
+style|ಶೈಲಿ
+innocent|ನಿರಪರಾಧಿ / ಮುಗ್ಧ|did nothing wrong
+detective|ಪತ್ತೇದಾರ|a person who solves crimes
+notebook|ನೋಟ್‌ಬುಕ್
+clue|ಸುಳಿವು|a sign that helps solve a mystery
+clues|ಸುಳಿವುಗಳು
+window|ಕಿಟಕಿ
+footprints|ಹೆಜ್ಜೆ ಗುರುತುಗಳು
+maybe|ಬಹುಶಃ
+thief|ಕಳ್ಳ
+alien|ಏಲಿಯನ್ / ಅನ್ಯಗ್ರಹ ಜೀವಿ
+itself|ತಾನೇ
+yellow|ಹಳದಿ
+crumbs|ತುಂಡುಗಳು / ಚೂರುಗಳು|very small pieces of food
+wall|ಗೋಡೆ
+roof|ಛಾವಣಿ
+sat|ಕುಳಿತ|past of sit
+monkey|ಕೋತಿ
+ghee|ತುಪ್ಪ
+sorry|ಕ್ಷಮಿಸಿ
+hard|ಕಷ್ಟ / ಗಟ್ಟಿ
+bravest|ಅತ್ಯಂತ ಧೈರ್ಯಶಾಲಿ
+car|ಕಾರು
+faster|ಇನ್ನೂ ವೇಗವಾಗಿ
+pedal|ಪೆಡಲ್
+dropped|ಬೀಳಿಸಿದ|past of drop
+brake|ಬ್ರೇಕ್
+coconut|ತೆಂಗಿನಕಾಯಿ / ಎಳನೀರು
+coconuts|ತೆಂಗಿನಕಾಯಿಗಳು
+seller|ಮಾರುವವನು
+practice|ಅಭ್ಯಾಸ
+met|ಭೇಟಿಯಾದ|past of meet
+peacock|ನವಿಲು
+golden|ಚಿನ್ನದ
+feathers|ಗರಿಗಳು
+bad|ಕೆಟ್ಟ
+magician|ಮಾಂತ್ರಿಕ / ಜಾದೂಗಾರ
+voice|ಧ್ವನಿ
+glass|ಗಾಜು
+tallest|ಅತಿ ಎತ್ತರದ
+rolled|ಮಡಚಿದ / ಉರುಳಿಸಿದ
+sleeves|ತೋಳುಗಳು
+blocked|ಅಡ್ಡವಾಯಿತು|stopped the way
+path|ದಾರಿ
+crazy|ಹುಚ್ಚು
+crocodiles|ಮೊಸಳೆಗಳು
+bridge|ಸೇತುವೆ
+tiptoed|ಮೆಲ್ಲಗೆ ನಡೆದ|walked quietly on toes
+song|ಹಾಡು
+sang|ಹಾಡಿದ|past of sing
+ghost|ಭೂತ / ದೆವ್ವ
+detector|ಪತ್ತೆ ಯಂತ್ರ
+sticker|ಸ್ಟಿಕ್ಕರ್
+gently|ಮೆಲ್ಲಗೆ / ಮೃದುವಾಗಿ
+door|ಬಾಗಿಲು
+student|ವಿದ್ಯಾರ್ಥಿ
+alone|ಒಂಟಿಯಾಗಿ
+felt|ಅನಿಸಿತು|past of feel
+biscuit|ಬಿಸ್ಕತ್
+friendship|ಸ್ನೇಹ
+trekking|ಚಾರಣ|long walks in hills
+held|ಹಿಡಿದ|past of hold
+slipped|ಜಾರಿದ
+rock|ಬಂಡೆ / ಕಲ್ಲು
+tied|ಕಟ್ಟಿದ
+towel|ಟವೆಲ್
+stick|ಕೋಲು
+pieces|ತುಂಡುಗಳು
+gave|ಕೊಟ್ಟ|past of give
+stream|ಹಳ್ಳ / ತೊರೆ|a small river
+downhill|ಇಳಿಜಾರಿನಲ್ಲಿ
+player|ಆಟಗಾರ
+final|ಅಂತಿಮ / ಫೈನಲ್
+ground|ಮೈದಾನ / ನೆಲ
+lemon|ನಿಂಬೆಹಣ್ಣು
+seconds|ಸೆಕೆಂಡುಗಳು
+left|ಉಳಿದ / ಎಡ
+raid|ದಾಳಿ / ರೇಡ್
+arms|ತೋಳುಗಳು
+cup|ಕಪ್ / ಬಟ್ಟಲು
+straight|ನೇರವಾಗಿ
+costume|ವೇಷಭೂಷಣ
+hero|ನಾಯಕ / ಹೀರೋ
+cape|ಮೇಲುಹೊದಿಕೆ|a cloth worn on the shoulders
+pink|ಗುಲಾಬಿ ಬಣ್ಣ
+kitten|ಬೆಕ್ಕಿನ ಮರಿ
+lost|ಕಳೆದುಹೋದ|past of lose
+child|ಮಗು
+businessman|ವ್ಯಾಪಾರಿ
+border|ಗಡಿ
+crore|ಕೋಟಿ
+thought|ಯೋಚಿಸಿದ|past of think
+police|ಪೊಲೀಸ್
+caught|ಹಿಡಿದರು / ಸಿಕ್ಕಿಬಿದ್ದ|past of catch
+anymore|ಇನ್ನು ಮುಂದೆ
+sad|ದುಃಖ / ಬೇಸರ
+lady|ಮಹಿಳೆ
+spoke|ಮಾತನಾಡಿದ|past of speak
+deep|ಆಳವಾದ
+breath|ಉಸಿರು
+nodded|ತಲೆಯಾಡಿಸಿದ
+banner|ಬ್ಯಾನರ್ / ಫಲಕ
+world|ಜಗತ್ತು
+bus|ಬಸ್
+speaker|ಸ್ಪೀಕರ್
+passengers|ಪ್ರಯಾಣಿಕರು
+tyre|ಟೈರ್
+flat|ಗಾಳಿ ಹೋದ / ಚಪ್ಪಟೆ
+tea|ಚಹಾ / ಟೀ
+told|ಹೇಳಿದ|past of tell
+happy|ಖುಷಿ / ಸಂತೋಷ
+part|ಭಾಗ
+planned|ಯೋಜಿಸಿದ
+parents|ಪೋಷಕರು / ತಂದೆತಾಯಿ
+torches|ಟಾರ್ಚ್‌ಗಳು
+hundred|ನೂರು
+drum|ಡೋಲು / ಡ್ರಮ್
+steel|ಉಕ್ಕು / ಸ್ಟೀಲ್
+story|ಕಥೆ
+demon|ರಾಕ್ಷಸ
+scary|ಭಯಾನಕ
+nice|ಒಳ್ಳೆಯ
+brightest|ಅತ್ಯಂತ ಪ್ರಕಾಶಮಾನ
+fought|ಜಗಳವಾಡಿದರು|past of fight
+forgot|ಮರೆತ|past of forget
+shopping|ಶಾಪಿಂಗ್ / ಖರೀದಿ
+else|ಬೇರೆ
+stall|ಅಂಗಡಿ / ಸ್ಟಾಲ್
+moment|ಕ್ಷಣ
+well|ಬಾವಿ / ಚೆನ್ನಾಗಿ
+silver|ಬೆಳ್ಳಿ
+unlimited|ಅನಿಯಮಿತ
+forever|ಎಂದೆಂದಿಗೂ
+house|ಮನೆ
+swimming pool|ಈಜುಕೊಳ
+woman|ಮಹಿಳೆ
+sitting|ಕುಳಿತಿರುವ
+priest|ಅರ್ಚಕ / ಪೂಜಾರಿ
+glowed|ಹೊಳೆಯಿತು
+understood|ಅರ್ಥವಾಯಿತು|past of understand
+grandchildren|ಮೊಮ್ಮಕ್ಕಳು
+biggest|ಅತಿ ದೊಡ್ಡ
+code|ಸಂಕೇತ / ಕೋಡ್
+operation|ಕಾರ್ಯಾಚರಣೆ
+cake|ಕೇಕ್
+leader|ನಾಯಕ
+sunglasses|ಕಪ್ಪು ಕನ್ನಡಕ
+act|ನಟಿಸು
+cream|ಕ್ರೀಮ್
+oven|ಓವನ್
+volcano|ಜ್ವಾಲಾಮುಖಿ
+chocolates|ಚಾಕೊಲೇಟ್‌ಗಳು
+toy|ಆಟಿಕೆ
+dinosaur|ಡೈನೋಸಾರ್
+ugliest|ಅತ್ಯಂತ ಕುರೂಪಿ
+idiots|ಹುಚ್ಚರು|said with love between friends
+autos|ಆಟೋಗಳು
+zoomed|ವೇಗವಾಗಿ ಹೋಯಿತು
+jam|ಜಾಮ್ / ದಟ್ಟಣೆ
+future|ಭವಿಷ್ಯ
+ago|ಹಿಂದೆ|before now
+hand|ಕೈ
+wrote|ಬರೆದ|past of write
+letters|ಅಕ್ಷರಗಳು / ಪತ್ರಗಳು
+marker|ಮಾರ್ಕರ್ ಪೆನ್
+stormy|ಬಿರುಗಾಳಿಯ
+puppy|ನಾಯಿಮರಿ
+leg|ಕಾಲು
+wrapped|ಸುತ್ತಿದ
+scarf|ಸ್ಕಾರ್ಫ್
+vet|ಪಶುವೈದ್ಯ|animal doctor
+homes|ಮನೆಗಳು
+grew|ಬೆಳೆದ|past of grow
+endless|ಅಂತ್ಯವಿಲ್ಲದ
+panicking|ಗಾಬರಿಯಾಗುತ್ತಿದ್ದ
+blank|ಖಾಲಿ
+chambers|ಕೋಣೆಗಳು
+badly|ಕೆಟ್ಟದಾಗಿ
+milk|ಹಾಲು
+turmeric|ಅರಿಶಿನ
+hall|ಸಭಾಂಗಣ / ಹಾಲ್
+gate|ಗೇಟ್ / ದ್ವಾರ
+hummed|ಗುನುಗಿದ|sang with closed lips
+spaceship|ಅಂತರಿಕ್ಷ ನೌಕೆ
+landed|ಇಳಿಯಿತು
+terrace|ತಾರಸಿ
+green|ಹಸಿರು
+ate|ತಿಂದ|past of eat
+chutney|ಚಟ್ನಿ
+fuel|ಇಂಧನ
+planet|ಗ್ರಹ
+boat|ದೋಣಿ
+sea|ಸಮುದ್ರ
+further|ಇನ್ನೂ ಮುಂದೆ
+engine|ಎಂಜಿನ್
+crabs|ಏಡಿಗಳು
+hairpin|ಹೇರ್‌ಪಿನ್
+stone|ಕಲ್ಲು
+born|ಹುಟ್ಟಿದ
+sand|ಮರಳು
+orange|ಕಿತ್ತಳೆ
+jar|ಜಾಡಿ / ಡಬ್ಬಿ
+page|ಪುಟ
+fun|ಮಜಾ
+hunger|ಹಸಿವು
+letter|ಪತ್ರ
+written|ಬರೆಯಲಾದ|past participle of write
+great-grandfather|ಮುತ್ತಜ್ಜ
+knew|ತಿಳಿದಿತ್ತು|past of know
+elder|ಹಿರಿಯ
+drank|ಕುಡಿದ|past of drink
+bench|ಬೆಂಚು
+friendships|ಸ್ನೇಹಗಳು
+older|ಹೆಚ್ಚು ಹಳೆಯ
+longer|ಹೆಚ್ಚು ಕಾಲ
+everything|ಎಲ್ಲವೂ
+everyone|ಎಲ್ಲರೂ
+someone|ಯಾರೋ
+nothing|ಏನೂ ಇಲ್ಲ
+together|ಒಟ್ಟಿಗೆ
+without|ಇಲ್ಲದೆ
+before|ಮೊದಲು / ಹಿಂದೆ
+after|ನಂತರ
+again|ಮತ್ತೆ
+only|ಮಾತ್ರ
+very|ತುಂಬಾ
+every|ಪ್ರತಿ
+many|ಅನೇಕ
+first|ಮೊದಲ
+next|ಮುಂದಿನ
+under|ಕೆಳಗೆ
+over|ಮೇಲೆ
+into|ಒಳಗೆ
+away|ದೂರ
+home|ಮನೆ
+night|ರಾತ್ರಿ
+day|ದಿನ
+time|ಸಮಯ
+water|ನೀರು
+food|ಊಟ / ಆಹಾರ
+doctor|ವೈದ್ಯ / ಡಾಕ್ಟರ್
+word|ಪದ
+words|ಪದಗಳು
+people|ಜನರು
+family|ಕುಟುಂಬ
+man|ಮನುಷ್ಯ / ಗಂಡಸು
+name|ಹೆಸರು
+song|ಹಾಡು
+songs|ಹಾಡುಗಳು
+line|ಗೆರೆ / ಸಾಲು
+long|ಉದ್ದ / ದೀರ್ಘ
+end|ಕೊನೆ
+fine|ಸರಿ / ಚೆನ್ನಾಗಿ
+okay|ಸರಿ
+hello|ನಮಸ್ಕಾರ / ಹಲೋ
+please|ದಯವಿಟ್ಟು
+today|ಇಂದು
+sitting|ಕುಳಿತಿರುವ
+gave|ಕೊಟ್ಟ|past of give
+twenty|ಇಪ್ಪತ್ತು
+seventeen|ಹದಿನೇಳು
+fifty|ಐವತ್ತು
+eleven|ಹನ್ನೊಂದು
+twelve|ಹನ್ನೆರಡು
+nine|ಒಂಬತ್ತು
+eight|ಎಂಟು
+forty|ನಲವತ್ತು
+five|ಐದು
+four|ನಾಲ್ಕು
+three|ಮೂರು
+two|ಎರಡು
+ten|ಹತ್ತು
+one|ಒಂದು

@@ -1,0 +1,435 @@
+# Short stories: Bangara, Kumbu, Gundamma, Teju (good but slightly crazy), Harshith (good boy, innocent)
+# "## id|genre|icon|Title|Kannada title"  then  "english|kannada"  lines, then  "? question|right|wrong|wrong"
+
+## map|Adventure|🗺️|The Map in Ajja's Book|ಅಜ್ಜನ ಪುಸ್ತಕದಲ್ಲಿನ ನಕ್ಷೆ
+One rainy Sunday, Bangara found an old map inside her grandfather's book.|ಒಂದು ಮಳೆಯ ಭಾನುವಾರ, ಬಂಗಾರ ಅಜ್ಜನ ಪುಸ್ತಕದೊಳಗೆ ಹಳೆಯ ನಕ್ಷೆಯೊಂದನ್ನು ಕಂಡಳು.
+There was a red X near a big banyan tree.|ದೊಡ್ಡ ಆಲದ ಮರದ ಹತ್ತಿರ ಕೆಂಪು X ಗುರುತು ಇತ್ತು.
+"Treasure!" shouted Teju. "We are going to be rich!"|"ನಿಧಿ!" ಎಂದು ತೇಜು ಕೂಗಿದಳು. "ನಾವು ಶ್ರೀಮಂತರಾಗುತ್ತೇವೆ!"
+Kumbu packed snacks. A lot of snacks.|ಕುಂಬು ತಿಂಡಿ ಕಟ್ಟಿಕೊಂಡ. ತುಂಬಾ ತಿಂಡಿ.
+Gundamma brought a torch and a rope. "Just in case," she said.|ಗುಂಡಮ್ಮ ಟಾರ್ಚ್ ಮತ್ತು ಹಗ್ಗ ತಂದಳು. "ಬೇಕಾದರೆ ಇರಲಿ," ಎಂದಳು.
+Harshith asked, "Should we ask the tree for permission first?"|ಹರ್ಷಿತ್ ಕೇಳಿದ, "ಮೊದಲು ಮರದ ಅನುಮತಿ ಕೇಳಬೇಕಾ?"
+They walked for two hours and finally found the old banyan tree.|ಎರಡು ಗಂಟೆ ನಡೆದ ಮೇಲೆ ಕೊನೆಗೂ ಆ ಹಳೆಯ ಆಲದ ಮರ ಸಿಕ್ಕಿತು.
+Under the roots, there was a small metal box.|ಬೇರುಗಳ ಕೆಳಗೆ ಒಂದು ಸಣ್ಣ ಲೋಹದ ಪೆಟ್ಟಿಗೆ ಇತ್ತು.
+Teju's hands were shaking. "Gold? Diamonds?"|ತೇಜುವಿನ ಕೈ ನಡುಗುತ್ತಿತ್ತು. "ಚಿನ್ನ? ವಜ್ರ?"
+Bangara opened it slowly. Inside was an old photo of five children laughing.|ಬಂಗಾರ ನಿಧಾನವಾಗಿ ತೆರೆದಳು. ಒಳಗೆ ಐದು ಮಕ್ಕಳು ನಗುತ್ತಿರುವ ಹಳೆಯ ಫೋಟೋ ಇತ್ತು.
+On the back it said: "Friends are the real treasure. Ajja, 1975."|ಹಿಂದೆ ಬರೆದಿತ್ತು: "ಸ್ನೇಹಿತರೇ ನಿಜವಾದ ನಿಧಿ. ಅಜ್ಜ, 1975."
+Kumbu smiled. "Ajja and his friends came here too!"|ಕುಂಬು ನಕ್ಕ. "ಅಜ್ಜ ಮತ್ತು ಅವರ ಸ್ನೇಹಿತರೂ ಇಲ್ಲಿಗೆ ಬಂದಿದ್ದರು!"
+They took a new photo under the same tree and put it in the box.|ಅದೇ ಮರದ ಕೆಳಗೆ ಹೊಸ ಫೋಟೋ ತೆಗೆದು ಪೆಟ್ಟಿಗೆಯಲ್ಲಿ ಇಟ್ಟರು.
+Teju laughed. "Okay, we are not rich. But this is better."|ತೇಜು ನಕ್ಕಳು. "ಸರಿ, ನಾವು ಶ್ರೀಮಂತರಲ್ಲ. ಆದರೆ ಇದು ಇನ್ನೂ ಚೆನ್ನಾಗಿದೆ."
+? What did Bangara find in the book?|An old map|A phone number|A gold coin
+? What was inside the metal box?|An old photo|Diamonds|A key
+? Who brought a rope?|Gundamma|Kumbu|Harshith
+
+## clock|Time travel|⏳|The Clock That Ran Backwards|ಹಿಂದಕ್ಕೆ ಓಡಿದ ಗಡಿಯಾರ
+Teju bought an old clock from a street market for fifty rupees.|ತೇಜು ರಸ್ತೆ ಸಂತೆಯಲ್ಲಿ ಐವತ್ತು ರೂಪಾಯಿಗೆ ಹಳೆಯ ಗಡಿಯಾರ ಕೊಂಡಳು.
+"It runs backwards," she said proudly. "That means it is special."|"ಇದು ಹಿಂದಕ್ಕೆ ಓಡುತ್ತದೆ," ಎಂದು ಹೆಮ್ಮೆಯಿಂದ ಹೇಳಿದಳು. "ಅಂದರೆ ಇದು ವಿಶೇಷ."
+Harshith turned the key three times, just to help.|ಸಹಾಯ ಮಾಡಲೆಂದು ಹರ್ಷಿತ್ ಕೀಲಿಯನ್ನು ಮೂರು ಸಲ ತಿರುಗಿಸಿದ.
+There was a bright flash, and the room became very quiet.|ಒಂದು ಪ್ರಕಾಶಮಾನ ಮಿಂಚು, ನಂತರ ಕೋಣೆ ತುಂಬಾ ನಿಶ್ಶಬ್ದವಾಯಿತು.
+Outside, there were no cars. Only bullock carts and old buildings.|ಹೊರಗೆ ಕಾರುಗಳಿರಲಿಲ್ಲ. ಎತ್ತಿನ ಗಾಡಿಗಳು ಮತ್ತು ಹಳೆಯ ಕಟ್ಟಡಗಳು ಮಾತ್ರ.
+A newspaper on the road said: 1950.|ರಸ್ತೆಯಲ್ಲಿದ್ದ ಪತ್ರಿಕೆಯಲ್ಲಿ 1950 ಎಂದಿತ್ತು.
+"We went back in time!" said Bangara. "Nobody touch anything!"|"ನಾವು ಹಿಂದಿನ ಕಾಲಕ್ಕೆ ಹೋಗಿದ್ದೇವೆ!" ಎಂದಳು ಬಂಗಾರ. "ಯಾರೂ ಏನನ್ನೂ ಮುಟ್ಟಬೇಡಿ!"
+Kumbu was already eating a hot dosa from a small hotel.|ಕುಂಬು ಆಗಲೇ ಸಣ್ಣ ಹೋಟೆಲ್‌ನಲ್ಲಿ ಬಿಸಿ ದೋಸೆ ತಿನ್ನುತ್ತಿದ್ದ.
+"It costs two paise!" he said happily. "Best day of my life!"|"ಎರಡು ಪೈಸೆ ಅಷ್ಟೇ!" ಎಂದು ಖುಷಿಯಿಂದ ಹೇಳಿದ. "ನನ್ನ ಜೀವನದ ಅತ್ಯುತ್ತಮ ದಿನ!"
+But they had no old money. The hotel owner looked angry.|ಆದರೆ ಅವರ ಬಳಿ ಹಳೆಯ ಹಣ ಇರಲಿಲ್ಲ. ಹೋಟೆಲ್ ಮಾಲೀಕ ಕೋಪದಿಂದ ನೋಡಿದ.
+Gundamma said, "We will wash the plates to pay for it."|ಗುಂಡಮ್ಮ ಹೇಳಿದಳು, "ಅದಕ್ಕೆ ಬದಲಾಗಿ ನಾವು ತಟ್ಟೆ ತೊಳೆಯುತ್ತೇವೆ."
+All five friends washed plates together, laughing and singing.|ಐವರೂ ಸ್ನೇಹಿತರು ನಗುತ್ತಾ ಹಾಡುತ್ತಾ ಒಟ್ಟಿಗೆ ತಟ್ಟೆ ತೊಳೆದರು.
+Then Bangara turned the key forward three times, and they were home again.|ನಂತರ ಬಂಗಾರ ಕೀಲಿಯನ್ನು ಮುಂದಕ್ಕೆ ಮೂರು ಸಲ ತಿರುಗಿಸಿದಳು, ಅವರು ಮತ್ತೆ ಮನೆಗೆ ಬಂದರು.
+Teju hugged the clock. "Next week: the year 3000!" Everyone shouted, "No!"|ತೇಜು ಗಡಿಯಾರವನ್ನು ಅಪ್ಪಿಕೊಂಡಳು. "ಮುಂದಿನ ವಾರ: 3000ನೇ ವರ್ಷ!" ಎಲ್ಲರೂ ಕೂಗಿದರು, "ಬೇಡ!"
+? Which year did they travel to?|1950|1850|2050
+? How did they pay for the dosa?|They washed plates|With old coins|Kumbu sang a song
+? Who turned the key first?|Harshith|Teju|Gundamma
+
+## robot|Sci-fi|🤖|Chintu the Robot|ಚಿಂಟು ರೋಬೋಟ್
+Teju built a robot from an old fridge, a mixer and a broken phone.|ತೇಜು ಹಳೆಯ ಫ್ರಿಜ್, ಮಿಕ್ಸರ್ ಮತ್ತು ಒಡೆದ ಫೋನ್‌ನಿಂದ ರೋಬೋಟ್ ತಯಾರಿಸಿದಳು.
+She named it Chintu. "Chintu will do all our homework," she said.|ಅದಕ್ಕೆ ಚಿಂಟು ಎಂದು ಹೆಸರಿಟ್ಟಳು. "ಚಿಂಟು ನಮ್ಮ ಎಲ್ಲಾ ಹೋಮ್‌ವರ್ಕ್ ಮಾಡುತ್ತದೆ," ಎಂದಳು.
+Chintu opened its eyes and said, "Hello. I want to learn English."|ಚಿಂಟು ಕಣ್ಣು ತೆರೆದು ಹೇಳಿತು, "ನಮಸ್ಕಾರ. ನಾನು ಇಂಗ್ಲಿಷ್ ಕಲಿಯಬೇಕು."
+"A robot that wants to study?" said Kumbu. "That is not normal."|"ಓದಬೇಕೆನ್ನುವ ರೋಬೋಟಾ?" ಎಂದ ಕುಂಬು. "ಇದು ಸಾಮಾನ್ಯವಲ್ಲ."
+Bangara became Chintu's teacher. Every evening, they practised words.|ಬಂಗಾರ ಚಿಂಟುವಿನ ಟೀಚರ್ ಆದಳು. ಪ್ರತಿ ಸಂಜೆ ಅವರು ಪದಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡಿದರು.
+Chintu made many mistakes. It said "I goed" and "two mouses".|ಚಿಂಟು ತುಂಬಾ ತಪ್ಪು ಮಾಡಿತು. "I goed", "two mouses" ಎಂದು ಹೇಳಿತು.
+Harshith said kindly, "Mistakes are okay. That is how we learn."|ಹರ್ಷಿತ್ ಪ್ರೀತಿಯಿಂದ ಹೇಳಿದ, "ತಪ್ಪುಗಳು ಪರವಾಗಿಲ್ಲ. ಹಾಗೆಯೇ ನಾವು ಕಲಿಯುವುದು."
+One night, the power went off and Chintu stopped working.|ಒಂದು ರಾತ್ರಿ ಕರೆಂಟ್ ಹೋಯಿತು, ಚಿಂಟು ಕೆಲಸ ಮಾಡುವುದನ್ನು ನಿಲ್ಲಿಸಿತು.
+Gundamma ran to the shop in the rain and bought new batteries.|ಗುಂಡಮ್ಮ ಮಳೆಯಲ್ಲಿ ಅಂಗಡಿಗೆ ಓಡಿ ಹೊಸ ಬ್ಯಾಟರಿಗಳನ್ನು ತಂದಳು.
+Chintu woke up and said its first perfect sentence.|ಚಿಂಟು ಎಚ್ಚರಗೊಂಡು ತನ್ನ ಮೊದಲ ಸರಿಯಾದ ವಾಕ್ಯ ಹೇಳಿತು.
+"Thank you, my friends. You did not give up on me."|"ಧನ್ಯವಾದಗಳು, ನನ್ನ ಸ್ನೇಹಿತರೇ. ನೀವು ನನ್ನ ಕೈಬಿಡಲಿಲ್ಲ."
+Everyone clapped. Teju cried a little and said it was rain water.|ಎಲ್ಲರೂ ಚಪ್ಪಾಳೆ ತಟ್ಟಿದರು. ತೇಜು ಸ್ವಲ್ಪ ಅತ್ತಳು, ಅದು ಮಳೆ ನೀರು ಎಂದಳು.
+? What did Chintu want to do?|Learn English|Cook food|Play cricket
+? Who bought new batteries?|Gundamma|Bangara|Kumbu
+? What did Harshith say about mistakes?|Mistakes are how we learn|Mistakes are bad|Robots never make mistakes
+
+## moon|Space|🚀|Lunch on the Moon|ಚಂದ್ರನ ಮೇಲೆ ಊಟ
+In the year 2060, the five friends won a free trip to the Moon.|2060ನೇ ಇಸವಿಯಲ್ಲಿ ಐವರು ಸ್ನೇಹಿತರು ಚಂದ್ರನಿಗೆ ಉಚಿತ ಪ್ರವಾಸ ಗೆದ್ದರು.
+Captain Gundamma checked every button twice before take-off.|ಹೊರಡುವ ಮೊದಲು ಕ್ಯಾಪ್ಟನ್ ಗುಂಡಮ್ಮ ಪ್ರತಿ ಬಟನ್ ಎರಡು ಸಲ ಪರಿಶೀಲಿಸಿದಳು.
+Doctor Bangara checked everyone's heartbeat. "All normal," she said.|ಡಾಕ್ಟರ್ ಬಂಗಾರ ಎಲ್ಲರ ಹೃದಯ ಬಡಿತ ಪರೀಕ್ಷಿಸಿದಳು. "ಎಲ್ಲಾ ಸಾಮಾನ್ಯ," ಎಂದಳು.
+Kumbu's heartbeat was fast. "I am worried about space food," he said.|ಕುಂಬುವಿನ ಬಡಿತ ವೇಗವಾಗಿತ್ತು. "ನನಗೆ ಬಾಹ್ಯಾಕಾಶದ ಊಟದ ಚಿಂತೆ," ಎಂದ.
+The rocket shook and roared, and then everything floated.|ರಾಕೆಟ್ ಅಲುಗಾಡಿ ಘರ್ಜಿಸಿತು, ನಂತರ ಎಲ್ಲವೂ ತೇಲತೊಡಗಿತು.
+Teju tried to drink juice, but the juice flew into Harshith's hair.|ತೇಜು ಜ್ಯೂಸ್ ಕುಡಿಯಲು ಪ್ರಯತ್ನಿಸಿದಳು, ಆದರೆ ಜ್ಯೂಸ್ ಹರ್ಷಿತ್‌ನ ಕೂದಲಿಗೆ ಹಾರಿತು.
+Harshith just said, "It's okay. Now my hair smells like mango."|ಹರ್ಷಿತ್ ಸುಮ್ಮನೆ ಹೇಳಿದ, "ಪರವಾಗಿಲ್ಲ. ಈಗ ನನ್ನ ಕೂದಲು ಮಾವಿನ ವಾಸನೆ."
+On the Moon, they walked slowly, like big jumping rabbits.|ಚಂದ್ರನ ಮೇಲೆ ಅವರು ದೊಡ್ಡ ಜಿಗಿಯುವ ಮೊಲಗಳಂತೆ ನಿಧಾನವಾಗಿ ನಡೆದರು.
+They looked back and saw the Earth, blue and beautiful.|ಹಿಂದೆ ತಿರುಗಿ ನೋಡಿದಾಗ ನೀಲಿ, ಸುಂದರ ಭೂಮಿ ಕಂಡಿತು.
+"Our families are all down there," said Bangara softly.|"ನಮ್ಮ ಕುಟುಂಬಗಳೆಲ್ಲಾ ಅಲ್ಲಿ ಕೆಳಗಿವೆ," ಎಂದು ಬಂಗಾರ ಮೃದುವಾಗಿ ಹೇಳಿದಳು.
+Kumbu opened a box. Inside were five packets of puliyogare.|ಕುಂಬು ಒಂದು ಡಬ್ಬಿ ತೆರೆದ. ಒಳಗೆ ಐದು ಪ್ಯಾಕೆಟ್ ಪುಳಿಯೋಗರೆ ಇತ್ತು.
+"My mother made it," he said. "Lunch on the Moon, Karnataka style!"|"ನನ್ನ ಅಮ್ಮ ಮಾಡಿದ್ದು," ಎಂದ. "ಚಂದ್ರನ ಮೇಲೆ ಊಟ, ಕರ್ನಾಟಕ ಶೈಲಿ!"
+It was the best lunch they ever had, 384,000 kilometres from home.|ಮನೆಯಿಂದ 3,84,000 ಕಿಲೋಮೀಟರ್ ದೂರದಲ್ಲಿ ಅದು ಅವರ ಅತ್ಯುತ್ತಮ ಊಟವಾಗಿತ್ತು.
+? Who was the captain?|Gundamma|Teju|Harshith
+? What happened to Teju's juice?|It flew into Harshith's hair|She drank it all|It froze
+? What did they eat on the Moon?|Puliyogare|Pizza|Space biscuits
+
+## mysorepak|Mystery|🔍|Who Ate the Mysore Pak?|ಮೈಸೂರು ಪಾಕ್ ತಿಂದವರು ಯಾರು?
+Gundamma's mother made a big plate of Mysore Pak for the festival.|ಹಬ್ಬಕ್ಕೆ ಗುಂಡಮ್ಮನ ಅಮ್ಮ ದೊಡ್ಡ ತಟ್ಟೆ ಮೈಸೂರು ಪಾಕ್ ಮಾಡಿದ್ದರು.
+In the morning, the plate was empty.|ಬೆಳಿಗ್ಗೆ ತಟ್ಟೆ ಖಾಲಿಯಾಗಿತ್ತು.
+Everyone looked at Kumbu. Kumbu looked at the ceiling.|ಎಲ್ಲರೂ ಕುಂಬುವಿನ ಕಡೆ ನೋಡಿದರು. ಕುಂಬು ಮೇಲ್ಛಾವಣಿ ನೋಡಿದ.
+"I am innocent!" he said. "I only dreamed about it."|"ನಾನು ನಿರಪರಾಧಿ!" ಎಂದ. "ನಾನು ಕನಸಿನಲ್ಲಿ ಮಾತ್ರ ತಿಂದೆ."
+Detective Bangara took out a notebook. "Let's look for clues."|ಡಿಟೆಕ್ಟಿವ್ ಬಂಗಾರ ನೋಟ್‌ಬುಕ್ ತೆಗೆದಳು. "ಸುಳಿವುಗಳನ್ನು ಹುಡುಕೋಣ."
+Clue one: the window was open.|ಮೊದಲ ಸುಳಿವು: ಕಿಟಕಿ ತೆರೆದಿತ್ತು.
+Clue two: there were small footprints on the table. Very small.|ಎರಡನೇ ಸುಳಿವು: ಮೇಜಿನ ಮೇಲೆ ಚಿಕ್ಕ ಹೆಜ್ಜೆ ಗುರುತುಗಳು. ತುಂಬಾ ಚಿಕ್ಕವು.
+Teju said, "Maybe it was a tiny thief. Or an alien!"|ತೇಜು ಹೇಳಿದಳು, "ಬಹುಶಃ ಚಿಕ್ಕ ಕಳ್ಳ. ಅಥವಾ ಏಲಿಯನ್!"
+Harshith said, "Maybe the Mysore Pak walked away by itself?"|ಹರ್ಷಿತ್ ಹೇಳಿದ, "ಬಹುಶಃ ಮೈಸೂರು ಪಾಕ್ ತಾನೇ ನಡೆದು ಹೋಯಿತಾ?"
+Clue three: yellow crumbs on the wall, going up to the roof.|ಮೂರನೇ ಸುಳಿವು: ಗೋಡೆಯ ಮೇಲೆ ಹಳದಿ ತುಂಡುಗಳು, ಛಾವಣಿಯವರೆಗೂ.
+They climbed up quietly. On the roof sat a mother monkey and her baby.|ಅವರು ಮೆಲ್ಲಗೆ ಹತ್ತಿದರು. ಛಾವಣಿಯ ಮೇಲೆ ತಾಯಿ ಕೋತಿ ಮತ್ತು ಮರಿ ಕುಳಿತಿದ್ದವು.
+Their faces were covered in ghee and sugar.|ಅವುಗಳ ಮುಖ ತುಪ್ಪ ಮತ್ತು ಸಕ್ಕರೆಯಿಂದ ತುಂಬಿತ್ತು.
+Everyone said sorry to Kumbu. Kumbu said, "Apology accepted. With Mysore Pak."|ಎಲ್ಲರೂ ಕುಂಬುವಿಗೆ ಕ್ಷಮೆ ಕೇಳಿದರು. ಕುಂಬು ಹೇಳಿದ, "ಕ್ಷಮೆ ಸ್ವೀಕರಿಸಿದೆ. ಮೈಸೂರು ಪಾಕ್ ಜೊತೆ."
+? Who did everyone suspect first?|Kumbu|Teju|Bangara
+? What was the first clue?|The window was open|A phone on the floor|A broken plate
+? Who really ate the Mysore Pak?|Monkeys|A cat|Gundamma's brother
+
+## driving|Comedy|🚗|Teju Learns to Drive|ತೇಜು ಡ್ರೈವಿಂಗ್ ಕಲಿಯುತ್ತಾಳೆ
+Teju decided to learn driving. "How hard can it be?" she said.|ತೇಜು ಡ್ರೈವಿಂಗ್ ಕಲಿಯಲು ನಿರ್ಧರಿಸಿದಳು. "ಅದೆಷ್ಟು ಕಷ್ಟ?" ಎಂದಳು.
+Gundamma was the teacher because she was the bravest.|ಗುಂಡಮ್ಮ ಅತ್ಯಂತ ಧೈರ್ಯಶಾಲಿಯಾದ್ದರಿಂದ ಅವಳೇ ಟೀಚರ್ ಆದಳು.
+Bangara, Kumbu and Harshith sat in the back seat, holding hands.|ಬಂಗಾರ, ಕುಂಬು ಮತ್ತು ಹರ್ಷಿತ್ ಕೈ ಹಿಡಿದುಕೊಂಡು ಹಿಂದಿನ ಸೀಟಿನಲ್ಲಿ ಕುಳಿತರು.
+"First, the mirror," said Gundamma. Teju fixed her hair in it.|"ಮೊದಲು ಕನ್ನಡಿ," ಎಂದಳು ಗುಂಡಮ್ಮ. ತೇಜು ಅದರಲ್ಲಿ ಕೂದಲು ಸರಿಮಾಡಿಕೊಂಡಳು.
+"No, Teju! The mirror is for seeing the road behind you!"|"ಅಲ್ಲ ತೇಜು! ಕನ್ನಡಿ ಹಿಂದಿನ ರಸ್ತೆ ನೋಡಲು!"
+The car moved very slowly. A cow walked past them faster.|ಕಾರು ತುಂಬಾ ನಿಧಾನವಾಗಿ ಚಲಿಸಿತು. ಒಂದು ಹಸು ಅವರಿಗಿಂತ ವೇಗವಾಗಿ ನಡೆದು ಹೋಯಿತು.
+Then Teju pressed the wrong pedal, and the car jumped forward.|ನಂತರ ತೇಜು ತಪ್ಪು ಪೆಡಲ್ ಒತ್ತಿದಳು, ಕಾರು ಮುಂದಕ್ಕೆ ಜಿಗಿಯಿತು.
+Kumbu screamed and dropped his samosa.|ಕುಂಬು ಕಿರುಚಿದ, ಅವನ ಸಮೋಸ ಕೆಳಗೆ ಬಿತ್ತು.
+"Brake! Brake!" shouted Gundamma calmly, but very loudly.|"ಬ್ರೇಕ್! ಬ್ರೇಕ್!" ಎಂದು ಗುಂಡಮ್ಮ ಶಾಂತವಾಗಿ, ಆದರೆ ತುಂಬಾ ಜೋರಾಗಿ ಕೂಗಿದಳು.
+The car stopped just in front of a coconut seller.|ಕಾರು ಎಳನೀರು ಮಾರುವವನ ಮುಂದೆಯೇ ನಿಂತಿತು.
+Harshith got out and said, "Sorry, uncle. Five coconuts, please."|ಹರ್ಷಿತ್ ಇಳಿದು ಹೇಳಿದ, "ಕ್ಷಮಿಸಿ ಅಂಕಲ್. ಐದು ಎಳನೀರು, ದಯವಿಟ್ಟು."
+After one month of practice, Teju passed her driving test.|ಒಂದು ತಿಂಗಳ ಅಭ್ಯಾಸದ ನಂತರ ತೇಜು ಡ್ರೈವಿಂಗ್ ಟೆಸ್ಟ್ ಪಾಸ್ ಮಾಡಿದಳು.
+Her first trip? Driving her friends to the coconut seller. To say thank you.|ಅವಳ ಮೊದಲ ಪ್ರಯಾಣ? ಸ್ನೇಹಿತರನ್ನು ಎಳನೀರು ಮಾರುವವನ ಬಳಿ ಕರೆದೊಯ್ಯುವುದು. ಧನ್ಯವಾದ ಹೇಳಲು.
+? What did Teju use the mirror for first?|To fix her hair|To see the road|To take a selfie
+? What did Kumbu drop?|His samosa|His phone|His glasses
+? How long did Teju practise before passing?|One month|One week|One year
+
+## peacock|Fantasy|🦚|The Peacock Who Could Talk|ಮಾತನಾಡುವ ನವಿಲು
+In a forest near Mysuru, the friends met a peacock with golden feathers.|ಮೈಸೂರಿನ ಹತ್ತಿರದ ಕಾಡಿನಲ್ಲಿ ಸ್ನೇಹಿತರಿಗೆ ಚಿನ್ನದ ಗರಿಗಳ ನವಿಲು ಸಿಕ್ಕಿತು.
+"Good evening," said the peacock. "Please do not scream."|"ಶುಭ ಸಂಜೆ," ಎಂದಿತು ನವಿಲು. "ದಯವಿಟ್ಟು ಕಿರುಚಬೇಡಿ."
+Kumbu screamed anyway. Then he said, "Sorry. Please continue."|ಕುಂಬು ಹೇಗೂ ಕಿರುಚಿದ. ನಂತರ ಹೇಳಿದ, "ಕ್ಷಮಿಸಿ. ಮುಂದುವರಿಸಿ."
+The peacock said, "A bad magician took my voice for singing."|ನವಿಲು ಹೇಳಿತು, "ಒಬ್ಬ ಕೆಟ್ಟ ಮಾಂತ್ರಿಕ ನನ್ನ ಹಾಡುವ ಧ್ವನಿಯನ್ನು ಕದ್ದ."
+"He keeps it in a glass bottle on top of the tallest hill."|"ಅವನು ಅದನ್ನು ಅತಿ ಎತ್ತರದ ಬೆಟ್ಟದ ಮೇಲೆ ಗಾಜಿನ ಬಾಟಲಿಯಲ್ಲಿ ಇಟ್ಟಿದ್ದಾನೆ."
+Gundamma rolled up her sleeves. "Which way is the hill?"|ಗುಂಡಮ್ಮ ತೋಳು ಮಡಚಿದಳು. "ಬೆಟ್ಟ ಯಾವ ಕಡೆ?"
+On the way, a river blocked their path.|ದಾರಿಯಲ್ಲಿ ಒಂದು ನದಿ ಅಡ್ಡ ಬಂತು.
+Teju had a crazy idea: "Let's ask the crocodiles to make a bridge!"|ತೇಜುವಿಗೆ ಹುಚ್ಚು ಐಡಿಯಾ ಬಂತು: "ಮೊಸಳೆಗಳಿಗೆ ಸೇತುವೆ ಮಾಡಲು ಕೇಳೋಣ!"
+Strangely, it worked. Harshith asked so politely that the crocodiles agreed.|ಆಶ್ಚರ್ಯವೆಂದರೆ ಅದು ಕೆಲಸ ಮಾಡಿತು. ಹರ್ಷಿತ್ ತುಂಬಾ ವಿನಯದಿಂದ ಕೇಳಿದ್ದರಿಂದ ಮೊಸಳೆಗಳು ಒಪ್ಪಿದವು.
+At the top, the magician was sleeping next to the bottle.|ಮೇಲೆ ಮಾಂತ್ರಿಕ ಬಾಟಲಿಯ ಪಕ್ಕ ಮಲಗಿದ್ದ.
+Bangara tiptoed, picked up the bottle and opened it.|ಬಂಗಾರ ಮೆಲ್ಲಗೆ ಹೋಗಿ ಬಾಟಲಿ ಎತ್ತಿ ತೆರೆದಳು.
+A beautiful song flew out, across the sky, back to the peacock.|ಸುಂದರವಾದ ಹಾಡೊಂದು ಆಕಾಶದಾದ್ಯಂತ ಹಾರಿ ನವಿಲಿನ ಬಳಿ ಹಿಂತಿರುಗಿತು.
+That night, the peacock danced and sang only for its five new friends.|ಆ ರಾತ್ರಿ ನವಿಲು ತನ್ನ ಐದು ಹೊಸ ಸ್ನೇಹಿತರಿಗಾಗಿ ಮಾತ್ರ ಕುಣಿದು ಹಾಡಿತು.
+? What did the magician steal?|The peacock's singing voice|Its golden feathers|Its eggs
+? How did they cross the river?|Crocodiles made a bridge|They swam|They used a boat
+? Who opened the bottle?|Bangara|Teju|Gundamma
+
+## ghost|Spooky|👻|The Ghost in Room 13|ಕೋಣೆ 13ರ ಭೂತ
+In the college hostel, everyone said Room 13 had a ghost.|ಕಾಲೇಜ್ ಹಾಸ್ಟೆಲ್‌ನಲ್ಲಿ ಕೋಣೆ 13ರಲ್ಲಿ ಭೂತ ಇದೆ ಎಂದು ಎಲ್ಲರೂ ಹೇಳುತ್ತಿದ್ದರು.
+Every night at twelve, someone was crying softly inside.|ಪ್ರತಿ ರಾತ್ರಿ ಹನ್ನೆರಡಕ್ಕೆ ಒಳಗೆ ಯಾರೋ ಮೆಲ್ಲಗೆ ಅಳುತ್ತಿದ್ದರು.
+"I am not scared," said Kumbu, hiding behind Gundamma.|"ನನಗೆ ಭಯವಿಲ್ಲ," ಎಂದ ಕುಂಬು, ಗುಂಡಮ್ಮನ ಹಿಂದೆ ಅಡಗುತ್ತಾ.
+Teju brought a ghost detector. It was a torch with a sticker on it.|ತೇಜು ಭೂತ ಪತ್ತೆ ಯಂತ್ರ ತಂದಳು. ಅದು ಸ್ಟಿಕ್ಕರ್ ಅಂಟಿಸಿದ ಟಾರ್ಚ್ ಆಗಿತ್ತು.
+At midnight, they heard the crying again.|ಮಧ್ಯರಾತ್ರಿ ಅವರಿಗೆ ಮತ್ತೆ ಅಳು ಕೇಳಿಸಿತು.
+Harshith knocked gently. "Hello? Are you okay? Do you need water?"|ಹರ್ಷಿತ್ ಮೆಲ್ಲಗೆ ಬಾಗಿಲು ತಟ್ಟಿದ. "ಹಲೋ? ನೀವು ಚೆನ್ನಾಗಿದ್ದೀರಾ? ನೀರು ಬೇಕಾ?"
+The door opened. It was not a ghost. It was a first-year student, Meena.|ಬಾಗಿಲು ತೆರೆಯಿತು. ಅದು ಭೂತವಲ್ಲ. ಮೊದಲ ವರ್ಷದ ವಿದ್ಯಾರ್ಥಿನಿ ಮೀನಾ.
+"I miss my home," she said. "And my English is weak. I feel alone."|"ನನಗೆ ಮನೆಯ ನೆನಪಾಗುತ್ತದೆ," ಎಂದಳು. "ನನ್ನ ಇಂಗ್ಲಿಷ್ ದುರ್ಬಲ. ನಾನು ಒಂಟಿ ಅನಿಸುತ್ತದೆ."
+Bangara sat next to her. "I felt the same. You are not alone now."|ಬಂಗಾರ ಅವಳ ಪಕ್ಕ ಕುಳಿತಳು. "ನನಗೂ ಹಾಗೇ ಅನಿಸಿತ್ತು. ಈಗ ನೀನು ಒಂಟಿಯಲ್ಲ."
+Kumbu shared his secret biscuit box. That is true friendship.|ಕುಂಬು ತನ್ನ ರಹಸ್ಯ ಬಿಸ್ಕತ್ ಡಬ್ಬಿ ಹಂಚಿಕೊಂಡ. ಅದೇ ನಿಜವಾದ ಸ್ನೇಹ.
+From that night, Meena practised English with them every day.|ಆ ರಾತ್ರಿಯಿಂದ ಮೀನಾ ಪ್ರತಿದಿನ ಅವರ ಜೊತೆ ಇಂಗ್ಲಿಷ್ ಅಭ್ಯಾಸ ಮಾಡಿದಳು.
+Now people say Room 13 has a ghost that laughs very loudly.|ಈಗ ಕೋಣೆ 13ರಲ್ಲಿ ಜೋರಾಗಿ ನಗುವ ಭೂತ ಇದೆ ಎಂದು ಜನ ಹೇಳುತ್ತಾರೆ.
+? Who was really crying in Room 13?|A new student|A ghost|A cat
+? What was Teju's ghost detector?|A torch with a sticker|A phone app|A mirror
+? Why was Meena sad?|She missed home and felt alone|She lost her bag|She failed an exam
+
+## ghats|Survival|🌧️|Lost in the Western Ghats|ಪಶ್ಚಿಮ ಘಟ್ಟದಲ್ಲಿ ದಾರಿ ತಪ್ಪಿದರು
+The friends went trekking in the Western Ghats during the monsoon.|ಮಳೆಗಾಲದಲ್ಲಿ ಸ್ನೇಹಿತರು ಪಶ್ಚಿಮ ಘಟ್ಟದಲ್ಲಿ ಚಾರಣಕ್ಕೆ ಹೋದರು.
+Suddenly, thick fog covered everything. They could not see the path.|ಇದ್ದಕ್ಕಿದ್ದಂತೆ ದಟ್ಟ ಮಂಜು ಎಲ್ಲವನ್ನೂ ಮುಚ್ಚಿತು. ದಾರಿ ಕಾಣಲಿಲ್ಲ.
+There was no phone signal. Teju held her phone up to the sky and prayed.|ಫೋನ್ ಸಿಗ್ನಲ್ ಇರಲಿಲ್ಲ. ತೇಜು ಫೋನನ್ನು ಆಕಾಶಕ್ಕೆ ಎತ್ತಿ ಪ್ರಾರ್ಥಿಸಿದಳು.
+"Rule number one," said Gundamma. "We stay together. Nobody walks alone."|"ಮೊದಲ ನಿಯಮ," ಎಂದಳು ಗುಂಡಮ್ಮ. "ನಾವು ಒಟ್ಟಿಗೆ ಇರುತ್ತೇವೆ. ಯಾರೂ ಒಬ್ಬರೇ ನಡೆಯಬಾರದು."
+Then Harshith slipped on a wet rock and hurt his ankle.|ಆಗ ಹರ್ಷಿತ್ ಒದ್ದೆ ಕಲ್ಲಿನ ಮೇಲೆ ಜಾರಿ ಪಾದದ ಗಂಟಿಗೆ ಪೆಟ್ಟು ಮಾಡಿಕೊಂಡ.
+Bangara checked it carefully. "It is a sprain, not a fracture."|ಬಂಗಾರ ಎಚ್ಚರಿಕೆಯಿಂದ ಪರೀಕ್ಷಿಸಿದಳು. "ಇದು ಉಳುಕು, ಮೂಳೆ ಮುರಿತವಲ್ಲ."
+She tied it tightly with Kumbu's towel and made a support stick.|ಕುಂಬುವಿನ ಟವೆಲ್‌ನಿಂದ ಬಿಗಿಯಾಗಿ ಕಟ್ಟಿ, ಆಧಾರಕ್ಕೆ ಕೋಲು ಮಾಡಿದಳು.
+Kumbu divided the last packet of biscuits into five equal pieces.|ಕುಂಬು ಕೊನೆಯ ಬಿಸ್ಕತ್ ಪ್ಯಾಕೆಟ್ ಅನ್ನು ಐದು ಸಮ ಭಾಗ ಮಾಡಿದ.
+"You gave away food?" said Teju. "Now I know this is serious."|"ನೀನು ಊಟ ಕೊಟ್ಟುಬಿಟ್ಟೆಯಾ?" ಎಂದಳು ತೇಜು. "ಈಗ ಗೊತ್ತಾಯ್ತು ಇದು ಗಂಭೀರ."
+They followed the sound of a stream downhill, slowly, step by step.|ಅವರು ಹಳ್ಳದ ಶಬ್ದ ಅನುಸರಿಸಿ ನಿಧಾನವಾಗಿ, ಹಂತ ಹಂತವಾಗಿ ಕೆಳಗೆ ಇಳಿದರು.
+Gundamma and Kumbu carried Harshith in turns.|ಗುಂಡಮ್ಮ ಮತ್ತು ಕುಂಬು ಸರದಿಯಲ್ಲಿ ಹರ್ಷಿತ್‌ನನ್ನು ಹೊತ್ತರು.
+After three hours, they saw the lights of a small village.|ಮೂರು ಗಂಟೆಗಳ ನಂತರ ಸಣ್ಣ ಹಳ್ಳಿಯ ದೀಪಗಳು ಕಂಡವು.
+Harshith said, "I am lucky. Not because I am safe. Because of you four."|ಹರ್ಷಿತ್ ಹೇಳಿದ, "ನಾನು ಅದೃಷ್ಟವಂತ. ಸುರಕ್ಷಿತವಾಗಿದ್ದೇನೆ ಎಂದಲ್ಲ. ನೀವು ನಾಲ್ವರಿಂದ."
+? What was rule number one?|Stay together|Run fast|Call the police
+? What happened to Harshith?|He sprained his ankle|He broke his arm|He lost his bag
+? How did they find the way?|They followed a stream|They used GPS|A dog showed them
+
+## kabaddi|Sports|🤼|The Kabaddi Final|ಕಬಡ್ಡಿ ಫೈನಲ್
+The college kabaddi team needed one more player for the final.|ಫೈನಲ್‌ಗೆ ಕಾಲೇಜ್ ಕಬಡ್ಡಿ ತಂಡಕ್ಕೆ ಇನ್ನೊಬ್ಬ ಆಟಗಾರ ಬೇಕಿತ್ತು.
+Gundamma was the captain. She looked at her friends.|ಗುಂಡಮ್ಮ ನಾಯಕಿ. ಅವಳು ತನ್ನ ಸ್ನೇಹಿತರ ಕಡೆ ನೋಡಿದಳು.
+Kumbu said, "I can't. I am too busy eating." He was eating.|ಕುಂಬು ಹೇಳಿದ, "ನನಗಾಗಲ್ಲ. ನಾನು ತಿನ್ನುವುದರಲ್ಲಿ ಬ್ಯುಸಿ." ಅವನು ತಿನ್ನುತ್ತಲೇ ಇದ್ದ.
+Teju said, "I can do it! I watched one video last night."|ತೇಜು ಹೇಳಿದಳು, "ನಾನು ಮಾಡುತ್ತೇನೆ! ನಿನ್ನೆ ರಾತ್ರಿ ಒಂದು ವೀಡಿಯೋ ನೋಡಿದೆ."
+Bangara said, "Teju, we will train together every morning."|ಬಂಗಾರ ಹೇಳಿದಳು, "ತೇಜು, ಪ್ರತಿ ಬೆಳಿಗ್ಗೆ ನಾವು ಒಟ್ಟಿಗೆ ತರಬೇತಿ ಮಾಡೋಣ."
+For two weeks, they woke up at five and ran around the ground.|ಎರಡು ವಾರ ಅವರು ಐದಕ್ಕೆ ಎದ್ದು ಮೈದಾನದ ಸುತ್ತ ಓಡಿದರು.
+Harshith made lemon juice for everyone, every single day.|ಹರ್ಷಿತ್ ಪ್ರತಿದಿನವೂ ಎಲ್ಲರಿಗೂ ನಿಂಬೆ ಜ್ಯೂಸ್ ಮಾಡಿದ.
+On the day of the final, the other team was big and strong.|ಫೈನಲ್ ದಿನ ಎದುರು ತಂಡ ದೊಡ್ಡದು ಮತ್ತು ಬಲಶಾಲಿಯಾಗಿತ್ತು.
+With ten seconds left, the score was equal.|ಹತ್ತು ಸೆಕೆಂಡ್ ಉಳಿದಿರುವಾಗ ಅಂಕ ಸಮವಾಗಿತ್ತು.
+Teju went for the last raid, shouting, "Kabaddi, kabaddi, kabaddi!"|ತೇಜು ಕೊನೆಯ ರೇಡ್‌ಗೆ ಹೋದಳು, "ಕಬಡ್ಡಿ, ಕಬಡ್ಡಿ, ಕಬಡ್ಡಿ!" ಎಂದು ಕೂಗುತ್ತಾ.
+She touched one player, slipped under two arms and jumped back over the line.|ಒಬ್ಬ ಆಟಗಾರನನ್ನು ಮುಟ್ಟಿ, ಎರಡು ಕೈಗಳ ಕೆಳಗೆ ಜಾರಿ, ಗೆರೆಯ ಹಿಂದೆ ಹಾರಿದಳು.
+They won! Kumbu stopped eating for the first time and danced.|ಅವರು ಗೆದ್ದರು! ಕುಂಬು ಮೊದಲ ಬಾರಿಗೆ ತಿನ್ನುವುದನ್ನು ನಿಲ್ಲಿಸಿ ಕುಣಿದ.
+Teju held the cup and said, "One video and four best friends. That's the secret."|ತೇಜು ಕಪ್ ಹಿಡಿದು ಹೇಳಿದಳು, "ಒಂದು ವೀಡಿಯೋ ಮತ್ತು ನಾಲ್ಕು ಆತ್ಮೀಯ ಸ್ನೇಹಿತರು. ಅದೇ ರಹಸ್ಯ."
+? Who was the team captain?|Gundamma|Bangara|Teju
+? What did Harshith make every day?|Lemon juice|Tea|Sandwiches
+? Who did the last raid?|Teju|Kumbu|Gundamma
+
+## honesty|Superhero|🦸|Harshith's Superpower|ಹರ್ಷಿತ್‌ನ ಸೂಪರ್ ಪವರ್
+One morning, Harshith woke up and found he could fly.|ಒಂದು ಬೆಳಿಗ್ಗೆ ಹರ್ಷಿತ್ ಎದ್ದಾಗ ತಾನು ಹಾರಬಲ್ಲೆ ಎಂದು ತಿಳಿಯಿತು.
+He flew straight to his friends. "Guys, I have a problem," he said.|ಅವನು ನೇರವಾಗಿ ಸ್ನೇಹಿತರ ಬಳಿ ಹಾರಿದ. "ಗೆಳೆಯರೇ, ನನಗೊಂದು ಸಮಸ್ಯೆ," ಎಂದ.
+Teju was so excited. "Make a costume! Choose a hero name!"|ತೇಜು ತುಂಬಾ ಉತ್ಸುಕಳಾದಳು. "ವೇಷ ಮಾಡು! ಹೀರೋ ಹೆಸರು ಆರಿಸು!"
+She made him a cape from her old dupatta. It was pink.|ಅವಳ ಹಳೆಯ ದುಪಟ್ಟದಿಂದ ಅವನಿಗೆ ಕೇಪ್ ಮಾಡಿದಳು. ಅದು ಗುಲಾಬಿ ಬಣ್ಣ.
+Harshith did not mind. He helped an old man cross the road.|ಹರ್ಷಿತ್‌ಗೆ ಬೇಸರವಿರಲಿಲ್ಲ. ಒಬ್ಬ ವೃದ್ಧರಿಗೆ ರಸ್ತೆ ದಾಟಲು ಸಹಾಯ ಮಾಡಿದ.
+He saved a kitten from a tree and found a lost child's mother.|ಮರದಿಂದ ಬೆಕ್ಕಿನ ಮರಿಯನ್ನು ಉಳಿಸಿದ, ಕಳೆದುಹೋದ ಮಗುವಿನ ಅಮ್ಮನನ್ನು ಹುಡುಕಿದ.
+Then a businessman said, "Fly my bag across the border. No questions."|ಆಗ ಒಬ್ಬ ವ್ಯಾಪಾರಿ ಹೇಳಿದ, "ನನ್ನ ಬ್ಯಾಗ್ ಗಡಿ ದಾಟಿಸು. ಪ್ರಶ್ನೆ ಕೇಳಬೇಡ."
+"I will give you one crore rupees."|"ನಿನಗೆ ಒಂದು ಕೋಟಿ ರೂಪಾಯಿ ಕೊಡುತ್ತೇನೆ."
+Harshith thought about it for one second. "No, thank you. That is not right."|ಹರ್ಷಿತ್ ಒಂದು ಕ್ಷಣ ಯೋಚಿಸಿದ. "ಬೇಡ, ಧನ್ಯವಾದ. ಅದು ಸರಿಯಲ್ಲ."
+Gundamma called the police, and the man was caught.|ಗುಂಡಮ್ಮ ಪೊಲೀಸರಿಗೆ ಕರೆ ಮಾಡಿದಳು, ಆ ವ್ಯಕ್ತಿ ಸಿಕ್ಕಿಬಿದ್ದ.
+The next morning, Harshith could not fly anymore.|ಮರುದಿನ ಬೆಳಿಗ್ಗೆ ಹರ್ಷಿತ್‌ಗೆ ಹಾರಲು ಆಗಲಿಲ್ಲ.
+"Are you sad?" asked Bangara. He smiled. "No. Flying was not my power."|"ಬೇಸರವಾಯ್ತಾ?" ಎಂದು ಬಂಗಾರ ಕೇಳಿದಳು. ಅವನು ನಕ್ಕ. "ಇಲ್ಲ. ಹಾರುವುದು ನನ್ನ ಶಕ್ತಿಯಲ್ಲ."
+"My real power is a good heart. And good friends who keep it safe."|"ನನ್ನ ನಿಜವಾದ ಶಕ್ತಿ ಒಳ್ಳೆಯ ಹೃದಯ. ಮತ್ತು ಅದನ್ನು ಕಾಪಾಡುವ ಒಳ್ಳೆಯ ಸ್ನೇಹಿತರು."
+? What colour was Harshith's cape?|Pink|Red|Blue
+? What did the businessman want?|To carry his bag across the border|A free ride home|A photo
+? What was Harshith's real power?|A good heart|Flying|Strength
+
+## patient|Medical|🩺|Bangara's First Patient|ಬಂಗಾರಳ ಮೊದಲ ರೋಗಿ
+Bangara was in her first week as a junior doctor.|ಬಂಗಾರ ಜೂನಿಯರ್ ಡಾಕ್ಟರ್ ಆಗಿ ತನ್ನ ಮೊದಲ ವಾರದಲ್ಲಿದ್ದಳು.
+Her first patient was an old lady who spoke only English and Tulu.|ಅವಳ ಮೊದಲ ರೋಗಿ ಇಂಗ್ಲಿಷ್ ಮತ್ತು ತುಳು ಮಾತ್ರ ಮಾತನಾಡುವ ವೃದ್ಧೆ.
+Bangara's hands were cold. She took a deep breath.|ಬಂಗಾರಳ ಕೈಗಳು ತಣ್ಣಗಿದ್ದವು. ಅವಳು ಆಳವಾಗಿ ಉಸಿರೆಳೆದಳು.
+"Good morning, madam. I'm Doctor Bangara. How can I help you today?"|"ಶುಭೋದಯ ಮೇಡಂ. ನಾನು ಡಾಕ್ಟರ್ ಬಂಗಾರ. ಇಂದು ನಿಮಗೆ ಹೇಗೆ ಸಹಾಯ ಮಾಡಲಿ?"
+"I have had a cough for two weeks, and I feel tired all the time."|"ಎರಡು ವಾರಗಳಿಂದ ಕೆಮ್ಮು ಇದೆ, ಮತ್ತು ಯಾವಾಗಲೂ ಸುಸ್ತು."
+Bangara listened carefully and asked simple, clear questions.|ಬಂಗಾರ ಗಮನವಿಟ್ಟು ಕೇಳಿದಳು, ಸರಳವಾದ ಸ್ಪಷ್ಟ ಪ್ರಶ್ನೆಗಳನ್ನು ಕೇಳಿದಳು.
+"Do you have fever at night? Have you lost weight?"|"ರಾತ್ರಿ ಜ್ವರ ಬರುತ್ತದೆಯಾ? ತೂಕ ಕಡಿಮೆಯಾಗಿದೆಯಾ?"
+She explained the tests slowly. The lady nodded and smiled.|ಅವಳು ಪರೀಕ್ಷೆಗಳನ್ನು ನಿಧಾನವಾಗಿ ವಿವರಿಸಿದಳು. ಆ ಮಹಿಳೆ ತಲೆಯಾಡಿಸಿ ನಕ್ಕರು.
+"Your English is very clear, doctor. Thank you for being patient."|"ನಿಮ್ಮ ಇಂಗ್ಲಿಷ್ ತುಂಬಾ ಸ್ಪಷ್ಟ, ಡಾಕ್ಟರ್. ತಾಳ್ಮೆಯಿಂದಿದ್ದಕ್ಕೆ ಧನ್ಯವಾದ."
+That evening, her friends were waiting outside the hospital.|ಆ ಸಂಜೆ ಅವಳ ಸ್ನೇಹಿತರು ಆಸ್ಪತ್ರೆಯ ಹೊರಗೆ ಕಾಯುತ್ತಿದ್ದರು.
+Teju had a banner: "Doctor Bangara, Saving the World!"|ತೇಜುವಿನ ಬಳಿ ಬ್ಯಾನರ್ ಇತ್ತು: "ಡಾಕ್ಟರ್ ಬಂಗಾರ, ಜಗತ್ತನ್ನು ಉಳಿಸುತ್ತಿದ್ದಾಳೆ!"
+Kumbu had her favourite masala dosa. Harshith had flowers.|ಕುಂಬು ಅವಳ ಇಷ್ಟದ ಮಸಾಲೆ ದೋಸೆ ತಂದಿದ್ದ. ಹರ್ಷಿತ್ ಹೂವುಗಳನ್ನು ತಂದಿದ್ದ.
+Gundamma said, "Remember when you were scared to speak English? Look at you now."|ಗುಂಡಮ್ಮ ಹೇಳಿದಳು, "ಇಂಗ್ಲಿಷ್ ಮಾತನಾಡಲು ಭಯಪಡುತ್ತಿದ್ದದ್ದು ನೆನಪಿದೆಯಾ? ಈಗ ನಿನ್ನನ್ನು ನೋಡು."
+? What was the patient's problem?|Cough and tiredness|A broken leg|Toothache
+? What did the patient praise?|Her clear English|Her nice clothes|The hospital food
+? What did Kumbu bring?|Masala dosa|Flowers|A banner
+
+## gokarna|Road trip|🚌|The Night Bus to Gokarna|ಗೋಕರ್ಣಕ್ಕೆ ರಾತ್ರಿ ಬಸ್
+The friends booked a night bus to Gokarna for a beach holiday.|ಸ್ನೇಹಿತರು ಬೀಚ್ ರಜೆಗಾಗಿ ಗೋಕರ್ಣಕ್ಕೆ ರಾತ್ರಿ ಬಸ್ ಬುಕ್ ಮಾಡಿದರು.
+Teju brought a speaker and wanted to sing all night.|ತೇಜು ಸ್ಪೀಕರ್ ತಂದು ರಾತ್ರಿಯಿಡೀ ಹಾಡಬೇಕೆಂದಿದ್ದಳು.
+The other passengers did not agree. Teju sang quietly instead.|ಬೇರೆ ಪ್ರಯಾಣಿಕರು ಒಪ್ಪಲಿಲ್ಲ. ಬದಲಿಗೆ ತೇಜು ಮೆಲ್ಲಗೆ ಹಾಡಿದಳು.
+At two in the morning, the bus stopped. The tyre was flat.|ರಾತ್ರಿ ಎರಡು ಗಂಟೆಗೆ ಬಸ್ ನಿಂತಿತು. ಟೈರ್ ಪಂಕ್ಚರ್ ಆಗಿತ್ತು.
+The driver looked tired and worried. There was no help nearby.|ಡ್ರೈವರ್ ಸುಸ್ತಾಗಿ, ಚಿಂತೆಯಲ್ಲಿದ್ದ. ಹತ್ತಿರ ಯಾವ ಸಹಾಯವೂ ಇರಲಿಲ್ಲ.
+Gundamma got down first. "Uncle, show us. We will help."|ಗುಂಡಮ್ಮ ಮೊದಲು ಇಳಿದಳು. "ಅಂಕಲ್, ತೋರಿಸಿ. ನಾವು ಸಹಾಯ ಮಾಡುತ್ತೇವೆ."
+Harshith held the torch. Kumbu and Gundamma lifted the heavy tyre.|ಹರ್ಷಿತ್ ಟಾರ್ಚ್ ಹಿಡಿದ. ಕುಂಬು ಮತ್ತು ಗುಂಡಮ್ಮ ಭಾರವಾದ ಟೈರ್ ಎತ್ತಿದರು.
+Bangara made tea on a small stove for the driver and the passengers.|ಬಂಗಾರ ಸಣ್ಣ ಸ್ಟವ್‌ನಲ್ಲಿ ಡ್ರೈವರ್ ಮತ್ತು ಪ್ರಯಾಣಿಕರಿಗೆ ಟೀ ಮಾಡಿದಳು.
+Teju told jokes so nobody felt sleepy or scared.|ಯಾರಿಗೂ ನಿದ್ದೆ ಅಥವಾ ಭಯ ಆಗದಂತೆ ತೇಜು ಜೋಕ್ ಹೇಳಿದಳು.
+In one hour, the new tyre was on, and everyone clapped.|ಒಂದು ಗಂಟೆಯಲ್ಲಿ ಹೊಸ ಟೈರ್ ಹಾಕಲಾಯಿತು, ಎಲ್ಲರೂ ಚಪ್ಪಾಳೆ ತಟ್ಟಿದರು.
+Now the passengers asked Teju to sing. Loudly.|ಈಗ ಪ್ರಯಾಣಿಕರೇ ತೇಜುವಿಗೆ ಹಾಡಲು ಹೇಳಿದರು. ಜೋರಾಗಿ.
+They reached Gokarna at sunrise, tired, dirty and very happy.|ಅವರು ಸೂರ್ಯೋದಯಕ್ಕೆ ಗೋಕರ್ಣ ತಲುಪಿದರು, ಸುಸ್ತಾಗಿ, ಕೊಳಕಾಗಿ, ತುಂಬಾ ಖುಷಿಯಾಗಿ.
+The best part of the trip was not the beach. It was the broken bus.|ಪ್ರವಾಸದ ಅತ್ಯುತ್ತಮ ಭಾಗ ಬೀಚ್ ಅಲ್ಲ. ಕೆಟ್ಟುಹೋದ ಬಸ್.
+? What went wrong with the bus?|A flat tyre|No petrol|The driver got lost
+? What did Bangara make?|Tea|Sandwiches|A fire
+? When did they reach Gokarna?|At sunrise|At midnight|In the afternoon
+
+## dasara|Festival|🪔|When the Dasara Lights Went Out|ದಸರಾ ದೀಪಗಳು ಆರಿದಾಗ
+It was Dasara, and the whole street was decorated with lights.|ದಸರಾ ಹಬ್ಬ, ಇಡೀ ಬೀದಿ ದೀಪಗಳಿಂದ ಅಲಂಕೃತವಾಗಿತ್ತು.
+The friends had planned a small show for the children of their area.|ಸ್ನೇಹಿತರು ತಮ್ಮ ಏರಿಯಾದ ಮಕ್ಕಳಿಗಾಗಿ ಸಣ್ಣ ಕಾರ್ಯಕ್ರಮ ಯೋಜಿಸಿದ್ದರು.
+Ten minutes before the show, the power went out.|ಕಾರ್ಯಕ್ರಮಕ್ಕೆ ಹತ್ತು ನಿಮಿಷ ಮೊದಲು ಕರೆಂಟ್ ಹೋಯಿತು.
+The children started crying. The parents started complaining.|ಮಕ್ಕಳು ಅಳತೊಡಗಿದರು. ಪೋಷಕರು ದೂರತೊಡಗಿದರು.
+Teju had an idea. "Everyone, switch on your phone torches!"|ತೇಜುವಿಗೆ ಐಡಿಯಾ ಬಂತು. "ಎಲ್ಲರೂ ಫೋನ್ ಟಾರ್ಚ್ ಆನ್ ಮಾಡಿ!"
+For once, Teju's crazy idea was a good one.|ಒಮ್ಮೆಯಾದರೂ ತೇಜುವಿನ ಹುಚ್ಚು ಐಡಿಯಾ ಒಳ್ಳೆಯದಾಗಿತ್ತು.
+Two hundred small lights filled the street like stars.|ಇನ್ನೂರು ಸಣ್ಣ ದೀಪಗಳು ನಕ್ಷತ್ರಗಳಂತೆ ಬೀದಿ ತುಂಬಿದವು.
+Gundamma used a bucket as a drum. Kumbu used two steel plates.|ಗುಂಡಮ್ಮ ಬಕೆಟ್ ಅನ್ನು ಡ್ರಮ್ ಆಗಿ ಬಳಸಿದಳು. ಕುಂಬು ಎರಡು ಸ್ಟೀಲ್ ತಟ್ಟೆ ಬಳಸಿದ.
+Bangara told the story of Chamundi and the demon Mahishasura.|ಬಂಗಾರ ಚಾಮುಂಡಿ ಮತ್ತು ಮಹಿಷಾಸುರನ ಕಥೆ ಹೇಳಿದಳು.
+Harshith played the demon. He apologised to the children every two minutes.|ಹರ್ಷಿತ್ ರಾಕ್ಷಸನ ಪಾತ್ರ ಮಾಡಿದ. ಪ್ರತಿ ಎರಡು ನಿಮಿಷಕ್ಕೆ ಮಕ್ಕಳಿಗೆ ಕ್ಷಮೆ ಕೇಳುತ್ತಿದ್ದ.
+"Sorry for being scary. I am actually very nice," he said.|"ಭಯ ಹುಟ್ಟಿಸಿದ್ದಕ್ಕೆ ಕ್ಷಮಿಸಿ. ನಾನು ನಿಜವಾಗಿ ತುಂಬಾ ಒಳ್ಳೆಯವನು," ಎಂದ.
+The children laughed so much that nobody noticed when the power came back.|ಮಕ್ಕಳು ಎಷ್ಟು ನಕ್ಕರೆಂದರೆ ಕರೆಂಟ್ ಬಂದದ್ದು ಯಾರಿಗೂ ಗೊತ್ತಾಗಲಿಲ್ಲ.
+Everyone agreed: it was the brightest Dasara ever, with no electricity.|ಎಲ್ಲರೂ ಒಪ್ಪಿದರು: ವಿದ್ಯುತ್ ಇಲ್ಲದೆಯೇ ಇದು ಅತ್ಯಂತ ಪ್ರಕಾಶಮಾನ ದಸರಾ.
+? What happened before the show?|The power went out|It rained|The stage broke
+? What did Gundamma use as a drum?|A bucket|A pot|A table
+? Which role did Harshith play?|The demon|The goddess|The king
+
+## sorry|Friendship|💛|The Fight and the Sorry|ಜಗಳ ಮತ್ತು ಕ್ಷಮೆ
+Bangara and Teju had never fought before. Not even once.|ಬಂಗಾರ ಮತ್ತು ತೇಜು ಹಿಂದೆಂದೂ ಜಗಳ ಆಡಿರಲಿಲ್ಲ. ಒಮ್ಮೆಯೂ ಇಲ್ಲ.
+But Teju forgot Bangara's important exam day and called her for shopping.|ಆದರೆ ತೇಜು ಬಂಗಾರಳ ಮುಖ್ಯ ಪರೀಕ್ಷೆಯ ದಿನ ಮರೆತು ಶಾಪಿಂಗ್‌ಗೆ ಕರೆದಳು.
+Bangara was stressed. She said, "You never think about anyone else!"|ಬಂಗಾರ ಒತ್ತಡದಲ್ಲಿದ್ದಳು. "ನೀನು ಯಾವತ್ತೂ ಬೇರೆಯವರ ಬಗ್ಗೆ ಯೋಚಿಸುವುದಿಲ್ಲ!" ಎಂದಳು.
+Teju was hurt. She did not reply. For three days, they did not talk.|ತೇಜುವಿಗೆ ನೋವಾಯಿತು. ಉತ್ತರಿಸಲಿಲ್ಲ. ಮೂರು ದಿನ ಅವರು ಮಾತನಾಡಲಿಲ್ಲ.
+The group felt empty. Kumbu even stopped eating his second lunch.|ಗುಂಪು ಖಾಲಿ ಅನಿಸಿತು. ಕುಂಬು ತನ್ನ ಎರಡನೇ ಊಟವನ್ನೂ ನಿಲ್ಲಿಸಿದ.
+Harshith said, "Maybe both of them are waiting for the other to speak first."|ಹರ್ಷಿತ್ ಹೇಳಿದ, "ಬಹುಶಃ ಇಬ್ಬರೂ ಮತ್ತೊಬ್ಬರು ಮೊದಲು ಮಾತನಾಡಲಿ ಎಂದು ಕಾಯುತ್ತಿದ್ದಾರೆ."
+Gundamma said, "Then let's give them a reason to meet."|ಗುಂಡಮ್ಮ ಹೇಳಿದಳು, "ಹಾಗಾದರೆ ಅವರು ಭೇಟಿಯಾಗಲು ಒಂದು ಕಾರಣ ಕೊಡೋಣ."
+They invited both of them to the same tea stall, at the same time.|ಇಬ್ಬರನ್ನೂ ಒಂದೇ ಟೀ ಅಂಗಡಿಗೆ ಒಂದೇ ಸಮಯಕ್ಕೆ ಕರೆದರು.
+Bangara and Teju saw each other. There was a long silence.|ಬಂಗಾರ ಮತ್ತು ತೇಜು ಒಬ್ಬರನ್ನೊಬ್ಬರು ನೋಡಿದರು. ದೀರ್ಘ ಮೌನ.
+Then they both said, "I'm sorry," at exactly the same moment.|ನಂತರ ಇಬ್ಬರೂ ಒಂದೇ ಕ್ಷಣದಲ್ಲಿ "ಕ್ಷಮಿಸು" ಎಂದರು.
+"I was stressed. I should not have said that," said Bangara.|"ನಾನು ಒತ್ತಡದಲ್ಲಿದ್ದೆ. ಹಾಗೆ ಹೇಳಬಾರದಿತ್ತು," ಎಂದಳು ಬಂಗಾರ.
+"I should have remembered your exam. I'm sorry I forgot," said Teju.|"ನಿನ್ನ ಪರೀಕ್ಷೆ ನೆನಪಿಟ್ಟುಕೊಳ್ಳಬೇಕಿತ್ತು. ಮರೆತಿದ್ದಕ್ಕೆ ಕ್ಷಮಿಸು," ಎಂದಳು ತೇಜು.
+They hugged, and Kumbu immediately ordered five plates of bajji.|ಅವರು ಅಪ್ಪಿಕೊಂಡರು, ಕುಂಬು ತಕ್ಷಣ ಐದು ಪ್ಲೇಟ್ ಬಜ್ಜಿ ಆರ್ಡರ್ ಮಾಡಿದ.
+Good friends can fight. Best friends know how to say sorry.|ಒಳ್ಳೆಯ ಸ್ನೇಹಿತರು ಜಗಳ ಆಡಬಹುದು. ಆತ್ಮೀಯ ಸ್ನೇಹಿತರಿಗೆ ಕ್ಷಮೆ ಕೇಳುವುದು ಗೊತ್ತು.
+? Why was Bangara upset?|Teju forgot her exam day|Teju broke her phone|Teju was late
+? How long did they not talk?|Three days|Three weeks|One day
+? Where did they meet again?|At a tea stall|At college|At the hospital
+
+## well|Fairy tale|✨|The Wishing Well|ಇಷ್ಟಾರ್ಥದ ಬಾವಿ
+Behind an old temple, the friends found a well with silver water.|ಹಳೆಯ ದೇವಸ್ಥಾನದ ಹಿಂದೆ ಸ್ನೇಹಿತರಿಗೆ ಬೆಳ್ಳಿಯ ನೀರಿನ ಬಾವಿ ಸಿಕ್ಕಿತು.
+A sign said: "One wish only. For the whole group."|ಒಂದು ಫಲಕ ಹೇಳುತ್ತಿತ್ತು: "ಒಂದೇ ಆಸೆ. ಇಡೀ ಗುಂಪಿಗೆ."
+Kumbu said, "Unlimited food forever. Easy."|ಕುಂಬು ಹೇಳಿದ, "ಜೀವನಪೂರ್ತಿ ಅನಿಯಮಿತ ಊಟ. ಸುಲಭ."
+Teju said, "A flying house! With a swimming pool on the roof!"|ತೇಜು ಹೇಳಿದಳು, "ಹಾರುವ ಮನೆ! ಛಾವಣಿಯ ಮೇಲೆ ಈಜುಕೊಳ ಇರಬೇಕು!"
+Gundamma wanted a strong body. Bangara wanted to pass every exam.|ಗುಂಡಮ್ಮನಿಗೆ ಬಲವಾದ ದೇಹ ಬೇಕಿತ್ತು. ಬಂಗಾರಳಿಗೆ ಎಲ್ಲಾ ಪರೀಕ್ಷೆ ಪಾಸ್ ಆಗಬೇಕಿತ್ತು.
+They argued for one hour. Nobody agreed.|ಒಂದು ಗಂಟೆ ವಾದ ಮಾಡಿದರು. ಯಾರೂ ಒಪ್ಪಲಿಲ್ಲ.
+Then Harshith noticed an old woman sitting near the temple, alone and hungry.|ಆಗ ಹರ್ಷಿತ್ ದೇವಸ್ಥಾನದ ಬಳಿ ಒಂಟಿಯಾಗಿ, ಹಸಿವಿನಿಂದ ಕುಳಿತಿದ್ದ ವೃದ್ಧೆಯನ್ನು ಗಮನಿಸಿದ.
+"Her family left her here," said the priest. "She has nobody."|"ಅವರ ಕುಟುಂಬ ಅವರನ್ನು ಇಲ್ಲಿ ಬಿಟ್ಟು ಹೋಯಿತು," ಎಂದರು ಅರ್ಚಕರು. "ಅವರಿಗೆ ಯಾರೂ ಇಲ್ಲ."
+The friends looked at each other. Without speaking, they all agreed.|ಸ್ನೇಹಿತರು ಒಬ್ಬರನ್ನೊಬ್ಬರು ನೋಡಿದರು. ಮಾತಿಲ್ಲದೆ ಎಲ್ಲರೂ ಒಪ್ಪಿದರು.
+Bangara said to the well, "Please give her a family who loves her."|ಬಂಗಾರ ಬಾವಿಗೆ ಹೇಳಿದಳು, "ದಯವಿಟ್ಟು ಅವರನ್ನು ಪ್ರೀತಿಸುವ ಕುಟುಂಬ ಕೊಡು."
+The water glowed. Nothing else happened.|ನೀರು ಹೊಳೆಯಿತು. ಬೇರೇನೂ ಆಗಲಿಲ್ಲ.
+Then they understood: the wish was them. They visited her every Sunday after that.|ಆಗ ಅವರಿಗೆ ಅರ್ಥವಾಯಿತು: ಆ ಆಸೆ ಅವರೇ. ಅಂದಿನಿಂದ ಪ್ರತಿ ಭಾನುವಾರ ಅವರನ್ನು ಭೇಟಿಯಾದರು.
+She called them "my five grandchildren" until the end.|ಕೊನೆಯವರೆಗೂ ಅವರು ಇವರನ್ನು "ನನ್ನ ಐದು ಮೊಮ್ಮಕ್ಕಳು" ಎಂದು ಕರೆದರು.
+? How many wishes did the well give?|One for the whole group|One each|Three
+? What did Kumbu want?|Unlimited food|A flying house|A strong body
+? Who became the old woman's family?|The five friends|The priest|Her old family
+
+## cake|Funny heist|🎂|Operation Birthday Cake|ಆಪರೇಷನ್ ಬರ್ತ್‌ಡೇ ಕೇಕ್
+It was Gundamma's birthday, and she hated surprises.|ಗುಂಡಮ್ಮನ ಹುಟ್ಟುಹಬ್ಬ, ಅವಳಿಗೆ ಸರ್ಪ್ರೈಸ್ ಇಷ್ಟವಿಲ್ಲ.
+So her friends planned the biggest surprise ever. Code name: Operation Cake.|ಹಾಗಾಗಿ ಸ್ನೇಹಿತರು ಅತಿ ದೊಡ್ಡ ಸರ್ಪ್ರೈಸ್ ಯೋಜಿಸಿದರು. ಕೋಡ್ ಹೆಸರು: ಆಪರೇಷನ್ ಕೇಕ್.
+Teju was the leader because she owned sunglasses.|ತೇಜು ಬಳಿ ಸನ್‌ಗ್ಲಾಸ್ ಇದ್ದುದರಿಂದ ಅವಳೇ ನಾಯಕಿ.
+Step one: Harshith had to keep Gundamma busy for two hours.|ಮೊದಲ ಹಂತ: ಹರ್ಷಿತ್ ಎರಡು ಗಂಟೆ ಗುಂಡಮ್ಮನನ್ನು ಬ್ಯುಸಿಯಾಗಿಡಬೇಕು.
+But Harshith cannot lie. "I'm keeping you busy for a surprise," he told her.|ಆದರೆ ಹರ್ಷಿತ್‌ಗೆ ಸುಳ್ಳು ಹೇಳಲು ಬರುವುದಿಲ್ಲ. "ಸರ್ಪ್ರೈಸ್‌ಗಾಗಿ ನಿನ್ನನ್ನು ಬ್ಯುಸಿಯಾಗಿಡುತ್ತಿದ್ದೇನೆ," ಎಂದು ಹೇಳಿಬಿಟ್ಟ.
+Gundamma laughed. "Fine. I will act surprised. Let's go for a walk."|ಗುಂಡಮ್ಮ ನಕ್ಕಳು. "ಸರಿ. ಆಶ್ಚರ್ಯಪಟ್ಟಂತೆ ನಟಿಸುತ್ತೇನೆ. ವಾಕ್ ಹೋಗೋಣ."
+Step two: Bangara and Kumbu had to bake a cake.|ಎರಡನೇ ಹಂತ: ಬಂಗಾರ ಮತ್ತು ಕುಂಬು ಕೇಕ್ ಮಾಡಬೇಕು.
+Kumbu tasted the cream every two minutes. Soon there was no cream.|ಕುಂಬು ಪ್ರತಿ ಎರಡು ನಿಮಿಷಕ್ಕೆ ಕ್ರೀಮ್ ರುಚಿ ನೋಡಿದ. ಬೇಗನೆ ಕ್ರೀಮ್ ಖಾಲಿಯಾಯಿತು.
+The cake came out of the oven looking like a sad volcano.|ಕೇಕ್ ಓವನ್‌ನಿಂದ ದುಃಖದ ಜ್ವಾಲಾಮುಖಿಯಂತೆ ಹೊರಬಂತು.
+Teju decorated it with gems, chocolates and one small toy dinosaur.|ತೇಜು ಅದನ್ನು ಜೆಮ್ಸ್, ಚಾಕೊಲೇಟ್ ಮತ್ತು ಒಂದು ಸಣ್ಣ ಆಟಿಕೆ ಡೈನೋಸಾರ್‌ನಿಂದ ಅಲಂಕರಿಸಿದಳು.
+When Gundamma came home, everyone jumped out and shouted, "Surprise!"|ಗುಂಡಮ್ಮ ಮನೆಗೆ ಬಂದಾಗ ಎಲ್ಲರೂ ಹಾರಿ "ಸರ್ಪ್ರೈಸ್!" ಎಂದು ಕೂಗಿದರು.
+She looked at the volcano cake and the dinosaur, and she started crying.|ಅವಳು ಜ್ವಾಲಾಮುಖಿ ಕೇಕ್ ಮತ್ತು ಡೈನೋಸಾರ್ ನೋಡಿ ಅಳತೊಡಗಿದಳು.
+"This is the ugliest, most beautiful cake in the world. I love you idiots."|"ಇದು ಜಗತ್ತಿನ ಅತ್ಯಂತ ಕುರೂಪಿ, ಅತ್ಯಂತ ಸುಂದರ ಕೇಕ್. ಹುಚ್ಚರೇ, ನೀವೆಂದರೆ ನನಗೆ ಪ್ರೀತಿ."
+? Why was Teju the leader?|She owned sunglasses|She was the oldest|She could bake
+? What did Harshith tell Gundamma?|The truth about the surprise|A big lie|Nothing
+? What did the cake look like?|A sad volcano|A castle|A flower
+
+## future|Future|🛸|Bengaluru 2080|ಬೆಂಗಳೂರು 2080
+Teju fixed the time clock. "This time, we go forward," she said.|ತೇಜು ಸಮಯದ ಗಡಿಯಾರ ರಿಪೇರಿ ಮಾಡಿದಳು. "ಈ ಬಾರಿ ಮುಂದಕ್ಕೆ ಹೋಗೋಣ," ಎಂದಳು.
+Flash! They were standing in Bengaluru in the year 2080.|ಮಿಂಚು! ಅವರು 2080ನೇ ವರ್ಷದ ಬೆಂಗಳೂರಿನಲ್ಲಿ ನಿಂತಿದ್ದರು.
+Flying autos zoomed above them. There was no traffic jam at all.|ಹಾರುವ ಆಟೋಗಳು ಮೇಲೆ ಓಡುತ್ತಿದ್ದವು. ಟ್ರಾಫಿಕ್ ಜಾಮ್ ಇರಲೇ ಇಲ್ಲ.
+"No traffic in Bengaluru?" said Gundamma. "Now I know this is the future."|"ಬೆಂಗಳೂರಿನಲ್ಲಿ ಟ್ರಾಫಿಕ್ ಇಲ್ಲವಾ?" ಎಂದಳು ಗುಂಡಮ್ಮ. "ಈಗ ಗೊತ್ತಾಯ್ತು ಇದು ಭವಿಷ್ಯ."
+Robots served food, but Kumbu was not happy. "Where is the dosa smell?"|ರೋಬೋಟ್‌ಗಳು ಊಟ ಬಡಿಸುತ್ತಿದ್ದವು, ಆದರೆ ಕುಂಬುವಿಗೆ ಖುಷಿಯಿರಲಿಲ್ಲ. "ದೋಸೆಯ ಪರಿಮಳ ಎಲ್ಲಿ?"
+Everyone was looking at screens. Nobody was talking to each other.|ಎಲ್ಲರೂ ಸ್ಕ್ರೀನ್ ನೋಡುತ್ತಿದ್ದರು. ಯಾರೂ ಪರಸ್ಪರ ಮಾತನಾಡುತ್ತಿರಲಿಲ್ಲ.
+In a park, they met a lonely old man with a familiar smile.|ಒಂದು ಪಾರ್ಕ್‌ನಲ್ಲಿ ಪರಿಚಿತ ನಗುವಿನ ಒಂಟಿ ವೃದ್ಧರೊಬ್ಬರು ಸಿಕ್ಕರು.
+"I am Harshith," he said. "I lost touch with my best friends long ago."|"ನಾನು ಹರ್ಷಿತ್," ಎಂದರು. "ಬಹಳ ಹಿಂದೆಯೇ ನನ್ನ ಆತ್ಮೀಯ ಸ್ನೇಹಿತರ ಸಂಪರ್ಕ ಕಳೆದುಕೊಂಡೆ."
+Young Harshith went pale. "That's me? Without you guys?"|ಯುವ ಹರ್ಷಿತ್ ಬಿಳಿಚಿಕೊಂಡ. "ಅದು ನಾನಾ? ನೀವಿಲ್ಲದೆ?"
+Bangara held his hand. "The future is not fixed. We can change it."|ಬಂಗಾರ ಅವನ ಕೈ ಹಿಡಿದಳು. "ಭವಿಷ್ಯ ಸ್ಥಿರವಲ್ಲ. ನಾವು ಅದನ್ನು ಬದಲಾಯಿಸಬಹುದು."
+Back home, they made a promise: one call every week, no matter what.|ಮನೆಗೆ ಮರಳಿ ಅವರು ಒಂದು ವಚನ ಕೊಟ್ಟರು: ಏನೇ ಆದರೂ ಪ್ರತಿ ವಾರ ಒಂದು ಕರೆ.
+Teju wrote it on the wall in big letters, in permanent marker.|ತೇಜು ಅದನ್ನು ದೊಡ್ಡ ಅಕ್ಷರಗಳಲ್ಲಿ ಪರ್ಮನೆಂಟ್ ಮಾರ್ಕರ್‌ನಲ್ಲಿ ಗೋಡೆಯ ಮೇಲೆ ಬರೆದಳು.
+Her mother was angry. But the promise stayed on the wall, and in their hearts.|ಅವಳ ಅಮ್ಮನಿಗೆ ಕೋಪ ಬಂತು. ಆದರೆ ವಚನ ಗೋಡೆಯ ಮೇಲೂ, ಅವರ ಹೃದಯದಲ್ಲೂ ಉಳಿಯಿತು.
+? What was missing in 2080 Bengaluru?|Traffic jams|Buildings|Trees
+? Who did they meet in the park?|Old Harshith|Old Teju|A robot teacher
+? What promise did they make?|One call every week|One trip every year|No phones ever
+
+## puppy|Animals|🐶|The Puppy in the Rain|ಮಳೆಯಲ್ಲಿ ನಾಯಿಮರಿ
+On a stormy evening, Harshith heard a small sound under a car.|ಬಿರುಗಾಳಿಯ ಸಂಜೆ, ಹರ್ಷಿತ್‌ಗೆ ಕಾರಿನ ಕೆಳಗೆ ಸಣ್ಣ ಶಬ್ದ ಕೇಳಿಸಿತು.
+It was a tiny puppy, wet and shaking, with a hurt leg.|ಅದು ಒದ್ದೆಯಾಗಿ ನಡುಗುತ್ತಿದ್ದ, ಕಾಲಿಗೆ ಪೆಟ್ಟಾದ ಪುಟ್ಟ ನಾಯಿಮರಿ.
+He called his friends. In twenty minutes, all four were there.|ಅವನು ಸ್ನೇಹಿತರಿಗೆ ಕರೆ ಮಾಡಿದ. ಇಪ್ಪತ್ತು ನಿಮಿಷದಲ್ಲಿ ನಾಲ್ವರೂ ಅಲ್ಲಿದ್ದರು.
+Bangara wrapped the puppy in her scarf and checked its leg gently.|ಬಂಗಾರ ನಾಯಿಮರಿಯನ್ನು ತನ್ನ ಸ್ಕಾರ್ಫ್‌ನಲ್ಲಿ ಸುತ್ತಿ ಮೆಲ್ಲಗೆ ಕಾಲು ಪರೀಕ್ಷಿಸಿದಳು.
+"We need a vet," she said. "Now."|"ನಮಗೆ ಪಶುವೈದ್ಯರು ಬೇಕು," ಎಂದಳು. "ಈಗಲೇ."
+Gundamma found a vet clinic open until nine. It was eight forty.|ಗುಂಡಮ್ಮ ಒಂಬತ್ತರವರೆಗೆ ತೆರೆದಿರುವ ಕ್ಲಿನಿಕ್ ಹುಡುಕಿದಳು. ಆಗ ಎಂಟು ನಲವತ್ತು.
+They ran through the rain. Kumbu held an umbrella over the puppy, not himself.|ಅವರು ಮಳೆಯಲ್ಲಿ ಓಡಿದರು. ಕುಂಬು ಛತ್ರಿಯನ್ನು ತನ್ನ ಮೇಲಲ್ಲ, ನಾಯಿಮರಿಯ ಮೇಲೆ ಹಿಡಿದ.
+The vet said, "You came just in time. The leg will heal in a month."|ಪಶುವೈದ್ಯರು ಹೇಳಿದರು, "ಸರಿಯಾದ ಸಮಯಕ್ಕೆ ಬಂದಿರಿ. ಒಂದು ತಿಂಗಳಲ್ಲಿ ಕಾಲು ಗುಣವಾಗುತ್ತದೆ."
+But who would keep the puppy? Everyone's house had a "no dogs" rule.|ಆದರೆ ನಾಯಿಮರಿಯನ್ನು ಯಾರು ಸಾಕುತ್ತಾರೆ? ಎಲ್ಲರ ಮನೆಯಲ್ಲೂ "ನಾಯಿ ಬೇಡ" ನಿಯಮ.
+Teju said, "Then the puppy will have five homes. One week each!"|ತೇಜು ಹೇಳಿದಳು, "ಹಾಗಾದರೆ ನಾಯಿಮರಿಗೆ ಐದು ಮನೆ. ಒಬ್ಬೊಬ್ಬರಿಗೆ ಒಂದು ವಾರ!"
+Strangely, all five parents agreed after meeting the puppy.|ಆಶ್ಚರ್ಯವೆಂದರೆ ನಾಯಿಮರಿಯನ್ನು ನೋಡಿದ ಮೇಲೆ ಐವರ ಪೋಷಕರೂ ಒಪ್ಪಿದರು.
+They named him Dosti, which means friendship.|ಅವರು ಅದಕ್ಕೆ ದೋಸ್ತಿ ಎಂದು ಹೆಸರಿಟ್ಟರು, ಅಂದರೆ ಸ್ನೇಹ.
+Dosti grew up with five homes, five families and endless love.|ದೋಸ್ತಿ ಐದು ಮನೆ, ಐದು ಕುಟುಂಬ ಮತ್ತು ಅಪಾರ ಪ್ರೀತಿಯೊಂದಿಗೆ ಬೆಳೆದ.
+? Where did Harshith find the puppy?|Under a car|In a box|Near a temple
+? What did Kumbu do with the umbrella?|Held it over the puppy|Lost it|Gave it to the vet
+? What does the name Dosti mean?|Friendship|Rain|Lucky
+
+## exam|Study|📖|The Night Before the Exam|ಪರೀಕ್ಷೆಯ ಹಿಂದಿನ ರಾತ್ರಿ
+It was the night before Bangara's biggest exam, and she was panicking.|ಬಂಗಾರಳ ಅತಿ ದೊಡ್ಡ ಪರೀಕ್ಷೆಯ ಹಿಂದಿನ ರಾತ್ರಿ, ಅವಳು ಗಾಬರಿಯಾಗಿದ್ದಳು.
+"I don't remember anything," she said. "My mind is completely blank."|"ನನಗೆ ಏನೂ ನೆನಪಿಲ್ಲ," ಎಂದಳು. "ನನ್ನ ಮನಸ್ಸು ಸಂಪೂರ್ಣ ಖಾಲಿ."
+Her friends arrived at nine with a plan, and snacks.|ಅವಳ ಸ್ನೇಹಿತರು ಒಂಬತ್ತಕ್ಕೆ ಯೋಜನೆಯೊಂದಿಗೆ ಬಂದರು, ತಿಂಡಿಗಳ ಜೊತೆ.
+Gundamma took her phone away. "No social media tonight."|ಗುಂಡಮ್ಮ ಅವಳ ಫೋನ್ ತೆಗೆದುಕೊಂಡಳು. "ಇಂದು ರಾತ್ರಿ ಸೋಷಿಯಲ್ ಮೀಡಿಯಾ ಬೇಡ."
+Teju turned the chapters into silly songs so they were easy to remember.|ತೇಜು ಅಧ್ಯಾಯಗಳನ್ನು ತಮಾಷೆಯ ಹಾಡುಗಳಾಗಿ ಮಾಡಿದಳು, ನೆನಪಿಡಲು ಸುಲಭವಾಗಲೆಂದು.
+"The heart has four chambers, la la la," she sang, dancing badly.|"ಹೃದಯಕ್ಕೆ ನಾಲ್ಕು ಕೋಣೆಗಳು, ಲ ಲ ಲ," ಎಂದು ಕೆಟ್ಟದಾಗಿ ಕುಣಿಯುತ್ತಾ ಹಾಡಿದಳು.
+Harshith asked her questions from the textbook, one by one.|ಹರ್ಷಿತ್ ಪಠ್ಯಪುಸ್ತಕದಿಂದ ಒಂದೊಂದಾಗಿ ಪ್ರಶ್ನೆ ಕೇಳಿದ.
+She answered most of them correctly. "See? You know it," he said.|ಅವಳು ಹೆಚ್ಚಿನವಕ್ಕೆ ಸರಿಯಾಗಿ ಉತ್ತರಿಸಿದಳು. "ನೋಡು? ನಿನಗೆ ಗೊತ್ತು," ಎಂದ.
+Kumbu made hot milk with turmeric. "Doctor's orders. From the future doctor."|ಕುಂಬು ಅರಿಶಿನದ ಬಿಸಿ ಹಾಲು ಮಾಡಿದ. "ಡಾಕ್ಟರ್ ಆದೇಶ. ಭವಿಷ್ಯದ ಡಾಕ್ಟರ್‌ಗೆ."
+At eleven, Gundamma said, "Enough. Sleep is also studying."|ಹನ್ನೊಂದಕ್ಕೆ ಗುಂಡಮ್ಮ ಹೇಳಿದಳು, "ಸಾಕು. ನಿದ್ದೆಯೂ ಓದಿನ ಭಾಗ."
+In the morning, all four were waiting at the exam hall gate.|ಬೆಳಿಗ್ಗೆ ನಾಲ್ವರೂ ಪರೀಕ್ಷಾ ಹಾಲ್‌ನ ಗೇಟ್ ಬಳಿ ಕಾಯುತ್ತಿದ್ದರು.
+During the exam, Bangara hummed Teju's silly song and smiled.|ಪರೀಕ್ಷೆಯ ಸಮಯದಲ್ಲಿ ಬಂಗಾರ ತೇಜುವಿನ ತಮಾಷೆ ಹಾಡು ಗುನುಗಿ ನಕ್ಕಳು.
+She passed with distinction. The first call she made was to her friends.|ಅವಳು ಡಿಸ್ಟಿಂಕ್ಷನ್‌ನಲ್ಲಿ ಪಾಸಾದಳು. ಮೊದಲ ಕರೆ ಸ್ನೇಹಿತರಿಗೇ ಮಾಡಿದಳು.
+? What did Gundamma take away?|Bangara's phone|Her books|Her snacks
+? How did Teju help?|She made the chapters into songs|She wrote notes|She cooked dinner
+? What did Gundamma say about sleep?|Sleep is also studying|Sleep is a waste|Don't sleep tonight
+
+## alien|Sci-fi comedy|👽|The Alien Who Loved Dosa|ದೋಸೆ ಪ್ರಿಯ ಏಲಿಯನ್
+One night, a small spaceship landed on Kumbu's terrace.|ಒಂದು ರಾತ್ರಿ ಸಣ್ಣ ಅಂತರಿಕ್ಷ ನೌಕೆ ಕುಂಬುವಿನ ತಾರಸಿಯ ಮೇಲೆ ಇಳಿಯಿತು.
+A green alien came out. It was only as tall as a water bottle.|ಹಸಿರು ಏಲಿಯನ್ ಹೊರಬಂತು. ಅದು ನೀರಿನ ಬಾಟಲಿಯಷ್ಟೇ ಎತ್ತರ.
+"Take me to your leader," it said. Kumbu took it to the kitchen.|"ನಿಮ್ಮ ನಾಯಕನ ಬಳಿ ಕರೆದೊಯ್ಯಿ," ಎಂದಿತು. ಕುಂಬು ಅದನ್ನು ಅಡುಗೆಮನೆಗೆ ಕರೆದೊಯ್ದ.
+He gave it one dosa. The alien's eyes became very big.|ಅವನು ಒಂದು ದೋಸೆ ಕೊಟ್ಟ. ಏಲಿಯನ್‌ನ ಕಣ್ಣುಗಳು ತುಂಬಾ ದೊಡ್ಡದಾದವು.
+It ate seventeen dosas and asked for chutney in a bucket.|ಅದು ಹದಿನೇಳು ದೋಸೆ ತಿಂದು, ಬಕೆಟ್‌ನಲ್ಲಿ ಚಟ್ನಿ ಕೇಳಿತು.
+"Finally, someone who eats like me," said Kumbu, with tears in his eyes.|"ಕೊನೆಗೂ ನನ್ನಂತೆ ತಿನ್ನುವವರು ಸಿಕ್ಕರು," ಎಂದ ಕುಂಬು, ಕಣ್ಣೀರಿನೊಂದಿಗೆ.
+The others came running. Teju wanted to put the alien on Instagram.|ಉಳಿದವರು ಓಡಿ ಬಂದರು. ತೇಜು ಏಲಿಯನ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್‌ಗೆ ಹಾಕಬೇಕೆಂದಳು.
+Bangara said no. "If people find out, they will take it away."|ಬಂಗಾರ ಬೇಡ ಎಂದಳು. "ಜನರಿಗೆ ಗೊತ್ತಾದರೆ ಅದನ್ನು ತೆಗೆದುಕೊಂಡು ಹೋಗುತ್ತಾರೆ."
+The alien explained that its ship had no fuel. It needed sugar.|ತನ್ನ ನೌಕೆಗೆ ಇಂಧನವಿಲ್ಲ, ಸಕ್ಕರೆ ಬೇಕು ಎಂದು ಏಲಿಯನ್ ವಿವರಿಸಿತು.
+Gundamma collected sugar from every house on the street, politely.|ಗುಂಡಮ್ಮ ಬೀದಿಯ ಪ್ರತಿ ಮನೆಯಿಂದ ವಿನಯದಿಂದ ಸಕ್ಕರೆ ಸಂಗ್ರಹಿಸಿದಳು.
+Harshith told the neighbours the truth: "It's for an alien." Nobody believed him.|ಹರ್ಷಿತ್ ನೆರೆಹೊರೆಯವರಿಗೆ ಸತ್ಯ ಹೇಳಿದ: "ಇದು ಏಲಿಯನ್‌ಗಾಗಿ." ಯಾರೂ ನಂಬಲಿಲ್ಲ.
+Before leaving, the alien hugged each of them with its tiny arms.|ಹೊರಡುವ ಮೊದಲು ಏಲಿಯನ್ ತನ್ನ ಪುಟ್ಟ ಕೈಗಳಿಂದ ಪ್ರತಿಯೊಬ್ಬರನ್ನೂ ಅಪ್ಪಿಕೊಂಡಿತು.
+"On my planet there is no word for friend. Now I will teach them one."|"ನನ್ನ ಗ್ರಹದಲ್ಲಿ ಸ್ನೇಹಿತ ಎಂಬ ಪದವೇ ಇಲ್ಲ. ಈಗ ನಾನು ಅವರಿಗೆ ಕಲಿಸುತ್ತೇನೆ."
+? How many dosas did the alien eat?|Seventeen|Seven|Seventy
+? What fuel did the spaceship need?|Sugar|Petrol|Coconut oil
+? Why did Bangara say no to Instagram?|People might take the alien away|Bad internet|Teju's phone was broken
+
+## island|Ocean adventure|🏝️|The Island With No Name|ಹೆಸರಿಲ್ಲದ ದ್ವೀಪ
+The friends rented a small boat near Udupi to see the sea.|ಸಮುದ್ರ ನೋಡಲು ಸ್ನೇಹಿತರು ಉಡುಪಿಯ ಬಳಿ ಸಣ್ಣ ದೋಣಿ ಬಾಡಿಗೆಗೆ ಪಡೆದರು.
+Teju said, "Let's go a little further." That was a mistake.|ತೇಜು ಹೇಳಿದಳು, "ಸ್ವಲ್ಪ ಇನ್ನೂ ಮುಂದೆ ಹೋಗೋಣ." ಅದು ತಪ್ಪಾಗಿತ್ತು.
+The engine stopped, and the waves pushed them to a small island.|ಎಂಜಿನ್ ನಿಂತಿತು, ಅಲೆಗಳು ಅವರನ್ನು ಸಣ್ಣ ದ್ವೀಪಕ್ಕೆ ತಳ್ಳಿದವು.
+There were no people, only coconut trees and a lot of crabs.|ಅಲ್ಲಿ ಜನರಿರಲಿಲ್ಲ, ತೆಂಗಿನ ಮರಗಳು ಮತ್ತು ತುಂಬಾ ಏಡಿಗಳು ಮಾತ್ರ.
+Everyone got a job. Gundamma fixed the engine with a hairpin.|ಎಲ್ಲರಿಗೂ ಕೆಲಸ ಸಿಕ್ಕಿತು. ಗುಂಡಮ್ಮ ಹೇರ್‌ಪಿನ್‌ನಿಂದ ಎಂಜಿನ್ ರಿಪೇರಿ ಮಾಡಿದಳು.
+Kumbu opened coconuts with a stone. "I was born for this," he said.|ಕುಂಬು ಕಲ್ಲಿನಿಂದ ತೆಂಗಿನಕಾಯಿ ಒಡೆದ. "ನಾನು ಇದಕ್ಕಾಗಿಯೇ ಹುಟ್ಟಿದ್ದು," ಎಂದ.
+Bangara cleaned Teju's small cut with clean water and a bandage.|ಬಂಗಾರ ತೇಜುವಿನ ಸಣ್ಣ ಗಾಯವನ್ನು ಶುದ್ಧ ನೀರಿನಿಂದ ತೊಳೆದು ಬ್ಯಾಂಡೇಜ್ ಹಾಕಿದಳು.
+Harshith wrote a big "HELP" on the sand with stones, in case.|ಹರ್ಷಿತ್ ಬೇಕಾದರೆ ಇರಲಿ ಎಂದು ಮರಳಿನ ಮೇಲೆ ಕಲ್ಲುಗಳಿಂದ ದೊಡ್ಡ "HELP" ಬರೆದ.
+Then he added, "Please, if you are free," to be polite.|ನಂತರ ವಿನಯಕ್ಕಾಗಿ "ದಯವಿಟ್ಟು, ನಿಮಗೆ ಬಿಡುವಿದ್ದರೆ" ಎಂದೂ ಸೇರಿಸಿದ.
+As the sun went down, they sat together and watched the sky turn orange.|ಸೂರ್ಯ ಮುಳುಗುವಾಗ ಅವರು ಒಟ್ಟಿಗೆ ಕುಳಿತು ಕಿತ್ತಳೆ ಬಣ್ಣಕ್ಕೆ ತಿರುಗುವ ಆಕಾಶ ನೋಡಿದರು.
+"Honestly," said Teju, "I'm not even scared. I have you all."|"ನಿಜ ಹೇಳಬೇಕೆಂದರೆ," ಎಂದಳು ತೇಜು, "ನನಗೆ ಭಯವೇ ಇಲ್ಲ. ನೀವೆಲ್ಲಾ ಇದ್ದೀರ."
+Then the engine started. Gundamma's hairpin had worked.|ಆಗ ಎಂಜಿನ್ ಶುರುವಾಯಿತು. ಗುಂಡಮ್ಮನ ಹೇರ್‌ಪಿನ್ ಕೆಲಸ ಮಾಡಿತ್ತು.
+They named the island "Friendship Island". It is not on any map, only in their hearts.|ಅವರು ದ್ವೀಪಕ್ಕೆ "ಸ್ನೇಹ ದ್ವೀಪ" ಎಂದು ಹೆಸರಿಟ್ಟರು. ಅದು ಯಾವ ನಕ್ಷೆಯಲ್ಲೂ ಇಲ್ಲ, ಅವರ ಹೃದಯದಲ್ಲಿ ಮಾತ್ರ.
+? Why did they reach the island?|The engine stopped|They wanted to camp|They were chasing a fish
+? What did Gundamma use to fix the engine?|A hairpin|A spoon|A rope
+? What did Harshith write on the sand?|HELP|SOS FOOD|HELLO
+
+## swap|Magic comedy|🔄|The Day Everyone Swapped|ಎಲ್ಲರೂ ಬದಲಾದ ದಿನ
+Teju found a strange spell in an old book and read it out loud. Of course.|ತೇಜು ಹಳೆಯ ಪುಸ್ತಕದಲ್ಲಿ ವಿಚಿತ್ರ ಮಂತ್ರ ಕಂಡು ಜೋರಾಗಿ ಓದಿದಳು. ಖಂಡಿತ.
+The next morning, everyone woke up in someone else's body.|ಮರುದಿನ ಬೆಳಿಗ್ಗೆ ಎಲ್ಲರೂ ಬೇರೆಯವರ ದೇಹದಲ್ಲಿ ಎಚ್ಚರಗೊಂಡರು.
+Kumbu was in Gundamma's body. He could not open a jar. Gundamma always could.|ಕುಂಬು ಗುಂಡಮ್ಮನ ದೇಹದಲ್ಲಿದ್ದ. ಡಬ್ಬಿ ತೆರೆಯಲು ಆಗಲಿಲ್ಲ. ಗುಂಡಮ್ಮಗೆ ಯಾವಾಗಲೂ ಆಗುತ್ತಿತ್ತು.
+"How do you do it?" he asked. "Practice and patience," she said, from his body.|"ನೀನು ಹೇಗೆ ಮಾಡ್ತೀಯ?" ಎಂದು ಕೇಳಿದ. "ಅಭ್ಯಾಸ ಮತ್ತು ತಾಳ್ಮೆ," ಎಂದಳು, ಅವನ ದೇಹದಿಂದ.
+Teju was in Bangara's body, and had to read a big medical book.|ತೇಜು ಬಂಗಾರಳ ದೇಹದಲ್ಲಿದ್ದಳು, ದೊಡ್ಡ ವೈದ್ಯಕೀಯ ಪುಸ್ತಕ ಓದಬೇಕಾಯಿತು.
+After one page, she said, "Bangara, you are a hero. This is so hard."|ಒಂದು ಪುಟದ ನಂತರ ಹೇಳಿದಳು, "ಬಂಗಾರ, ನೀನು ಹೀರೋ. ಇದು ತುಂಬಾ ಕಷ್ಟ."
+Bangara was in Teju's body and suddenly had a hundred crazy ideas.|ಬಂಗಾರ ತೇಜುವಿನ ದೇಹದಲ್ಲಿದ್ದಳು, ಇದ್ದಕ್ಕಿದ್ದಂತೆ ನೂರು ಹುಚ್ಚು ಐಡಿಯಾಗಳು ಬಂದವು.
+"It's so fun in here," she laughed. "Your mind is like a festival!"|"ಇಲ್ಲಿ ತುಂಬಾ ಮಜಾ," ಎಂದು ನಕ್ಕಳು. "ನಿನ್ನ ಮನಸ್ಸು ಹಬ್ಬದಂತೆ!"
+Harshith was in Kumbu's body and was hungry every ten minutes.|ಹರ್ಷಿತ್ ಕುಂಬುವಿನ ದೇಹದಲ್ಲಿದ್ದ, ಪ್ರತಿ ಹತ್ತು ನಿಮಿಷಕ್ಕೆ ಹಸಿವಾಗುತ್ತಿತ್ತು.
+"Kumbu, I'm sorry I ever laughed at you. This is real hunger."|"ಕುಂಬು, ನಿನ್ನನ್ನು ನೋಡಿ ನಕ್ಕಿದ್ದಕ್ಕೆ ಕ್ಷಮಿಸು. ಇದು ನಿಜವಾದ ಹಸಿವು."
+By evening, each of them understood the others much better.|ಸಂಜೆಯ ಹೊತ್ತಿಗೆ ಪ್ರತಿಯೊಬ್ಬರೂ ಉಳಿದವರನ್ನು ಇನ್ನೂ ಚೆನ್ನಾಗಿ ಅರ್ಥಮಾಡಿಕೊಂಡರು.
+Teju read the spell backwards, and everyone was back to normal.|ತೇಜು ಮಂತ್ರವನ್ನು ಹಿಂದಿನಿಂದ ಓದಿದಳು, ಎಲ್ಲರೂ ಮೊದಲಿನಂತಾದರು.
+"Let's never do that again," said Gundamma. "But I'm glad we did."|"ಇನ್ನೆಂದೂ ಹಾಗೆ ಮಾಡಬಾರದು," ಎಂದಳು ಗುಂಡಮ್ಮ. "ಆದರೆ ಮಾಡಿದ್ದು ಒಳ್ಳೆಯದಾಯಿತು."
+? Who was in Gundamma's body?|Kumbu|Teju|Harshith
+? What did Teju have to read?|A big medical book|A cookbook|A map
+? What did everyone learn?|To understand each other better|How to cook|How to do magic
+
+## letter|Historical|📜|The Letter from 1942|1942ರ ಪತ್ರ
+While cleaning Gundamma's old house, they found a letter in the wall.|ಗುಂಡಮ್ಮನ ಹಳೆಯ ಮನೆ ಸ್ವಚ್ಛಗೊಳಿಸುವಾಗ ಗೋಡೆಯಲ್ಲಿ ಒಂದು ಪತ್ರ ಸಿಕ್ಕಿತು.
+It was written in 1942, during the freedom struggle.|ಅದು 1942ರಲ್ಲಿ, ಸ್ವಾತಂತ್ರ್ಯ ಹೋರಾಟದ ಸಮಯದಲ್ಲಿ ಬರೆದದ್ದು.
+"Dear Ramu," it said. "If I don't come back, take care of our village."|"ಪ್ರೀತಿಯ ರಾಮು," ಎಂದಿತ್ತು. "ನಾನು ಮರಳಿ ಬರದಿದ್ದರೆ ನಮ್ಮ ಹಳ್ಳಿಯನ್ನು ನೋಡಿಕೋ."
+"You are my best friend. We will meet again in a free India. Your friend, Shankar."|"ನೀನು ನನ್ನ ಆತ್ಮೀಯ ಸ್ನೇಹಿತ. ಸ್ವತಂತ್ರ ಭಾರತದಲ್ಲಿ ಮತ್ತೆ ಭೇಟಿಯಾಗೋಣ. ನಿನ್ನ ಸ್ನೇಹಿತ, ಶಂಕರ್."
+Gundamma was quiet. "Ramu was my great-grandfather."|ಗುಂಡಮ್ಮ ಮೌನವಾದಳು. "ರಾಮು ನನ್ನ ಮುತ್ತಜ್ಜ."
+"Did they ever meet again?" asked Harshith.|"ಅವರು ಮತ್ತೆ ಭೇಟಿಯಾದರಾ?" ಎಂದು ಹರ್ಷಿತ್ ಕೇಳಿದ.
+Nobody knew. So the friends decided to find out.|ಯಾರಿಗೂ ಗೊತ್ತಿರಲಿಲ್ಲ. ಹಾಗಾಗಿ ಸ್ನೇಹಿತರು ಕಂಡುಹಿಡಿಯಲು ನಿರ್ಧರಿಸಿದರು.
+Bangara searched old newspapers in the library. Teju asked every elder in the village.|ಬಂಗಾರ ಗ್ರಂಥಾಲಯದಲ್ಲಿ ಹಳೆಯ ಪತ್ರಿಕೆಗಳನ್ನು ಹುಡುಕಿದಳು. ತೇಜು ಹಳ್ಳಿಯ ಪ್ರತಿ ಹಿರಿಯರನ್ನೂ ಕೇಳಿದಳು.
+Kumbu found the answer at a tea shop, of course.|ಕುಂಬುವಿಗೆ ಉತ್ತರ ಟೀ ಅಂಗಡಿಯಲ್ಲಿ ಸಿಕ್ಕಿತು, ಖಂಡಿತ.
+The old tea seller said, "Shankar? He came back in 1947. He opened this shop."|ಹಳೆಯ ಟೀ ಮಾರುವವರು ಹೇಳಿದರು, "ಶಂಕರ್? ಅವರು 1947ರಲ್ಲಿ ಮರಳಿ ಬಂದರು. ಈ ಅಂಗಡಿ ತೆರೆದರು."
+"Every morning, he and Ramu drank tea right here, on this bench."|"ಪ್ರತಿ ಬೆಳಿಗ್ಗೆ ಅವರು ಮತ್ತು ರಾಮು ಇಲ್ಲೇ, ಈ ಬೆಂಚಿನ ಮೇಲೆ ಟೀ ಕುಡಿಯುತ್ತಿದ್ದರು."
+The five friends sat on the same bench and ordered five teas.|ಐವರು ಸ್ನೇಹಿತರು ಅದೇ ಬೆಂಚಿನ ಮೇಲೆ ಕುಳಿತು ಐದು ಟೀ ಆರ್ಡರ್ ಮಾಡಿದರು.
+Some friendships are older than the country. Some will last longer than us.|ಕೆಲವು ಸ್ನೇಹಗಳು ದೇಶಕ್ಕಿಂತ ಹಳೆಯವು. ಕೆಲವು ನಮಗಿಂತ ಹೆಚ್ಚು ಕಾಲ ಉಳಿಯುತ್ತವೆ.
+? When was the letter written?|1942|1947|1962
+? Who was Ramu?|Gundamma's great-grandfather|A tea seller|A teacher
+? Where did Kumbu find the answer?|At a tea shop|In the library|In the letter
