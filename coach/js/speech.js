@@ -15,8 +15,13 @@ function pickVoice() {
 if (window.speechSynthesis) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
 
 /** speak text; resolves when finished (best effort) */
+// English voices misread some Kannada names (Bangara -> "Banjara"), so speak a phonetic spelling instead
+const SAYFIX = [[/\bBangara\b/gi, "Bungaara"], [/\bTeju\b/gi, "Thay-ju"]];
+// names the recogniser can spell any way: never count them against a spoken sentence
+const NAMES = new Set(["bangara", "kumbu", "gundamma", "teju", "harshith", "ajja", "chintu", "meena", "dosti", "ramu", "shankar"]);
 export function say(text, { rate = 0.92, kn = false } = {}) {
   const lang = kn ? "kn-IN" : "en-IN";
+  if (!kn) for (const [re, to] of SAYFIX) text = String(text).replace(re, to);
   if (NTTS) return NTTS.stop().catch(() => {}).then(() => NTTS.speak({ text, lang, rate, pitch: 1, volume: 1, category: "playback" })).catch(() => {});
   return new Promise((res) => {
     if (!window.speechSynthesis) return res();
@@ -110,7 +115,7 @@ export function heardWord(heard, target) {
 }
 /** sentence score: which words of the target were said (order tolerant). returns { score, hit:[bool] } */
 export function sentenceScore(heard, target) {
-  const h = norm(heard), t = norm(target); const used = new Array(h.length).fill(false);
+  const h = norm(heard), t = norm(target).filter((w) => !NAMES.has(w.replace(/'s$/, ""))); const used = new Array(h.length).fill(false);
   const hit = t.map((w) => { const i = h.findIndex((x, k) => !used[k] && close(x, w)); if (i >= 0) { used[i] = true; return true; } return false; });
   return { score: t.length ? hit.filter(Boolean).length / t.length : 0, hit };
 }
