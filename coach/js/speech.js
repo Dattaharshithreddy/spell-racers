@@ -53,59 +53,78 @@ export async function micPermission() {
  * Resolves { text, ms } where ms = time from start until done() first returned true (or null).
  * Rejects with Error("not-allowed") / Error("no-sr").
  */
+/**
+ * Listen until `done(text)` is true or `timeout` ms pass. Android and Chrome stop the recogniser after
+ * 1-2 s of silence (the learner is still thinking!), so we keep restarting it until the time is really up.
+ * Resolves { text, ms } where ms = time until the right answer was heard (null if never).
+ */
 export function listen({ timeout = 6000, onInterim, done } = {}) {
   if (NSR) return nativeListen({ timeout, onInterim, done });
   return new Promise((resolve, reject) => {
     if (!WSR) return reject(new Error("no-sr"));
-    const r = new WSR(); r.lang = "en-IN"; r.interimResults = true; r.maxAlternatives = 3; r.continuous = false;
-    const t0 = performance.now(); let best = "", ms = null, fin = false;
-    const finish = () => { if (fin) return; fin = true; clearTimeout(to); try { r.abort(); } catch (e) {} resolve({ text: best, ms }); };
-    r.onresult = (e) => {
-      let t = ""; for (let i = 0; i < e.results.length; i++) t += e.results[i][0].transcript + " ";
-      // also look at alternatives of the latest result (better chance of catching the word)
-      const last = e.results[e.results.length - 1]; const alts = []; for (let a = 0; a < last.length; a++) alts.push(last[a].transcript);
-      best = t.trim(); onInterim && onInterim(best);
-      if (done && ms === null && [best, ...alts].some((x) => done(x))) { ms = performance.now() - t0; best = [best, ...alts].find((x) => done(x)); finish(); return; }
-      if (last.isFinal) finish();
+    const t0 = performance.now(), heard = []; let best = "", ms = null, fin = false, r = null, starts = 0, rt = 0;
+    const judge = () => { if (!done || ms !== null) return; const hit = heard.find((x) => done(x)) || (heard.length > 1 && done(heard.join(" ")) ? heard.join(" ") : null); if (hit) { ms = performance.now() - t0; best = hit; } };
+    const finish = () => { if (fin) return; fin = true; clearTimeout(to); clearTimeout(rt); try { r && r.abort(); } catch (e) {} judge(); resolve({ text: best, ms }); };
+    const go = () => {
+      if (fin) return; starts++;
+      r = new WSR(); r.lang = "en-IN"; r.interimResults = true; r.maxAlternatives = 5; r.continuous = false;
+      r.onresult = (e) => {
+        let t = ""; for (let i = 0; i < e.results.length; i++) t += e.results[i][0].transcript + " ";
+        const last = e.results[e.results.length - 1], alts = []; for (let k = 0; k < last.length; k++) alts.push(last[k].transcript);
+        best = t.trim(); onInterim && onInterim(best); if (last.isFinal) heard.push(best, ...alts);
+        if (done && ms === null) { const hit = [best, ...alts].find((x) => done(x)); if (hit) { ms = performance.now() - t0; best = hit; finish(); } }
+      };
+      r.onerror = (e) => { if (fin) return; if (e.error === "not-allowed" || e.error === "service-not-allowed") { fin = true; clearTimeout(to); reject(new Error("not-allowed")); } };
+      r.onend = () => { if (fin) return; if (performance.now() - t0 < timeout - 500 && starts < 12) rt = setTimeout(go, 120); else finish(); };
+      try { r.start(); } catch (e) { if (starts === 1) { fin = true; clearTimeout(to); reject(e); } else finish(); }
     };
-    r.onerror = (e) => { if (fin) return; if (e.error === "no-speech" || e.error === "aborted") finish(); else { fin = true; clearTimeout(to); reject(new Error(e.error)); } };
-    r.onend = finish;
     const to = setTimeout(finish, timeout);
-    try { r.start(); } catch (e) { reject(e); }
+    go();
   });
 }
 async function nativeListen({ timeout, onInterim, done }) {
   if (!permOk && !(await micPermission())) throw new Error("not-allowed");
-  const t0 = performance.now(); let best = "", ms = null, h = null, fin = false;
+  const t0 = performance.now(), heard = []; let best = "", ms = null, fin = false, rt = 0, starts = 0; const hs = [];
   return new Promise(async (resolve) => {
+    const judge = () => { if (!done || ms !== null) return; const hit = heard.find((x) => done(x)) || (heard.length > 1 && done(heard.join(" ")) ? heard.join(" ") : null); if (hit) { ms = performance.now() - t0; best = hit; } };
     const finish = async () => {
-      if (fin) return; fin = true; clearTimeout(to);
-      try { await NSR.stop(); } catch (e) {} try { h && h.remove(); } catch (e) {}
-      resolve({ text: best, ms });
+      if (fin) return; fin = true; clearTimeout(to); clearTimeout(rt);
+      try { await NSR.stop(); } catch (e) {} for (const h of hs) { try { h.remove(); } catch (e) {} }
+      judge(); resolve({ text: best, ms });
     };
-    try {
-      h = await NSR.addListener("partialResults", (d) => {
-        const m = (d && d.matches) || []; if (!m.length) return;
-        best = m[0]; onInterim && onInterim(best);
-        if (done && ms === null) { const hit = m.find((x) => done(x)); if (hit) { ms = performance.now() - t0; best = hit; finish(); } }
-      });
-    } catch (e) {}
+    const take = (m) => {
+      m = (m || []).filter(Boolean); if (!m.length || fin) return;
+      best = m[0]; heard.push(...m); onInterim && onInterim(best);
+      if (done && ms === null) { const hit = m.find((x) => done(x)); if (hit) { ms = performance.now() - t0; best = hit; finish(); } }
+    };
+    // the recogniser stopped (silence, no match, error): start again while there is time left
+    const again = () => { if (fin) return; clearTimeout(rt); if (performance.now() - t0 > timeout - 500 || starts >= 12) return finish(); rt = setTimeout(go, 200); };
+    const go = async () => {
+      if (fin) return; starts++;
+      try { const res = await NSR.start({ language: "en-IN", maxResults: 5, popup: false, partialResults: true }); if (res && res.matches && res.matches.length) { take(res.matches); again(); } }
+      catch (e) { again(); }
+    };
+    try { hs.push(await NSR.addListener("partialResults", (d) => take(d && d.matches))); } catch (e) {}
+    try { hs.push(await NSR.addListener("listeningState", (d) => { if (d && d.status === "stopped") again(); })); } catch (e) {}
     const to = setTimeout(finish, timeout + 800);
-    try {
-      const res = await NSR.start({ language: "en-IN", maxResults: 5, popup: false, partialResults: true });
-      if (res && res.matches && res.matches.length) { best = res.matches[0]; if (done && ms === null) { const hit = res.matches.find((x) => done(x)); if (hit) { ms = performance.now() - t0; best = hit; } } finish(); }
-    } catch (e) { finish(); }
+    go();
   });
 }
 
 // ---------------- matching
-export const norm = (s) => s.toLowerCase().replace(/[’']/g, "'").replace(/[^a-z' ]/g, " ").split(/\s+/).filter(Boolean);
+const NUM = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"];
+// British/American spellings and number digits should not count as mistakes
+const canon = (w) => (/^\d+$/.test(w) && NUM[+w]) || w.replace(/our$/, "or").replace(/ours$/, "ors").replace(/is(e|ed|es|ing)$/, "iz$1").replace(/isation$/, "ization").replace(/tre$/, "ter").replace(/ll(ed|ing)$/, "l$1").replace(/ogue$/, "og");
+export const norm = (s) => String(s || "").toLowerCase().replace(/[’']/g, "'").replace(/[^a-z0-9' ]/g, " ").split(/\s+/).filter(Boolean).map(canon);
 export function lev(a, b) {
   const d = Array.from({ length: a.length + 1 }, (_, i) => [i]); for (let j = 1; j <= b.length; j++) d[0][j] = j;
   for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
   return d[a.length][b.length];
 }
-const close = (x, w) => x === w || (w.length > 4 && lev(x, w) <= 1) || (w.length > 7 && lev(x, w) <= 2) || x.replace(/s$/, "") === w.replace(/s$/, "");
+// rough sound key: the recogniser often writes a similar-sounding word ("band" for "bond", "fare" for "fair")
+const sound = (w) => w.replace(/^kn/, "n").replace(/^wr/, "r").replace(/ph/g, "f").replace(/ck|q|c(?=[aou]|$)/g, "k").replace(/c/g, "s").replace(/z/g, "s").replace(/v/g, "w").replace(/gh/g, "").replace(/(.)\1+/g, "$1").replace(/(?!^)[aeiouyh]/g, "");
+const stem = (w) => w.replace(/'s$/, "").replace(/(es|s|ed|d|ing)$/, "");
+const close = (x, w) => x === w || stem(x) === stem(w) || (w.length >= 4 && x[0] === w[0] && lev(x, w) <= 1) || (w.length > 4 && lev(x, w) <= 1) || (w.length > 7 && lev(x, w) <= 2) || (w.length >= 3 && sound(x) === sound(w) && x[0] === w[0]);
 /** is the target word / short phrase inside what was heard? */
 export function heardWord(heard, target) {
   const h = norm(heard), t = norm(target); if (!t.length) return false;

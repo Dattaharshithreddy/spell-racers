@@ -176,7 +176,7 @@ function recallCardRun(w, ctx, { label = "Fast recall", soft = false } = {}) {
         <div class="big">${esc(w.w)}</div>
         ${w.s ? `<div class="row ex"><div class="grow">${exHtml(w.s, w.w)}</div><button class="speak-ico" data-say="${esc(w.s)}">🔊</button></div>` : ""}
         ${!ok && Speech.canListen ? `<button class="mic" id="mic2">🎤</button><p class="heard" id="hd2">Say “${esc(w.w)}” once now</p>` : ""}
-        ${!ok && why && why.startsWith("I heard") ? `<button class="btn ghost" id="fix">It heard me wrong. I said it right.</button>` : ""}
+        ${!ok && Speech.canListen && why && !why.startsWith("No problem") ? `<button class="btn ghost" id="fix">✋ I said it right. Count it.</button>` : ""}
         <button class="btn gold" id="next">Next ›</button>`;
       say(w.w);
       if ($("#mic2")) $("#mic2").onclick = () => micTry(w.w, $("#mic2"), $("#hd2"), () => Store.spoke("word"));
@@ -198,7 +198,7 @@ function recallCardRun(w, ctx, { label = "Fast recall", soft = false } = {}) {
     let cancelled = false;
     $("#skip").onclick = () => { cancelled = true; Store.grade(w.w, false); reveal(false, null, "No problem. Learn it now:"); };
     t0 = performance.now(); requestAnimationFrame(tick);
-    listen({ timeout: 6000, onInterim: (t) => $("#hd") && ($("#hd").textContent = `“${t}”`), done: (x) => heardWord(x, w.w) })
+    listen({ timeout: 7000, onInterim: (t) => $("#hd") && ($("#hd").textContent = `“${t}”`), done: (x) => heardWord(x, w.w) })
       .then((r) => {
         if (cancelled || over) return;
         if (r.ms !== null) { Store.grade(w.w, true, soft ? null : r.ms); Store.spoke("word"); reveal(true, r.ms); setTimeout(() => !over && $("#next") && end("ok"), r.ms < 2000 ? 1400 : 2200); }
