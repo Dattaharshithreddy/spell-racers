@@ -89,30 +89,41 @@ export function listen({ timeout = 6000, onInterim: oi, done } = {}) {
 }
 async function nativeListen({ timeout, onInterim, done }) {
   if (!permOk && !(await micPermission())) throw new Error("not-allowed");
-  const t0 = performance.now(), heard = []; let best = "", ms = null, fin = false, rt = 0, starts = 0; const hs = [];
+  // Android plugin facts: with partialResults the start() call resolves at once; the final result
+  // arrives as a "partialResults" event ~0.5-1 s AFTER speech ends; on silence it errors silently.
+  // So: poll isListening(), and only restart when it has been idle AND no result came for a while.
+  const t0 = performance.now(), heard = []; let best = "", ms = null, fin = false, starting = false, idleSince = 0, lastHeard = t0, poll = 0; const hs = [];
   return new Promise(async (resolve) => {
     const judge = () => { if (!done || ms !== null) return; const hit = heard.find((x) => done(x)) || (heard.length > 1 && done(heard.join(" ")) ? heard.join(" ") : null); if (hit) { ms = performance.now() - t0; best = hit; } };
     const finish = async () => {
-      if (fin) return; fin = true; clearTimeout(to); clearTimeout(rt);
+      if (fin) return; fin = true; clearTimeout(to); clearInterval(poll);
+      // give a result that is still on its way a moment to arrive
+      if (ms === null && performance.now() - lastHeard < 900) await new Promise((r) => setTimeout(r, 700));
       try { await NSR.stop(); } catch (e) {} for (const h of hs) { try { h.remove(); } catch (e) {} }
       judge(); resolve({ text: best, ms });
     };
     const take = (m) => {
-      m = (m || []).filter(Boolean); if (!m.length || fin) return;
+      m = (m || []).filter(Boolean); if (!m.length) return; lastHeard = performance.now();
       best = m[0]; heard.push(...m); onInterim && onInterim(best);
-      if (done && ms === null) { const hit = m.find((x) => done(x)); if (hit) { ms = performance.now() - t0; best = hit; finish(); } }
+      if (!fin && done && ms === null) { const hit = m.find((x) => done(x)); if (hit) { ms = performance.now() - t0; best = hit; finish(); } }
     };
-    // the recogniser stopped (silence, no match, error): start again while there is time left
-    const again = () => { if (fin) return; clearTimeout(rt); if (performance.now() - t0 > timeout - 500 || starts >= 12) return finish(); rt = setTimeout(go, 200); };
     const go = async () => {
-      if (fin) return; starts++;
-      try { const res = await NSR.start({ language: "en-IN", maxResults: 5, popup: false, partialResults: true }); if (res && res.matches && res.matches.length) { take(res.matches); again(); } }
-      catch (e) { again(); }
+      if (fin || starting) return; starting = true; idleSince = 0;
+      try { await NSR.start({ language: "en-IN", maxResults: 5, popup: false, partialResults: true }); } catch (e) {}
+      starting = false;
     };
     try { hs.push(await NSR.addListener("partialResults", (d) => take(d && d.matches))); } catch (e) {}
-    try { hs.push(await NSR.addListener("listeningState", (d) => { if (d && d.status === "stopped") again(); })); } catch (e) {}
     const to = setTimeout(finish, timeout + 800);
-    current = finish; go();
+    current = finish; await go();
+    poll = setInterval(async () => {
+      if (fin || starting) return;
+      let on = true; try { on = !!(await NSR.isListening()).listening; } catch (e) {}
+      const now = performance.now();
+      if (on) { idleSince = 0; return; }
+      if (!idleSince) { idleSince = now; return; }
+      // idle for 1 s and nothing new heard for 1.2 s -> the recogniser gave up: start it again
+      if (now - idleSince > 1000 && now - lastHeard > 1200 && now - t0 < timeout - 800) go();
+    }, 350);
   });
 }
 
