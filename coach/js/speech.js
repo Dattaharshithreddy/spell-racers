@@ -99,7 +99,8 @@ async function nativeListen({ timeout, onInterim, done }) {
       if (fin) return; fin = true; clearTimeout(to); clearInterval(poll);
       // give a result that is still on its way a moment to arrive
       if (ms === null && performance.now() - lastHeard < 900) await new Promise((r) => setTimeout(r, 700));
-      try { await NSR.stop(); } catch (e) {} for (const h of hs) { try { h.remove(); } catch (e) {} }
+      // NOTE: the Android plugin never resolves stop(), so never await it
+      try { NSR.stop().catch(() => {}); } catch (e) {} for (const h of hs) { try { h.remove(); } catch (e) {} }
       judge(); resolve({ text: best, ms });
     };
     const take = (m) => {
