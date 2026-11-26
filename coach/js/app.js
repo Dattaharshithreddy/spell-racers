@@ -4,7 +4,7 @@ import { CONVS as C1 } from "./convs.js";
 import { CONVS2 } from "./convs2.js";
 import { STORIES, GLOSS } from "./stories.js";
 const CONVS = [...C1, ...CONVS2];
-import { Speech, say, stopSpeaking, listen, heardWord, sentenceScore, micPermission } from "./speech.js";
+import { Speech, say, stopSpeaking, stopListening, listen, heardWord, sentenceScore, micPermission } from "./speech.js";
 
 const $ = (s, r = document) => r.querySelector(s);
 const app = $("#app");
@@ -16,7 +16,7 @@ const CAP = window.Capacitor, NATIVE = !!(CAP && CAP.isNativePlatform && CAP.isN
 const Plug = (n) => (NATIVE && CAP.Plugins[n]) || null;
 let leaving = null;          // cleanup for the current screen (stop mic / speech)
 function toast(t, ms = 2200) { const el = $("#toast"); el.innerHTML = t; el.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => (el.hidden = true), ms); }
-function show(html) { if (leaving) { try { leaving(); } catch (e) {} leaving = null; } stopSpeaking(); app.innerHTML = html; window.scrollTo(0, 0); }
+function show(html) { if (leaving) { try { leaving(); } catch (e) {} leaving = null; } stopSpeaking(); stopListening(); app.innerHTML = html; window.scrollTo(0, 0); }
 const top = (title, back = "home") => `<div class="top"><button class="back" data-go="${back}">‹</button><h2>${title}</h2></div>`;
 app.addEventListener("click", (e) => { const g = e.target.closest("[data-go]"); if (g) go(g.dataset.go); const s = e.target.closest("[data-say]"); if (s) say(s.dataset.say, { rate: 0.88 }); });
 const dots = (b = 0) => `<span class="dots">${"●".repeat(Math.min(5, b))}${"○".repeat(Math.max(0, 5 - b))}</span>`;
@@ -237,6 +237,7 @@ function shadowCard(sentence, kn, { label = "Shadowing" } = {}) {
       const t0 = performance.now();
       try {
         const r = await listen({ timeout: 9000, onInterim: (t) => ($("#hd").textContent = `“${t}”`), done: (x) => sentenceScore(x, sentence).score >= 0.999 });
+        if (!document.body.contains(btn)) return;
         const sc = sentenceScore(r.text, sentence), pct = Math.round(sc.score * 100);
         const words = sentence.split(/\s+/); let k = 0;
         const marked = words.map((wd) => { const clean = wd.replace(/[^A-Za-z']/g, ""); if (!clean) return esc(wd); const cls = sc.hit[k++] ? "hit" : "miss"; return `<span class="${cls}">${esc(wd)}</span>`; }).join(" ");
@@ -345,6 +346,7 @@ function runConv(cv) {
       const btn = $("#mic"); if (btn.classList.contains("rec")) return; stopSpeaking(); btn.classList.add("rec"); $("#msg").textContent = "Listening…";
       try {
         const r = await listen({ timeout: 9000, onInterim: (t) => ($("#msg").textContent = `“${t}”`), done: (x) => sentenceScore(x, right).score >= 0.999 });
+        if (!document.body.contains(btn)) return;
         const sc = Math.round(sentenceScore(r.text, right).score * 100);
         if (sc >= 70) { spoken++; Store.spoke("sentence"); mine.classList.add("said"); $("#msg").innerHTML = `🌟 Well said! (${sc}%)`; await wait(700); step(); return; }
         $("#msg").innerHTML = r.text ? `I heard “${esc(r.text)}” (${sc}%). Try again slowly, or skip.` : "I didn't hear you. Try again.";
@@ -411,6 +413,7 @@ function runStory(st) {
       if (mic.classList.contains("rec")) return; stopSpeaking(); mic.classList.add("rec"); $("#msg").textContent = "Listening…";
       try {
         const r = await listen({ timeout: 10000, onInterim: (t) => ($("#msg").textContent = `“${t}”`), done: (x) => sentenceScore(x, en).score >= 0.999 });
+        if (!document.body.contains(mic)) return;
         const sc = Math.round(sentenceScore(r.text, en).score * 100);
         if (sc >= 70) { spoken++; Store.spoke("sentence"); $("#msg").innerHTML = `🌟 Well said! (${sc}%)`; await wait(650); if (!closed) $("#nx").click(); return; }
         $("#msg").innerHTML = r.text ? `I heard “${esc(r.text)}” (${sc}%). Try again or tap Next.` : "I didn't hear you. Try again.";
@@ -546,7 +549,7 @@ function settings() {
   $("#rm").onchange = () => { p.remind = $("#rm").value; Store.save(); setReminder(); toast("Reminder set for " + p.remind); };
   $("#mt").onclick = async () => {
     $("#mth").textContent = "Say: “Hello, my name is " + p.name + "”";
-    try { const r = await listen({ timeout: 6000, onInterim: (t) => ($("#mth").textContent = `“${t}”`) }); $("#mth").innerHTML = r.text ? `✅ Working! I heard: “${esc(r.text)}”` : "I didn't hear anything. Check the mic permission."; }
+    try { const r = await listen({ timeout: 6000, onInterim: (t) => ($("#mth").textContent = `“${t}”`) }); if (!$("#mth")) return; $("#mth").innerHTML = r.text ? `✅ Working! I heard: “${esc(r.text)}”` : "I didn't hear anything. Check the mic permission."; }
     catch (e) { $("#mth").textContent = e.message === "not-allowed" ? "Microphone blocked. Allow it in Android Settings › Apps › Bangara › Permissions." : "Speech recognition isn't available on this device."; }
   };
   app.querySelectorAll("[data-sw]").forEach((b) => (b.onclick = () => { Store.switchTo(b.dataset.sw); home(); }));

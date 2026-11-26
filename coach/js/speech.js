@@ -58,7 +58,12 @@ export async function micPermission() {
  * 1-2 s of silence (the learner is still thinking!), so we keep restarting it until the time is really up.
  * Resolves { text, ms } where ms = time until the right answer was heard (null if never).
  */
-export function listen({ timeout = 6000, onInterim, done } = {}) {
+let current = null;               // finish() of the listen in progress
+/** stop any listening right now (called when the screen changes) */
+export function stopListening() { const f = current; current = null; if (f) try { f(); } catch (e) {} }
+export function listen({ timeout = 6000, onInterim: oi, done } = {}) {
+  stopListening();
+  const onInterim = oi && ((t) => { try { oi(t); } catch (e) {} });
   if (NSR) return nativeListen({ timeout, onInterim, done });
   return new Promise((resolve, reject) => {
     if (!WSR) return reject(new Error("no-sr"));
@@ -79,7 +84,7 @@ export function listen({ timeout = 6000, onInterim, done } = {}) {
       try { r.start(); } catch (e) { if (starts === 1) { fin = true; clearTimeout(to); reject(e); } else finish(); }
     };
     const to = setTimeout(finish, timeout);
-    go();
+    current = finish; go();
   });
 }
 async function nativeListen({ timeout, onInterim, done }) {
@@ -107,7 +112,7 @@ async function nativeListen({ timeout, onInterim, done }) {
     try { hs.push(await NSR.addListener("partialResults", (d) => take(d && d.matches))); } catch (e) {}
     try { hs.push(await NSR.addListener("listeningState", (d) => { if (d && d.status === "stopped") again(); })); } catch (e) {}
     const to = setTimeout(finish, timeout + 800);
-    go();
+    current = finish; go();
   });
 }
 
